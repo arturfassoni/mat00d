@@ -1,8 +1,8 @@
 # Informações do Livro
-title: "EDA"
-author: "Prof. Artur Fassoni"
-copyright: "2026"
-logo: ""  # Opcional: nome da imagem de logo se tiver
+title: Equações Diferenciais A
+author:  Artur Fassoni
+copyright: 2026
+logo: "_static/logo.svg"
 
 # Identificação do Repositório (Essencial para o caminho correto)
 repository:

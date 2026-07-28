@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="120" height="120">
+  <!-- Fundo escuro arredondado (identidade visual mantida) -->
+  <rect width="200" height="200" rx="40" fill="#1e293b" />
+
+  <!-- Eixos X e Y -->
+  <path d="M 30 170 L 170 170" stroke="#94a3b8" stroke-width="4" stroke-linecap="round" />
+  <path d="M 30 170 L 30 30" stroke="#94a3b8" stroke-width="4" stroke-linecap="round" />
+
+  <!-- Campo de Direcoes (Slope Field) - Representa dy/dx = f(x,y) -->
+  <!-- Linha inferior -->
+  <line x1="55" y1="145" x2="75" y2="135" stroke="#475569" stroke-width="3" stroke-linecap="round" />
+  <line x1="95" y1="140" x2="115" y2="135" stroke="#475569" stroke-width="3" stroke-linecap="round" />
+  <line x1="135" y1="135" x2="155" y2="135" stroke="#475569" stroke-width="3" stroke-linecap="round" />
+  <!-- Linha do meio -->
+  <line x1="55" y1="105" x2="75" y2="90" stroke="#475569" stroke-width="3" stroke-linecap="round" />
+  <line x1="95" y1="95" x2="115" y2="85" stroke="#475569" stroke-width="3" stroke-linecap="round" />
+  <line x1="135" y1="85" x2="155" y2="80" stroke="#475569" stroke-width="3" stroke-linecap="round" />
+  <!-- Linha superior -->
+  <line x1="55" y1="65" x2="75" y2="40" stroke="#475569" stroke-width="3" stroke-linecap="round" />
+  <line x1="95" y1="50" x2="115" y2="35" stroke="#475569" stroke-width="3" stroke-linecap="round" />
+  <line x1="135" y1="35" x2="155" y2="25" stroke="#475569" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Familia de Curvas de Solucao -->
+  <!-- Curva 1 (Verde - Crescimento Logistico/Estavel) -->
+  <path d="M 30 150 C 90 150, 100 40, 170 30" stroke="#10b981" stroke-width="6" fill="none" stroke-linecap="round" />
+  
+  <!-- Curva 2 (Azul - Trajetoria Intermediaria) -->
+  <path d="M 30 110 C 70 110, 80 80, 170 75" stroke="#3b82f6" stroke-width="6" fill="none" stroke-linecap="round" />
+  
+  <!-- Curva 3 (Laranja - Decaimento) -->
+  <path d="M 30 50 C 70 50, 100 130, 170 140" stroke="#f59e0b" stroke-width="6" fill="none" stroke-linecap="round" />
+
+  <!-- Pontos de Valor Inicial (PVI) sobre o eixo Y -->
+  <circle cx="30" cy="150" r="6" fill="#10b981" />
+  <circle cx="30" cy="110" r="6" fill="#3b82f6" />
+  <circle cx="30" cy="50" r="6" fill="#f59e0b" />
+</svg>
