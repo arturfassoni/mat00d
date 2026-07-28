@@ -1,0 +1,17 @@
+format: jb-book
+root: 00-home
+
+parts:
+  - caption: Equações Diferenciais A
+    chapters:
+      - file: 0001-inicio
+
+  - caption: Introdução
+    chapters:
+      - file: 0101-a
+      - file: 0102-b
+      - file: 0103-c
+
+  - caption: Equações Diferenciais de 1a Ordem
+    chapters:
+      - file: 0201-a
