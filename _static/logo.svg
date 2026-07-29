@@ -6,7 +6,7 @@
   <path d="M 30 170 L 170 170" stroke="#94a3b8" stroke-width="4" stroke-linecap="round" />
   <path d="M 30 170 L 30 30" stroke="#94a3b8" stroke-width="4" stroke-linecap="round" />
 
-  <!-- Campo de Direcoes (Slope Field) - Representa dy/dx = f(x,y) -->
+  <!-- Campo de Direções (Slope Field) - Representa dy/dx = f(x,y) -->
   <!-- Linha inferior -->
   <line x1="55" y1="145" x2="75" y2="135" stroke="#475569" stroke-width="3" stroke-linecap="round" />
   <line x1="95" y1="140" x2="115" y2="135" stroke="#475569" stroke-width="3" stroke-linecap="round" />
@@ -20,15 +20,15 @@
   <line x1="95" y1="50" x2="115" y2="35" stroke="#475569" stroke-width="3" stroke-linecap="round" />
   <line x1="135" y1="35" x2="155" y2="25" stroke="#475569" stroke-width="3" stroke-linecap="round" />
 
-  <!-- Familia de Curvas de Solucao -->
-  <!-- Curva 1 (Verde - Crescimento Logistico/Estavel) -->
-  <path d="M 30 150 C 90 150, 100 40, 170 30" stroke="#10b981" stroke-width="6" fill="none" stroke-linecap="round" />
+  <!-- Família de Curvas de Solução (Respeitando a Unicidade e Tangência PERFEITA) -->
+  <!-- Curva 1 (Verde - Inferior) - Curva tangencia os segmentos da linha inferior -->
+  <path d="M 30 150 C 70 150, 110 135, 170 135" stroke="#10b981" stroke-width="6" fill="none" stroke-linecap="round" />
   
-  <!-- Curva 2 (Azul - Trajetoria Intermediaria) -->
-  <path d="M 30 110 C 70 110, 80 80, 170 75" stroke="#3b82f6" stroke-width="6" fill="none" stroke-linecap="round" />
+  <!-- Curva 2 (Azul - Intermediária) - Curva tangencia os segmentos da linha do meio -->
+  <path d="M 30 110 C 70 110, 110 85, 170 80" stroke="#3b82f6" stroke-width="6" fill="none" stroke-linecap="round" />
   
-  <!-- Curva 3 (Laranja - Decaimento) -->
-  <path d="M 30 50 C 70 50, 100 130, 170 140" stroke="#f59e0b" stroke-width="6" fill="none" stroke-linecap="round" />
+  <!-- Curva 3 (Laranja - Superior) - Curva tangencia os segmentos da linha superior -->
+  <path d="M 30 50 C 70 50, 110 25, 170 20" stroke="#f59e0b" stroke-width="6" fill="none" stroke-linecap="round" />
 
   <!-- Pontos de Valor Inicial (PVI) sobre o eixo Y -->
   <circle cx="30" cy="150" r="6" fill="#10b981" />

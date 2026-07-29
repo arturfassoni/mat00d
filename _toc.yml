@@ -1,13 +1,82 @@
 format: jb-book
-root: 0001-inicio
+root: home
 
 parts:
-  - caption: Introdução
+  - caption: Introdução às EDs
     chapters:
-      - file: 0101-a
-      - file: 0102-b
-      - file: 0103-c
+      - file: intro/oquee.ipynb
+      - file: intro/fund1.ipynb
+      - file: intro/porque.ipynb
+      - file: intro/direcoes.ipynb
+      - file: intro/solucoes.ipynb
+      - file: intro/classificacao.ipynb
+      - file: intro/modelagem.ipynb
+      - file: intro/fund2.ipynb
+      - file: intro/exerc.ipynb
 
-  - caption: Equações Diferenciais de 1a Ordem
+  - caption: EDs de 1a Ordem
     chapters:
-      - file: 0201-a
+      - file: ord1/lineares.ipynb
+        sections:
+        - file: ord1/modelos.ipynb
+        - file: ord1/fund1.ipynb
+        - file: ord1/fund2.ipynb
+      - file: ord1/separaveis.ipynb
+        sections:
+        - file: ord1/queda.ipynb
+        - file: ord1/escape.ipynb
+        - file: ord1/logistico.ipynb
+      - file: ord1/autonomas.ipynb
+        sections:
+        - file: ord1/logistico2.ipynb
+        - file: ord1/allee.ipynb
+        - file: ord1/alleelogistico.ipynb
+      - file: ord1/exerc.ipynb
+
+  - caption: EDs de 2a Ordem
+    chapters:
+      - file: ord2/mod.ipynb
+      - file: ord2/h.ipynb
+        sections:
+        - file: ord2/rrd.ipynb
+        - file: ord2/rcc.ipynb
+        - file: ord2/rrr.ipynb
+        - file: ord2/teo.ipynb
+      - file: ord2/nh.ipynb
+        sections:
+        - file: ord2/ci.ipynb
+        - file: ord2/vp.ipynb
+      - file: ord2/vib.ipynb
+        sections:
+        - file: ord2/vibl.ipynb
+        - file: ord2/vibf.ipynb
+      - file: ord2/exerc.ipynb
+
+  - caption: EDs de Ordem Superior
+    chapters:
+      - file: ordn/mod.ipynb
+      - file: ordn/h.ipynb
+      - file: ordn/nh.ipynb
+        sections:
+        - file: ordn/ci.ipynb
+        - file: ordn/vp.ipynb
+      - file: ordn/exerc.ipynb
+
+  - caption: Sistemas de EDs Lineares
+    chapters:
+      - file: sist/mod.ipynb
+      - file: sist/mat.ipynb
+      - file: sist/aut.ipynb
+      - file: sist/h.ipynb
+        sections:
+        - file: sist/ard.ipynb
+        - file: sist/acc.ipynb
+        - file: sist/arr.ipynb
+        - file: sist/teo.ipynb
+      - file: sist/nh.ipynb
+      - file: sist/exerc.ipynb
+  
+  - caption: Provas
+    chapters:
+      - file: provas/p1.ipynb
+      - file: provas/p2.ipynb
