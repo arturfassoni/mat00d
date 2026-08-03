@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>A equação \(y&#39;=ay\) &#8212; Equações Diferenciais A</title>
+    <title>A equação diferencial fundamental \(y&#39; = ky\) &#8212; Equações Diferenciais A</title>
   
   
   
@@ -70,8 +70,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro/fund1';</script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
-    <link rel="next" title="Por que Equações Diferenciais?" href="porque.html" />
-    <link rel="prev" title="O que é uma Equação Diferencial?" href="oquee.html" />
+    <link rel="next" title="Por que equações diferenciais?" href="porque.html" />
+    <link rel="prev" title="O que são equações diferenciais?" href="oquee.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="pt"/>
   </head>
@@ -172,10 +172,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introdução às EDs</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="oquee.html">O que é uma Equação Diferencial?</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">A equação <span class="math notranslate nohighlight">\(y'=ay\)</span></a></li>
-<li class="toctree-l1"><a class="reference internal" href="porque.html">Por que Equações Diferenciais?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="direcoes.html">Campos de direções e Método de Euler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oquee.html">O que são equações diferenciais?</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">A equação diferencial fundamental <span class="math notranslate nohighlight">\(y' = ky\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="porque.html">Por que equações diferenciais?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="direcoes.html">Campos de Direções e o Método de Euler</a></li>
 <li class="toctree-l1"><a class="reference internal" href="solucoes.html">Soluções de uma EDO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="classificacao.html">Classificação de EDs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modelagem.html">Modelagem</a></li>
@@ -381,7 +381,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -392,11 +394,23 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>A equação y'=ay</h1>
+    <h1>A equação diferencial fundamental y' = ky</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2>   </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adivinhando-a-solucao">Adivinhando a solução</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resolvendo-de-verdade-separacao-de-variaveis">Resolvendo de verdade: separação de variáveis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-constante-a-e-a-condicao-inicial">A constante <span class="math notranslate nohighlight">\(A\)</span> e a condição inicial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-sinal-de-k-decide-tudo">O sinal de <span class="math notranslate nohighlight">\(k\)</span> decide tudo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#por-que-essa-equacao-e-tao-importante">Por que essa equação é tão importante?</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -406,9 +420,143 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="a-equacao-y-ay">
-<h1>A equação <span class="math notranslate nohighlight">\(y'=ay\)</span><a class="headerlink" href="#a-equacao-y-ay" title="Permalink to this heading">#</a></h1>
-<p><em>Em construção</em></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="a-equacao-diferencial-fundamental-y-ky">
+<h1>A equação diferencial fundamental <span class="math notranslate nohighlight">\(y' = ky\)</span><a class="headerlink" href="#a-equacao-diferencial-fundamental-y-ky" title="Permalink to this heading">#</a></h1>
+<p>A equação diferencial mais simples — e, disparadamente, uma das mais importantes de todo o curso — é</p>
+<div class="math notranslate nohighlight">
+\[
+y' = ky,
+\]</div>
+<p>onde <span class="math notranslate nohighlight">\(k\)</span> é uma constante. Ela faz uma pergunta muito natural: <strong>qual função <span class="math notranslate nohighlight">\(y(t)\)</span> é igual (ou um múltiplo constante) à sua própria derivada?</strong></p>
+<section id="adivinhando-a-solucao">
+<h2>Adivinhando a solução<a class="headerlink" href="#adivinhando-a-solucao" title="Permalink to this heading">#</a></h2>
+<p>Comece pelo caso mais simples, <span class="math notranslate nohighlight">\(k=1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+y' = y.
+\]</div>
+<p>Qual função você conhece cuja derivada é ela mesma? Se você lembrar da tabela de derivadas do Cálculo 1, a resposta salta aos olhos:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d}{dt}e^t = e^t.
+\]</div>
+<p>Então <span class="math notranslate nohighlight">\(y(t) = e^t\)</span> é uma solução. E, como a derivada é linear, qualquer múltiplo <span class="math notranslate nohighlight">\(y(t) = Ce^t\)</span> também funciona:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d}{dt}\big(Ce^t\big) = Ce^t.
+\]</div>
+<p>Para a equação geral <span class="math notranslate nohighlight">\(y' = ky\)</span>, um «chute» análogo é <span class="math notranslate nohighlight">\(y(t) = Ce^{kt}\)</span>. Verificando por substituição direta:</p>
+<div class="math notranslate nohighlight">
+\[
+y' = \frac{d}{dt}\big(Ce^{kt}\big) = kCe^{kt} = k\,y. \quad\checkmark
+\]</div>
+<p>Funciona! Mas essa estratégia de «adivinhar e verificar» depende de já conhecermos a resposta de antemão. E se não soubéssemos, de cor, a derivada de <span class="math notranslate nohighlight">\(e^{kt}\)</span>? Precisamos de um método sistemático.</p>
+</section>
+<section id="resolvendo-de-verdade-separacao-de-variaveis">
+<h2>Resolvendo de verdade: separação de variáveis<a class="headerlink" href="#resolvendo-de-verdade-separacao-de-variaveis" title="Permalink to this heading">#</a></h2>
+<p>A ideia da <strong>separação de variáveis</strong> é reescrever a equação de modo que tudo o que envolve <span class="math notranslate nohighlight">\(y\)</span> fique de um lado, e tudo que envolve <span class="math notranslate nohighlight">\(t\)</span> fique do outro — e então integrar os dois lados separadamente.</p>
+<p>Escrevendo <span class="math notranslate nohighlight">\(y' = dy/dt\)</span>, a equação <span class="math notranslate nohighlight">\(y'=ky\)</span> vira</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dt} = ky.
+\]</div>
+<p>Separando as variáveis (supondo <span class="math notranslate nohighlight">\(y \neq 0\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{y} = k\,dt.
+\]</div>
+<p>Integrando os dois lados:</p>
+<div class="math notranslate nohighlight">
+\[
+\int \frac{dy}{y} = \int k\,dt \quad\Longrightarrow\quad \ln|y| = kt + C_1.
+\]</div>
+<p>Aplicando a exponencial dos dois lados:</p>
+<div class="math notranslate nohighlight">
+\[
+|y| = e^{kt + C_1} = e^{C_1}\,e^{kt} \quad\Longrightarrow\quad y = \pm\, e^{C_1}\,e^{kt}.
+\]</div>
+<p>Como <span class="math notranslate nohighlight">\(C_1\)</span> é uma constante arbitrária, <span class="math notranslate nohighlight">\(\pm e^{C_1}\)</span> também é — só que agora pode ser <strong>qualquer</strong> constante não nula. Chamando essa constante de <span class="math notranslate nohighlight">\(A\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = A\,e^{kt}, \qquad A \neq 0.
+\]</div>
+<p>E o caso <span class="math notranslate nohighlight">\(y=0\)</span>? Ele ficou de fora quando dividimos por <span class="math notranslate nohighlight">\(y\)</span> — mas é fácil ver que a função constante <span class="math notranslate nohighlight">\(y(t)\equiv 0\)</span> também satisfaz <span class="math notranslate nohighlight">\(y'=ky\)</span> (afinal, <span class="math notranslate nohighlight">\(0 = k\cdot 0\)</span>). Ela corresponde exatamente ao valor <span class="math notranslate nohighlight">\(A=0\)</span>. Juntando tudo, a <strong>solução geral</strong> é</p>
+<div class="math notranslate nohighlight">
+\[
+\,y(t) = A\,e^{kt}, \qquad A \in \mathbb{R} \text{ arbitrário.}\,
+\]</div>
+</section>
+<section id="a-constante-a-e-a-condicao-inicial">
+<h2>A constante <span class="math notranslate nohighlight">\(A\)</span> e a condição inicial<a class="headerlink" href="#a-constante-a-e-a-condicao-inicial" title="Permalink to this heading">#</a></h2>
+<p>Assim como no Cálculo 1, a constante <span class="math notranslate nohighlight">\(A\)</span> representa uma família inteira de soluções — uma para cada valor de <span class="math notranslate nohighlight">\(A\)</span>. Para escolher uma solução específica, precisamos de uma informação extra: o valor de <span class="math notranslate nohighlight">\(y\)</span> em algum instante. Fazendo <span class="math notranslate nohighlight">\(t=0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+y(0) = A\,e^{k \cdot 0} = A.
+\]</div>
+<p>Ou seja, neste exemplo <span class="math notranslate nohighlight">\(A\)</span> é simplesmente o <strong>valor inicial</strong> <span class="math notranslate nohighlight">\(y_0 = y(0)\)</span>! O problema de valor inicial</p>
+<div class="math notranslate nohighlight">
+\[
+y' = ky, \qquad y(0) = y_0
+\]</div>
+<p>tem solução única</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = y_0\, e^{kt}.
+\]</div>
+<p>Abaixo, a família de soluções para <span class="math notranslate nohighlight">\(k=1\)</span> e diferentes valores de <span class="math notranslate nohighlight">\(A\)</span> (equivalentemente, de <span class="math notranslate nohighlight">\(y_0\)</span>):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">A</span> <span class="ow">in</span> <span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">A</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;0.5&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Família de soluções de $y&#39; = y$: $\ y(t) = Ae^t$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$t$&quot;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;$y$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/ef1d2e4a3a02c2c0dd89eeba0fff4a13745d683775a1e95408f0deca4f7adf69.png" src="../_images/ef1d2e4a3a02c2c0dd89eeba0fff4a13745d683775a1e95408f0deca4f7adf69.png" />
+</div>
+</div>
+</section>
+<section id="o-sinal-de-k-decide-tudo">
+<h2>O sinal de <span class="math notranslate nohighlight">\(k\)</span> decide tudo<a class="headerlink" href="#o-sinal-de-k-decide-tudo" title="Permalink to this heading">#</a></h2>
+<p>O comportamento da solução depende inteiramente do sinal de <span class="math notranslate nohighlight">\(k\)</span>:</p>
+<ul class="simple">
+<li><p>Se <span class="math notranslate nohighlight">\(k&gt;0\)</span>, <span class="math notranslate nohighlight">\(e^{kt} \to \infty\)</span> quando <span class="math notranslate nohighlight">\(t\to\infty\)</span>: <strong>crescimento exponencial</strong>.</p></li>
+<li><p>Se <span class="math notranslate nohighlight">\(k&lt;0\)</span>, <span class="math notranslate nohighlight">\(e^{kt} \to 0\)</span> quando <span class="math notranslate nohighlight">\(t\to\infty\)</span>: <strong>decaimento exponencial</strong>.</p></li>
+<li><p>Se <span class="math notranslate nohighlight">\(k=0\)</span>, a solução é constante: <span class="math notranslate nohighlight">\(y(t) = y_0\)</span>.</p></li>
+</ul>
+<p>Compare as duas situações, ambas partindo do mesmo valor inicial <span class="math notranslate nohighlight">\(y_0=1\)</span>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">1</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">0.7</span><span class="o">*</span><span class="n">t</span><span class="p">),</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$k=0.7&gt;0$ (crescimento)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">1</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.7</span><span class="o">*</span><span class="n">t</span><span class="p">),</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$k=-0.7&lt;0$ (decaimento)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$y&#39; = ky,\ y(0)=1$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$t$&quot;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;$y$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/eedd7f3b58f0e6d5d069b08abde3e35b0b969a2e67eb7390cfe94f1b5f22bcfc.png" src="../_images/eedd7f3b58f0e6d5d069b08abde3e35b0b969a2e67eb7390cfe94f1b5f22bcfc.png" />
+</div>
+</div>
+</section>
+<section id="por-que-essa-equacao-e-tao-importante">
+<h2>Por que essa equação é tão importante?<a class="headerlink" href="#por-que-essa-equacao-e-tao-importante" title="Permalink to this heading">#</a></h2>
+<p>A equação <span class="math notranslate nohighlight">\(y'=ky\)</span> vai reaparecer sob diferentes disfarces ao longo de todo o curso: crescimento populacional, decaimento radioativo, juros compostos, resfriamento de um corpo, carga de um capacitor, entre muitos outros. Ela é, de fato, o ponto de partida de quase tudo que vem a seguir.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -447,7 +595,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">O que é uma Equação Diferencial?</p>
+        <p class="prev-next-title">O que são equações diferenciais?</p>
       </div>
     </a>
     <a class="right-next"
@@ -455,7 +603,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">próximo</p>
-        <p class="prev-next-title">Por que Equações Diferenciais?</p>
+        <p class="prev-next-title">Por que equações diferenciais?</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -465,6 +613,25 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i>  
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adivinhando-a-solucao">Adivinhando a solução</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resolvendo-de-verdade-separacao-de-variaveis">Resolvendo de verdade: separação de variáveis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-constante-a-e-a-condicao-inicial">A constante <span class="math notranslate nohighlight">\(A\)</span> e a condição inicial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-sinal-de-k-decide-tudo">O sinal de <span class="math notranslate nohighlight">\(k\)</span> decide tudo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#por-que-essa-equacao-e-tao-importante">Por que essa equação é tão importante?</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Por que Equações Diferenciais? &#8212; Equações Diferenciais A</title>
+    <title>Por que equações diferenciais? &#8212; Equações Diferenciais A</title>
   
   
   
@@ -65,11 +65,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro/porque';</script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
-    <link rel="next" title="Campos de direções e Método de Euler" href="direcoes.html" />
-    <link rel="prev" title="A equação \(y&#39;=ay\)" href="fund1.html" />
+    <link rel="next" title="Campos de Direções e o Método de Euler" href="direcoes.html" />
+    <link rel="prev" title="A equação diferencial fundamental \(y&#39; = ky\)" href="fund1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="pt"/>
   </head>
@@ -170,10 +172,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introdução às EDs</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="oquee.html">O que é uma Equação Diferencial?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fund1.html">A equação <span class="math notranslate nohighlight">\(y'=ay\)</span></a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Por que Equações Diferenciais?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="direcoes.html">Campos de direções e Método de Euler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oquee.html">O que são equações diferenciais?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fund1.html">A equação diferencial fundamental <span class="math notranslate nohighlight">\(y' = ky\)</span></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Por que equações diferenciais?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="direcoes.html">Campos de Direções e o Método de Euler</a></li>
 <li class="toctree-l1"><a class="reference internal" href="solucoes.html">Soluções de uma EDO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="classificacao.html">Classificação de EDs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modelagem.html">Modelagem</a></li>
@@ -379,7 +381,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -390,11 +394,25 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Por que Equações Diferenciais?</h1>
+    <h1>Por que equações diferenciais?</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2>   </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-movimento-dos-planetas-gravitacao-de-newton">O movimento dos planetas — Gravitação de Newton</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-previsao-do-tempo-equacoes-de-navierstokes">A previsão do tempo — Equações de Navier–Stokes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#buracos-negros-e-ondas-gravitacionais-relatividade-geral">Buracos negros e ondas gravitacionais — Relatividade Geral</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#epidemias-o-modelo-sir">Epidemias — o modelo SIR</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#circuitos-eletricos-a-equacao-rlc">Circuitos elétricos — a equação RLC</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#controle-mantendo-um-sistema-no-lugar-certo">Controle — mantendo um sistema no lugar certo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vibracao-e-ressonancia-por-que-pontes-e-predios-podem-entrar-em-colapso">Vibração e ressonância — por que pontes e prédios podem entrar em colapso</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -404,9 +422,222 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="por-que-equacoes-diferenciais">
-<h1>Por que Equações Diferenciais?<a class="headerlink" href="#por-que-equacoes-diferenciais" title="Permalink to this heading">#</a></h1>
-<p><em>Em construção</em></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="por-que-equacoes-diferenciais">
+<h1>Por que equações diferenciais?<a class="headerlink" href="#por-que-equacoes-diferenciais" title="Permalink to this heading">#</a></h1>
+<p>Equações diferenciais estão em todo lugar. Sempre que alguma quantidade muda ao longo do tempo (ou do espaço) obedecendo a alguma lei física, química, biológica ou econômica, o resultado quase sempre é uma equação diferencial. Elas são a linguagem matemática usada para descrever como o universo funciona: do movimento dos planetas à previsão do tempo, de circuitos elétricos a epidemias, de pontes que vibram a mercados financeiros.</p>
+<p>A seguir, alguns exemplos grandiosos — equações que descrevem fenômenos que moldam o mundo, e o universo, à nossa volta.</p>
+<section id="o-movimento-dos-planetas-gravitacao-de-newton">
+<h2>O movimento dos planetas — Gravitação de Newton<a class="headerlink" href="#o-movimento-dos-planetas-gravitacao-de-newton" title="Permalink to this heading">#</a></h2>
+<p>A lei da gravitação universal de Newton, combinada com sua segunda lei do movimento, leva a uma equação diferencial para a posição <span class="math notranslate nohighlight">\(\vec r(t)\)</span> de um corpo orbitando outro — por exemplo, um planeta ao redor do Sol:</p>
+<div class="math notranslate nohighlight">
+\[
+\ddot{\vec r} = -\frac{GM}{|\vec r|^{3}}\,\vec r.
+\]</div>
+<p>É uma equação diferencial de <strong>segunda ordem</strong> (envolve <span class="math notranslate nohighlight">\(\ddot{\vec r} = \vec r''\)</span>), e suas soluções são exatamente as órbitas elípticas descritas pelas Leis de Kepler. É essa mesma equação, com pequenos ajustes, que a NASA resolve numericamente para planejar a trajetória de uma sonda até Marte.</p>
+<p><img alt="A Terra vista do espaço, missão Apollo 17" src="https://commons.wikimedia.org/wiki/Special:FilePath/The_Earth_seen_from_Apollo_17.jpg" /></p>
+<p><em>Fonte: NASA, Apollo 17 (1972) — domínio público.</em></p>
+</section>
+<section id="a-previsao-do-tempo-equacoes-de-navierstokes">
+<h2>A previsão do tempo — Equações de Navier–Stokes<a class="headerlink" href="#a-previsao-do-tempo-equacoes-de-navierstokes" title="Permalink to this heading">#</a></h2>
+<p>O movimento de qualquer fluido — o ar da atmosfera, a água dos oceanos, o sangue nas veias — é descrito pelas <strong>equações de Navier–Stokes</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+\rho\left(\frac{\partial \vec v}{\partial t} + (\vec v\cdot\nabla)\vec v\right) = -\nabla p + \mu\nabla^2\vec v + \rho\,\vec g.
+\]</div>
+<p>Diferente do exemplo anterior, essa é uma <strong>equação diferencial parcial</strong> (EDP): a incógnita <span class="math notranslate nohighlight">\(\vec v(x,y,z,t)\)</span> depende de várias variáveis — posição <em>e</em> tempo — e a equação envolve derivadas parciais em relação a cada uma delas. Toda previsão do tempo do mundo, no fundo, é uma simulação numérica dessa equação rodando em um supercomputador, sobre uma grade de pontos cobrindo a atmosfera inteira. (Curiosidade: ainda não sabemos provar, em geral, se essas equações sempre têm solução bem-comportada — é um dos sete «Problemas do Milênio», com um prêmio de US$ 1 milhão para quem resolver.)</p>
+<p><img alt="Furacão Isabel, fotografado da Estação Espacial Internacional" src="https://commons.wikimedia.org/wiki/Special:FilePath/Hurricane_Isabel_from_ISS.jpg" /></p>
+<p><em>Fonte: NASA / Estação Espacial Internacional, Expedição 7 (2003) — domínio público.</em></p>
+</section>
+<section id="buracos-negros-e-ondas-gravitacionais-relatividade-geral">
+<h2>Buracos negros e ondas gravitacionais — Relatividade Geral<a class="headerlink" href="#buracos-negros-e-ondas-gravitacionais-relatividade-geral" title="Permalink to this heading">#</a></h2>
+<p>As equações de campo de Einstein,</p>
+<div class="math notranslate nohighlight">
+\[
+G_{\mu\nu} = \frac{8\pi G}{c^4}\,T_{\mu\nu},
+\]</div>
+<p>são um sistema de equações diferenciais parciais que relacionam a curvatura do espaço-tempo (lado esquerdo) à distribuição de massa e energia (lado direito). A partir delas, Einstein previu, em 1915, a existência de buracos negros e de ondas gravitacionais — décadas antes de qualquer evidência observacional. As ondas gravitacionais só foram detectadas em 2015 (observatório LIGO), e a primeira imagem real de um buraco negro só foi obtida em 2019: exatamente a «sombra» prevista pelas soluções dessa equação.</p>
+<p><img alt="Primeira imagem de um buraco negro (M87*), obtida pelo Event Horizon Telescope" src="https://commons.wikimedia.org/wiki/Special:FilePath/Black_hole_-_Messier_87_crop_max_res.jpg" /></p>
+<p><em>Fonte: Event Horizon Telescope Collaboration (2019) — CC BY 4.0.</em></p>
+</section>
+<section id="epidemias-o-modelo-sir">
+<h2>Epidemias — o modelo SIR<a class="headerlink" href="#epidemias-o-modelo-sir" title="Permalink to this heading">#</a></h2>
+<p>Como uma doença se espalha por uma população? O modelo mais simples e mais usado é o <strong>modelo SIR</strong> (Suscetíveis–Infectados–Recuperados), um sistema de três equações diferenciais não lineares:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+S' &amp;= -\beta\,\frac{SI}{N},\\
+I' &amp;= \beta\,\frac{SI}{N} - \gamma I,\\
+R' &amp;= \gamma I,
+\end{aligned}
+\end{split}\]</div>
+<p>onde <span class="math notranslate nohighlight">\(S(t)\)</span>, <span class="math notranslate nohighlight">\(I(t)\)</span> e <span class="math notranslate nohighlight">\(R(t)\)</span> são o número de suscetíveis, infectados e recuperados (com <span class="math notranslate nohighlight">\(S+I+R=N\)</span> constante), <span class="math notranslate nohighlight">\(\beta\)</span> é a taxa de infecção (quão facilmente a doença se transmite a cada contato) e <span class="math notranslate nohighlight">\(\gamma\)</span> é a taxa de recuperação.</p>
+<p>A razão <span class="math notranslate nohighlight">\(R_0 = \beta/\gamma\)</span> — o famoso «número básico de reprodução», tão citado durante a pandemia de Covid-19 — determina se a epidemia decola (<span class="math notranslate nohighlight">\(R_0&gt;1\)</span>) ou se extingue sozinha (<span class="math notranslate nohighlight">\(R_0&lt;1\)</span>). Veja como o mesmo modelo, com diferentes valores de <span class="math notranslate nohighlight">\(\beta\)</span> (e portanto de <span class="math notranslate nohighlight">\(R_0\)</span>), produz picos de infecção com magnitudes completamente diferentes:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.integrate</span><span class="w"> </span><span class="kn">import</span> <span class="n">odeint</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">sir</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
+    <span class="n">S</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="n">R</span> <span class="o">=</span> <span class="n">y</span>
+    <span class="n">dS</span> <span class="o">=</span> <span class="o">-</span><span class="n">beta</span><span class="o">*</span><span class="n">S</span><span class="o">*</span><span class="n">I</span><span class="o">/</span><span class="n">N</span>
+    <span class="n">dI</span> <span class="o">=</span> <span class="n">beta</span><span class="o">*</span><span class="n">S</span><span class="o">*</span><span class="n">I</span><span class="o">/</span><span class="n">N</span> <span class="o">-</span> <span class="n">gamma</span><span class="o">*</span><span class="n">I</span>
+    <span class="n">dR</span> <span class="o">=</span> <span class="n">gamma</span><span class="o">*</span><span class="n">I</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">dS</span><span class="p">,</span> <span class="n">dI</span><span class="p">,</span> <span class="n">dR</span><span class="p">]</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">I0</span><span class="p">,</span> <span class="n">R0_</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span>
+<span class="n">S0</span> <span class="o">=</span> <span class="n">N</span> <span class="o">-</span> <span class="n">I0</span> <span class="o">-</span> <span class="n">R0_</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">160</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+<span class="n">gamma</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">7</span>  <span class="c1"># ~7 dias até a recuperação</span>
+
+<span class="n">betas</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">beta</span> <span class="ow">in</span> <span class="n">betas</span><span class="p">:</span>
+    <span class="n">sol</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">sir</span><span class="p">,</span> <span class="p">[</span><span class="n">S0</span><span class="p">,</span> <span class="n">I0</span><span class="p">,</span> <span class="n">R0_</span><span class="p">],</span> <span class="n">t</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">beta</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="n">N</span><span class="p">))</span>
+    <span class="n">I</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">fr</span><span class="s2">&quot;$\beta=</span><span class="si">{</span><span class="n">beta</span><span class="si">}</span><span class="s2">$  ($R_0=</span><span class="si">{</span><span class="n">beta</span><span class="o">/</span><span class="n">gamma</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">$)&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;dias&quot;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Infectados $I(t)$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Modelo SIR: efeito da taxa de infecção $\beta$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/b33f3fd88c7e8c06b0f8f8b45d0b6e29edc686cabbcdb7efc906b10f1cccc191.png" src="../_images/b33f3fd88c7e8c06b0f8f8b45d0b6e29edc686cabbcdb7efc906b10f1cccc191.png" />
+</div>
+</div>
+<p>Quanto maior <span class="math notranslate nohighlight">\(\beta\)</span> (doença mais contagiosa), mais alto e mais rápido é o pico de infectados — exatamente o comportamento que motivou as medidas de distanciamento social: reduzir <span class="math notranslate nohighlight">\(\beta\)</span> «achata a curva».</p>
+</section>
+<section id="circuitos-eletricos-a-equacao-rlc">
+<h2>Circuitos elétricos — a equação RLC<a class="headerlink" href="#circuitos-eletricos-a-equacao-rlc" title="Permalink to this heading">#</a></h2>
+<p>Em um circuito elétrico com um resistor (<span class="math notranslate nohighlight">\(R\)</span>), um indutor (<span class="math notranslate nohighlight">\(L\)</span>) e um capacitor (<span class="math notranslate nohighlight">\(C\)</span>) em série, a carga <span class="math notranslate nohighlight">\(q(t)\)</span> no capacitor obedece a</p>
+<div class="math notranslate nohighlight">
+\[
+L\,q'' + R\,q' + \frac{1}{C}\,q = E(t),
+\]</div>
+<p>onde <span class="math notranslate nohighlight">\(E(t)\)</span> é a tensão da fonte. Compare com a equação de um sistema massa-mola-amortecedor,</p>
+<div class="math notranslate nohighlight">
+\[
+m\,x'' + c\,x' + k\,x = F(t):
+\]</div>
+<p>são <strong>exatamente a mesma equação diferencial</strong>, apenas com nomes diferentes para as constantes! Essa é uma das ideias mais bonitas das equações diferenciais: sistemas físicos completamente diferentes — um circuito eletrônico e uma mola mecânica — são descritos pela mesma matemática, e se comportam exatamente da mesma forma. Dependendo dos valores das constantes, a resposta livre (sem fonte) pode ser oscilatória, crítica, ou suave:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">osc</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">m</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">y</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">v</span><span class="p">,</span> <span class="o">-</span><span class="p">(</span><span class="n">c</span><span class="o">/</span><span class="n">m</span><span class="p">)</span><span class="o">*</span><span class="n">v</span> <span class="o">-</span> <span class="p">(</span><span class="n">k</span><span class="o">/</span><span class="n">m</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">]</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">k</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">c_crit</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">m</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="p">[(</span><span class="s2">&quot;Subamortecido&quot;</span><span class="p">,</span> <span class="mf">0.3</span><span class="o">*</span><span class="n">c_crit</span><span class="p">),</span>
+                  <span class="p">(</span><span class="s2">&quot;Criticamente amortecido&quot;</span><span class="p">,</span> <span class="n">c_crit</span><span class="p">),</span>
+                  <span class="p">(</span><span class="s2">&quot;Superamortecido&quot;</span><span class="p">,</span> <span class="mf">2.5</span><span class="o">*</span><span class="n">c_crit</span><span class="p">)]:</span>
+    <span class="n">sol</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">osc</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">t</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">k</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">sol</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;0.7&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$t$ (s)&quot;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;carga $q(t)$ (ou posição $x(t)$)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$L q&#39;&#39; + Rq&#39; + q/C = 0$ — três regimes possíveis&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/0f1e3062da1fd72874588e5b7abf6f57732f979611bbe3627c8781c3a7780216.png" src="../_images/0f1e3062da1fd72874588e5b7abf6f57732f979611bbe3627c8781c3a7780216.png" />
+</div>
+</div>
+<p>Vamos entender exatamente de onde vêm esses três comportamentos — e como identificá-los sem simular nada — quando estudarmos equações lineares de segunda ordem.</p>
+</section>
+<section id="controle-mantendo-um-sistema-no-lugar-certo">
+<h2>Controle — mantendo um sistema no lugar certo<a class="headerlink" href="#controle-mantendo-um-sistema-no-lugar-certo" title="Permalink to this heading">#</a></h2>
+<p>Muitos sistemas de engenharia precisam ser <strong>controlados</strong>: um piloto automático deve manter um avião em altitude constante, um foguete precisa pousar exatamente sobre a plataforma, e o cruise control do seu carro deve manter a velocidade constante mesmo numa subida. Em todos esses casos, um sensor mede o estado atual do sistema, compara com o valor desejado (o <em>setpoint</em>), e aplica uma força corretiva — e o resultado, mais uma vez, é uma equação diferencial.</p>
+<p>Um controlador <strong>PID</strong> (proporcional–integral–derivativo), o mais usado na indústria, aplica uma força de correção</p>
+<div class="math notranslate nohighlight">
+\[
+u(t) = k_p\,e(t) + k_i\int_0^t e(s)\,ds + k_d\,e'(t), \qquad e(t) = v_{\text{ref}} - v(t),
+\]</div>
+<p>onde <span class="math notranslate nohighlight">\(e(t)\)</span> é o erro entre o valor desejado e o valor atual. Veja a diferença entre um carro tentando manter <span class="math notranslate nohighlight">\(25\,\text{m/s}\)</span> ao subir uma ladeira sem nenhum controle ativo, e o mesmo carro com um controlador PI:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">cruise</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">F0</span><span class="p">,</span> <span class="n">F_hill</span><span class="p">,</span> <span class="n">kp</span><span class="p">,</span> <span class="n">ki</span><span class="p">,</span> <span class="n">v_ref</span><span class="p">,</span> <span class="n">controlled</span><span class="p">):</span>
+    <span class="n">v</span><span class="p">,</span> <span class="n">integral</span> <span class="o">=</span> <span class="n">y</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="n">kp</span><span class="o">*</span><span class="p">(</span><span class="n">v_ref</span> <span class="o">-</span> <span class="n">v</span><span class="p">)</span> <span class="o">+</span> <span class="n">ki</span><span class="o">*</span><span class="n">integral</span> <span class="k">if</span> <span class="n">controlled</span> <span class="k">else</span> <span class="mf">0.0</span>
+    <span class="n">dv</span> <span class="o">=</span> <span class="p">(</span><span class="n">F0</span> <span class="o">+</span> <span class="n">u</span> <span class="o">-</span> <span class="n">b</span><span class="o">*</span><span class="n">v</span> <span class="o">-</span> <span class="n">F_hill</span><span class="p">)</span><span class="o">/</span><span class="n">m</span>
+    <span class="n">dintegral</span> <span class="o">=</span> <span class="n">v_ref</span> <span class="o">-</span> <span class="n">v</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">dv</span><span class="p">,</span> <span class="n">dintegral</span><span class="p">]</span>
+
+<span class="n">m</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">50</span>       <span class="c1"># massa (kg), coeficiente de arrasto/atrito</span>
+<span class="n">v_ref</span> <span class="o">=</span> <span class="mi">25</span>             <span class="c1"># velocidade desejada (m/s)</span>
+<span class="n">F0</span> <span class="o">=</span> <span class="n">b</span><span class="o">*</span><span class="n">v_ref</span>           <span class="c1"># empuxo do motor que mantém v_ref em plano</span>
+<span class="n">F_hill</span> <span class="o">=</span> <span class="mi">300</span>           <span class="c1"># força extra exigida por uma ladeira, a partir de t=0</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+<span class="n">sol_livre</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">cruise</span><span class="p">,</span> <span class="p">[</span><span class="n">v_ref</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">t</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">F0</span><span class="p">,</span> <span class="n">F_hill</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">v_ref</span><span class="p">,</span> <span class="kc">False</span><span class="p">))</span>
+<span class="n">sol_pid</span>   <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">cruise</span><span class="p">,</span> <span class="p">[</span><span class="n">v_ref</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">t</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">F0</span><span class="p">,</span> <span class="n">F_hill</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">v_ref</span><span class="p">,</span> <span class="kc">True</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">sol_livre</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Sem controle&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">sol_pid</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Com controle (PI)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">v_ref</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Velocidade desejada&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$t$ (s)&quot;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;velocidade (m/s)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Controle de velocidade (cruise control) ao subir uma ladeira&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/4cd6ad8e1eb5289f2a33d36b2664eaa1da2f5f85e9712b06193feb5352799b39.png" src="../_images/4cd6ad8e1eb5289f2a33d36b2664eaa1da2f5f85e9712b06193feb5352799b39.png" />
+</div>
+</div>
+<p>Sem controle, a força extra da ladeira faz o carro perder velocidade e estabilizar bem abaixo do valor desejado. Com o controlador, o erro é continuamente corrigido até a velocidade convergir de volta para o valor de referência.</p>
+</section>
+<section id="vibracao-e-ressonancia-por-que-pontes-e-predios-podem-entrar-em-colapso">
+<h2>Vibração e ressonância — por que pontes e prédios podem entrar em colapso<a class="headerlink" href="#vibracao-e-ressonancia-por-que-pontes-e-predios-podem-entrar-em-colapso" title="Permalink to this heading">#</a></h2>
+<p>Toda estrutura — uma ponte, um prédio, a asa de um avião — tem uma ou mais <strong>frequências naturais de vibração</strong> <span class="math notranslate nohighlight">\(\omega_0\)</span>, determinadas por sua massa e rigidez. Se uma força externa oscilante (vento, passos sincronizados de pedestres, um terremoto) atua sobre a estrutura numa frequência <span class="math notranslate nohighlight">\(\omega\)</span> próxima de <span class="math notranslate nohighlight">\(\omega_0\)</span>, a amplitude da vibração pode crescer dramaticamente — um fenômeno chamado <strong>ressonância</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+m\,x'' + c\,x' + k\,x = F_0\cos(\omega t).
+\]</div>
+<p>Foi a ressonância, amplificada por ventos moderados, que derrubou a ponte de Tacoma Narrows em 1940 (um caso clássico, ainda estudado em todo curso de engenharia), e que obrigou o fechamento da Millennium Bridge em Londres, em 2000, poucos dias após a inauguração, por causa da vibração excessiva causada pelos próprios pedestres. Veja como a amplitude da resposta depende da proximidade entre <span class="math notranslate nohighlight">\(\omega\)</span> e <span class="math notranslate nohighlight">\(\omega_0\)</span>, e como o amortecimento <span class="math notranslate nohighlight">\(\zeta\)</span> controla o tamanho do pico:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">omega0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">k</span><span class="o">/</span><span class="n">m</span><span class="p">)</span>
+<span class="n">omega</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">2.5</span><span class="o">*</span><span class="n">omega0</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+<span class="n">F0</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="k">for</span> <span class="n">zeta</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="p">[(</span><span class="mf">0.02</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;$\zeta=0.02$ (quase sem amortecimento)&quot;</span><span class="p">),</span>
+                      <span class="p">(</span><span class="mf">0.10</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;$\zeta=0.10$&quot;</span><span class="p">),</span>
+                      <span class="p">(</span><span class="mf">0.30</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;$\zeta=0.30$&quot;</span><span class="p">)]:</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">zeta</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">m</span><span class="p">)</span>
+    <span class="n">amp</span> <span class="o">=</span> <span class="n">F0</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">k</span> <span class="o">-</span> <span class="n">m</span><span class="o">*</span><span class="n">omega</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">c</span><span class="o">*</span><span class="n">omega</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">omega</span><span class="o">/</span><span class="n">omega0</span><span class="p">,</span> <span class="n">amp</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$\omega/\omega_0$ (frequência da força / frequência natural)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Amplitude&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Curva de ressonância: $mx&#39;&#39; + cx&#39; + kx = F_0\cos(\omega t)$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/076f8aec22e0caea41fa9f70bf661fc9834423ee809b4e1133e7b69250c8c62f.png" src="../_images/076f8aec22e0caea41fa9f70bf661fc9834423ee809b4e1133e7b69250c8c62f.png" />
+</div>
+</div>
+<p>Quanto menor o amortecimento, mais estreito e mais alto é o pico de ressonância — e mais perigosa é a estrutura se a frequência de excitação chegar perto de <span class="math notranslate nohighlight">\(\omega_0\)</span>. Projetar estruturas para evitar ressonância é uma das aplicações mais diretas de equações diferenciais na engenharia civil e mecânica.</p>
+<p>O mesmo tipo de raciocínio — escrever uma equação que relaciona uma quantidade e sua taxa de variação — aparece em praticamente qualquer área da engenharia e das ciências: o crescimento de uma população, a difusão de calor em uma peça metálica, o preço de uma opção financeira, os níveis de energia de um átomo na mecânica quântica, o comportamento de um robô ou de uma rede neural. Ao longo deste curso, vamos aprender a construir e resolver esses modelos — começando pelos mais simples, mas sempre de olho no quanto eles conseguem descrever.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -445,7 +676,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">A equação <span class="math notranslate nohighlight">\(y'=ay\)</span></p>
+        <p class="prev-next-title">A equação diferencial fundamental <span class="math notranslate nohighlight">\(y' = ky\)</span></p>
       </div>
     </a>
     <a class="right-next"
@@ -453,7 +684,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">próximo</p>
-        <p class="prev-next-title">Campos de direções e Método de Euler</p>
+        <p class="prev-next-title">Campos de Direções e o Método de Euler</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -463,6 +694,27 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i>  
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-movimento-dos-planetas-gravitacao-de-newton">O movimento dos planetas — Gravitação de Newton</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-previsao-do-tempo-equacoes-de-navierstokes">A previsão do tempo — Equações de Navier–Stokes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#buracos-negros-e-ondas-gravitacionais-relatividade-geral">Buracos negros e ondas gravitacionais — Relatividade Geral</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#epidemias-o-modelo-sir">Epidemias — o modelo SIR</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#circuitos-eletricos-a-equacao-rlc">Circuitos elétricos — a equação RLC</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#controle-mantendo-um-sistema-no-lugar-certo">Controle — mantendo um sistema no lugar certo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vibracao-e-ressonancia-por-que-pontes-e-predios-podem-entrar-em-colapso">Vibração e ressonância — por que pontes e prédios podem entrar em colapso</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

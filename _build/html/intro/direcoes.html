@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Campos de direções e Método de Euler &#8212; Equações Diferenciais A</title>
+    <title>Campos de Direções e o Método de Euler &#8212; Equações Diferenciais A</title>
   
   
   
@@ -65,11 +65,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro/direcoes';</script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
     <link rel="next" title="Soluções de uma EDO" href="solucoes.html" />
-    <link rel="prev" title="Por que Equações Diferenciais?" href="porque.html" />
+    <link rel="prev" title="Por que equações diferenciais?" href="porque.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="pt"/>
   </head>
@@ -170,10 +172,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introdução às EDs</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="oquee.html">O que é uma Equação Diferencial?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fund1.html">A equação <span class="math notranslate nohighlight">\(y'=ay\)</span></a></li>
-<li class="toctree-l1"><a class="reference internal" href="porque.html">Por que Equações Diferenciais?</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Campos de direções e Método de Euler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oquee.html">O que são equações diferenciais?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fund1.html">A equação diferencial fundamental <span class="math notranslate nohighlight">\(y' = ky\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="porque.html">Por que equações diferenciais?</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Campos de Direções e o Método de Euler</a></li>
 <li class="toctree-l1"><a class="reference internal" href="solucoes.html">Soluções de uma EDO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="classificacao.html">Classificação de EDs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modelagem.html">Modelagem</a></li>
@@ -379,7 +381,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -390,11 +394,25 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Campos de direções e Método de Euler</h1>
+    <h1>Campos de Direções e o Método de Euler</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2>   </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-derivada-como-inclinacao">A Derivada como Inclinação</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-familia-de-solucoes-e-a-condicao-inicial">A Família de Soluções e a Condição Inicial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duas-formas-de-resolver-o-problema-analitica-vs-numerica">Duas formas de resolver o problema: Analítica vs. Numérica</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verificando-a-solucao-a-mao">Verificando a solução à mão</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-metodo-de-euler-seguindo-o-fluxo-passo-a-passo">O Método de Euler: Seguindo o fluxo passo a passo</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -404,9 +422,214 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="campos-de-direcoes-e-metodo-de-euler">
-<h1>Campos de direções e Método de Euler<a class="headerlink" href="#campos-de-direcoes-e-metodo-de-euler" title="Permalink to this heading">#</a></h1>
-<p><em>Em construção</em></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="campos-de-direcoes-e-o-metodo-de-euler">
+<h1>Campos de Direções e o Método de Euler<a class="headerlink" href="#campos-de-direcoes-e-o-metodo-de-euler" title="Permalink to this heading">#</a></h1>
+<p>Até agora, falamos sobre encontrar a solução de uma Equação Diferencial (ED) de forma analítica, ou seja, manipulando equações para encontrar uma fórmula exata, como <span class="math notranslate nohighlight">\(y(t) = e^{kt}\)</span>.</p>
+<p>Mas o que a equação diferencial <span class="math notranslate nohighlight">\(y' = f(t, y)\)</span> nos diz visualmente?</p>
+<section id="a-derivada-como-inclinacao">
+<h2>A Derivada como Inclinação<a class="headerlink" href="#a-derivada-como-inclinacao" title="Permalink to this heading">#</a></h2>
+<p>Lembre-se do Cálculo 1: a derivada <span class="math notranslate nohighlight">\(y'(t)\)</span> nada mais é do que a <strong>inclinação da reta tangente</strong> à curva <span class="math notranslate nohighlight">\(y(t)\)</span> em um determinado ponto.</p>
+<p>Quando temos uma equação diferencial na forma:
+$<span class="math notranslate nohighlight">\(y' = f(t, y)\)</span>$</p>
+<p>A matemática está nos dando uma bússola. Ela diz: <em>Se a solução passar pelo ponto <span class="math notranslate nohighlight">\((t, y)\)</span>, a inclinação dela neste exato momento será <span class="math notranslate nohighlight">\(f(t, y)\)</span></em>.</p>
+<p>Se calcularmos essa inclinação para vários pontos em um plano e desenharmos pequenos segmentos de reta apontando para a direção correta, criamos o que chamamos de <strong>Campo de Direções</strong>. Ele nos mostra o «fluxo» das soluções, como se fossem as correntes de um rio. A solução de uma ED é simplesmente um barco solto nesse rio: ele segue o fluxo da correnteza.</p>
+<p>Vamos visualizar isso em Python com um exemplo clássico. Considere a equação:
+$<span class="math notranslate nohighlight">\(y' = y - t\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="c1"># Definindo a ED: y&#39; = f(t, y)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">y</span> <span class="o">-</span> <span class="n">t</span>
+
+<span class="c1"># Criando uma grade de pontos no plano (t, y)</span>
+<span class="n">t_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">y_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">T</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">t_grid</span><span class="p">,</span> <span class="n">y_grid</span><span class="p">)</span>
+
+<span class="c1"># Calculando a inclinação em cada ponto da grade</span>
+<span class="c1"># Para o quiver (gráfico de setas), o vetor direção é (1, y&#39;)</span>
+<span class="n">dT</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">T</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
+<span class="n">dY</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+
+<span class="c1"># Normalizando os vetores para que todas as setinhas tenham o mesmo tamanho (estética)</span>
+<span class="n">L</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dT</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dY</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">dT_norm</span> <span class="o">=</span> <span class="n">dT</span> <span class="o">/</span> <span class="n">L</span>
+<span class="n">dY_norm</span> <span class="o">=</span> <span class="n">dY</span> <span class="o">/</span> <span class="n">L</span>
+
+<span class="c1"># Plotando o Campo de Direções</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">dT_norm</span><span class="p">,</span> <span class="n">dY_norm</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">pivot</span><span class="o">=</span><span class="s1">&#39;mid&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Campo de Direções para $y&#39; = y - t$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Tempo (t)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;y(t)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/401f3c3ffa0f137348590b0fc20876a22c0090ded798ccbec090d7bbc06f3946.png" src="../_images/401f3c3ffa0f137348590b0fc20876a22c0090ded798ccbec090d7bbc06f3946.png" />
+</div>
+</div>
+</section>
+<section id="a-familia-de-solucoes-e-a-condicao-inicial">
+<h2>A Família de Soluções e a Condição Inicial<a class="headerlink" href="#a-familia-de-solucoes-e-a-condicao-inicial" title="Permalink to this heading">#</a></h2>
+<p>Ao olhar para o campo de direções acima, você provavelmente consegue imaginar curvas suaves acompanhando as setas. Existem infinitas curvas possíveis! Cada curva é uma solução diferente.</p>
+<p>O que define qual dessas curvas é a «nossa» solução? A <strong>Condição Inicial (CI)</strong>. Ao definirmos um ponto de partida <span class="math notranslate nohighlight">\((t_0, y_0)\)</span>, escolhemos exatamente qual correnteza o nosso barco vai pegar. Variar a condição inicial (que matematicamente significa mudar a constante de integração) é simplesmente soltar o barco em um ponto diferente do rio.</p>
+</section>
+<section id="duas-formas-de-resolver-o-problema-analitica-vs-numerica">
+<h2>Duas formas de resolver o problema: Analítica vs. Numérica<a class="headerlink" href="#duas-formas-de-resolver-o-problema-analitica-vs-numerica" title="Permalink to this heading">#</a></h2>
+<p>Na prática, quando nos deparamos com uma Equação Diferencial, temos dois grandes caminhos para resolvê-la:</p>
+<ol class="arabic simple">
+<li><p><strong>A abordagem Analítica (Exata):</strong> É quando usamos manipulações algébricas e técnicas de integração para encontrar uma <strong>fórmula fechada</strong> para a função <span class="math notranslate nohighlight">\(y(t)\)</span>. O resultado é uma equação matemática contínua.</p></li>
+<li><p><strong>A abordagem Numérica (Aproximada):</strong> É quando usamos computadores e algoritmos para encontrar os <strong>valores numéricos</strong> da função em pontos específicos no tempo, sem nunca descobrir a fórmula exata por trás dela. A saída é apenas um conjunto de pontos (uma tabela de dados).</p></li>
+</ol>
+<p>Nos próximos capítulos, aprenderemos técnicas analíticas. Para a nossa equação de exemplo <span class="math notranslate nohighlight">\(y' = y - t\)</span>, se aplicarmos um método chamado «Fator Integrante» (que veremos em breve), chegaremos à seguinte <strong>Solução Geral</strong>:</p>
+<div class="math notranslate nohighlight">
+\[y(t) = t + 1 + C e^t\]</div>
+<p>Onde <span class="math notranslate nohighlight">\(C\)</span> é a nossa constante de integração.</p>
+<section id="verificando-a-solucao-a-mao">
+<h3>Verificando a solução à mão<a class="headerlink" href="#verificando-a-solucao-a-mao" title="Permalink to this heading">#</a></h3>
+<p>Em Equações Diferenciais, você raramente precisa ficar na dúvida se acertou ou errou uma questão. Basta pegar a sua solução e jogar de volta na equação original! Vamos testar se a fórmula que encontramos realmente obedece a <span class="math notranslate nohighlight">\(y' = y - t\)</span>.</p>
+<p>Primeiro, calculamos a derivada da nossa solução <span class="math notranslate nohighlight">\(y(t)\)</span>:
+$<span class="math notranslate nohighlight">\(y'(t) = \frac{d}{dt} (t + 1 + C e^t)\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(y'(t) = 1 + 0 + C e^t\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(y'(t) = 1 + C e^t\)</span>$</p>
+<p>Agora, substituímos <span class="math notranslate nohighlight">\(y\)</span> e <span class="math notranslate nohighlight">\(y'\)</span> na equação original (<span class="math notranslate nohighlight">\(y' = y - t\)</span>):
+$<span class="math notranslate nohighlight">\(1 + C e^t = (t + 1 + C e^t) - t\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(1 + C e^t = 1 + C e^t\)</span>$</p>
+<p>A igualdade é verdadeira! Isso prova que a nossa fórmula está correta.</p>
+<p>O termo <span class="math notranslate nohighlight">\(C\)</span> na fórmula significa que temos uma <strong>família infinita de soluções</strong>. Cada valor de <span class="math notranslate nohighlight">\(C\)</span> representa uma curva diferente no nosso campo de direções. Vamos plotar algumas dessas curvas exatas sobre o campo que geramos lá em cima e ver a mágica acontecer.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Criando um vetor de tempo mais denso para o traçado suave das curvas exatas</span>
+<span class="n">t_smooth</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># Redesenhando o campo de direções (com as correções geométricas)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">dT_norm</span><span class="p">,</span> <span class="n">dY_norm</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">pivot</span><span class="o">=</span><span class="s1">&#39;mid&#39;</span><span class="p">,</span> 
+           <span class="n">angles</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale_units</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># Valores de C que queremos testar</span>
+<span class="n">valores_C</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># Plotando a família de soluções exatas</span>
+<span class="k">for</span> <span class="n">C</span> <span class="ow">in</span> <span class="n">valores_C</span><span class="p">:</span>
+    <span class="c1"># A fórmula da nossa solução analítica</span>
+    <span class="n">y_exato</span> <span class="o">=</span> <span class="n">t_smooth</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">C</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">t_smooth</span><span class="p">)</span>
+    
+    <span class="c1"># Vamos destacar a curva onde C=0</span>
+    <span class="k">if</span> <span class="n">C</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_smooth</span><span class="p">,</span> <span class="n">y_exato</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;C = 0 (Linha Reta)&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_smooth</span><span class="p">,</span> <span class="n">y_exato</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;C = </span><span class="si">{</span><span class="n">C</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Família de Soluções Analíticas sobre o Campo de Direções&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Tempo (t)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;y(t)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="c1"># Travando os limites para não deformar o gráfico com exponenciais explodindo</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="c1"># Aspect ratio 1:1 e legenda</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/abc2599a2524cb9370f3e5ab8e228740ef5e0824ad11cd4ced981f5fe4d20857.png" src="../_images/abc2599a2524cb9370f3e5ab8e228740ef5e0824ad11cd4ced981f5fe4d20857.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="o-metodo-de-euler-seguindo-o-fluxo-passo-a-passo">
+<h2>O Método de Euler: Seguindo o fluxo passo a passo<a class="headerlink" href="#o-metodo-de-euler-seguindo-o-fluxo-passo-a-passo" title="Permalink to this heading">#</a></h2>
+<p>E se não soubermos integrar a equação? (Na prática da engenharia, isso acontece muito!).
+Podemos usar a própria geometria do campo de direções para «desenhar» a solução aproximada. Essa é a base do <strong>Método de Euler</strong>, o método numérico mais fundamental para resolver EDs.</p>
+<p>A lógica é a seguinte:</p>
+<ol class="arabic simple">
+<li><p>Você está no ponto inicial <span class="math notranslate nohighlight">\((t_0, y_0)\)</span>.</p></li>
+<li><p>Você calcula a inclinação neste ponto: <span class="math notranslate nohighlight">\(y' = f(t_0, y_0)\)</span>.</p></li>
+<li><p>Você caminha em linha reta nessa direção por um pequeno passo de tempo <span class="math notranslate nohighlight">\(h\)</span>.</p></li>
+<li><p>Chegando no novo ponto <span class="math notranslate nohighlight">\((t_1, y_1)\)</span>, você olha novamente a «bússola» da ED, calcula a nova inclinação e repete o processo.</p></li>
+</ol>
+<p>Matematicamente, a atualização a cada passo é:
+$<span class="math notranslate nohighlight">\(t_{n+1} = t_n + h\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(y_{n+1} = y_n + h \cdot f(t_n, y_n)\)</span>$</p>
+<p>Vamos implementar isso e ver como a aproximação numérica caminha sobre o nosso campo de direções!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Implementação do Método de Euler</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">euler_method</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">n_steps</span><span class="p">):</span>
+    <span class="n">t_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_steps</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">y_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_steps</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    
+    <span class="n">t_vals</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">t0</span>
+    <span class="n">y_vals</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">y0</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_steps</span><span class="p">):</span>
+        <span class="c1"># Calcula a inclinação atual</span>
+        <span class="n">slope</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">t_vals</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">y_vals</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        
+        <span class="c1"># Dá o passo de tamanho h</span>
+        <span class="n">t_vals</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">t_vals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">h</span>
+        <span class="n">y_vals</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_vals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">h</span> <span class="o">*</span> <span class="n">slope</span>
+        
+    <span class="k">return</span> <span class="n">t_vals</span><span class="p">,</span> <span class="n">y_vals</span>
+
+<span class="c1"># Vamos simular começando em y(0) = 1, com passo h=0.2</span>
+<span class="n">t0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.75</span>
+<span class="n">h</span> <span class="o">=</span> <span class="mf">0.2</span>
+<span class="n">n_steps</span> <span class="o">=</span> <span class="mi">15</span>
+
+<span class="n">t_euler</span><span class="p">,</span> <span class="n">y_euler</span> <span class="o">=</span> <span class="n">euler_method</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">n_steps</span><span class="p">)</span>
+
+<span class="c1"># Redesenhando o campo e colocando a solução do Euler por cima</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span> <span class="c1"># Deixamos mais quadrada para uma visualização geométrica ideal</span>
+
+<span class="c1"># CORREÇÃO: angles=&#39;xy&#39; garante que a seta siga os dados, e scale_units ajusta o tamanho</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">dT_norm</span><span class="p">,</span> <span class="n">dY_norm</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">pivot</span><span class="o">=</span><span class="s1">&#39;mid&#39;</span><span class="p">,</span> 
+           <span class="n">angles</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale_units</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># Plotando os passos do método de Euler</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_euler</span><span class="p">,</span> <span class="n">y_euler</span><span class="p">,</span> <span class="s1">&#39;ro-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Euler (h=</span><span class="si">{</span><span class="n">h</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="s1">&#39;go&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Condição Inicial&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span> <span class="c1"># Ponto inicial verde</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Método de Euler acompanhando o Campo de Direções&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Tempo (t)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;y(t)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># CORREÇÃO 2 (Opcional, mas muito didática): Força os eixos a terem a mesma escala visual</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/6f8bdf80a91d8dc081d8e21211d25ff4140009f8ad197e49a40290386ce35e81.png" src="../_images/6f8bdf80a91d8dc081d8e21211d25ff4140009f8ad197e49a40290386ce35e81.png" />
+</div>
+</div>
+<p>Observe como os pontos vermelhos seguem fielmente a direção apontada pelas setas do campo!</p>
+<p>É claro que, como andamos em linha reta a cada passo, o Método de Euler comete um pequeno erro ao longo do caminho, pois a solução real é uma curva suave, não uma sequência de retas. Se o passo <span class="math notranslate nohighlight">\(h\)</span> for grande demais, podemos «desgarrar» muito da curva real. Para melhorar a precisão, basta dar passos mais curtos (diminuir <span class="math notranslate nohighlight">\(h\)</span>) ou usar métodos numéricos mais sofisticados, como os métodos de Runge-Kutta, que veremos futuramente na sua formação computacional.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -445,7 +668,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">Por que Equações Diferenciais?</p>
+        <p class="prev-next-title">Por que equações diferenciais?</p>
       </div>
     </a>
     <a class="right-next"
@@ -463,6 +686,27 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i>  
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-derivada-como-inclinacao">A Derivada como Inclinação</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-familia-de-solucoes-e-a-condicao-inicial">A Família de Soluções e a Condição Inicial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duas-formas-de-resolver-o-problema-analitica-vs-numerica">Duas formas de resolver o problema: Analítica vs. Numérica</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verificando-a-solucao-a-mao">Verificando a solução à mão</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-metodo-de-euler-seguindo-o-fluxo-passo-a-passo">O Método de Euler: Seguindo o fluxo passo a passo</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>O que é uma Equação Diferencial? &#8212; Equações Diferenciais A</title>
+    <title>O que são equações diferenciais? &#8212; Equações Diferenciais A</title>
   
   
   
@@ -65,10 +65,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro/oquee';</script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
-    <link rel="next" title="A equação \(y&#39;=ay\)" href="fund1.html" />
+    <link rel="next" title="A equação diferencial fundamental \(y&#39; = ky\)" href="fund1.html" />
     <link rel="prev" title="Equações Diferenciais" href="../home.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="pt"/>
@@ -170,10 +172,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introdução às EDs</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">O que é uma Equação Diferencial?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fund1.html">A equação <span class="math notranslate nohighlight">\(y'=ay\)</span></a></li>
-<li class="toctree-l1"><a class="reference internal" href="porque.html">Por que Equações Diferenciais?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="direcoes.html">Campos de direções e Método de Euler</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">O que são equações diferenciais?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fund1.html">A equação diferencial fundamental <span class="math notranslate nohighlight">\(y' = ky\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="porque.html">Por que equações diferenciais?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="direcoes.html">Campos de Direções e o Método de Euler</a></li>
 <li class="toctree-l1"><a class="reference internal" href="solucoes.html">Soluções de uma EDO</a></li>
 <li class="toctree-l1"><a class="reference internal" href="classificacao.html">Classificação de EDs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modelagem.html">Modelagem</a></li>
@@ -379,7 +381,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -390,11 +394,20 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>O que é uma Equação Diferencial?</h1>
+    <h1>O que são equações diferenciais?</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2>   </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voce-ja-resolveu-equacoes-diferenciais-sem-saber">Você já resolveu equações diferenciais (sem saber)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-vem-a-seguir">O que vem a seguir</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -404,9 +417,82 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="o-que-e-uma-equacao-diferencial">
-<h1>O que é uma Equação Diferencial?<a class="headerlink" href="#o-que-e-uma-equacao-diferencial" title="Permalink to this heading">#</a></h1>
-<p><em>Em construção</em></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="o-que-sao-equacoes-diferenciais">
+<h1>O que são equações diferenciais?<a class="headerlink" href="#o-que-sao-equacoes-diferenciais" title="Permalink to this heading">#</a></h1>
+<p>Ao longo da sua vida escolar, você resolveu inúmeras equações. Numa equação como</p>
+<div class="math notranslate nohighlight">
+\[
+x^2 - 5x + 6 = 0,
+\]</div>
+<p>a incógnita <span class="math notranslate nohighlight">\(x\)</span> é um <strong>número</strong>: queremos descobrir qual valor (ou valores) de <span class="math notranslate nohighlight">\(x\)</span> tornam a igualdade verdadeira. Aqui, <span class="math notranslate nohighlight">\(x=2\)</span> e <span class="math notranslate nohighlight">\(x=3\)</span> resolvem a equação.</p>
+<p>Uma <strong>equação diferencial</strong> é um tipo diferente de equação. Nela, a incógnita não é mais um número: é uma <strong>função</strong>. Queremos encontrar uma função <span class="math notranslate nohighlight">\(y(t)\)</span> que satisfaça uma equação envolvendo ela mesma e suas derivadas <span class="math notranslate nohighlight">\(y', y'', \dots\)</span> Por exemplo,</p>
+<div class="math notranslate nohighlight">
+\[
+y' = 2y
+\]</div>
+<p>é uma equação diferencial: buscamos uma função <span class="math notranslate nohighlight">\(y(t)\)</span> cuja derivada seja, em todo instante, igual ao dobro do valor da própria função.</p>
+<p>De modo geral, uma <strong>equação diferencial ordinária</strong> (EDO) é uma equação da forma</p>
+<div class="math notranslate nohighlight">
+\[
+F\big(t,\,y,\,y',\,y'',\,\dots,\,y^{(n)}\big) = 0,
+\]</div>
+<p>relacionando a variável independente <span class="math notranslate nohighlight">\(t\)</span>, a função desconhecida <span class="math notranslate nohighlight">\(y(t)\)</span> e suas derivadas. (O nome <em>ordinária</em> indica que <span class="math notranslate nohighlight">\(y\)</span> depende de uma única variável <span class="math notranslate nohighlight">\(t\)</span>; quando a incógnita depende de várias variáveis — como posição <em>e</em> tempo — obtemos uma <strong>equação diferencial parcial</strong>, com derivadas parciais. Veremos exemplos grandiosos na próxima aula.)</p>
+<section id="voce-ja-resolveu-equacoes-diferenciais-sem-saber">
+<h2>Você já resolveu equações diferenciais (sem saber)<a class="headerlink" href="#voce-ja-resolveu-equacoes-diferenciais-sem-saber" title="Permalink to this heading">#</a></h2>
+<p>Boa notícia: você já tem experiência com equações diferenciais desde o Cálculo 1! Toda vez que você calculou uma integral indefinida, você resolveu a equação diferencial mais simples que existe:</p>
+<div class="math notranslate nohighlight">
+\[
+y' = f(t).
+\]</div>
+<p>Encontrar uma primitiva de <span class="math notranslate nohighlight">\(f(t)\)</span> <em>é</em> resolver essa ED — a «incógnita» <span class="math notranslate nohighlight">\(y(t)\)</span> é justamente a família de primitivas de <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<p><strong>Exemplo 1.</strong> Resolva <span class="math notranslate nohighlight">\(y' = 2t\)</span>.</p>
+<p>Basta integrar os dois lados em relação a <span class="math notranslate nohighlight">\(t\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = \int 2t\,dt = t^2 + C,
+\]</div>
+<p>onde <span class="math notranslate nohighlight">\(C\)</span> é uma constante arbitrária — a <em>constante de integração</em>. Ou seja, a equação <span class="math notranslate nohighlight">\(y'=2t\)</span> não tem uma única solução, mas uma <strong>família de soluções</strong>, uma para cada valor de <span class="math notranslate nohighlight">\(C\)</span>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">C</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">C</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">t</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>  <span class="c1"># solução particular com y(0)=1</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Família de soluções de $y&#39; = 2t$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$t$&quot;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;$y$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/513192ffa6758f5a15c861dade6bf2c868e72832dc2a3bde5e1227c3cbce1cd5.png" src="../_images/513192ffa6758f5a15c861dade6bf2c868e72832dc2a3bde5e1227c3cbce1cd5.png" />
+</div>
+</div>
+<p>Cada valor de <span class="math notranslate nohighlight">\(C\)</span> desloca a parábola verticalmente, mas todas têm a mesma inclinação em cada instante <span class="math notranslate nohighlight">\(t\)</span> — afinal, todas satisfazem <span class="math notranslate nohighlight">\(y'=2t\)</span>. Se, além da equação, soubermos o valor de <span class="math notranslate nohighlight">\(y\)</span> em algum ponto — por exemplo, <span class="math notranslate nohighlight">\(y(0) = 1\)</span> (curva vermelha) — conseguimos determinar <span class="math notranslate nohighlight">\(C\)</span> e isolar <strong>uma única solução</strong>. Esse tipo de problema, uma ED acompanhada de uma condição extra, é chamado de <strong>problema de valor inicial</strong> (PVI), e vamos encontrá-lo o tempo todo neste curso.</p>
+<p><strong>Exemplo 2.</strong> Resolva <span class="math notranslate nohighlight">\(y'' = 6t\)</span>.</p>
+<p>Agora a incógnita aparece na segunda derivada. Integramos duas vezes:</p>
+<div class="math notranslate nohighlight">
+\[
+y'(t) = \int 6t\,dt = 3t^2 + C_1,
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+y(t) = \int (3t^2 + C_1)\,dt = t^3 + C_1 t + C_2.
+\]</div>
+<p>Note que, dessa vez, surgem <strong>duas</strong> constantes arbitrárias, <span class="math notranslate nohighlight">\(C_1\)</span> e <span class="math notranslate nohighlight">\(C_2\)</span> — uma para cada integração. Esse é um padrão geral: a solução geral de uma ED de ordem <span class="math notranslate nohighlight">\(n\)</span> costuma ter <span class="math notranslate nohighlight">\(n\)</span> constantes arbitrárias, e precisamos de <span class="math notranslate nohighlight">\(n\)</span> condições (por exemplo, <span class="math notranslate nohighlight">\(y(t_0)\)</span> e <span class="math notranslate nohighlight">\(y'(t_0)\)</span>) para determinar uma solução específica.</p>
+</section>
+<section id="o-que-vem-a-seguir">
+<h2>O que vem a seguir<a class="headerlink" href="#o-que-vem-a-seguir" title="Permalink to this heading">#</a></h2>
+<p>A seguir, vamos estudar a equação diferencial mais simples e mais importante de todas — tão importante que aparece em praticamente todo modelo de crescimento, decaimento e mudança:</p>
+<div class="math notranslate nohighlight">
+\[
+y' = ky.
+\]</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -453,7 +539,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">próximo</p>
-        <p class="prev-next-title">A equação <span class="math notranslate nohighlight">\(y'=ay\)</span></p>
+        <p class="prev-next-title">A equação diferencial fundamental <span class="math notranslate nohighlight">\(y' = ky\)</span></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -463,6 +549,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i>  
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voce-ja-resolveu-equacoes-diferenciais-sem-saber">Você já resolveu equações diferenciais (sem saber)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-vem-a-seguir">O que vem a seguir</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
