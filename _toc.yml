@@ -12,7 +12,6 @@ parts:
       - file: intro/classificacao.ipynb
       - file: intro/modelagem.ipynb
       - file: intro/fund2.ipynb
-      - file: intro/exerc.ipynb
 
   - caption: EDs de 1a Ordem
     chapters:
@@ -31,7 +30,6 @@ parts:
         - file: ord1/logistico2.ipynb
         - file: ord1/allee.ipynb
         - file: ord1/alleelogistico.ipynb
-      - file: ord1/exerc.ipynb
 
   - caption: EDs de 2a Ordem
     chapters:
@@ -60,7 +58,6 @@ parts:
         sections:
         - file: ordn/ci.ipynb
         - file: ordn/vp.ipynb
-      - file: ordn/exerc.ipynb
 
   - caption: Sistemas de EDs Lineares
     chapters:
@@ -74,8 +71,13 @@ parts:
         - file: sist/arr.ipynb
         - file: sist/teo.ipynb
       - file: sist/nh.ipynb
-      - file: sist/exerc.ipynb
   
+  - caption: Exercícios
+    chapters:
+      - file: exerc/exerc1.ipynb
+      - file: exerc/exerc2.ipynb
+
+
   - caption: Provas
     chapters:
       - file: provas/p1.ipynb

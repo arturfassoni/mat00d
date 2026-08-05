@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Soluções de uma EDO &#8212; Equações Diferenciais A</title>
+    <title>Soluções de uma ED &#8212; Equações Diferenciais A</title>
   
   
   
@@ -65,6 +65,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro/solucoes';</script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
@@ -174,18 +176,17 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="fund1.html">A equação diferencial fundamental <span class="math notranslate nohighlight">\(y' = ky\)</span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="porque.html">Por que equações diferenciais?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="direcoes.html">Campos de Direções e o Método de Euler</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Soluções de uma EDO</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Soluções de uma ED</a></li>
 <li class="toctree-l1"><a class="reference internal" href="classificacao.html">Classificação de EDs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modelagem.html">Modelagem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modelagem.html">Modelos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fund2.html">A equação <span class="math notranslate nohighlight">\(y'=ay+b\)</span></a></li>
-<li class="toctree-l1"><a class="reference internal" href="exerc.html">Exercícios</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de 1a Ordem</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ord1/lineares.html">Lineares</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ord1/modelos.html">Modelos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ord1/fund1.html">A equação <span class="math notranslate nohighlight">\(y^’=ay+b(t)\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ord1/fund2.html">A equação <span class="math notranslate nohighlight">\(y^’=a(t)y+b(t)\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ord1/fund1.html">A equação <span class="math notranslate nohighlight">\(y'=ay+b(t)\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ord1/fund2.html">A equação <span class="math notranslate nohighlight">\(y'=a(t)y+b(t)\)</span></a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ord1/separaveis.html">Separáveis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -200,7 +201,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../ord1/alleelogistico.html">Modelo</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../ord1/exerc.html">Exercícios</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de 2a Ordem</span></p>
 <ul class="nav bd-sidenav">
@@ -222,7 +222,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../ord2/vibf.html">Vibrações Forçadas</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../ord2/exerc.html">Exercícios</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de Ordem Superior</span></p>
 <ul class="nav bd-sidenav">
@@ -233,7 +232,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../ordn/vp.html">Variação dos Parâmetros</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../ordn/exerc.html">Exercícios</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Sistemas de EDs Lineares</span></p>
 <ul class="nav bd-sidenav">
@@ -248,7 +246,11 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../sist/nh.html">Não-Homogêneas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sist/exerc.html">Exercícios</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercícios</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../exerc/exerc1.html">Exercícios P1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exerc/exerc2.html">Exercícios P2</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Provas</span></p>
 <ul class="nav bd-sidenav">
@@ -379,7 +381,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -390,11 +394,33 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Soluções de uma EDO</h1>
+    <h1>Soluções de uma ED</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2>   </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verificando-se-uma-funcao-e-solucao">Verificando se uma função é solução</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-verificacao-simbolica-com-python">Bônus: verificação simbólica com Python</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#familia-de-solucoes-e-problemas-de-valor-inicial-pvi">Família de soluções e Problemas de Valor Inicial (PVI)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplos-de-solucoes-gerais-familias">Exemplos de soluções gerais (famílias)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplos-de-pvi-a-condicao-inicial-escolhe-a-curva">Exemplos de PVI: a condição inicial escolhe a curva</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#um-pvi-de-segunda-ordem-precisa-de-duas-condicoes">Um PVI de segunda ordem precisa de duas condições</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uma-edo-sempre-tem-solucao-existencia-e-unicidade">Uma EDO sempre tem solução? (Existência e Unicidade)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quando-a-unicidade-falha-um-exemplo-classico">Quando a unicidade falha: um exemplo clássico</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-vem-a-seguir">O que vem a seguir</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -404,9 +430,268 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="solucoes-de-uma-edo">
-<h1>Soluções de uma EDO<a class="headerlink" href="#solucoes-de-uma-edo" title="Permalink to this heading">#</a></h1>
-<p><em>Em construção</em></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="solucoes-de-uma-ed">
+<h1>Soluções de uma ED<a class="headerlink" href="#solucoes-de-uma-ed" title="Permalink to this heading">#</a></h1>
+<p>Nas últimas aulas, resolvemos algumas equações diferenciais — por integração direta (<span class="math notranslate nohighlight">\(y'=2t\)</span>), por separação de variáveis (<span class="math notranslate nohighlight">\(y'=ky\)</span>) — e vimos, através do campo de direções, como as soluções se comportam como um rio que carrega um barquinho. Mas o que significa, exatamente, dizer que uma função <strong>é solução</strong> de uma equação diferencial?</p>
+<p><strong>Definição.</strong> Uma função <span class="math notranslate nohighlight">\(y=\varphi(t)\)</span>, definida e derivável (o quanto for necessário) em um intervalo <span class="math notranslate nohighlight">\(I\)</span>, é uma <strong>solução</strong> da equação diferencial</p>
+<div class="math notranslate nohighlight">
+\[
+F\big(t,\,y,\,y',\,\dots,\,y^{(n)}\big) = 0
+\]</div>
+<p>em <span class="math notranslate nohighlight">\(I\)</span> se, ao substituirmos <span class="math notranslate nohighlight">\(y\)</span> por <span class="math notranslate nohighlight">\(\varphi(t)\)</span> e cada derivada pela derivada correspondente de <span class="math notranslate nohighlight">\(\varphi\)</span>, a igualdade é satisfeita <strong>para todo</strong> <span class="math notranslate nohighlight">\(t \in I\)</span>.</p>
+<p>Em outras palavras: verificar se uma função é solução é, no fundo, um exercício de Cálculo — calcular derivadas e substituir de volta na equação. Nada de mágica.</p>
+<section id="verificando-se-uma-funcao-e-solucao">
+<h2>Verificando se uma função é solução<a class="headerlink" href="#verificando-se-uma-funcao-e-solucao" title="Permalink to this heading">#</a></h2>
+<p><strong>Exemplo 1.</strong> Verifique se <span class="math notranslate nohighlight">\(y = e^{3t}\)</span> é solução de</p>
+<div class="math notranslate nohighlight">
+\[
+y' - 3y = 0.
+\]</div>
+<p>Calculamos <span class="math notranslate nohighlight">\(y' = 3e^{3t}\)</span> e substituímos:</p>
+<div class="math notranslate nohighlight">
+\[
+y' - 3y = 3e^{3t} - 3e^{3t} = 0. \quad\checkmark
+\]</div>
+<p>A igualdade vale para todo <span class="math notranslate nohighlight">\(t\)</span>, logo <span class="math notranslate nohighlight">\(y=e^{3t}\)</span> é, de fato, solução.</p>
+<p><strong>Exemplo 2 (cuidado com «parecer certo»).</strong> A função <span class="math notranslate nohighlight">\(y=e^{2t}\)</span> <strong>não</strong> é solução dessa mesma equação:</p>
+<div class="math notranslate nohighlight">
+\[
+y' - 3y = 2e^{2t} - 3e^{2t} = -e^{2t} \neq 0.
+\]</div>
+<p>A lição: ter «a cara» de uma solução não basta — é preciso <em>sempre</em> verificar substituindo de volta na equação original.</p>
+<p><strong>Exemplo 3 (segunda ordem).</strong> Verifique se <span class="math notranslate nohighlight">\(y = \cos t + \text{sen}\,t\)</span> é solução de</p>
+<div class="math notranslate nohighlight">
+\[
+y'' + y = 0.
+\]</div>
+<p>Temos <span class="math notranslate nohighlight">\(y' = -\text{sen}\,t + \cos t\)</span> e <span class="math notranslate nohighlight">\(y'' = -\cos t - \text{sen}\,t\)</span>. Substituindo:</p>
+<div class="math notranslate nohighlight">
+\[
+y'' + y = (-\cos t - \text{sen}\,t) + (\cos t + \text{sen}\,t) = 0. \quad\checkmark
+\]</div>
+<section id="bonus-verificacao-simbolica-com-python">
+<h3>Bônus: verificação simbólica com Python<a class="headerlink" href="#bonus-verificacao-simbolica-com-python" title="Permalink to this heading">#</a></h3>
+<p>Pacotes de matemática simbólica, como o <code class="docutils literal notranslate"><span class="pre">sympy</span></code>, conseguem fazer essa verificação automaticamente — uma boa forma de conferir suas contas na mão:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+<span class="n">resultado</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">y</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y&#39;&#39; + y =&quot;</span><span class="p">,</span> <span class="n">sp</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">resultado</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">t</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">y</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sympy&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="familia-de-solucoes-e-problemas-de-valor-inicial-pvi">
+<h2>Família de soluções e Problemas de Valor Inicial (PVI)<a class="headerlink" href="#familia-de-solucoes-e-problemas-de-valor-inicial-pvi" title="Permalink to this heading">#</a></h2>
+<p>Repare no padrão dos exemplos das aulas passadas: a equação <span class="math notranslate nohighlight">\(y'=2t\)</span> tinha solução geral <span class="math notranslate nohighlight">\(y=t^2+C\)</span>; a equação <span class="math notranslate nohighlight">\(y'=ky\)</span> tinha solução geral <span class="math notranslate nohighlight">\(y=Ae^{kt}\)</span>. Em ambos os casos apareceu <strong>uma constante arbitrária</strong> — e não por acaso.</p>
+<p><strong>Resultado (informal).</strong> A solução geral de uma equação diferencial de ordem <span class="math notranslate nohighlight">\(n\)</span> costuma depender de <span class="math notranslate nohighlight">\(n\)</span> constantes arbitrárias <span class="math notranslate nohighlight">\(C_1, \dots, C_n\)</span>. Cada escolha dessas constantes fornece uma <strong>solução particular</strong>; o conjunto de todas as escolhas possíveis forma a <strong>família de soluções</strong> (ou <em>solução geral</em>) da equação.</p>
+<p>Como no Cálculo 1, para escolher uma solução específica dentro da família precisamos de informação extra: os valores de <span class="math notranslate nohighlight">\(y\)</span> (e de suas derivadas, se a ordem for maior que 1) em algum ponto <span class="math notranslate nohighlight">\(t_0\)</span>. Uma equação diferencial acompanhada dessas condições é chamada de <strong>Problema de Valor Inicial (PVI)</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+&amp;\text{EDO de ordem } n,\\
+&amp;y(t_0) = y_0,\quad y'(t_0)=y_1,\quad \dots,\quad y^{(n-1)}(t_0) = y_{n-1}.
+\end{aligned}
+\end{split}\]</div>
+<p>Resolver um PVI significa: achar a solução geral (a família) e, depois, usar as <span class="math notranslate nohighlight">\(n\)</span> condições iniciais para determinar as <span class="math notranslate nohighlight">\(n\)</span> constantes — isolando exatamente <strong>uma</strong> curva dentro da família.</p>
+</section>
+<section id="exemplos-de-solucoes-gerais-familias">
+<h2>Exemplos de soluções gerais (famílias)<a class="headerlink" href="#exemplos-de-solucoes-gerais-familias" title="Permalink to this heading">#</a></h2>
+<p><strong>Exemplo 4.</strong> Mostre que <span class="math notranslate nohighlight">\(y = Ce^{-2t}\)</span> é solução de</p>
+<div class="math notranslate nohighlight">
+\[
+y' + 2y = 0
+\]</div>
+<p>para <strong>qualquer</strong> valor da constante <span class="math notranslate nohighlight">\(C\)</span>.</p>
+<p>Calculamos <span class="math notranslate nohighlight">\(y' = -2Ce^{-2t}\)</span> e substituímos:</p>
+<div class="math notranslate nohighlight">
+\[
+y' + 2y = -2Ce^{-2t} + 2Ce^{-2t} = 0, \qquad \text{para todo } C.
+\]</div>
+<p>Como a igualdade vale independentemente do valor de <span class="math notranslate nohighlight">\(C\)</span>, toda a família <span class="math notranslate nohighlight">\(y=Ce^{-2t}\)</span> é solução — não uma curva isolada, mas infinitas, uma para cada <span class="math notranslate nohighlight">\(C\)</span>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">C</span> <span class="ow">in</span> <span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">C</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">t</span><span class="p">),</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;0.5&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Família de soluções de $y&#39; + 2y = 0$: $y(t)=Ce^{-2t}$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$t$&quot;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;$y$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/5bd0b1f7a787f5cb3f369dbcd1df2455d88b5a6a08e9eba07dcbe8a3e6440106.png" src="../_images/5bd0b1f7a787f5cb3f369dbcd1df2455d88b5a6a08e9eba07dcbe8a3e6440106.png" />
+</div>
+</div>
+</section>
+<section id="exemplos-de-pvi-a-condicao-inicial-escolhe-a-curva">
+<h2>Exemplos de PVI: a condição inicial escolhe a curva<a class="headerlink" href="#exemplos-de-pvi-a-condicao-inicial-escolhe-a-curva" title="Permalink to this heading">#</a></h2>
+<p><strong>Exemplo 5.</strong> Resolva o PVI</p>
+<div class="math notranslate nohighlight">
+\[
+y' + 2y = 0, \qquad y(0) = 5.
+\]</div>
+<p>Já sabemos, do Exemplo 4, que a solução geral é <span class="math notranslate nohighlight">\(y(t) = Ce^{-2t}\)</span>. Usamos a condição inicial para achar <span class="math notranslate nohighlight">\(C\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+y(0) = Ce^{0} = C = 5.
+\]</div>
+<p>Logo, a solução do PVI é</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = 5e^{-2t}.
+\]</div>
+<p>Entre todas as curvas azuis da família, a condição inicial «escolheu» exatamente uma:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">C</span> <span class="ow">in</span> <span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">C</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">t</span><span class="p">),</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.35</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">t</span><span class="p">),</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$y(0)=5$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;0.5&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;PVI: $y&#39;+2y=0,\ y(0)=5$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$t$&quot;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;$y$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/64523f439a1a2443bc3a2f11d7bc8bc3515d96861c9e9ce79dadfd1116c9ace8.png" src="../_images/64523f439a1a2443bc3a2f11d7bc8bc3515d96861c9e9ce79dadfd1116c9ace8.png" />
+</div>
+</div>
+<section id="um-pvi-de-segunda-ordem-precisa-de-duas-condicoes">
+<h3>Um PVI de segunda ordem precisa de duas condições<a class="headerlink" href="#um-pvi-de-segunda-ordem-precisa-de-duas-condicoes" title="Permalink to this heading">#</a></h3>
+<p><strong>Exemplo 6.</strong> A equação</p>
+<div class="math notranslate nohighlight">
+\[
+y'' - y = 0
+\]</div>
+<p>tem solução geral <span class="math notranslate nohighlight">\(y(t) = C_1 e^{t} + C_2 e^{-t}\)</span> (verifique por substituição — é um bom exercício!). Como é uma equação de <strong>segunda</strong> ordem, um PVI para ela precisa de <strong>duas</strong> condições, por exemplo <span class="math notranslate nohighlight">\(y(0)\)</span> e <span class="math notranslate nohighlight">\(y'(0)\)</span>. Considere</p>
+<div class="math notranslate nohighlight">
+\[
+y(0) = 1, \qquad y'(0) = 0.
+\]</div>
+<p>Da solução geral, <span class="math notranslate nohighlight">\(y'(t) = C_1 e^t - C_2 e^{-t}\)</span>. Substituindo <span class="math notranslate nohighlight">\(t=0\)</span> nas duas expressões:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+y(0) &amp;= C_1 + C_2 = 1,\\
+y'(0) &amp;= C_1 - C_2 = 0.
+\end{aligned}
+\end{split}\]</div>
+<p>Resolvendo esse sistema linear (some as duas equações): <span class="math notranslate nohighlight">\(C_1 = C_2 = \tfrac12\)</span>. Logo,</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = \frac{e^{t}+e^{-t}}{2}.
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">t</span><span class="p">),</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span>
+         <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$y(t) = \frac{e^t+e^{-t}}</span><span class="si">{2}</span><span class="s2">$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;PVI: $y&#39;&#39;-y=0,\ y(0)=1,\ y&#39;(0)=0$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$t$&quot;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;$y$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/4e2deb51da1ed46aae12cffdf4fff2e2341610a49377edb89925256e4668cdc7.png" src="../_images/4e2deb51da1ed46aae12cffdf4fff2e2341610a49377edb89925256e4668cdc7.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="uma-edo-sempre-tem-solucao-existencia-e-unicidade">
+<h2>Uma EDO sempre tem solução? (Existência e Unicidade)<a class="headerlink" href="#uma-edo-sempre-tem-solucao-existencia-e-unicidade" title="Permalink to this heading">#</a></h2>
+<p>Em todos os exemplos acima, começamos supondo que a equação <em>tinha</em> solução e fomos atrás dela. Mas ficam duas perguntas naturais:</p>
+<ol class="arabic simple">
+<li><p>Será que <strong>sempre existe</strong> alguma solução?</p></li>
+<li><p>Se existe, ela é a <strong>única</strong> possível?</p></li>
+</ol>
+<p>A resposta tem uma bela intuição geométrica, ligada ao campo de direções que vimos na aula passada: se, em cada ponto <span class="math notranslate nohighlight">\((t,y)\)</span>, o campo indica uma direção bem definida, que varia suavemente de um ponto para o outro, é razoável esperar que — soltando um barquinho em qualquer ponto — exista um único caminho que ele possa seguir, sem bifurcações nem buracos no meio do rio.</p>
+<p><strong>Resultado (Existência e Unicidade, versão informal).</strong> Considere o PVI</p>
+<div class="math notranslate nohighlight">
+\[
+y' = f(t,y), \qquad y(t_0) = y_0.
+\]</div>
+<p>Se <span class="math notranslate nohighlight">\(f(t,y)\)</span> e <span class="math notranslate nohighlight">\(\dfrac{\partial f}{\partial y}(t,y)\)</span> forem funções <strong>contínuas</strong> em uma região ao redor do ponto <span class="math notranslate nohighlight">\((t_0, y_0)\)</span>, então o PVI possui <strong>exatamente uma solução</strong>, definida ao menos em algum intervalo em torno de <span class="math notranslate nohighlight">\(t_0\)</span>.</p>
+<p>Intuitivamente: a continuidade de <span class="math notranslate nohighlight">\(f\)</span> garante que o campo de direções não tem «saltos» — logo existe uma curva seguindo o fluxo (<strong>existência</strong>). Já a continuidade de <span class="math notranslate nohighlight">\(\partial f/\partial y\)</span> garante que curvas vizinhas não se cruzam nem se fundem (<strong>unicidade</strong>).</p>
+<p>A boa notícia: praticamente todas as equações que vamos estudar neste curso — lineares, separáveis, autônomas — satisfazem essas condições sem esforço. Por isso podemos confiar nas técnicas que aprenderemos: elas encontram <em>a</em> solução, não <em>uma entre várias</em>.</p>
+<section id="quando-a-unicidade-falha-um-exemplo-classico">
+<h3>Quando a unicidade falha: um exemplo clássico<a class="headerlink" href="#quando-a-unicidade-falha-um-exemplo-classico" title="Permalink to this heading">#</a></h3>
+<p>E se as hipóteses do resultado não valerem? Considere o PVI</p>
+<div class="math notranslate nohighlight">
+\[
+y' = y^{1/3}, \qquad y(0) = 0.
+\]</div>
+<p>Aqui <span class="math notranslate nohighlight">\(f(t,y) = y^{1/3}\)</span> é contínua em toda parte — mas</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial f}{\partial y} = \frac{1}{3}y^{-2/3}
+\]</div>
+<p><strong>explode</strong> (não é contínua) exatamente em <span class="math notranslate nohighlight">\(y=0\)</span> — o próprio ponto inicial! As hipóteses do resultado acima falham ali.</p>
+<p>E, de fato, esse PVI tem <strong>mais de uma solução</strong>. Além da solução óbvia <span class="math notranslate nohighlight">\(y(t)\equiv 0\)</span>, a função</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = \left(\frac{2t}{3}\right)^{3/2}, \qquad t \geq 0,
+\]</div>
+<p>também satisfaz a equação e a mesma condição inicial (verifique — é um bom exercício!). Geometricamente, o «rio» do campo de direções se bifurca exatamente no ponto de partida, e o barquinho pode escolher qualquer um dos dois caminhos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">t</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">**</span><span class="mf">1.5</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$y(t)=0$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$y(t)=(2t/3)^{3/2}$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;go&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Mesma condição inicial $y(0)=0$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Falha de unicidade: $y&#39; = y^{1/3},\ y(0)=0$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$t$&quot;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;$y$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/a6b4dac3319ece6a0cd72403d95865963ea0d1c5a954b93563a6700112561c28.png" src="../_images/a6b4dac3319ece6a0cd72403d95865963ea0d1c5a954b93563a6700112561c28.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="o-que-vem-a-seguir">
+<h2>O que vem a seguir<a class="headerlink" href="#o-que-vem-a-seguir" title="Permalink to this heading">#</a></h2>
+<p>A partir de agora, sempre que resolvermos uma EDO, faremos duas coisas: encontrar a solução (geral, ou de um PVI) e ter em mente que — para as equações «bem-comportadas» que veremos ao longo do curso — essa solução é a única possível.</p>
+<p>Na próxima seção, vamos organizar melhor o «zoológico» das equações diferenciais: como classificá-las por ordem, linearidade e outros critérios, o que vai nos ajudar a escolher a técnica certa para cada uma.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -463,6 +748,35 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i>  
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verificando-se-uma-funcao-e-solucao">Verificando se uma função é solução</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-verificacao-simbolica-com-python">Bônus: verificação simbólica com Python</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#familia-de-solucoes-e-problemas-de-valor-inicial-pvi">Família de soluções e Problemas de Valor Inicial (PVI)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplos-de-solucoes-gerais-familias">Exemplos de soluções gerais (famílias)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplos-de-pvi-a-condicao-inicial-escolhe-a-curva">Exemplos de PVI: a condição inicial escolhe a curva</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#um-pvi-de-segunda-ordem-precisa-de-duas-condicoes">Um PVI de segunda ordem precisa de duas condições</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uma-edo-sempre-tem-solucao-existencia-e-unicidade">Uma EDO sempre tem solução? (Existência e Unicidade)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quando-a-unicidade-falha-um-exemplo-classico">Quando a unicidade falha: um exemplo clássico</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-vem-a-seguir">O que vem a seguir</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
