@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Lineares &#8212; Equações Diferenciais A</title>
+    <title>Equações Lineares e o Fator Integrante &#8212; Equações Diferenciais A</title>
   
   
   
@@ -65,11 +65,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ord1/lineares';</script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
-    <link rel="next" title="Modelos" href="modelos.html" />
-    <link rel="prev" title="A equação \(y&#39;=ay+b\)" href="fund0.html" />
+    <link rel="next" title="Separáveis" href="separaveis.html" />
+    <link rel="prev" title="Modelagem com EDOs de 1ª Ordem" href="modelagem.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="pt"/>
   </head>
@@ -179,26 +181,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de 1a Ordem</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="modelagem.html">Modelos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fund0.html">A equação <span class="math notranslate nohighlight">\(y'=ay+b\)</span></a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Lineares</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="modelos.html">Modelos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fund1.html">A equação <span class="math notranslate nohighlight">\(y'=ay+b(t)\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="fund2.html">A equação <span class="math notranslate nohighlight">\(y'=a(t)y+b(t)\)</span></a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="separaveis.html">Separáveis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="queda.html">Queda Livre com Resistência do Ar Quadrática</a></li>
-<li class="toctree-l2"><a class="reference internal" href="escape.html">Velocidade de Escape</a></li>
-<li class="toctree-l2"><a class="reference internal" href="logistico.html">Modelo Logístico</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="autonomas.html">Autônomas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="logistico2.html">Modelo Logístico</a></li>
-<li class="toctree-l2"><a class="reference internal" href="allee.html">Crescimento Exponencial com Limiar Crítico</a></li>
-<li class="toctree-l2"><a class="reference internal" href="alleelogistico.html">Modelo</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="modelagem.html">Modelagem com EDOs de 1ª Ordem</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Equações Lineares e o Fator Integrante</a></li>
+<li class="toctree-l1"><a class="reference internal" href="separaveis.html">Separáveis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autonomas.html">Autônomas</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de 2a Ordem</span></p>
 <ul class="nav bd-sidenav">
@@ -379,7 +365,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -390,11 +378,38 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Lineares</h1>
+    <h1>Equações Lineares e o Fator Integrante</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2>   </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivacao-produtos-quimicos-em-uma-lagoa">1. Motivação: Produtos Químicos em uma Lagoa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-forma-geral-das-equacoes-lineares">2. A Forma Geral das Equações Lineares</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resolvendo-casos-simples-um-truque-elegante">3. Resolvendo Casos Simples: Um Truque Elegante</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-simples-1">Exemplo Simples 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-simples-2">Exemplo Simples 2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-metodo-do-fator-integrante-a-regra-geral">4. O Método do Fator Integrante (A Regra Geral)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resumo-do-metodo">Resumo do Método:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#retornando-ao-problema-da-lagoa">5. Retornando ao Problema da Lagoa</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-a-matematica-esta-nos-dizendo">O que a Matemática está nos dizendo?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplos-de-fixacao">6. Exemplos de Fixação</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-3">Exemplo 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-4">Exemplo 4</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -404,11 +419,199 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="lineares">
-<h1>Lineares<a class="headerlink" href="#lineares" title="Permalink to this heading">#</a></h1>
-<p><em>Em construção</em></p>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="equacoes-lineares-e-o-fator-integrante">
+<h1>Equações Lineares e o Fator Integrante<a class="headerlink" href="#equacoes-lineares-e-o-fator-integrante" title="Permalink to this heading">#</a></h1>
+<p>Na aula anterior, vimos como a equação <span class="math notranslate nohighlight">\(y' = ay + b\)</span> modelava uma série de fenômenos assumindo que as taxas <span class="math notranslate nohighlight">\(a\)</span> e <span class="math notranslate nohighlight">\(b\)</span> eram <em>constantes</em>. Mas o que acontece quando o ambiente muda ao longo do tempo?</p>
+<section id="motivacao-produtos-quimicos-em-uma-lagoa">
+<h2>1. Motivação: Produtos Químicos em uma Lagoa<a class="headerlink" href="#motivacao-produtos-quimicos-em-uma-lagoa" title="Permalink to this heading">#</a></h2>
+<p>Considere uma lagoa que contém, inicialmente, 10 milhões de galões de água fresca. Uma indústria vizinha começa a despejar água contendo um produto químico indesejável a uma taxa de 5 milhões de galões por ano, e a mistura sai da lagoa em direção ao mar na mesma taxa (mantendo o volume da lagoa constante).</p>
+<p>No entanto, a indústria não funciona da mesma forma o ano todo. A concentração do produto químico na água que entra varia sazonalmente (periodicamente) com o tempo <span class="math notranslate nohighlight">\(t\)</span> (em anos), dada pela expressão <span class="math notranslate nohighlight">\(2 + \sin(2t)\)</span> gramas por galão.</p>
+<p>Se <span class="math notranslate nohighlight">\(Q(t)\)</span> for a quantidade (em gramas) do produto químico na lagoa, a taxa de variação é:
+$<span class="math notranslate nohighlight">\(\frac{dQ}{dt} = (\text{taxa de entrada}) - (\text{taxa de saída})\)</span>$</p>
+<ul class="simple">
+<li><p><strong>Taxa de entrada:</strong> <span class="math notranslate nohighlight">\((5 \times 10^6 \text{ gal/ano}) \times (2 + \sin(2t) \text{ g/gal})\)</span></p></li>
+<li><p><strong>Taxa de saída:</strong> <span class="math notranslate nohighlight">\((5 \times 10^6 \text{ gal/ano}) \times \left(\frac{Q(t)}{10^7} \text{ g/gal}\right) = \frac{Q(t)}{2} \text{ g/ano}\)</span></p></li>
+</ul>
+<p>Para simplificar os números imensos, vamos medir a poluição em «toneladas» (megagramas), fazendo <span class="math notranslate nohighlight">\(q(t) = Q(t)/10^6\)</span>. Se dividirmos tudo por <span class="math notranslate nohighlight">\(10^6\)</span>, chegamos à nossa Equação Diferencial:</p>
+<div class="math notranslate nohighlight">
+\[\frac{dq}{dt} = 5(2 + \sin(2t)) - \frac{1}{2}q\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{dq}{dt} + \frac{1}{2}q = 10 + 5\sin(2t)\]</div>
+<p>Tente resolver esta equação por separação de variáveis e você logo perceberá um problema: <strong>não conseguimos isolar <span class="math notranslate nohighlight">\(q\)</span> de um lado e <span class="math notranslate nohighlight">\(t\)</span> do outro.</strong> Precisamos de um novo método matemático para lidar com essa situação.</p>
+</section>
+<section id="a-forma-geral-das-equacoes-lineares">
+<h2>2. A Forma Geral das Equações Lineares<a class="headerlink" href="#a-forma-geral-das-equacoes-lineares" title="Permalink to this heading">#</a></h2>
+<p>O modelo da lagoa é um exemplo clássico de uma <strong>Equação Diferencial Linear de 1ª Ordem Não Autônoma</strong>. A forma-padrão geral de escrever qualquer equação dessa família é:</p>
+<div class="math notranslate nohighlight">
+\[\frac{dy}{dt} + p(t)y = g(t)\]</div>
+<p>Onde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(p(t)\)</span> é uma função que multiplica a variável dependente <span class="math notranslate nohighlight">\(y\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(g(t)\)</span> é o termo forçante (ou fonte) do lado direito.</p></li>
+</ul>
+<p>Se <span class="math notranslate nohighlight">\(g(t)\)</span> fosse zero, a equação seria «homogênea» e facilmente separável. O desafio aqui é lidar com o termo <span class="math notranslate nohighlight">\(g(t)\)</span> sem destruir a relação da derivada.</p>
+<p>Antes de resolvermos a lagoa, vamos ver como um «truque» matemático resolve equações muito parecidas com ela.</p>
+</section>
+<section id="resolvendo-casos-simples-um-truque-elegante">
+<h2>3. Resolvendo Casos Simples: Um Truque Elegante<a class="headerlink" href="#resolvendo-casos-simples-um-truque-elegante" title="Permalink to this heading">#</a></h2>
+<p>A ideia principal para resolver essas equações vem do Cálculo 1: <strong>a Regra do Produto</strong>. Lembre-se que</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dt}[u \cdot y] = u y' + u' y\]</div>
+<p>O truque consiste em multiplicar a equação inteira por uma função «mágica» que transforma o lado esquerdo em uma derivada de produto exata.</p>
+<p>Veja dois exemplos.</p>
+<section id="exemplo-simples-1">
+<h3>Exemplo Simples 1<a class="headerlink" href="#exemplo-simples-1" title="Permalink to this heading">#</a></h3>
+<p>Considere a equação:
+$<span class="math notranslate nohighlight">\(\frac{dy}{dt} + \frac{1}{2}y = \frac{1}{2}e^{t/3}\)</span>$</p>
+<p>Se, «do nada», decidirmos multiplicar todos os termos por <span class="math notranslate nohighlight">\(e^{t/2}\)</span>, veja o que acontece:
+$<span class="math notranslate nohighlight">\(e^{t/2}\frac{dy}{dt} + \frac{1}{2}e^{t/2}y = \frac{1}{2}e^{5t/6}\)</span>$</p>
+<p>Perceba que o lado esquerdo é exatamente o resultado de derivar o produto <span class="math notranslate nohighlight">\((e^{t/2}y)\)</span>. Podemos reescrever a equação como:
+$<span class="math notranslate nohighlight">\(\frac{d}{dt} \left( e^{t/2}y \right) = \frac{1}{2}e^{5t/6}\)</span>$</p>
+<p>Agora ficou fácil! Basta integrar os dois lados em relação a <span class="math notranslate nohighlight">\(t\)</span>:
+$<span class="math notranslate nohighlight">\(e^{t/2}y = \int \frac{1}{2}e^{5t/6} \, dt\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(e^{t/2}y = \frac{3}{5}e^{5t/6} + C\)</span>$</p>
+<p>Para isolar <span class="math notranslate nohighlight">\(y\)</span>, dividimos tudo por <span class="math notranslate nohighlight">\(e^{t/2}\)</span>:
+$<span class="math notranslate nohighlight">\(y(t) = \frac{3}{5}e^{t/3} + Ce^{-t/2}\)</span>$
+Pronto, resolvemos a EDO!</p>
+</section>
+<section id="exemplo-simples-2">
+<h3>Exemplo Simples 2<a class="headerlink" href="#exemplo-simples-2" title="Permalink to this heading">#</a></h3>
+<p>Considere o problema com <span class="math notranslate nohighlight">\(t &gt; 0\)</span>:
+$<span class="math notranslate nohighlight">\(t y' + 2y = 4t^2 \implies y' + \frac{2}{t}y = 4t\)</span>$</p>
+<p>Desta vez, a função mágica será <span class="math notranslate nohighlight">\(t^2\)</span>. Multiplicando toda a equação reescrita por <span class="math notranslate nohighlight">\(t^2\)</span>:
+$<span class="math notranslate nohighlight">\(t^2 y' + 2t y = 4t^3\)</span>$</p>
+<p>O lado esquerdo é exatamente a derivada do produto <span class="math notranslate nohighlight">\((t^2 y)\)</span>.
+$<span class="math notranslate nohighlight">\(\frac{d}{dt} \left( t^2 y \right) = 4t^3\)</span>$</p>
+<p>Integrando os dois lados:
+$<span class="math notranslate nohighlight">\(t^2 y = t^4 + C\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(y(t) = t^2 + \frac{C}{t^2}\)</span>$</p>
+</section>
+</section>
+<section id="o-metodo-do-fator-integrante-a-regra-geral">
+<h2>4. O Método do Fator Integrante (A Regra Geral)<a class="headerlink" href="#o-metodo-do-fator-integrante-a-regra-geral" title="Permalink to this heading">#</a></h2>
+<p>Nos exemplos acima, as funções mágicas <span class="math notranslate nohighlight">\(e^{t/2}\)</span> e <span class="math notranslate nohighlight">\(t^2\)</span> não caíram do céu. Existe uma forma dedutiva de encontrá-las para <em>qualquer</em> EDO linear de primeira ordem.</p>
+<p>Vamos chamar essa função mágica de <strong>Fator Integrante</strong>, denotado por <span class="math notranslate nohighlight">\(\mu(t)\)</span>.</p>
+<p>Se tomarmos a equação na forma padrão <span class="math notranslate nohighlight">\(\frac{dy}{dt} + p(t)y = g(t)\)</span> e a multiplicarmos por <span class="math notranslate nohighlight">\(\mu(t)\)</span>, temos:</p>
+<div class="math notranslate nohighlight">
+\[\mu(t)\frac{dy}{dt} + \mu(t)p(t)y = \mu(t)g(t)\]</div>
+<p>Queremos que o lado esquerdo seja exatamente a derivada do produto <span class="math notranslate nohighlight">\(\frac{d}{dt}[\mu(t)y]\)</span>.</p>
+<p>Expandindo isso pela regra do produto, teríamos</p>
+<div class="math notranslate nohighlight">
+\[\mu(t)\frac{dy}{dt} + \frac{d\mu}{dt}y\]</div>
+<p>Para que isso seja verdade, o termo que acompanha o <span class="math notranslate nohighlight">\(y\)</span> precisa bater:
+$<span class="math notranslate nohighlight">\(\frac{d\mu}{dt} = \mu(t) p(t)\)</span>$</p>
+<p>Essa é uma equação separável para <span class="math notranslate nohighlight">\(\mu(t)\)</span>:
+$<span class="math notranslate nohighlight">\(\frac{1}{\mu} d\mu = p(t) dt\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(\ln|\mu| = \int p(t) dt\)</span>$</p>
+<p>Elevando na exponencial e ignorando a constante (pois só precisamos de <em>um</em> fator integrante que funcione), chegamos à fórmula definitiva:</p>
+<div class="math notranslate nohighlight">
+\[\mu(t) = e^{\int p(t) dt}\]</div>
+<section id="resumo-do-metodo">
+<h3>Resumo do Método:<a class="headerlink" href="#resumo-do-metodo" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Coloque a EDO na forma padrão: <span class="math notranslate nohighlight">\(y' + p(t)y = g(t)\)</span></p></li>
+<li><p>Calcule o fator integrante: <span class="math notranslate nohighlight">\(\mu(t) = e^{\int p(t) dt}\)</span></p></li>
+<li><p>Multiplique a equação toda por <span class="math notranslate nohighlight">\(\mu(t)\)</span>.</p></li>
+<li><p>O lado esquerdo virará <span class="math notranslate nohighlight">\(\frac{d}{dt}[\mu(t)y]\)</span>.</p></li>
+<li><p>Integre ambos os lados e isole <span class="math notranslate nohighlight">\(y(t)\)</span>.</p></li>
+</ol>
+</section>
+</section>
+<section id="retornando-ao-problema-da-lagoa">
+<h2>5. Retornando ao Problema da Lagoa<a class="headerlink" href="#retornando-ao-problema-da-lagoa" title="Permalink to this heading">#</a></h2>
+<p>Agora temos as ferramentas para limpar a nossa lagoa. A equação era:
+$<span class="math notranslate nohighlight">\(\frac{dq}{dt} + \frac{1}{2}q = 10 + 5\sin(2t)\)</span>$</p>
+<p>Aqui, <span class="math notranslate nohighlight">\(p(t) = 1/2\)</span>. Portanto, o nosso fator integrante será:
+$<span class="math notranslate nohighlight">\(\mu(t) = e^{\int \frac{1}{2} dt} = e^{t/2}\)</span>$</p>
+<p>Multiplicando a EDO por <span class="math notranslate nohighlight">\(e^{t/2}\)</span>:
+$<span class="math notranslate nohighlight">\(e^{t/2}q' + \frac{1}{2}e^{t/2}q = e^{t/2}(10 + 5\sin(2t))\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(\frac{d}{dt}\left( e^{t/2} q \right) = 10e^{t/2} + 5e^{t/2}\sin(2t)\)</span>$</p>
+<p>Integrando ambos os lados (o segundo termo do lado direito requer integração por partes duas vezes, omitiremos a álgebra chata aqui para focar na engenharia):
+$<span class="math notranslate nohighlight">\(e^{t/2} q(t) = 20e^{t/2} + e^{t/2} \left[ \frac{10}{17}\sin(2t) - \frac{40}{17}\cos(2t) \right] + C\)</span>$</p>
+<p>Dividindo tudo por <span class="math notranslate nohighlight">\(e^{t/2}\)</span>, obtemos a <strong>Solução Geral</strong>:
+$<span class="math notranslate nohighlight">\(q(t) = 20 + \frac{10}{17}\sin(2t) - \frac{40}{17}\cos(2t) + C e^{-t/2}\)</span>$</p>
+<p>Como a lagoa estava inicialmente com água limpa (fresca), sabemos que a condição inicial é <span class="math notranslate nohighlight">\(q(0) = 0\)</span>. Substituindo:
+$<span class="math notranslate nohighlight">\(0 = 20 + 0 - \frac{40}{17} + C \implies C = \frac{40}{17} - 20 = -\frac{300}{17}\)</span>$</p>
+<p>A nossa solução exata para a quantidade de produto químico ao longo dos anos é:
+$<span class="math notranslate nohighlight">\(q(t) = 20 - \frac{40}{17}\cos(2t) + \frac{10}{17}\sin(2t) - \frac{300}{17}e^{-t/2}\)</span>$</p>
+<p>Vamos analisar isso visualmente.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="c1"># 1. Definindo a EDO: q&#39; = f(t, q)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">f_lagoa</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">q</span>
+
+<span class="c1"># 2. Criando a grade de pontos para o Campo de Direções</span>
+<span class="n">t_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">q_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">T</span><span class="p">,</span> <span class="n">Q_mesh</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">t_grid</span><span class="p">,</span> <span class="n">q_grid</span><span class="p">)</span>
+
+<span class="c1"># Ajuste proporcional de tamanho das setas</span>
+<span class="n">dt_step</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span> <span class="o">-</span> <span class="mi">0</span><span class="p">)</span> <span class="o">/</span> <span class="mi">25</span> <span class="o">*</span> <span class="mf">0.6</span>
+<span class="n">dT</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">T</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">*</span> <span class="n">dt_step</span>
+<span class="n">dQ</span> <span class="o">=</span> <span class="n">f_lagoa</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">Q_mesh</span><span class="p">)</span> <span class="o">*</span> <span class="n">dt_step</span>
+
+<span class="c1"># 3. Solução Exata para q(0) = 0</span>
+<span class="n">t_smooth</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+<span class="n">q_sol</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">-</span> <span class="p">(</span><span class="mi">40</span><span class="o">/</span><span class="mi">17</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">t_smooth</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">10</span><span class="o">/</span><span class="mi">17</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">t_smooth</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mi">300</span><span class="o">/</span><span class="mi">17</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">t_smooth</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># 4. Plotagem</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Plot do Campo de Direções</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">Q_mesh</span><span class="p">,</span> <span class="n">dT</span><span class="p">,</span> <span class="n">dQ</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">pivot</span><span class="o">=</span><span class="s1">&#39;mid&#39;</span><span class="p">,</span>
+           <span class="n">angles</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale_units</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Campo de Direções&#39;</span><span class="p">)</span>
+
+<span class="c1"># Plot da Solução Exata</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_smooth</span><span class="p">,</span> <span class="n">q_sol</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;royalblue&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Solução $q(t)$ com $q(0)=0$&#39;</span><span class="p">)</span>
+
+<span class="c1"># Linha do Nível Médio de Equilíbrio</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;crimson&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Nível Médio (20 t)&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Campo de Direções e Evolução da Poluição na Lagoa&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Tempo $t$ (anos)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Quantidade $q(t)$ (toneladas)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower right&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/0e7e01aba8c614fb5b1b5bd354247e24eaddc607affe97c1239fcf0bd6f43966.png" src="../_images/0e7e01aba8c614fb5b1b5bd354247e24eaddc607affe97c1239fcf0bd6f43966.png" />
+</div>
+</div>
+<section id="o-que-a-matematica-esta-nos-dizendo">
+<h3>O que a Matemática está nos dizendo?<a class="headerlink" href="#o-que-a-matematica-esta-nos-dizendo" title="Permalink to this heading">#</a></h3>
+<p>Observe o gráfico acima e veja o poder de desmembrar a equação nos seus componentes:</p>
+<ol class="arabic simple">
+<li><p><strong>O Regime Transitório:</strong> O termo <span class="math notranslate nohighlight">\(- \frac{300}{17}e^{-t/2}\)</span> puxa a quantidade inicial para zero (água fresca). Mas como o expoente é negativo, esse termo «morre» (vai para zero) à medida que o tempo avança. Após alguns anos (em torno de <span class="math notranslate nohighlight">\(t=10\)</span>), a memória do estado inicial limpo da lagoa é completamente apagada.</p></li>
+<li><p><strong>O Regime Permanente:</strong> O restante da equação <span class="math notranslate nohighlight">\(20 - \frac{40}{17}\cos(2t) + \frac{10}{17}\sin(2t)\)</span> independe de onde o sistema começou. Ele mostra que a lagoa oscila em torno de um nível médio constante de 20 toneladas. As ondas são o reflexo direto da variação sazonal do despejo da fábrica (representado pelas funções seno e cosseno).</p></li>
+</ol>
+<p>Para sistemas lineares de engenharia (sejam circuitos elétricos AC, sejam sistemas mecânicos vibratórios), essa decomposição entre a resposta transitória (que zera) e a resposta forçada ou permanente (que dita o ritmo futuro) é um dos conceitos analíticos mais importantes que você levará deste curso.</p>
+</section>
+</section>
+<section id="exemplos-de-fixacao">
+<h2>6. Exemplos de Fixação<a class="headerlink" href="#exemplos-de-fixacao" title="Permalink to this heading">#</a></h2>
+<section id="exemplo-3">
+<h3>Exemplo 3<a class="headerlink" href="#exemplo-3" title="Permalink to this heading">#</a></h3>
+<p>Encontre a solução geral da equação diferencial:
+$<span class="math notranslate nohighlight">\(y' - 2y = 4 - t\)</span><span class="math notranslate nohighlight">\(
+Analise o comportamento da solução quando \)</span>t \to \infty<span class="math notranslate nohighlight">\( em função da constante \)</span>C<span class="math notranslate nohighlight">\(. Existe algum valor inicial \)</span>y(0)$ para o qual a solução não cresce exponencialmente?</p>
+</section>
+<section id="exemplo-4">
+<h3>Exemplo 4<a class="headerlink" href="#exemplo-4" title="Permalink to this heading">#</a></h3>
+<p>Considere o Problema de Valor Inicial (PVI):
+$<span class="math notranslate nohighlight">\(2y' + ty = 2, \qquad y(0) = 1\)</span><span class="math notranslate nohighlight">\(
+a) Mostre que o fator integrante é \)</span>\mu(t) = e^{t^2/4}<span class="math notranslate nohighlight">\(.  
+b) Escreva a solução \)</span>y(t)<span class="math notranslate nohighlight">\( utilizando uma integral definida com limite inferior em \)</span>t_0 = 0$. <em>(Nota: essa integral não possui primitiva em termos de funções elementares, devendo ser mantida na forma integral).</em></p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -442,20 +645,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="fund0.html"
+       href="modelagem.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">A equação <span class="math notranslate nohighlight">\(y'=ay+b\)</span></p>
+        <p class="prev-next-title">Modelagem com EDOs de 1ª Ordem</p>
       </div>
     </a>
     <a class="right-next"
-       href="modelos.html"
+       href="separaveis.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">próximo</p>
-        <p class="prev-next-title">Modelos</p>
+        <p class="prev-next-title">Separáveis</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -465,6 +668,40 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i>  
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivacao-produtos-quimicos-em-uma-lagoa">1. Motivação: Produtos Químicos em uma Lagoa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-forma-geral-das-equacoes-lineares">2. A Forma Geral das Equações Lineares</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resolvendo-casos-simples-um-truque-elegante">3. Resolvendo Casos Simples: Um Truque Elegante</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-simples-1">Exemplo Simples 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-simples-2">Exemplo Simples 2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-metodo-do-fator-integrante-a-regra-geral">4. O Método do Fator Integrante (A Regra Geral)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resumo-do-metodo">Resumo do Método:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#retornando-ao-problema-da-lagoa">5. Retornando ao Problema da Lagoa</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-a-matematica-esta-nos-dizendo">O que a Matemática está nos dizendo?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplos-de-fixacao">6. Exemplos de Fixação</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-3">Exemplo 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-4">Exemplo 4</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
