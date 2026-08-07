@@ -15,21 +15,10 @@ parts:
 
   - caption: EDs de 1a Ordem
     chapters:
+      - file: ord1/modelagem.ipynb
       - file: ord1/lineares.ipynb
-        sections:
-        - file: ord1/modelos.ipynb
-        - file: ord1/fund1.ipynb
-        - file: ord1/fund2.ipynb
       - file: ord1/separaveis.ipynb
-        sections:
-        - file: ord1/queda.ipynb
-        - file: ord1/escape.ipynb
-        - file: ord1/logistico.ipynb
       - file: ord1/autonomas.ipynb
-        sections:
-        - file: ord1/logistico2.ipynb
-        - file: ord1/allee.ipynb
-        - file: ord1/alleelogistico.ipynb
 
   - caption: EDs de 2a Ordem
     chapters:
