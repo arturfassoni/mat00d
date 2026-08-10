@@ -418,12 +418,15 @@ document.write(`
 <section id="queda-livre-com-resistencia-do-ar">
 <h2>1. Queda Livre com Resistência do Ar<a class="headerlink" href="#queda-livre-com-resistencia-do-ar" title="Permalink to this heading">#</a></h2>
 <p>Imagine um objeto caindo na atmosfera. Pela Segunda Lei de Newton, a massa do objeto multiplicada por sua aceleração é igual à força resultante sobre ele (<span class="math notranslate nohighlight">\(F = ma\)</span>). A força resultante tem duas componentes: a gravidade puxando para baixo (positiva, <span class="math notranslate nohighlight">\(mg\)</span>) e a resistência do ar empurrando para cima (negativa, modelada como proporcional à velocidade, <span class="math notranslate nohighlight">\(\gamma v\)</span>).</p>
-<p>Isso nos dá a equação:
-$<span class="math notranslate nohighlight">\(m \frac{dv}{dt} = mg - \gamma v\)</span>$</p>
-<p>Se dividirmos tudo pela massa <span class="math notranslate nohighlight">\(m\)</span>, obtemos:
-$<span class="math notranslate nohighlight">\(\frac{dv}{dt} = -\frac{\gamma}{m}v + g\)</span>$</p>
-<p>Para um objeto de 10 kg e um coeficiente de resistência <span class="math notranslate nohighlight">\(\gamma = 2\)</span> kg/s, usando a gravidade <span class="math notranslate nohighlight">\(g = 9.8\)</span> m/s², chegamos à equação:
-$<span class="math notranslate nohighlight">\(\frac{dv}{dt} = -0.2v + 9.8\)</span>$</p>
+<p>Isso nos dá a equação:</p>
+<div class="math notranslate nohighlight">
+\[m \frac{dv}{dt} = mg - \gamma v\]</div>
+<p>Se dividirmos tudo pela massa <span class="math notranslate nohighlight">\(m\)</span>, obtemos:</p>
+<div class="math notranslate nohighlight">
+\[\frac{dv}{dt} = -\frac{\gamma}{m}v + g\]</div>
+<p>Para um objeto de 10 kg e um coeficiente de resistência <span class="math notranslate nohighlight">\(\gamma = 2\)</span> kg/s, usando a gravidade <span class="math notranslate nohighlight">\(g = 9.8\)</span> m/s², chegamos à equação:</p>
+<div class="math notranslate nohighlight">
+\[\frac{dv}{dt} = -0.2v + 9.8\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>

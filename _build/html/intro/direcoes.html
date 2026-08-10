@@ -413,12 +413,14 @@ document.write(`
 <section id="a-derivada-como-inclinacao">
 <h2>A Derivada como Inclinação<a class="headerlink" href="#a-derivada-como-inclinacao" title="Permalink to this heading">#</a></h2>
 <p>Lembre-se do Cálculo 1: a derivada <span class="math notranslate nohighlight">\(y'(t)\)</span> nada mais é do que a <strong>inclinação da reta tangente</strong> à curva <span class="math notranslate nohighlight">\(y(t)\)</span> em um determinado ponto.</p>
-<p>Quando temos uma equação diferencial na forma:
-$<span class="math notranslate nohighlight">\(y' = f(t, y)\)</span>$</p>
+<p>Quando temos uma equação diferencial na forma:</p>
+<div class="math notranslate nohighlight">
+\[y' = f(t, y)\]</div>
 <p>A matemática está nos dando uma bússola. Ela diz: <em>Se a solução passar pelo ponto <span class="math notranslate nohighlight">\((t, y)\)</span>, a inclinação dela neste exato momento será <span class="math notranslate nohighlight">\(f(t, y)\)</span></em>.</p>
 <p>Se calcularmos essa inclinação para vários pontos em um plano e desenharmos pequenos segmentos de reta apontando para a direção correta, criamos o que chamamos de <strong>Campo de Direções</strong>. Ele nos mostra o «fluxo» das soluções, como se fossem as correntes de um rio. A solução de uma ED é simplesmente um barco solto nesse rio: ele segue o fluxo da correnteza.</p>
-<p>Vamos visualizar isso em Python com um exemplo clássico. Considere a equação:
-$<span class="math notranslate nohighlight">\(y' = y - t\)</span>$</p>
+<p>Vamos visualizar isso em Python com um exemplo clássico. Considere a equação:</p>
+<div class="math notranslate nohighlight">
+\[y' = y - t\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -481,13 +483,18 @@ $<span class="math notranslate nohighlight">\(y' = y - t\)</span>$</p>
 <section id="verificando-a-solucao-a-mao">
 <h3>Verificando a solução à mão<a class="headerlink" href="#verificando-a-solucao-a-mao" title="Permalink to this heading">#</a></h3>
 <p>Em Equações Diferenciais, você raramente precisa ficar na dúvida se acertou ou errou uma questão. Basta pegar a sua solução e jogar de volta na equação original! Vamos testar se a fórmula que encontramos realmente obedece a <span class="math notranslate nohighlight">\(y' = y - t\)</span>.</p>
-<p>Primeiro, calculamos a derivada da nossa solução <span class="math notranslate nohighlight">\(y(t)\)</span>:
-$<span class="math notranslate nohighlight">\(y'(t) = \frac{d}{dt} (t + 1 + C e^t)\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(y'(t) = 1 + 0 + C e^t\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(y'(t) = 1 + C e^t\)</span>$</p>
-<p>Agora, substituímos <span class="math notranslate nohighlight">\(y\)</span> e <span class="math notranslate nohighlight">\(y'\)</span> na equação original (<span class="math notranslate nohighlight">\(y' = y - t\)</span>):
-$<span class="math notranslate nohighlight">\(1 + C e^t = (t + 1 + C e^t) - t\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(1 + C e^t = 1 + C e^t\)</span>$</p>
+<p>Primeiro, calculamos a derivada da nossa solução <span class="math notranslate nohighlight">\(y(t)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[y'(t) = \frac{d}{dt} (t + 1 + C e^t)\]</div>
+<div class="math notranslate nohighlight">
+\[y'(t) = 1 + 0 + C e^t\]</div>
+<div class="math notranslate nohighlight">
+\[y'(t) = 1 + C e^t\]</div>
+<p>Agora, substituímos <span class="math notranslate nohighlight">\(y\)</span> e <span class="math notranslate nohighlight">\(y'\)</span> na equação original (<span class="math notranslate nohighlight">\(y' = y - t\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[1 + C e^t = (t + 1 + C e^t) - t\]</div>
+<div class="math notranslate nohighlight">
+\[1 + C e^t = 1 + C e^t\]</div>
 <p>A igualdade é verdadeira! Isso prova que a nossa fórmula está correta.</p>
 <p>O termo <span class="math notranslate nohighlight">\(C\)</span> na fórmula significa que temos uma <strong>família infinita de soluções</strong>. Cada valor de <span class="math notranslate nohighlight">\(C\)</span> representa uma curva diferente no nosso campo de direções. Vamos plotar algumas dessas curvas exatas sobre o campo que geramos lá em cima e ver a mágica acontecer.</p>
 <div class="cell docutils container">
@@ -549,9 +556,11 @@ Podemos usar a própria geometria do campo de direções para «desenhar» a sol
 <li><p>Você caminha em linha reta nessa direção por um pequeno passo de tempo <span class="math notranslate nohighlight">\(h\)</span>.</p></li>
 <li><p>Chegando no novo ponto <span class="math notranslate nohighlight">\((t_1, y_1)\)</span>, você olha novamente a «bússola» da ED, calcula a nova inclinação e repete o processo.</p></li>
 </ol>
-<p>Matematicamente, a atualização a cada passo é:
-$<span class="math notranslate nohighlight">\(t_{n+1} = t_n + h\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(y_{n+1} = y_n + h \cdot f(t_n, y_n)\)</span>$</p>
+<p>Matematicamente, a atualização a cada passo é:</p>
+<div class="math notranslate nohighlight">
+\[t_{n+1} = t_n + h\]</div>
+<div class="math notranslate nohighlight">
+\[y_{n+1} = y_n + h \cdot f(t_n, y_n)\]</div>
 <p>Vamos implementar isso e ver como a aproximação numérica caminha sobre o nosso campo de direções!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
