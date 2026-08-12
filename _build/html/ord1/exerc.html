@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Exercícios P2 &#8212; Equações Diferenciais A</title>
+    <title>Exercícios &#8212; Equações Diferenciais A</title>
   
   
   
@@ -65,11 +65,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'exerc/exerc2';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ord1/exerc';</script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
-    <link rel="next" title="Prova 1" href="../provas/p1.html" />
-    <link rel="prev" title="Exercícios P1" href="exerc1.html" />
+    <link rel="next" title="Vídeos" href="videos.html" />
+    <link rel="prev" title="Equações Autônomas" href="autonomas.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="pt"/>
   </head>
@@ -176,14 +178,17 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../intro/direcoes.html">Campos de Direções e o Método de Euler</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../intro/solucoes.html">Soluções de uma ED</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../intro/classificacao.html">Classificação de EDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/exerc.html">Exercícios</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../intro/videos.html">Vídeos</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de 1a Ordem</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../ord1/modelagem.html">Modelagem com EDOs de 1ª Ordem</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ord1/lineares.html">Equações Lineares e o Fator Integrante</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ord1/separaveis.html">Separáveis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ord1/autonomas.html">Autônomas</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="modelagem.html">Modelagem com EDOs de 1ª Ordem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lineares.html">Equações Lineares e o Fator Integrante</a></li>
+<li class="toctree-l1"><a class="reference internal" href="separaveis.html">Equações Separáveis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autonomas.html">Equações Autônomas</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Exercícios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="videos.html">Vídeos</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de 2a Ordem</span></p>
 <ul class="nav bd-sidenav">
@@ -229,11 +234,6 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../sist/nh.html">Não-Homogêneas</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercícios</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="exerc1.html">Exercícios P1</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Exercícios P2</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Provas</span></p>
 <ul class="nav bd-sidenav">
@@ -293,7 +293,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/exerc/exerc2.ipynb" target="_blank"
+      <li><a href="../_sources/ord1/exerc.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Baixar arquivo fonte"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -364,7 +364,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -375,11 +377,22 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Exercícios P2</h1>
+    <h1>Exercícios</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2>   </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelagem-com-eds-de-1a-ordem">Modelagem com EDs de 1a Ordem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equacoes-lineares-e-o-fator-integrante">Equações Lineares e o Fator Integrante</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equacoes-separaveis">Equações Separáveis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equacoes-autonomas">Equações Autônomas</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -389,9 +402,101 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="exercicios-p2">
-<h1>Exercícios P2<a class="headerlink" href="#exercicios-p2" title="Permalink to this heading">#</a></h1>
-<p><em>Em construção</em></p>
+  <section id="exercicios">
+<h1>Exercícios<a class="headerlink" href="#exercicios" title="Permalink to this heading">#</a></h1>
+<p>Exercícios retirados da 9a Edição do livro <em>Equações Diferenciais e Problemas de Valores de Contorno</em> de Boyce e DiPrima.</p>
+<section id="modelagem-com-eds-de-1a-ordem">
+<h2>Modelagem com EDs de 1a Ordem<a class="headerlink" href="#modelagem-com-eds-de-1a-ordem" title="Permalink to this heading">#</a></h2>
+<p><strong>Exercício 1.</strong> [Seção 1.2, Exerc. 7] Uma população de ratos do campo satisfaz a equação diferencial (veja a seção Modelagem):</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d y}{d t}=\frac{p}{2}-450 .
+\]</div>
+<p>a. Encontre o instante em que a população é extinta se <span class="math notranslate nohighlight">\(p(0)=850\)</span>.</p>
+<p>b. Encontre o instante de extinção se <span class="math notranslate nohighlight">\(p(0)=p_0\)</span>, em que <span class="math notranslate nohighlight">\(0&lt;p_0&lt;900\)</span>.</p>
+<p>c. Encontre a população inicial <span class="math notranslate nohighlight">\(p_0\)</span> se a população se torna extinta em um ano.</p>
+<p><strong>Exercício 2.</strong> [Seção 1.2, Exerc. 13] Considere um circuito elétrico contendo um capacitor, um resistor e uma bateria em série. A carga <span class="math notranslate nohighlight">\(Q(t)\)</span> no capacitor satisfaz a equação</p>
+<div class="math notranslate nohighlight">
+\[
+R \frac{d Q}{d t}+\frac{Q}{C}=V,
+\]</div>
+<p>em que <span class="math notranslate nohighlight">\(R\)</span> é a resistência, <span class="math notranslate nohighlight">\(C\)</span> é a capacitância e <span class="math notranslate nohighlight">\(V\)</span> é a voltagem constante fornecida pela bateria. (Você não precisa saber de circuitos elétricos aqui, mas apenas usar o modelo acima para responder os itens a seguir).</p>
+<p>a. Se <span class="math notranslate nohighlight">\(Q(0)=0\)</span>, encontre <span class="math notranslate nohighlight">\(Q(t)\)</span> em qualquer instante <span class="math notranslate nohighlight">\(t\)</span> e esboce o gráfico de <span class="math notranslate nohighlight">\(Q\)</span> em função de <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<p>b.Encontre o valor limite <span class="math notranslate nohighlight">\(Q_L\)</span> para onde <span class="math notranslate nohighlight">\(Q(t)\)</span> tende após um longo período de tempo.</p>
+<p>c. Suponha que <span class="math notranslate nohighlight">\(Q\left(t_1\right)=Q_L\)</span> e que, no instante <span class="math notranslate nohighlight">\(t=t_1\)</span>, a bateria é removida e o circuito é fechado novamente. Encontre <span class="math notranslate nohighlight">\(Q(t)\)</span> para <span class="math notranslate nohighlight">\(t&gt;t_1\)</span> e esboce seu gráfico.</p>
+</section>
+<section id="equacoes-lineares-e-o-fator-integrante">
+<h2>Equações Lineares e o Fator Integrante<a class="headerlink" href="#equacoes-lineares-e-o-fator-integrante" title="Permalink to this heading">#</a></h2>
+<p><strong>Exercício 3.</strong> [Seção 2.1, Exerc. 1,2,3,9,11,12] Em cada um dos itens abaixo, encontre a solução geral da equação diferencial dada e use-a para determinar o comportamento das soluções quando <span class="math notranslate nohighlight">\(t \rightarrow \infty\)</span>.</p>
+<p>a. <span class="math notranslate nohighlight">\(y^{\prime}+3 y=t+e^{-2 t}\)</span></p>
+<p>b. <span class="math notranslate nohighlight">\(y^{\prime}-2 y=t^2 e^{2 t}\)</span></p>
+<p>c. <span class="math notranslate nohighlight">\(y^{\prime}+y=t e^{-t}+1\)</span></p>
+<p>d. <span class="math notranslate nohighlight">\(y^{\prime}-y=2 t e^{2 t}, y(0)=1\)</span></p>
+<p>e. <span class="math notranslate nohighlight">\(y^{\prime}+\frac{2}{t} y=\frac{\cos t}{t^2}, y(\pi)=0, t&gt;0\)</span></p>
+<p>f. <span class="math notranslate nohighlight">\(t y^{\prime}+(t+1) y=t, y(\ln 2)=1, \quad t&gt;0\)</span></p>
+<p><strong>Exercício 4.</strong> [Seção 2.1, Exerc. 18]  Considere o problema de valor inicial</p>
+<div class="math notranslate nohighlight">
+\[
+y^{\prime}+\frac{2}{3} y=1-\frac{1}{2} t, \quad y(0)=y_0 .
+\]</div>
+<p>Encontre o valor de <span class="math notranslate nohighlight">\(y_0\)</span> para o qual a solução toca, mas não cruza o eixo dos <span class="math notranslate nohighlight">\(t\)</span>.</p>
+</section>
+<section id="equacoes-separaveis">
+<h2>Equações Separáveis<a class="headerlink" href="#equacoes-separaveis" title="Permalink to this heading">#</a></h2>
+<p><strong>Exercício 5.</strong> [Seção 2.2, Exerc. 2,5,14,16] Em cada um dos itens abaixo, resolva a equação diferencial ou do PVI dados:</p>
+<p>a. <span class="math notranslate nohighlight">\(y^{\prime}+y^2 \operatorname{sen} x=0\)</span></p>
+<p>b. <span class="math notranslate nohighlight">\(\frac{d y}{d x}=\frac{x-e^{-x}}{y+e^y}\)</span></p>
+<p>c. <span class="math notranslate nohighlight">\(y^{\prime}=2 x /(1+2 y), y(2)=0\)</span></p>
+<p>d. <span class="math notranslate nohighlight">\(\operatorname{sen}(2 x) d x+\cos (3 y) d y=0, \quad y(\pi / 2)=\pi / 3\)</span></p>
+<p><strong>Exercício 6.</strong> [Seção 2.2, Exerc. 17] Resolva o problema de valor inicial</p>
+<div class="math notranslate nohighlight">
+\[
+y^{\prime}=\frac{1+3 x^2}{3 y^2-6 y}, \quad y(0)=1
+\]</div>
+<p>e determine o intervalo de validade da solução.</p>
+<p><strong>Exercício 7.</strong> [Seção 2.2, Exerc. 20] Resolva o problema de valor inicial</p>
+<div class="math notranslate nohighlight">
+\[
+y^{\prime}=\frac{2-e^x}{3+2 y}, \quad y(0)=0
+\]</div>
+<p>e determine onde a solução atinge seu valor máximo.</p>
+<p><strong>Exercício 8.</strong> [Seção 1.2, Exerc. 9] Considere um objeto de massa 10 kg em queda seguindo o modelo de queda livre (seção Modelagem), mas suponha agora que o coeficiente de resistência do ar é proporcional ao quadrado da velocidade.</p>
+<p>a. Se a velocidade limite for <span class="math notranslate nohighlight">\(49 \mathrm{~m} / \mathrm{s}\)</span>, mostre que a equação de movimento pode ser escrita como</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d v}{d t}=\frac{1}{245}\left(49^2-v^2\right) .
+\]</div>
+<p>b. Se <span class="math notranslate nohighlight">\(v(0)=0\)</span>, encontre uma expressão para <span class="math notranslate nohighlight">\(v(t)\)</span> em qualquer instante.</p>
+<p>c. Faça o gráfico da solução encontrada no item b e da solução (26) do Exemplo 2 no mesmo conjunto de eixos.</p>
+<p>d. Baseado nos gráficos encontrados no item c, compare o efeito de um coeficiente de resistência do ar quadrático com um linear.</p>
+<p>e. Encontre a distância <span class="math notranslate nohighlight">\(x(t)\)</span> percorrida pelo objeto até o instante <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<p>f. Encontre o tempo <span class="math notranslate nohighlight">\(T\)</span> que demora para o objeto cair 300 m.</p>
+</section>
+<section id="equacoes-autonomas">
+<h2>Equações Autônomas<a class="headerlink" href="#equacoes-autonomas" title="Permalink to this heading">#</a></h2>
+<p><strong>Exercício 9.</strong> [Seção 2.5, Exerc. 1,2,7] Os problemas abaixo envolvem equações da forma <span class="math notranslate nohighlight">\(d y / d t=f(y)\)</span>. Em cada problema, esboce o gráfico de <span class="math notranslate nohighlight">\(f(y)\)</span> em função de <span class="math notranslate nohighlight">\(y\)</span>, determine os pontos críticos (de equilíbrio) e classifique cada um como assintoticamente estável ou instável. Desenhe a reta de fase e esboce diversos gráficos de soluções no plano ty.</p>
+<p>a) <span class="math notranslate nohighlight">\(d y / d t=a y+b y^2, \quad a&gt;0, b&gt;0,-\infty&lt;y_0&lt;\infty\)</span></p>
+<p>b) <span class="math notranslate nohighlight">\(d y / d t=y(y-1)(y-2), \quad y_0 \geq 0\)</span></p>
+<p>c) <span class="math notranslate nohighlight">\(d y / d t=y\left(1-y^2\right), \quad-\infty&lt;y_0&lt;\infty\)</span></p>
+<p><strong>Exercício 10.</strong> [Seção 2.5, Exerc. 17]</p>
+<p>a. Resolva a equação de Gompertz</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d y}{d t}=r y \ln \left(\frac{K}{y}\right),
+\]</div>
+<p>sujeita à condição inicial <span class="math notranslate nohighlight">\(y(0)=y_0\)</span>.</p>
+<p>Sugestão: você pode querer definir <span class="math notranslate nohighlight">\(u=\ln (y / K)\)</span>.</p>
+<p>b. Para os valores <span class="math notranslate nohighlight">\(r=0.71\)</span> por ano, <span class="math notranslate nohighlight">\(K=80.5 \times 10^6 \mathrm{~kg}, y_0 / K=0.25\)</span>, use o modelo de Gompertz para encontrar o valor previsto de <span class="math notranslate nohighlight">\(y(2)\)</span>.</p>
+<p>c. Para os mesmos dados do item (b), use o modelo de Gompertz para encontrar o instante <span class="math notranslate nohighlight">\(\tau\)</span> no qual <span class="math notranslate nohighlight">\(y(\tau)=0,75 K\)</span>.</p>
+<p><strong>Exercício 11.</strong> [Seção 2.5, Exerc. 19] Para determinado nível de empenho, é razoável supor que a taxa de captura dos peixes depende da população <span class="math notranslate nohighlight">\(y\)</span>: quanto mais peixes houver, mais fácil será capturá-los. Vamos supor então que a taxa segundo a qual os peixes são capturados é dada por <span class="math notranslate nohighlight">\(Ey\)</span>, em que <span class="math notranslate nohighlight">\(E\)</span> é uma constante positiva, com unidades iguais ao inverso do tempo, que mede o empenho total feito para administrar a espécie de peixe em consideração. Para incluir esse efeito, a equação logística é substituída por</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dt} = r\left(1 - \frac{y}{K}\right)y - Ey. \tag{20}
+\]</div>
+<p>Essa equação é conhecida como <strong>modelo de Schaefer</strong>, em homenagem ao biologista M. B. Schaefer, que a aplicou a populações de peixes.</p>
+<p>a. Mostre que, se <span class="math notranslate nohighlight">\(E &lt; r\)</span>, então existem dois pontos de equilíbrio, <span class="math notranslate nohighlight">\(y_1 = 0\)</span> e <span class="math notranslate nohighlight">\(y_2 = K(1 - E/r) &gt; 0\)</span>.</p>
+<p>b. Mostre que <span class="math notranslate nohighlight">\(y = y_1\)</span> é instável e que <span class="math notranslate nohighlight">\(y = y_2\)</span> é assintoticamente estável.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -407,7 +512,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./exerc"
+            path: "./ord1"
         },
         predefinedOutput: true
     }
@@ -425,20 +530,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="exerc1.html"
+       href="autonomas.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">Exercícios P1</p>
+        <p class="prev-next-title">Equações Autônomas</p>
       </div>
     </a>
     <a class="right-next"
-       href="../provas/p1.html"
+       href="videos.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">próximo</p>
-        <p class="prev-next-title">Prova 1</p>
+        <p class="prev-next-title">Vídeos</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -448,6 +553,24 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i>  
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelagem-com-eds-de-1a-ordem">Modelagem com EDs de 1a Ordem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equacoes-lineares-e-o-fator-integrante">Equações Lineares e o Fator Integrante</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equacoes-separaveis">Equações Separáveis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equacoes-autonomas">Equações Autônomas</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

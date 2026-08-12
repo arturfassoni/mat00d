@@ -12,6 +12,7 @@ parts:
       - file: intro/classificacao.ipynb
       - file: intro/modelagem.ipynb
       - file: intro/fund2.ipynb
+      - file: intro/exerc.ipynb
       - file: intro/videos.ipynb
 
   - caption: EDs de 1a Ordem
@@ -20,6 +21,8 @@ parts:
       - file: ord1/lineares.ipynb
       - file: ord1/separaveis.ipynb
       - file: ord1/autonomas.ipynb
+      - file: ord1/exerc.ipynb
+      - file: ord1/videos.ipynb
 
   - caption: EDs de 2a Ordem
     chapters:
@@ -62,12 +65,6 @@ parts:
         - file: sist/teo.ipynb
       - file: sist/nh.ipynb
   
-  - caption: Exercícios
-    chapters:
-      - file: exerc/exerc1.ipynb
-      - file: exerc/exerc2.ipynb
-
-
   - caption: Provas
     chapters:
       - file: provas/p1.ipynb
