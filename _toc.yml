@@ -12,6 +12,7 @@ parts:
       - file: intro/classificacao.ipynb
       - file: intro/modelagem.ipynb
       - file: intro/fund2.ipynb
+      - file: intro/videos.ipynb
 
   - caption: EDs de 1a Ordem
     chapters:
