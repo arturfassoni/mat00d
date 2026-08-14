@@ -185,8 +185,8 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Modelagem com EDOs de 1ª Ordem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lineares.html">Equações Lineares e o Fator Integrante</a></li>
-<li class="toctree-l1"><a class="reference internal" href="separaveis.html">Equações Separáveis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="autonomas.html">Equações Autônomas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="separaveis.html">Equações Diferenciais Separáveis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autonomas.html">Equações Autônomas e Dinâmica Populacional</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exerc.html">Exercícios</a></li>
 <li class="toctree-l1"><a class="reference internal" href="videos.html">Vídeos</a></li>
 </ul>
@@ -393,9 +393,17 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mistura-em-tanques">4. Mistura em Tanques</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#investimentos-e-juros-compostos">5. Investimentos e Juros Compostos</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algo-em-comum">Algo em comum</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resolvendo-a-equacao-y-ay-b">Resolvendo a Equação <span class="math notranslate nohighlight">\(y' = ay + b\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resolvendo-a-equacao-y-ay-b">Resolvendo a Equação <span class="math notranslate nohighlight">\(y' = ay + b\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-1-separacao-de-variaveis">Método 1: separação de variáveis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-2-fator-integrante">Método 2: fator integrante</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-segredo-esta-no-sinal-de-a">O segredo está no sinal de <span class="math notranslate nohighlight">\(a\)</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalizacoes-para-o-futuro">Generalizações para o futuro</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalizacoes-para-o-futuro">Generalizações para o futuro</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generalizando-pela-linearidade-o-fator-integrante">Generalizando pela linearidade: o fator integrante</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generalizando-pela-separabilidade-separacao-de-variaveis">Generalizando pela separabilidade: separação de variáveis</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -614,6 +622,9 @@ $<span class="math notranslate nohighlight">\(\frac{dQ}{dt} = -0.03Q + 0.75\)</s
 </section>
 <section id="resolvendo-a-equacao-y-ay-b">
 <h2>Resolvendo a Equação <span class="math notranslate nohighlight">\(y' = ay + b\)</span><a class="headerlink" href="#resolvendo-a-equacao-y-ay-b" title="Permalink to this heading">#</a></h2>
+<p>Repare que essa equação é, ao mesmo tempo, <strong>linear</strong> (é da forma <span class="math notranslate nohighlight">\(y' + p(t)y = q(t)\)</span>, com <span class="math notranslate nohighlight">\(p(t)=-a\)</span> e <span class="math notranslate nohighlight">\(q(t)=b\)</span> constantes) e <strong>separável</strong> (o lado direito, <span class="math notranslate nohighlight">\(ay+b\)</span>, depende só de <span class="math notranslate nohighlight">\(y\)</span>, então trivialmente se fatora como <span class="math notranslate nohighlight">\(g(t)h(y)\)</span> com <span class="math notranslate nohighlight">\(g(t)\equiv 1\)</span>). Isso significa que existem <strong>dois caminhos diferentes</strong> para resolvê-la — e vale a pena conhecer os dois, porque cada um vai generalizar de um jeito diferente para modelos mais complexos, como veremos mais adiante.</p>
+<section id="metodo-1-separacao-de-variaveis">
+<h3>Método 1: separação de variáveis<a class="headerlink" href="#metodo-1-separacao-de-variaveis" title="Permalink to this heading">#</a></h3>
 <p>Vamos encontrar a fórmula geral que soluciona essa EDO. Assumindo que <span class="math notranslate nohighlight">\(a \neq 0\)</span>, podemos colocar a constante <span class="math notranslate nohighlight">\(a\)</span> em evidência no lado direito:</p>
 <div class="math notranslate nohighlight">
 \[\frac{dy}{dt} = a \left( y + \frac{b}{a} \right)\]</div>
@@ -632,6 +643,38 @@ $<span class="math notranslate nohighlight">\(\frac{dQ}{dt} = -0.03Q + 0.75\)</s
 <div class="math notranslate nohighlight">
 \[y(t) = -\frac{b}{a} + \left( y_0 + \frac{b}{a} \right) e^{at}\]</div>
 </section>
+<section id="metodo-2-fator-integrante">
+<h3>Método 2: fator integrante<a class="headerlink" href="#metodo-2-fator-integrante" title="Permalink to this heading">#</a></h3>
+<p>Existe um segundo caminho, que vai ser nosso principal instrumento nas próximas aulas: o <strong>método do fator integrante</strong>. A ideia é multiplicar a equação inteira por um fator especialmente escolhido, de forma que o lado esquerdo vire a derivada de um produto.</p>
+<p>Reescrevendo a equação com os termos em <span class="math notranslate nohighlight">\(y\)</span> do mesmo lado:</p>
+<div class="math notranslate nohighlight">
+\[
+y' - ay = b.
+\]</div>
+<p>Agora multiplicamos os dois lados por <span class="math notranslate nohighlight">\(e^{-at}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+e^{-at}y' - a\,e^{-at}y = b\,e^{-at}.
+\]</div>
+<p>O truque é que o lado esquerdo é exatamente a derivada de um produto (verifique com a regra do produto!):</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d}{dt}\Big(e^{-at}y\Big) = b\,e^{-at}.
+\]</div>
+<p>Agora basta integrar os dois lados em relação a <span class="math notranslate nohighlight">\(t\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+e^{-at}y = -\frac{b}{a}e^{-at} + c,
+\]</div>
+<p>e isolar <span class="math notranslate nohighlight">\(y\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = -\frac{b}{a} + c\,e^{at}.
+\]</div>
+<p>A mesma solução de antes — ótimo sinal de que os dois métodos são, de fato, consistentes!</p>
+<p>Por enquanto, não vamos explicar <em>como</em> descobrir que <span class="math notranslate nohighlight">\(e^{-at}\)</span> é o fator certo — esse é justamente o próximo tópico do curso: o método do fator integrante para EDs lineares de 1ª ordem em geral. Por ora, fica a ideia: existe sempre um fator que, multiplicado na equação certa, transforma qualquer ED linear de 1ª ordem numa integração direta.</p>
+</section>
+</section>
 <section id="o-segredo-esta-no-sinal-de-a">
 <h2>O segredo está no sinal de <span class="math notranslate nohighlight">\(a\)</span><a class="headerlink" href="#o-segredo-esta-no-sinal-de-a" title="Permalink to this heading">#</a></h2>
 <p>Olhando para a fórmula da solução, notamos um termo fixo (<span class="math notranslate nohighlight">\(-b/a\)</span>) e um termo exponencial que multiplica o desvio inicial. A constante <span class="math notranslate nohighlight">\(a\)</span> dita o destino de todo o sistema!</p>
@@ -643,10 +686,26 @@ $<span class="math notranslate nohighlight">\(\frac{dQ}{dt} = -0.03Q + 0.75\)</s
 </section>
 <section id="generalizacoes-para-o-futuro">
 <h2>Generalizações para o futuro<a class="headerlink" href="#generalizacoes-para-o-futuro" title="Permalink to this heading">#</a></h2>
-<p>Construir modelos onde as taxas são constantes é um ótimo ponto de partida, mas em projetos de engenharia complexos, o cenário muda.</p>
-<p>O que acontece se a taxa de depósito na conta bancária variar todo mês? Ou se o coeficiente de resistência do ar de um foguete mudar à medida que ele consome combustível e fica mais leve? Nesses casos, <span class="math notranslate nohighlight">\(a\)</span> e <span class="math notranslate nohighlight">\(b\)</span> deixam de ser constantes e passam a ser funções do tempo, gerando as <strong>EDOs Lineares de 1ª Ordem Não Autônomas</strong> (<span class="math notranslate nohighlight">\(y' = a(t)y + b(t)\)</span>).</p>
-<p>E se a resistência do ar não for proporcional à velocidade, mas sim ao <em>quadrado</em> da velocidade, como em aerodinâmica avançada? Isso introduz termos como <span class="math notranslate nohighlight">\(v^2\)</span>, tornando a equação <strong>Não Linear</strong>.</p>
-<p>Nas próximas aulas, deixaremos de apenas contemplar campos de direções para aprender técnicas analíticas poderosas (como o método do Fator Integrante) capazes de extrair as soluções exatas para essas equações mais robustas.</p>
+<p>Construir modelos onde as taxas são constantes é um ótimo ponto de partida, mas em projetos de engenharia complexos, o cenário muda. E é exatamente aqui que a dupla natureza da equação <span class="math notranslate nohighlight">\(y'=ay+b\)</span> — linear e separável — se torna útil: cada característica aponta para uma direção diferente de generalização, com seu próprio método de solução. Os dois serão igualmente importantes ao longo do curso.</p>
+<section id="generalizando-pela-linearidade-o-fator-integrante">
+<h3>Generalizando pela linearidade: o fator integrante<a class="headerlink" href="#generalizando-pela-linearidade-o-fator-integrante" title="Permalink to this heading">#</a></h3>
+<p>O método do fator integrante não depende de <span class="math notranslate nohighlight">\(a\)</span> e <span class="math notranslate nohighlight">\(b\)</span> serem constantes — ele continua funcionando (com pequenos ajustes) mesmo quando os coeficientes variam com o tempo, desde que a equação continue linear:</p>
+<div class="math notranslate nohighlight">
+\[
+y' = a(t)\,y + b(t).
+\]</div>
+<p>É exatamente isso que acontece se a taxa de juros do banco mudar mês a mês, se a temperatura ambiente oscilar ao longo do dia, ou se o coeficiente de resistência do ar de um foguete mudar à medida que ele consome combustível e fica mais leve. Essas são as <strong>EDs lineares de 1ª ordem</strong> (possivelmente não autônomas), e vamos resolvê-las sistematicamente com o fator integrante já na próxima aula.</p>
+</section>
+<section id="generalizando-pela-separabilidade-separacao-de-variaveis">
+<h3>Generalizando pela separabilidade: separação de variáveis<a class="headerlink" href="#generalizando-pela-separabilidade-separacao-de-variaveis" title="Permalink to this heading">#</a></h3>
+<p>Já a separação de variáveis não exige que a equação seja linear — só exige que o lado direito se fatore como <span class="math notranslate nohighlight">\(g(t)h(y)\)</span>. Isso permite generalizar a equação trocando a forma como a taxa depende de <span class="math notranslate nohighlight">\(y\)</span>, mesmo que isso quebre a linearidade, desde que a equação continue sem depender explicitamente de <span class="math notranslate nohighlight">\(t\)</span> (ou seja, continue <strong>autônoma</strong> — um caso particular, e especialmente importante, de equação separável). Dois exemplos:</p>
+<ul class="simple">
+<li><p>Se a resistência do ar for proporcional ao <strong>quadrado</strong> da velocidade (mais realista em altas velocidades), a equação da queda livre vira <span class="math notranslate nohighlight">\(v' = g - \dfrac{\gamma}{m}v^2\)</span> — não linear, mas ainda autônoma (e, portanto, ainda separável).</p></li>
+<li><p>Se a predação das corujas não for constante, mas seguir uma resposta do tipo <strong>Holling tipo II</strong> — em que a taxa de predação satura conforme há mais ratos disponíveis —, a equação vira <span class="math notranslate nohighlight">\(p' = rp - \dfrac{kp}{c+p}\)</span> — de novo, não linear, mas ainda autônoma.</p></li>
+</ul>
+<p>Vamos resolver equações desse tipo, mais gerais, quando estudarmos separação de variáveis e equações autônomas em detalhe.</p>
+<p>Nas próximas aulas, deixaremos de apenas contemplar campos de direções para aprender essas duas técnicas analíticas — o fator integrante e a separação de variáveis — capazes de extrair soluções exatas para modelos bem mais robustos que os que vimos hoje.</p>
+</section>
 </section>
 </section>
 
@@ -720,9 +779,17 @@ $<span class="math notranslate nohighlight">\(\frac{dQ}{dt} = -0.03Q + 0.75\)</s
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mistura-em-tanques">4. Mistura em Tanques</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#investimentos-e-juros-compostos">5. Investimentos e Juros Compostos</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algo-em-comum">Algo em comum</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resolvendo-a-equacao-y-ay-b">Resolvendo a Equação <span class="math notranslate nohighlight">\(y' = ay + b\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resolvendo-a-equacao-y-ay-b">Resolvendo a Equação <span class="math notranslate nohighlight">\(y' = ay + b\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-1-separacao-de-variaveis">Método 1: separação de variáveis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metodo-2-fator-integrante">Método 2: fator integrante</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-segredo-esta-no-sinal-de-a">O segredo está no sinal de <span class="math notranslate nohighlight">\(a\)</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalizacoes-para-o-futuro">Generalizações para o futuro</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalizacoes-para-o-futuro">Generalizações para o futuro</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generalizando-pela-linearidade-o-fator-integrante">Generalizando pela linearidade: o fator integrante</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generalizando-pela-separabilidade-separacao-de-variaveis">Generalizando pela separabilidade: separação de variáveis</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

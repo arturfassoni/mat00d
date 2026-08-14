@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Equações Autônomas &#8212; Equações Diferenciais A</title>
+    <title>Equações Autônomas e Dinâmica Populacional &#8212; Equações Diferenciais A</title>
   
   
   
@@ -65,11 +65,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ord1/autonomas';</script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
     <link rel="next" title="Exercícios" href="exerc.html" />
-    <link rel="prev" title="Equações Separáveis" href="separaveis.html" />
+    <link rel="prev" title="Equações Diferenciais Separáveis" href="separaveis.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="pt"/>
   </head>
@@ -183,8 +185,8 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="modelagem.html">Modelagem com EDOs de 1ª Ordem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lineares.html">Equações Lineares e o Fator Integrante</a></li>
-<li class="toctree-l1"><a class="reference internal" href="separaveis.html">Equações Separáveis</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Equações Autônomas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="separaveis.html">Equações Diferenciais Separáveis</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Equações Autônomas e Dinâmica Populacional</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exerc.html">Exercícios</a></li>
 <li class="toctree-l1"><a class="reference internal" href="videos.html">Vídeos</a></li>
 </ul>
@@ -362,7 +364,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -373,11 +377,28 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Equações Autônomas</h1>
+    <h1>Equações Autônomas e Dinâmica Populacional</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2>   </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crescimento-exponencial-o-modelo-de-malthus">Crescimento exponencial: o modelo de Malthus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-crescimento-logistico-verhulst">O crescimento logístico (Verhulst)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resolvendo-a-equacao-logistica-por-separacao-de-variaveis">Resolvendo a equação logística por separação de variáveis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-a-biomassa-de-linguado-gigante-no-oceano-pacifico">Exemplo: a biomassa de linguado gigante no Oceano Pacífico</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analise-geometrica-pontos-de-equilibrio-e-a-reta-de-fase">Análise geométrica: pontos de equilíbrio e a reta de fase</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#um-limiar-critico">Um limiar crítico</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crescimento-logistico-com-limiar">Crescimento logístico com limiar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-vem-a-seguir">O que vem a seguir</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -387,9 +408,436 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="equacoes-autonomas">
-<h1>Equações Autônomas<a class="headerlink" href="#equacoes-autonomas" title="Permalink to this heading">#</a></h1>
-<p><em>Em construção</em></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="equacoes-autonomas-e-dinamica-populacional">
+<h1>Equações Autônomas e Dinâmica Populacional<a class="headerlink" href="#equacoes-autonomas-e-dinamica-populacional" title="Permalink to this heading">#</a></h1>
+<p>No capítulo de classificação, vimos rapidamente que uma equação de primeira ordem é <strong>autônoma</strong> quando pode ser escrita como <span class="math notranslate nohighlight">\(y'=f(y)\)</span> — o lado direito não depende explicitamente de <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<p>Nesta aula, vamos explorar essas equações a fundo, no contexto de dinâmica populacional, e descobrir algo notável: é possível entender o comportamento qualitativo das soluções <strong>sem resolver a equação</strong>, só olhando para o seu lado direito.</p>
+<section id="crescimento-exponencial-o-modelo-de-malthus">
+<h2>Crescimento exponencial: o modelo de Malthus<a class="headerlink" href="#crescimento-exponencial-o-modelo-de-malthus" title="Permalink to this heading">#</a></h2>
+<p>A hipótese mais simples sobre o crescimento de uma população <span class="math notranslate nohighlight">\(y(t)\)</span> é que sua taxa de variação é proporcional ao valor atual — já vimos essa equação bem no início do curso, com outro nome:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dt} = ry, \qquad y(0)=y_0,
+\]</div>
+<p>com solução <span class="math notranslate nohighlight">\(y(t) = y_0e^{rt}\)</span>.</p>
+<p>Aqui <span class="math notranslate nohighlight">\(r\)</span> é chamada de <strong>taxa de crescimento</strong> (se <span class="math notranslate nohighlight">\(r&gt;0\)</span>) ou de <strong>declínio</strong> (se <span class="math notranslate nohighlight">\(r&lt;0\)</span>).</p>
+<p>Esse é o modelo de <strong>Malthus</strong>, e ele prevê crescimento exponencial <em>para sempre</em> — o que, na prática, não pode ser verdade: mais cedo ou mais tarde, espaço, comida ou outros recursos limitados vão reduzir essa taxa de crescimento.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">r_m</span> <span class="o">=</span> <span class="mf">0.4</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="o">/</span><span class="n">r_m</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">y0</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">]:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">r_m</span><span class="o">*</span><span class="n">t</span><span class="p">),</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Crescimento exponencial: $y&#39; = ry,\ r&gt;0$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$t$&quot;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;$y$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([</span><span class="mi">1</span><span class="o">/</span><span class="n">r_m</span><span class="p">,</span> <span class="mi">2</span><span class="o">/</span><span class="n">r_m</span><span class="p">,</span> <span class="mi">3</span><span class="o">/</span><span class="n">r_m</span><span class="p">,</span> <span class="mi">4</span><span class="o">/</span><span class="n">r_m</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;1/r&#39;</span><span class="p">,</span> <span class="s1">&#39;2/r&#39;</span><span class="p">,</span> <span class="s1">&#39;3/r&#39;</span><span class="p">,</span> <span class="s1">&#39;4/r&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/cee9c8becbe32dcefa3af64c4023d7122bea992aa5d93d75dadcedc7ed9fea97.png" src="../_images/cee9c8becbe32dcefa3af64c4023d7122bea992aa5d93d75dadcedc7ed9fea97.png" />
+</div>
+</div>
+</section>
+<section id="o-crescimento-logistico-verhulst">
+<h2>O crescimento logístico (Verhulst)<a class="headerlink" href="#o-crescimento-logistico-verhulst" title="Permalink to this heading">#</a></h2>
+<p>A ideia para consertar o modelo de Malthus é deixar a taxa de crescimento depender da própria população: grande quando <span class="math notranslate nohighlight">\(y\)</span> é pequeno (a espécie tem espaço e recursos de sobra), e cada vez menor — até ficar negativa — conforme <span class="math notranslate nohighlight">\(y\)</span> cresce e os recursos escasseiam.</p>
+<p>Trocamos a constante <span class="math notranslate nohighlight">\(r\)</span> por uma função <span class="math notranslate nohighlight">\(h(y)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dt} = h(y)\,y.
+\]</div>
+<p>A escolha mais simples de <span class="math notranslate nohighlight">\(h(y)\)</span> com esse comportamento é uma reta decrescente, <span class="math notranslate nohighlight">\(h(y) = r - ay\)</span> (com <span class="math notranslate nohighlight">\(r,a&gt;0\)</span>).</p>
+<p>Substituindo:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dt} = (r-ay)y,
+\]</div>
+<p>ou, escrevendo <span class="math notranslate nohighlight">\(K=r/a\)</span> (forma equivalente, mas mais fácil de interpretar):</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dt} = r\left(1-\frac{y}{K}\right)y.
+\]</div>
+<p>Essa é a <strong>equação logística</strong> (ou de Verhulst).</p>
+<p>Aqui <span class="math notranslate nohighlight">\(r\)</span> é a <strong>taxa de crescimento intrínseca</strong> (a taxa quando <span class="math notranslate nohighlight">\(y\)</span> é pequeno, sem nenhum fator limitante), e <span class="math notranslate nohighlight">\(K\)</span> é a <strong>capacidade de suporte</strong> — o tamanho populacional máximo que o ambiente consegue sustentar.</p>
+<section id="resolvendo-a-equacao-logistica-por-separacao-de-variaveis">
+<h3>Resolvendo a equação logística por separação de variáveis<a class="headerlink" href="#resolvendo-a-equacao-logistica-por-separacao-de-variaveis" title="Permalink to this heading">#</a></h3>
+<p>Vamos resolver</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dt} = r\left(1-\frac{y}{K}\right)y, \qquad y(0)=y_0,
+\]</div>
+<p>supondo, por enquanto, que <span class="math notranslate nohighlight">\(y\neq 0\)</span> e <span class="math notranslate nohighlight">\(y\neq K\)</span> (voltamos a esses dois casos daqui a pouco). Separando as variáveis:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{(1-y/K)\,y} = r\,dt.
+\]</div>
+<p>O lado esquerdo não é imediato de integrar do jeito que está, mas uma <strong>decomposição em frações parciais</strong> (uma técnica de Cálculo 2) simplifica bastante:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{(1-y/K)\,y} = \frac{1}{y} + \frac{1/K}{1-y/K}.
+\]</div>
+<p>(Confira: colocando no mesmo denominador, os dois lados batem.)</p>
+<p>Substituindo e integrando:</p>
+<div class="math notranslate nohighlight">
+\[
+\int\left(\frac{1}{y} + \frac{1/K}{1-y/K}\right)dy = \int r\,dt \quad\Longrightarrow\quad \ln|y| - \ln\left|1-\frac{y}{K}\right| = rt + c.
+\]</div>
+<p>Combinando os logaritmos e aplicando a exponencial dos dois lados:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{y}{1-y/K} = C\,e^{rt}.
+\]</div>
+<p>Usando a condição inicial <span class="math notranslate nohighlight">\(y(0)=y_0\)</span> para achar <span class="math notranslate nohighlight">\(C = \dfrac{y_0}{1-y_0/K}\)</span>, e isolando <span class="math notranslate nohighlight">\(y\)</span> depois de um pouco de álgebra, chegamos à solução:</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = \frac{y_0 K}{y_0 + (K-y_0)e^{-rt}}.
+\]</div>
+<p>(É um bom exercício conferir essa álgebra — ou deixar o Python verificar para você, como faremos a seguir.)</p>
+<p>Repare que essa fórmula também vale, por coincidência feliz, para os casos <span class="math notranslate nohighlight">\(y_0=0\)</span> e <span class="math notranslate nohighlight">\(y_0=K\)</span> que tínhamos deixado de fora: ela dá exatamente <span class="math notranslate nohighlight">\(y(t)\equiv 0\)</span> e <span class="math notranslate nohighlight">\(y(t)\equiv K\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+
+<span class="n">t_s</span><span class="p">,</span> <span class="n">r_s</span><span class="p">,</span> <span class="n">K_s</span><span class="p">,</span> <span class="n">y0_s</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;t r K y0&#39;</span><span class="p">,</span> <span class="n">positive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">y_s</span> <span class="o">=</span> <span class="n">y0_s</span><span class="o">*</span><span class="n">K_s</span> <span class="o">/</span> <span class="p">(</span><span class="n">y0_s</span> <span class="o">+</span> <span class="p">(</span><span class="n">K_s</span> <span class="o">-</span> <span class="n">y0_s</span><span class="p">)</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">r_s</span><span class="o">*</span><span class="n">t_s</span><span class="p">))</span>
+
+<span class="n">lado_esquerdo</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">y_s</span><span class="p">,</span> <span class="n">t_s</span><span class="p">)</span>
+<span class="n">lado_direito</span> <span class="o">=</span> <span class="n">r_s</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">y_s</span><span class="o">/</span><span class="n">K_s</span><span class="p">)</span><span class="o">*</span><span class="n">y_s</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y&#39;(t) - r(1-y/K)y =&quot;</span><span class="p">,</span> <span class="n">sp</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">lado_esquerdo</span> <span class="o">-</span> <span class="n">lado_direito</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y&#39;(t) - r(1-y/K)y = 0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r_</span><span class="p">,</span> <span class="n">K_</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">10.0</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">y_logistica</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y0</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">y0</span><span class="o">*</span><span class="n">K_</span> <span class="o">/</span> <span class="p">(</span><span class="n">y0</span> <span class="o">+</span> <span class="p">(</span><span class="n">K_</span> <span class="o">-</span> <span class="n">y0</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">r_</span><span class="o">*</span><span class="n">t</span><span class="p">))</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">f_log</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">r_</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">y</span><span class="o">/</span><span class="n">K_</span><span class="p">)</span><span class="o">*</span><span class="n">y</span>
+
+<span class="n">t_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">y_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">T</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">t_grid</span><span class="p">,</span> <span class="n">y_grid</span><span class="p">)</span>
+<span class="n">dt_step</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span> <span class="o">-</span> <span class="mi">0</span><span class="p">)</span><span class="o">/</span><span class="mi">20</span><span class="o">*</span><span class="mf">0.6</span>
+<span class="n">dT</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">T</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span><span class="o">*</span><span class="n">dt_step</span>
+<span class="n">dV</span> <span class="o">=</span> <span class="n">f_log</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span><span class="o">*</span><span class="n">dt_step</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">dT</span><span class="p">,</span> <span class="n">dV</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">pivot</span><span class="o">=</span><span class="s1">&#39;mid&#39;</span><span class="p">,</span>
+           <span class="n">angles</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale_units</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">y0</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">15</span><span class="p">]:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y_logistica</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y0</span><span class="p">),</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;y(0)=</span><span class="si">{</span><span class="n">y0</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">K_</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;K=</span><span class="si">{</span><span class="n">K_</span><span class="si">:</span><span class="s1">g</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;0.4&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Crescimento logístico: $y&#39; = r(1-y/K)y$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$t$&quot;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;$y$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center right&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/c4b3b9d47a23f000d91bb02e379bf1f549f0d1a165e9d1895b609e91cd8a6f78.png" src="../_images/c4b3b9d47a23f000d91bb02e379bf1f549f0d1a165e9d1895b609e91cd8a6f78.png" />
+</div>
+</div>
+</section>
+<section id="exemplo-a-biomassa-de-linguado-gigante-no-oceano-pacifico">
+<h3>Exemplo: a biomassa de linguado gigante no Oceano Pacífico<a class="headerlink" href="#exemplo-a-biomassa-de-linguado-gigante-no-oceano-pacifico" title="Permalink to this heading">#</a></h3>
+<p>O modelo logístico já foi usado para descrever o crescimento da biomassa de linguado gigante numa região do Oceano Pacífico, com parâmetros estimados <span class="math notranslate nohighlight">\(r=0{,}71\)</span>/ano e <span class="math notranslate nohighlight">\(K=80{,}5\times10^6\)</span> kg. Partindo de <span class="math notranslate nohighlight">\(y_0=0{,}25K\)</span>, quanto vale a biomassa dois anos depois? E em que instante ela atinge <span class="math notranslate nohighlight">\(75\%\)</span> da capacidade de suporte?</p>
+<p>Dá para isolar <span class="math notranslate nohighlight">\(t\)</span> algebricamente na fórmula (como o Boyce faz), mas vamos aproveitar e deixar o Python resolver isso numericamente para a gente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.optimize</span><span class="w"> </span><span class="kn">import</span> <span class="n">brentq</span>
+
+<span class="n">r_h</span><span class="p">,</span> <span class="n">K_h</span> <span class="o">=</span> <span class="mf">0.71</span><span class="p">,</span> <span class="mf">80.5e6</span>
+<span class="n">y0_h</span> <span class="o">=</span> <span class="mf">0.25</span><span class="o">*</span><span class="n">K_h</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">y_h</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">y0_h</span><span class="o">*</span><span class="n">K_h</span> <span class="o">/</span> <span class="p">(</span><span class="n">y0_h</span> <span class="o">+</span> <span class="p">(</span><span class="n">K_h</span> <span class="o">-</span> <span class="n">y0_h</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">r_h</span><span class="o">*</span><span class="n">t</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;y(2) = </span><span class="si">{</span><span class="n">y_h</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="si">:</span><span class="s2">.3e</span><span class="si">}</span><span class="s2"> kg  (~</span><span class="si">{</span><span class="n">y_h</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mf">1e6</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> milhões de kg)&quot;</span><span class="p">)</span>
+
+<span class="n">tau</span> <span class="o">=</span> <span class="n">brentq</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">y_h</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.75</span><span class="o">*</span><span class="n">K_h</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;tau = </span><span class="si">{</span><span class="n">tau</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> anos&quot;</span><span class="p">)</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y_h</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">/</span><span class="n">K_h</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;y(0)=0,25K&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;K (capacidade de suporte)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;0.5&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">tau</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;0.5&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tau</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">fr</span><span class="s1">&#39;$\tau\approx</span><span class="si">{</span><span class="n">tau</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">$ anos&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Biomassa de linguado gigante no Oceano Pacífico&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Tempo (anos)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;$y/K$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y(2) = 4.666e+07 kg  (~46.7 milhões de kg)
+tau = 3.095 anos
+</pre></div>
+</div>
+<img alt="../_images/18e5032047787015311e8f2ca1d4014d5973ed304dae439a9f5bafdf7d4a2eea.png" src="../_images/18e5032047787015311e8f2ca1d4014d5973ed304dae439a9f5bafdf7d4a2eea.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="analise-geometrica-pontos-de-equilibrio-e-a-reta-de-fase">
+<h2>Análise geométrica: pontos de equilíbrio e a reta de fase<a class="headerlink" href="#analise-geometrica-pontos-de-equilibrio-e-a-reta-de-fase" title="Permalink to this heading">#</a></h2>
+<p>Repare que o gráfico da solução geral, lá em cima, já contém a resposta: para qualquer <span class="math notranslate nohighlight">\(y_0&gt;0\)</span>, a solução converge para <span class="math notranslate nohighlight">\(K\)</span>; as retas <span class="math notranslate nohighlight">\(y=0\)</span> e <span class="math notranslate nohighlight">\(y=K\)</span> nunca são cruzadas por nenhuma outra curva. Será que dava para prever esse comportamento <strong>sem resolver a equação</strong>, só olhando para ela?</p>
+<p>A resposta é sim — e a ideia é surpreendentemente simples. Como a equação é autônoma, <span class="math notranslate nohighlight">\(y'=f(y)\)</span>, o valor de <span class="math notranslate nohighlight">\(f(y)\)</span> (a inclinação) depende só da altura <span class="math notranslate nohighlight">\(y\)</span>, não do instante <span class="math notranslate nohighlight">\(t\)</span>. Então basta estudar o <strong>gráfico de <span class="math notranslate nohighlight">\(f(y)\)</span> em função de <span class="math notranslate nohighlight">\(y\)</span></strong> para saber tudo sobre o comportamento qualitativo das soluções — sem integrar nada!</p>
+<p><strong>Pontos de equilíbrio (ou pontos críticos).</strong> São os valores de <span class="math notranslate nohighlight">\(y\)</span> onde <span class="math notranslate nohighlight">\(f(y)=0\)</span> — ali, <span class="math notranslate nohighlight">\(y'=0\)</span>, então a função constante <span class="math notranslate nohighlight">\(y(t)\equiv y^*\)</span> é uma solução (uma <strong>solução de equilíbrio</strong>). Para a equação logística, <span class="math notranslate nohighlight">\(f(y)=r(1-y/K)y=0\)</span> dá <span class="math notranslate nohighlight">\(y=0\)</span> e <span class="math notranslate nohighlight">\(y=K\)</span> — exatamente as duas retas horizontais que vimos no gráfico.</p>
+<p>Fora dos pontos de equilíbrio, o sinal de <span class="math notranslate nohighlight">\(f(y)\)</span> diz se <span class="math notranslate nohighlight">\(y\)</span> está crescendo ou decrescendo:</p>
+<ul class="simple">
+<li><p>Onde <span class="math notranslate nohighlight">\(f(y)&gt;0\)</span>, temos <span class="math notranslate nohighlight">\(y'&gt;0\)</span>: <span class="math notranslate nohighlight">\(y\)</span> cresce.</p></li>
+<li><p>Onde <span class="math notranslate nohighlight">\(f(y)&lt;0\)</span>, temos <span class="math notranslate nohighlight">\(y'&lt;0\)</span>: <span class="math notranslate nohighlight">\(y\)</span> decresce.</p></li>
+</ul>
+<p>Isso é tudo que precisamos! Vamos visualizar o gráfico de <span class="math notranslate nohighlight">\(f(y)\)</span>, com setas indicando essa direção de crescimento/decrescimento, e também a versão vertical dessa mesma informação — o eixo <span class="math notranslate nohighlight">\(y\)</span> sozinho, chamado de <strong>reta de fase</strong>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">plot_fy_e_reta_de_fase</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span> <span class="n">equilibrios</span><span class="p">,</span> <span class="n">titulo</span><span class="p">):</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">),</span> <span class="n">gridspec_kw</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;width_ratios&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]})</span>
+
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">eq</span> <span class="ow">in</span> <span class="n">equilibrios</span><span class="p">:</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;ko&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;$y$&quot;</span><span class="p">);</span> <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;$f(y)$&quot;</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">titulo</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+    <span class="c1"># pontos que dividem o domínio em intervalos: bordas + equilíbrios</span>
+    <span class="n">pts</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">equilibrios</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">y_min</span> <span class="o">&lt;</span> <span class="n">pts</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+        <span class="n">pts</span> <span class="o">=</span> <span class="p">[</span><span class="n">y_min</span><span class="p">]</span> <span class="o">+</span> <span class="n">pts</span>
+    <span class="k">if</span> <span class="n">y_max</span> <span class="o">&gt;</span> <span class="n">pts</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="n">pts</span> <span class="o">=</span> <span class="n">pts</span> <span class="o">+</span> <span class="p">[</span><span class="n">y_max</span><span class="p">]</span>
+
+    <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">eq</span> <span class="ow">in</span> <span class="n">equilibrios</span><span class="p">:</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">eq</span><span class="p">,</span> <span class="s1">&#39;ko&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">eq</span><span class="si">:</span><span class="s1">g</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">0.12</span><span class="p">,</span> <span class="n">eq</span><span class="p">),</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([])</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Reta de fase&quot;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pts</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">pts</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">pts</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+        <span class="n">sinal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">mid</span><span class="p">]))[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">halflen</span> <span class="o">=</span> <span class="mf">0.22</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span>
+
+        <span class="n">dx</span> <span class="o">=</span> <span class="n">halflen</span><span class="o">*</span><span class="n">sinal</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">mid</span><span class="o">+</span><span class="n">dx</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">mid</span><span class="o">-</span><span class="n">dx</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+                         <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-|&gt;&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;crimson&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">2.2</span><span class="p">))</span>
+
+        <span class="n">dy</span> <span class="o">=</span> <span class="n">halflen</span><span class="o">*</span><span class="n">sinal</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">mid</span><span class="o">+</span><span class="n">dy</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">mid</span><span class="o">-</span><span class="n">dy</span><span class="p">),</span>
+                         <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-|&gt;&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;crimson&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">2.2</span><span class="p">))</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">f_log_y</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">r_</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">y</span><span class="o">/</span><span class="n">K_</span><span class="p">)</span><span class="o">*</span><span class="n">y</span>
+
+<span class="n">plot_fy_e_reta_de_fase</span><span class="p">(</span><span class="n">f_log_y</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">K_</span><span class="p">],</span> <span class="sa">r</span><span class="s2">&quot;$f(y)=r(1-y/K)y$&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/66cb767c005e6583a8bda674250d8eb4ad8144fc3207f13d0102f357e910d1b9.png" src="../_images/66cb767c005e6583a8bda674250d8eb4ad8144fc3207f13d0102f357e910d1b9.png" />
+</div>
+</div>
+<p>No gráfico da esquerda, a parábola cruza o eixo horizontal exatamente nos pontos de equilíbrio <span class="math notranslate nohighlight">\(y=0\)</span> e <span class="math notranslate nohighlight">\(y=K\)</span>; entre eles, <span class="math notranslate nohighlight">\(f(y)&gt;0\)</span> (seta para a direita — <span class="math notranslate nohighlight">\(y\)</span> cresce); acima de <span class="math notranslate nohighlight">\(K\)</span>, <span class="math notranslate nohighlight">\(f(y)&lt;0\)</span> (seta para a esquerda — <span class="math notranslate nohighlight">\(y\)</span> decresce). Na reta de fase (direita), a mesma informação aparece de forma ainda mais direta: as setas por perto de <span class="math notranslate nohighlight">\(K\)</span> <strong>convergem</strong> para ele, e as setas por perto de <span class="math notranslate nohighlight">\(0\)</span> <strong>se afastam</strong> dele.</p>
+<p>Isso define os dois conceitos centrais desta aula:</p>
+<ul class="simple">
+<li><p><strong>Equilíbrio assintoticamente estável</strong>: soluções que começam perto dele tendem a ele quando <span class="math notranslate nohighlight">\(t\to\infty\)</span>. Aqui, <span class="math notranslate nohighlight">\(y=K\)</span>.</p></li>
+<li><p><strong>Equilíbrio instável</strong>: soluções que começam perto dele se afastam. Aqui, <span class="math notranslate nohighlight">\(y=0\)</span>.</p></li>
+</ul>
+<p>Ou seja: por menor que seja a população inicial (desde que positiva), ela cresce e se aproxima de <span class="math notranslate nohighlight">\(K\)</span>; e se a população começar acima de <span class="math notranslate nohighlight">\(K\)</span>, ela decresce até <span class="math notranslate nohighlight">\(K\)</span>. Tudo isso, <strong>sem resolver a equação diferencial</strong> — só olhando para o sinal de <span class="math notranslate nohighlight">\(f(y)\)</span>!</p>
+<p>Vale registrar um ponto sutil: mesmo um termo não linear «pequeno» (o <span class="math notranslate nohighlight">\(-ay^2\)</span> que diferencia a equação logística da exponencial pura) muda completamente o destino da solução no longo prazo — de crescimento ilimitado para uma acomodação em <span class="math notranslate nohighlight">\(K\)</span>. É um bom lembrete de por que a distinção linear/não linear, que vimos lá na aula de classificação, importa tanto.</p>
+</section>
+<section id="um-limiar-critico">
+<h2>Um limiar crítico<a class="headerlink" href="#um-limiar-critico" title="Permalink to this heading">#</a></h2>
+<p>Considere agora uma equação parecida, mas com um sinal de menos a mais:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dt} = -r\left(1-\frac{y}{T}\right)y, \qquad r&gt;0,\ T&gt;0.
+\]</div>
+<p>Os pontos de equilíbrio continuam sendo as raízes do lado direito: <span class="math notranslate nohighlight">\(y=0\)</span> e <span class="math notranslate nohighlight">\(y=T\)</span>. Mas o sinal trocado muda tudo:</p>
+<ul class="simple">
+<li><p>Para <span class="math notranslate nohighlight">\(0&lt;y&lt;T\)</span>: <span class="math notranslate nohighlight">\(-r(1-y/T)y &lt; 0\)</span>, então <span class="math notranslate nohighlight">\(y\)</span> <strong>decresce</strong> (em direção a <span class="math notranslate nohighlight">\(0\)</span>).</p></li>
+<li><p>Para <span class="math notranslate nohighlight">\(y&gt;T\)</span>: <span class="math notranslate nohighlight">\(-r(1-y/T)y &gt; 0\)</span>, então <span class="math notranslate nohighlight">\(y\)</span> <strong>cresce</strong> (se afastando de <span class="math notranslate nohighlight">\(T\)</span>).</p></li>
+</ul>
+<p>Ou seja, os papéis se inverteram por completo em relação ao caso logístico: agora <span class="math notranslate nohighlight">\(y=0\)</span> é <strong>assintoticamente estável</strong>, e <span class="math notranslate nohighlight">\(y=T\)</span> é <strong>instável</strong>. <span class="math notranslate nohighlight">\(T\)</span> funciona como um <strong>limiar</strong>: populações que começam abaixo dele encolhem até a extinção; populações que começam acima dele crescem sem parar.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r_T</span><span class="p">,</span> <span class="n">T_</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">5.0</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">f_thr_y</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="o">-</span><span class="n">r_T</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">y</span><span class="o">/</span><span class="n">T_</span><span class="p">)</span><span class="o">*</span><span class="n">y</span>
+
+<span class="n">plot_fy_e_reta_de_fase</span><span class="p">(</span><span class="n">f_thr_y</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">T_</span><span class="p">],</span> <span class="sa">r</span><span class="s2">&quot;$f(y)=-r(1-y/T)y$&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/3d1a8eeffada7131d519a4e05ea6cc2690863b9e6a466ab8e03696b1ab4ee763.png" src="../_images/3d1a8eeffada7131d519a4e05ea6cc2690863b9e6a466ab8e03696b1ab4ee763.png" />
+</div>
+</div>
+<p>Limiares críticos como esse aparecem em vários contextos além da biologia. Em mecânica dos fluidos, por exemplo, pequenas perturbações num escoamento laminar costumam seguir uma equação parecida com essa: abaixo de uma certa <strong>amplitude crítica</strong> <span class="math notranslate nohighlight">\(T\)</span>, a perturbação se dissipa e o escoamento permanece laminar; acima dela, a perturbação cresce e o escoamento se torna turbulento.</p>
+<p>Podemos resolver essa equação exatamente do mesmo jeito que a logística (é separável!). Na verdade, repare que a equação do limiar sai da equação logística trocando <span class="math notranslate nohighlight">\(K\to T\)</span> e <span class="math notranslate nohighlight">\(r\to -r\)</span> — então podemos fazer essa mesma substituição direto na solução que já temos:</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = \frac{y_0 T}{y_0 + (T-y_0)e^{rt}}.
+\]</div>
+<p>Repare no expoente <strong>positivo</strong>: se <span class="math notranslate nohighlight">\(y_0&gt;T\)</span>, o termo <span class="math notranslate nohighlight">\((T-y_0)e^{rt}\)</span> é negativo e cresce em módulo sem parar — o denominador zera num instante finito <span class="math notranslate nohighlight">\(t^*\)</span>, e a população <strong>explode em tempo finito</strong> (não só quando <span class="math notranslate nohighlight">\(t\to\infty\)</span>, como no crescimento exponencial comum)! Vamos visualizar:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t_s2</span><span class="p">,</span> <span class="n">r_s2</span><span class="p">,</span> <span class="n">T_s2</span><span class="p">,</span> <span class="n">y0_s2</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;t r T y0&#39;</span><span class="p">,</span> <span class="n">positive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">y_thr_s</span> <span class="o">=</span> <span class="n">y0_s2</span><span class="o">*</span><span class="n">T_s2</span> <span class="o">/</span> <span class="p">(</span><span class="n">y0_s2</span> <span class="o">+</span> <span class="p">(</span><span class="n">T_s2</span> <span class="o">-</span> <span class="n">y0_s2</span><span class="p">)</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">r_s2</span><span class="o">*</span><span class="n">t_s2</span><span class="p">))</span>
+
+<span class="n">lado_esquerdo2</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">y_thr_s</span><span class="p">,</span> <span class="n">t_s2</span><span class="p">)</span>
+<span class="n">lado_direito2</span> <span class="o">=</span> <span class="o">-</span><span class="n">r_s2</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">y_thr_s</span><span class="o">/</span><span class="n">T_s2</span><span class="p">)</span><span class="o">*</span><span class="n">y_thr_s</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y&#39;(t) - [-r(1-y/T)y] =&quot;</span><span class="p">,</span> <span class="n">sp</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">lado_esquerdo2</span> <span class="o">-</span> <span class="n">lado_direito2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y&#39;(t) - [-r(1-y/T)y] = 0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">y_limiar</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y0</span><span class="p">):</span>
+    <span class="n">denom</span> <span class="o">=</span> <span class="n">y0</span> <span class="o">+</span> <span class="p">(</span><span class="n">T_</span> <span class="o">-</span> <span class="n">y0</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">r_T</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">y0</span><span class="o">*</span><span class="n">T_</span><span class="o">/</span><span class="n">denom</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">denom</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">y0</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y_limiar</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y0</span><span class="p">),</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;y(0)=</span><span class="si">{</span><span class="n">y0</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">T_</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Limiar T=</span><span class="si">{</span><span class="n">T_</span><span class="si">:</span><span class="s1">g</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;0.6&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Crescimento com limiar: $y&#39; = -r(1-y/T)y$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$t$&quot;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;$y$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/8a86dc557eba034694036c711db8c8618813b0d22295bc4e90b0b03e7f68b6e0.png" src="../_images/8a86dc557eba034694036c711db8c8618813b0d22295bc4e90b0b03e7f68b6e0.png" />
+</div>
+</div>
+</section>
+<section id="crescimento-logistico-com-limiar">
+<h2>Crescimento logístico com limiar<a class="headerlink" href="#crescimento-logistico-com-limiar" title="Permalink to this heading">#</a></h2>
+<p>O modelo de limiar da seção anterior tem um problema: ele prevê crescimento <em>ilimitado</em> para <span class="math notranslate nohighlight">\(y_0&gt;T\)</span>, o que não é realista — toda população real esbarra, cedo ou tarde, numa capacidade de suporte. A correção natural é combinar os dois efeitos, o limiar <strong>e</strong> a capacidade de suporte, numa equação só:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dt} = -r\left(1-\frac{y}{T}\right)\left(1-\frac{y}{K}\right)y, \qquad r&gt;0,\ 0&lt;T&lt;K.
+\]</div>
+<p>Agora temos <strong>três</strong> pontos de equilíbrio: <span class="math notranslate nohighlight">\(y=0\)</span>, <span class="math notranslate nohighlight">\(y=T\)</span> e <span class="math notranslate nohighlight">\(y=K\)</span>. Analisando o sinal do lado direito em cada faixa:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(0&lt;y&lt;T\)</span>: o lado direito é negativo — <span class="math notranslate nohighlight">\(y\)</span> decresce (rumo a <span class="math notranslate nohighlight">\(0\)</span>).</p></li>
+<li><p><span class="math notranslate nohighlight">\(T&lt;y&lt;K\)</span>: o lado direito é positivo — <span class="math notranslate nohighlight">\(y\)</span> cresce (rumo a <span class="math notranslate nohighlight">\(K\)</span>).</p></li>
+<li><p><span class="math notranslate nohighlight">\(y&gt;K\)</span>: o lado direito é negativo — <span class="math notranslate nohighlight">\(y\)</span> decresce (rumo a <span class="math notranslate nohighlight">\(K\)</span>).</p></li>
+</ul>
+<p>Então <span class="math notranslate nohighlight">\(y=0\)</span> e <span class="math notranslate nohighlight">\(y=K\)</span> são assintoticamente estáveis, e <span class="math notranslate nohighlight">\(y=T\)</span> (o limiar) é instável, espremido entre os dois:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r_c</span><span class="p">,</span> <span class="n">T_c</span><span class="p">,</span> <span class="n">K_c</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">10.0</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">f_comb_y</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="o">-</span><span class="n">r_c</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">y</span><span class="o">/</span><span class="n">T_c</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">y</span><span class="o">/</span><span class="n">K_c</span><span class="p">)</span><span class="o">*</span><span class="n">y</span>
+
+<span class="n">plot_fy_e_reta_de_fase</span><span class="p">(</span><span class="n">f_comb_y</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">T_c</span><span class="p">,</span> <span class="n">K_c</span><span class="p">],</span> <span class="sa">r</span><span class="s2">&quot;$f(y)=-r(1-y/T)(1-y/K)y$&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/8a5de5a750da1f93b2ddbebfaecb2f252903b8af806f47b37069afe81e058d22.png" src="../_images/8a5de5a750da1f93b2ddbebfaecb2f252903b8af806f47b37069afe81e058d22.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.integrate</span><span class="w"> </span><span class="kn">import</span> <span class="n">odeint</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">f_comb</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="k">return</span> <span class="o">-</span><span class="n">r_c</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">y</span><span class="o">/</span><span class="n">T_c</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">y</span><span class="o">/</span><span class="n">K_c</span><span class="p">)</span><span class="o">*</span><span class="n">y</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">y0</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">]:</span>
+    <span class="n">sol</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">f_comb</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">sol</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;y(0)=</span><span class="si">{</span><span class="n">y0</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">K_c</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;K=</span><span class="si">{</span><span class="n">K_c</span><span class="si">:</span><span class="s1">g</span><span class="si">}</span><span class="s1"> (estável)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">T_c</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;T=</span><span class="si">{</span><span class="n">T_c</span><span class="si">:</span><span class="s1">g</span><span class="si">}</span><span class="s1"> (instável)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;0.6&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Crescimento logístico com limiar: $y&#39;=-r(1-y/T)(1-y/K)y$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$t$&quot;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;$y$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/b532fd7fb99746980eacf4152e7c5020a7ac318c9707abac306a132b61a872fa.png" src="../_images/b532fd7fb99746980eacf4152e7c5020a7ac318c9707abac306a132b61a872fa.png" />
+</div>
+</div>
+<p>Repare que, dessa vez, não escrevemos uma fórmula fechada para <span class="math notranslate nohighlight">\(y(t)\)</span> — a decomposição em frações parciais fica bem mais trabalhosa com três raízes, e usamos integração numérica (<code class="docutils literal notranslate"><span class="pre">odeint</span></code>) para desenhar as curvas. Isso ilustra bem o valor da abordagem geométrica: mesmo sem uma fórmula explícita, sabíamos exatamente qual seria o formato qualitativo das soluções antes mesmo de calcular qualquer coisa.</p>
+<p>Esse tipo de modelo (com limiar) já foi usado para descrever a extinção do <strong>pombo-passageiro</strong> nos Estados Unidos. Até o final do século XIX, a espécie existia em quantidades imensas — bilhões de indivíduos. Mas ela só conseguia se reproduzir com sucesso quando presente em grandes concentrações (um limiar <span class="math notranslate nohighlight">\(T\)</span> relativamente alto). A caça intensa reduziu a densidade local da espécie abaixo desse limiar, mesmo com um número absoluto de indivíduos ainda grande — e a população, presa no lado errado do limiar, entrou em colapso. O último pombo-passageiro morreu em 1914. É um exemplo real (e triste) de como um limiar crítico, e não só o tamanho absoluto da população, pode decidir o destino de uma espécie.</p>
+</section>
+<section id="o-que-vem-a-seguir">
+<h2>O que vem a seguir<a class="headerlink" href="#o-que-vem-a-seguir" title="Permalink to this heading">#</a></h2>
+<p>Com isso, fechamos o estudo das equações de primeira ordem: lineares (fator integrante), separáveis (separação de variáveis) e autônomas (reta de fase e estabilidade) — três ferramentas complementares, cada uma com seu domínio de aplicação.</p>
+<p>Vamos guardar essa ideia de reta de fase e estabilidade — ela vai reaparecer, de um jeito mais rico, quando estudarmos <strong>sistemas</strong> de equações lineares mais adiante no curso. Por enquanto, seguimos para o próximo grande tema: equações diferenciais de <strong>segunda ordem</strong>, que aparecem naturalmente em sistemas mecânicos e elétricos.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -428,7 +876,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">Equações Separáveis</p>
+        <p class="prev-next-title">Equações Diferenciais Separáveis</p>
       </div>
     </a>
     <a class="right-next"
@@ -446,6 +894,30 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i>  
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crescimento-exponencial-o-modelo-de-malthus">Crescimento exponencial: o modelo de Malthus</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-crescimento-logistico-verhulst">O crescimento logístico (Verhulst)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resolvendo-a-equacao-logistica-por-separacao-de-variaveis">Resolvendo a equação logística por separação de variáveis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-a-biomassa-de-linguado-gigante-no-oceano-pacifico">Exemplo: a biomassa de linguado gigante no Oceano Pacífico</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analise-geometrica-pontos-de-equilibrio-e-a-reta-de-fase">Análise geométrica: pontos de equilíbrio e a reta de fase</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#um-limiar-critico">Um limiar crítico</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crescimento-logistico-com-limiar">Crescimento logístico com limiar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-vem-a-seguir">O que vem a seguir</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

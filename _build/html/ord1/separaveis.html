@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Equações Separáveis &#8212; Equações Diferenciais A</title>
+    <title>Equações Diferenciais Separáveis &#8212; Equações Diferenciais A</title>
   
   
   
@@ -65,10 +65,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ord1/separaveis';</script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
-    <link rel="next" title="Equações Autônomas" href="autonomas.html" />
+    <link rel="next" title="Equações Autônomas e Dinâmica Populacional" href="autonomas.html" />
     <link rel="prev" title="Equações Lineares e o Fator Integrante" href="lineares.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="pt"/>
@@ -183,8 +185,8 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="modelagem.html">Modelagem com EDOs de 1ª Ordem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lineares.html">Equações Lineares e o Fator Integrante</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Equações Separáveis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="autonomas.html">Equações Autônomas</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Equações Diferenciais Separáveis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autonomas.html">Equações Autônomas e Dinâmica Populacional</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exerc.html">Exercícios</a></li>
 <li class="toctree-l1"><a class="reference internal" href="videos.html">Vídeos</a></li>
 </ul>
@@ -362,7 +364,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -373,11 +377,32 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Equações Separáveis</h1>
+    <h1>Equações Diferenciais Separáveis</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2>   </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivacao-e-se-a-resistencia-do-ar-nao-fosse-linear">Motivação: e se a resistência do ar não fosse linear?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-metodo-de-separacao-de-variaveis">O método de separação de variáveis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-1">Exemplo 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-2-um-pvi-que-da-para-resolver-explicitamente">Exemplo 2 (um PVI que dá para resolver explicitamente)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-3-as-vezes-so-da-para-deixar-implicito">Exemplo 3 (às vezes só dá para deixar implícito)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voltando-a-queda-livre-com-resistencia-quadratica">Voltando à queda livre com resistência quadrática</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#velocidade-de-escape">Velocidade de escape</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#o-truque-trocar-t-por-x-como-variavel-independente">O truque: trocar <span class="math notranslate nohighlight">\(t\)</span> por <span class="math notranslate nohighlight">\(x\)</span> como variável independente</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qual-e-a-menor-velocidade-inicial-que-escapa-da-terra">Qual é a menor velocidade inicial que escapa da Terra?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-vem-a-seguir">O que vem a seguir</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -387,9 +412,408 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="equacoes-separaveis">
-<h1>Equações Separáveis<a class="headerlink" href="#equacoes-separaveis" title="Permalink to this heading">#</a></h1>
-<p><em>Em construção</em></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="equacoes-diferenciais-separaveis">
+<h1>Equações Diferenciais Separáveis<a class="headerlink" href="#equacoes-diferenciais-separaveis" title="Permalink to this heading">#</a></h1>
+<section id="motivacao-e-se-a-resistencia-do-ar-nao-fosse-linear">
+<h2>Motivação: e se a resistência do ar não fosse linear?<a class="headerlink" href="#motivacao-e-se-a-resistencia-do-ar-nao-fosse-linear" title="Permalink to this heading">#</a></h2>
+<p>Na aula de modelagem, vimos o modelo de queda livre com resistência do ar <strong>proporcional à velocidade</strong> (<span class="math notranslate nohighlight">\(\gamma v\)</span>), que pode ser resolvido usando o fator integrante, porque aquela equação era linear. E prometemos voltar para o caso em que a resistência é proporcional ao <strong>quadrado</strong> da velocidade (mais realista em velocidades maiores):</p>
+<div class="math notranslate nohighlight">
+\[
+m\frac{dv}{dt} = mg - \gamma v^2 \quad\Longrightarrow\quad \frac{dv}{dt} = g - \frac{\gamma}{m}v^2.
+\]</div>
+<p>Essa equação <strong>não é linear</strong> (por causa do <span class="math notranslate nohighlight">\(v^2\)</span>) — o fator integrante não se aplica diretamente. Mas repare: o lado direito depende só de <span class="math notranslate nohighlight">\(v\)</span>, não de <span class="math notranslate nohighlight">\(t\)</span>. Isso significa que a equação é <strong>autônoma</strong> — e toda equação autônoma é, automaticamente, <strong>separável</strong>. Vamos usar esta aula para desenvolver a técnica de separação de variáveis e, no final, resolver essa equação (e também um outro exemplo clássico: a velocidade de escape de um foguete).</p>
+</section>
+<section id="o-metodo-de-separacao-de-variaveis">
+<h2>O método de separação de variáveis<a class="headerlink" href="#o-metodo-de-separacao-de-variaveis" title="Permalink to this heading">#</a></h2>
+<p>Já vimos rapidamente esse tipo de equação lá no capítulo de classificação. Uma equação de primeira ordem é <strong>separável</strong> quando pode ser escrita na forma</p>
+<div class="math notranslate nohighlight">
+\[
+y' = g(t)\,h(y),
+\]</div>
+<p>ou seja, o lado direito se fatora em uma parte que só depende de <span class="math notranslate nohighlight">\(t\)</span> e outra que só depende de <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<p>Aliás, é exatamente esse formato que já usamos para resolver <span class="math notranslate nohighlight">\(y'=ay+b\)</span> (com <span class="math notranslate nohighlight">\(h(y)=ay+b\)</span> e <span class="math notranslate nohighlight">\(g(t)\equiv 1\)</span>).</p>
+<p>Agora vamos generalizar para <span class="math notranslate nohighlight">\(g(t)\)</span> e <span class="math notranslate nohighlight">\(h(y)\)</span> quaisquer.</p>
+<p>A ideia para resolvê-la é praticamente um truque de notação. Escrevendo <span class="math notranslate nohighlight">\(y' = dy/dt\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dt} = g(t)\,h(y) \quad\Longrightarrow\quad \frac{dy}{h(y)} = g(t)\,dt,
+\]</div>
+<p>e agora integramos os dois lados, cada um em relação à sua própria variável:</p>
+<div class="math notranslate nohighlight">
+\[
+\int \frac{dy}{h(y)} = \int g(t)\,dt.
+\]</div>
+<p>Calculando as duas primitivas, chegamos a uma equação envolvendo <span class="math notranslate nohighlight">\(t\)</span>, <span class="math notranslate nohighlight">\(y\)</span> e uma constante arbitrária <span class="math notranslate nohighlight">\(c\)</span> — em geral, uma equação <strong>implícita</strong> para <span class="math notranslate nohighlight">\(y\)</span>. Às vezes dá para isolar <span class="math notranslate nohighlight">\(y(t)\)</span> explicitamente, às vezes não — e tudo bem, a forma implícita já é uma solução legítima. Se houver uma condição inicial <span class="math notranslate nohighlight">\(y(t_0)=y_0\)</span>, usamos ela para determinar <span class="math notranslate nohighlight">\(c\)</span>, exatamente como já fizemos antes.</p>
+<section id="exemplo-1">
+<h3>Exemplo 1<a class="headerlink" href="#exemplo-1" title="Permalink to this heading">#</a></h3>
+<p>Resolva</p>
+<div class="math notranslate nohighlight">
+\[
+y' = \frac{t^2}{1-y^2}.
+\]</div>
+<p>Aqui <span class="math notranslate nohighlight">\(g(t)=t^2\)</span> e <span class="math notranslate nohighlight">\(h(y) = \dfrac{1}{1-y^2}\)</span> — de fato separável. Separando as variáveis:</p>
+<div class="math notranslate nohighlight">
+\[
+(1-y^2)\,dy = t^2\,dt.
+\]</div>
+<p>Integrando os dois lados:</p>
+<div class="math notranslate nohighlight">
+\[
+y - \frac{y^3}{3} = \frac{t^3}{3} + C.
+\]</div>
+<p>Multiplicando tudo por <span class="math notranslate nohighlight">\(-3\)</span> e reorganizando (renomeando a constante):</p>
+<div class="math notranslate nohighlight">
+\[
+t^3 - 3y + y^3 = c.
+\]</div>
+<p>Essa é uma família de curvas — uma para cada valor de <span class="math notranslate nohighlight">\(c\)</span> — chamadas <strong>curvas integrais</strong> da equação. Repare que não conseguimos (nem vamos tentar) isolar <span class="math notranslate nohighlight">\(y\)</span> explicitamente aqui: a solução fica naturalmente na forma implícita. Vamos usar o Python para visualizar a família inteira, junto com o campo de direções:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">t</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">t_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">2.2</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">,</span> <span class="mi">23</span><span class="p">)</span>
+<span class="n">y_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">23</span><span class="p">)</span> <span class="o">+</span> <span class="mf">1e-3</span>   <span class="c1"># pequeno deslocamento pra evitar y = ±1 exatamente</span>
+
+<span class="n">T</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">t_grid</span><span class="p">,</span> <span class="n">y_grid</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="n">np</span><span class="o">.</span><span class="n">errstate</span><span class="p">(</span><span class="n">divide</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="n">invalid</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">):</span>
+    <span class="n">dT</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">T</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="n">dY</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+    <span class="n">Lnorm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dT</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dY</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">dT_n</span><span class="p">,</span> <span class="n">dY_n</span> <span class="o">=</span> <span class="n">dT</span><span class="o">/</span><span class="n">Lnorm</span><span class="p">,</span> <span class="n">dY</span><span class="o">/</span><span class="n">Lnorm</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">dT_n</span><span class="p">,</span> <span class="n">dY_n</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">pivot</span><span class="o">=</span><span class="s1">&#39;mid&#39;</span><span class="p">)</span>
+
+<span class="n">t_fine</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">2.2</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+<span class="n">y_fine</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+<span class="n">Tf</span><span class="p">,</span> <span class="n">Yf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">t_fine</span><span class="p">,</span> <span class="n">y_fine</span><span class="p">)</span>
+<span class="n">Z</span> <span class="o">=</span> <span class="n">Tf</span><span class="o">**</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">3</span><span class="o">*</span><span class="n">Yf</span> <span class="o">+</span> <span class="n">Yf</span><span class="o">**</span><span class="mi">3</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">Tf</span><span class="p">,</span> <span class="n">Yf</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">levels</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">linewidths</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Curvas integrais de $y&#39; = t^2/(1-y^2)$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$t$&quot;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;$y$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/2ed595469a902e72743ce4cc3a543a102da1955ec8350dc2e2ca59565268574d.png" src="../_images/2ed595469a902e72743ce4cc3a543a102da1955ec8350dc2e2ca59565268574d.png" />
+</div>
+</div>
+<p>Repare como as curvas azuis (as curvas integrais, para diferentes valores de <span class="math notranslate nohighlight">\(c\)</span>) seguem exatamente a direção indicada pelo campo cinza — como já esperávamos. Cada escolha de <span class="math notranslate nohighlight">\(c\)</span> corresponde a uma condição inicial diferente.</p>
+</section>
+<section id="exemplo-2-um-pvi-que-da-para-resolver-explicitamente">
+<h3>Exemplo 2 (um PVI que dá para resolver explicitamente)<a class="headerlink" href="#exemplo-2-um-pvi-que-da-para-resolver-explicitamente" title="Permalink to this heading">#</a></h3>
+<p>Resolva o problema de valor inicial</p>
+<div class="math notranslate nohighlight">
+\[
+y' = \frac{3t^2+4t+2}{2(y-1)}, \qquad y(0) = -1.
+\]</div>
+<p>Separando as variáveis:</p>
+<div class="math notranslate nohighlight">
+\[
+2(y-1)\,dy = (3t^2+4t+2)\,dt.
+\]</div>
+<p>Integrando os dois lados:</p>
+<div class="math notranslate nohighlight">
+\[
+y^2 - 2y = t^3 + 2t^2 + 2t + c.
+\]</div>
+<p>Usando a condição inicial (<span class="math notranslate nohighlight">\(t=0\)</span>, <span class="math notranslate nohighlight">\(y=-1\)</span>): <span class="math notranslate nohighlight">\((-1)^2 - 2(-1) = 1+2 = 3 = c\)</span>. Logo,</p>
+<div class="math notranslate nohighlight">
+\[
+y^2 - 2y = t^3 + 2t^2 + 2t + 3.
+\]</div>
+<p>Dessa vez dá para isolar <span class="math notranslate nohighlight">\(y\)</span>: completando o quadrado (<span class="math notranslate nohighlight">\(y^2-2y = (y-1)^2 - 1\)</span>) e resolvendo,</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = 1 \pm \sqrt{t^3+2t^2+2t+4}.
+\]</div>
+<p>A condição inicial <span class="math notranslate nohighlight">\(y(0)=-1\)</span> escolhe o sinal de menos (confira: <span class="math notranslate nohighlight">\(1-\sqrt{4} = 1-2=-1\)</span> ✓), então a solução do PVI é</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = 1 - \sqrt{t^3+2t^2+2t+4}.
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">y_sol</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">t</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">t</span> <span class="o">+</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y_sol</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Condição inicial $y(0)=-1$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;PVI: $y&#39;=(3t^2+4t+2)/[2(y-1)],\ y(0)=-1$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$t$&quot;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;$y$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/f6fd5bf6e734f602d6f30b1af2eee1eb5b7b2cd9a0a842cd750f8671f3d0ea00.png" src="../_images/f6fd5bf6e734f602d6f30b1af2eee1eb5b7b2cd9a0a842cd750f8671f3d0ea00.png" />
+</div>
+</div>
+</section>
+<section id="exemplo-3-as-vezes-so-da-para-deixar-implicito">
+<h3>Exemplo 3 (às vezes só dá para deixar implícito)<a class="headerlink" href="#exemplo-3-as-vezes-so-da-para-deixar-implicito" title="Permalink to this heading">#</a></h3>
+<p>Resolva</p>
+<div class="math notranslate nohighlight">
+\[
+y' = \frac{4t-t^3}{4+y^3},
+\]</div>
+<p>e encontre a curva que passa pelo ponto <span class="math notranslate nohighlight">\((0,1)\)</span>.</p>
+<p>Separando e integrando:</p>
+<div class="math notranslate nohighlight">
+\[
+(4+y^3)\,dy = (4t-t^3)\,dt \quad\Longrightarrow\quad 4y + \frac{y^4}{4} = 2t^2 - \frac{t^4}{4} + C.
+\]</div>
+<p>Multiplicando tudo por <span class="math notranslate nohighlight">\(4\)</span> e reorganizando:</p>
+<div class="math notranslate nohighlight">
+\[
+y^4 + 16y + t^4 - 8t^2 = c.
+\]</div>
+<p>Usando o ponto <span class="math notranslate nohighlight">\((0,1)\)</span>: <span class="math notranslate nohighlight">\(1 + 16 + 0 - 0 = 17 = c\)</span>. Logo, a curva procurada é</p>
+<div class="math notranslate nohighlight">
+\[
+y^4 + 16y + t^4 - 8t^2 = 17.
+\]</div>
+<p>Aqui a equação em <span class="math notranslate nohighlight">\(y\)</span> é do <strong>quarto grau</strong> — não vale a pena tentar isolar <span class="math notranslate nohighlight">\(y(t)\)</span> na mão. Sem problema: a forma implícita já é uma solução perfeitamente válida. Vamos visualizar a família inteira (e destacar a curva que passa por <span class="math notranslate nohighlight">\((0,1)\)</span>) com o Python:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t_fine</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+<span class="n">y_fine</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">3.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+<span class="n">Tf</span><span class="p">,</span> <span class="n">Yf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">t_fine</span><span class="p">,</span> <span class="n">y_fine</span><span class="p">)</span>
+<span class="n">Z</span> <span class="o">=</span> <span class="n">Yf</span><span class="o">**</span><span class="mi">4</span> <span class="o">+</span> <span class="mi">16</span><span class="o">*</span><span class="n">Yf</span> <span class="o">+</span> <span class="n">Tf</span><span class="o">**</span><span class="mi">4</span> <span class="o">-</span> <span class="mi">8</span><span class="o">*</span><span class="n">Tf</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">Tf</span><span class="p">,</span> <span class="n">Yf</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">levels</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">30</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;0.6&#39;</span><span class="p">,</span> <span class="n">linewidths</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">Tf</span><span class="p">,</span> <span class="n">Yf</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">levels</span><span class="o">=</span><span class="p">[</span><span class="mi">17</span><span class="p">],</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">linewidths</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Ponto $(0,1)$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Curvas integrais de $y&#39; = (4t-t^3)/(4+y^3)$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$t$&quot;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;$y$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/ed83d2f00769995590354f040c843c51c24761e213acade2bd01003fab341506.png" src="../_images/ed83d2f00769995590354f040c843c51c24761e213acade2bd01003fab341506.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="voltando-a-queda-livre-com-resistencia-quadratica">
+<h2>Voltando à queda livre com resistência quadrática<a class="headerlink" href="#voltando-a-queda-livre-com-resistencia-quadratica" title="Permalink to this heading">#</a></h2>
+<p>Lembra da equação que ficou pendurada no início da aula?</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dv}{dt} = g - \frac{\gamma}{m}v^2.
+\]</div>
+<p>Agora temos a ferramenta certa. Essa é uma equação <strong>autônoma</strong> (o lado direito só depende de <span class="math notranslate nohighlight">\(v\)</span>), logo automaticamente separável, com <span class="math notranslate nohighlight">\(g(t)\equiv 1\)</span> e <span class="math notranslate nohighlight">\(h(v) = g - \frac{\gamma}{m}v^2\)</span>.</p>
+<p>Vale a pena reescrever a constante: chamando <span class="math notranslate nohighlight">\(k=\gamma/m\)</span> e <span class="math notranslate nohighlight">\(v_{eq}=\sqrt{g/k}=\sqrt{mg/\gamma}\)</span> (a nova velocidade terminal — verifique que <span class="math notranslate nohighlight">\(dv/dt=0\)</span> exatamente em <span class="math notranslate nohighlight">\(v=v_{eq}\)</span>, igual fizemos no caso linear!), a equação vira</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dv}{dt} = k\left(v_{eq}^2 - v^2\right).
+\]</div>
+<p>Separando as variáveis:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dv}{v_{eq}^2 - v^2} = k\,dt.
+\]</div>
+<p>Essa integral (que você pode conferir numa tabela de integrais, ou pedindo pro computador) tem como resultado uma <strong>tangente hiperbólica</strong>. Supondo que o objeto parte do repouso, <span class="math notranslate nohighlight">\(v(0)=0\)</span>, o resultado é</p>
+<div class="math notranslate nohighlight">
+\[
+v(t) = v_{eq}\,\tanh\!\big(v_{eq}\,k\,t\big).
+\]</div>
+<p>Repare que, quando <span class="math notranslate nohighlight">\(t\to\infty\)</span>, <span class="math notranslate nohighlight">\(\tanh(\cdot)\to 1\)</span> e <span class="math notranslate nohighlight">\(v(t)\to v_{eq}\)</span> — exatamente como esperávamos: a velocidade se aproxima da velocidade terminal, só que agora seguindo uma curva diferente da exponencial que vimos no caso linear.</p>
+<p>Vamos verificar essa solução, do jeito que já viramos fãs: substituindo de volta na equação.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+
+<span class="n">t_s</span><span class="p">,</span> <span class="n">g_s</span><span class="p">,</span> <span class="n">gamma_s</span><span class="p">,</span> <span class="n">m_s</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;t g gamma m&#39;</span><span class="p">,</span> <span class="n">positive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">k_s</span> <span class="o">=</span> <span class="n">gamma_s</span><span class="o">/</span><span class="n">m_s</span>
+<span class="n">v_eq_s</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">g_s</span><span class="o">/</span><span class="n">k_s</span><span class="p">)</span>
+
+<span class="n">v_s</span> <span class="o">=</span> <span class="n">v_eq_s</span> <span class="o">*</span> <span class="n">sp</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="n">v_eq_s</span> <span class="o">*</span> <span class="n">k_s</span> <span class="o">*</span> <span class="n">t_s</span><span class="p">)</span>
+
+<span class="n">lado_esquerdo</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">v_s</span><span class="p">,</span> <span class="n">t_s</span><span class="p">)</span>
+<span class="n">lado_direito</span> <span class="o">=</span> <span class="n">g_s</span> <span class="o">-</span> <span class="n">k_s</span><span class="o">*</span><span class="n">v_s</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;v&#39;(t) - (g - k v(t)^2) =&quot;</span><span class="p">,</span> <span class="n">sp</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">lado_esquerdo</span> <span class="o">-</span> <span class="n">lado_direito</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>v&#39;(t) - (g - k v(t)^2) = 0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m_</span> <span class="o">=</span> <span class="mi">80</span>        <span class="c1"># massa (kg)</span>
+<span class="n">gamma_</span> <span class="o">=</span> <span class="mf">0.25</span>   <span class="c1"># coeficiente de arrasto quadrático (kg/m)</span>
+<span class="n">g_</span> <span class="o">=</span> <span class="mf">9.8</span>
+
+<span class="n">k_</span> <span class="o">=</span> <span class="n">gamma_</span><span class="o">/</span><span class="n">m_</span>
+<span class="n">v_eq_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">g_</span><span class="o">/</span><span class="n">k_</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Velocidade terminal: </span><span class="si">{</span><span class="n">v_eq_</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2"> m/s&quot;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">f_quad</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">g_</span> <span class="o">-</span> <span class="n">k_</span><span class="o">*</span><span class="n">v</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">t_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">v_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">T</span><span class="p">,</span> <span class="n">V</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">t_grid</span><span class="p">,</span> <span class="n">v_grid</span><span class="p">)</span>
+<span class="n">dt_step</span> <span class="o">=</span> <span class="p">(</span><span class="mi">40</span> <span class="o">-</span> <span class="mi">0</span><span class="p">)</span> <span class="o">/</span> <span class="mi">20</span> <span class="o">*</span> <span class="mf">0.6</span>
+<span class="n">dT</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">T</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">*</span> <span class="n">dt_step</span>
+<span class="n">dV</span> <span class="o">=</span> <span class="n">f_quad</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span> <span class="o">*</span> <span class="n">dt_step</span>
+
+<span class="n">t_smooth</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">v_smooth</span> <span class="o">=</span> <span class="n">v_eq_</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="n">v_eq_</span> <span class="o">*</span> <span class="n">k_</span> <span class="o">*</span> <span class="n">t_smooth</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">dT</span><span class="p">,</span> <span class="n">dV</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">pivot</span><span class="o">=</span><span class="s1">&#39;mid&#39;</span><span class="p">,</span>
+           <span class="n">angles</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale_units</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_smooth</span><span class="p">,</span> <span class="n">v_smooth</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;v(0)=0&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">v_eq_</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Velocidade Terminal (v=</span><span class="si">{</span><span class="n">v_eq_</span><span class="si">:</span><span class="s1">.0f</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Queda Livre com Resistência do Ar Proporcional a $v^2$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Tempo (s)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Velocidade (m/s)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower right&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Velocidade terminal: 56 m/s
+</pre></div>
+</div>
+<img alt="../_images/8df8f1c05b5c4bf035c9f4e3c58255d29e020212ef18d12482742ac73a64b2e6.png" src="../_images/8df8f1c05b5c4bf035c9f4e3c58255d29e020212ef18d12482742ac73a64b2e6.png" />
+</div>
+</div>
+<p>Compare com o caso linear que vimos na aula de modelagem: lá, a velocidade se aproximava do equilíbrio seguindo uma exponencial, <span class="math notranslate nohighlight">\(v(t) = v_{eq} + (v_0-v_{eq})e^{-kt}\)</span>; aqui, seguindo uma tangente hiperbólica. Formas diferentes, mas a mesma ideia física: a resistência do ar sempre «puxa» a velocidade de volta para o equilíbrio.</p>
+<p>Vamos ver mais um exemplo clássico em que a separação de variáveis é essencial — dessa vez, olhando para cima, não para baixo.</p>
+</section>
+<section id="velocidade-de-escape">
+<h2>Velocidade de escape<a class="headerlink" href="#velocidade-de-escape" title="Permalink to this heading">#</a></h2>
+<p>Um foguete (ou qualquer objeto) lançado da superfície da Terra, na vertical, com velocidade inicial <span class="math notranslate nohighlight">\(v_0\)</span>, sofre a força da gravidade — mas, diferente da queda livre perto do chão, a força gravitacional <strong>muda com a altitude</strong>: ela é mais fraca quanto mais longe do centro da Terra o objeto está.</p>
+<p>Seja <span class="math notranslate nohighlight">\(x\)</span> a altura acima da superfície da Terra (<span class="math notranslate nohighlight">\(x=0\)</span> na superfície) e <span class="math notranslate nohighlight">\(R\)</span> o raio da Terra. A lei da gravitação de Newton diz que a força (peso) sobre um objeto de massa <span class="math notranslate nohighlight">\(m\)</span> é</p>
+<div class="math notranslate nohighlight">
+\[
+F(x) = -\frac{mgR^2}{(R+x)^2},
+\]</div>
+<p>onde <span class="math notranslate nohighlight">\(g\)</span> é a aceleração da gravidade na superfície (o sinal de menos indica que a força aponta para o centro da Terra). Repare que, em <span class="math notranslate nohighlight">\(x=0\)</span>, recuperamos o peso de sempre: <span class="math notranslate nohighlight">\(F(0)=-mg\)</span>.</p>
+<p>Pela segunda lei de Newton, a equação de movimento é</p>
+<div class="math notranslate nohighlight">
+\[
+m\frac{dv}{dt} = -\frac{mgR^2}{(R+x)^2}, \qquad v(0) = v_0.
+\]</div>
+<p>Só que aqui temos um problema: essa equação envolve <span class="math notranslate nohighlight">\(t\)</span>, <span class="math notranslate nohighlight">\(x\)</span> <strong>e</strong> <span class="math notranslate nohighlight">\(v\)</span> ao mesmo tempo — três variáveis! Não é separável do jeito que está, porque o lado direito depende de <span class="math notranslate nohighlight">\(x\)</span>, não de <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<section id="o-truque-trocar-t-por-x-como-variavel-independente">
+<h3>O truque: trocar <span class="math notranslate nohighlight">\(t\)</span> por <span class="math notranslate nohighlight">\(x\)</span> como variável independente<a class="headerlink" href="#o-truque-trocar-t-por-x-como-variavel-independente" title="Permalink to this heading">#</a></h3>
+<p>Como queremos <span class="math notranslate nohighlight">\(v\)</span> em função de <span class="math notranslate nohighlight">\(x\)</span> (a velocidade em função da altura, não do tempo), vamos usar a regra da cadeia para reescrever <span class="math notranslate nohighlight">\(dv/dt\)</span> em termos de <span class="math notranslate nohighlight">\(dv/dx\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dv}{dt} = \frac{dv}{dx}\frac{dx}{dt} = v\,\frac{dv}{dx},
+\]</div>
+<p>já que <span class="math notranslate nohighlight">\(dx/dt = v\)</span>, por definição. Substituindo na equação de movimento (e cancelando o <span class="math notranslate nohighlight">\(m\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[
+v\,\frac{dv}{dx} = -\frac{gR^2}{(R+x)^2}.
+\]</div>
+<p>Agora sim: uma equação envolvendo só <span class="math notranslate nohighlight">\(v\)</span> e <span class="math notranslate nohighlight">\(x\)</span> — e <strong>separável</strong>!</p>
+<p>Separando as variáveis:</p>
+<div class="math notranslate nohighlight">
+\[
+v\,dv = -\frac{gR^2}{(R+x)^2}\,dx.
+\]</div>
+<p>Integrando os dois lados:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{v^2}{2} = \frac{gR^2}{R+x} + c.
+\]</div>
+<p>Usando a condição inicial (<span class="math notranslate nohighlight">\(x=0\)</span>, <span class="math notranslate nohighlight">\(v=v_0\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{v_0^2}{2} = gR + c \quad\Longrightarrow\quad c = \frac{v_0^2}{2} - gR.
+\]</div>
+<p>Logo,</p>
+<div class="math notranslate nohighlight">
+\[
+v^2 = v_0^2 - 2gR + \frac{2gR^2}{R+x}.
+\]</div>
+<p>Essa fórmula nos dá a velocidade em função da altitude <span class="math notranslate nohighlight">\(x\)</span> (e não do tempo!) — repare como a mudança de variável independente foi essencial para isso.</p>
+</section>
+<section id="qual-e-a-menor-velocidade-inicial-que-escapa-da-terra">
+<h3>Qual é a menor velocidade inicial que escapa da Terra?<a class="headerlink" href="#qual-e-a-menor-velocidade-inicial-que-escapa-da-terra" title="Permalink to this heading">#</a></h3>
+<p>Olhando para a fórmula de <span class="math notranslate nohighlight">\(v^2\)</span>: conforme <span class="math notranslate nohighlight">\(x\to\infty\)</span>, o termo <span class="math notranslate nohighlight">\(\dfrac{2gR^2}{R+x}\to 0\)</span>, então</p>
+<div class="math notranslate nohighlight">
+\[
+v^2 \longrightarrow v_0^2 - 2gR.
+\]</div>
+<p>Para o objeto <strong>nunca parar de subir</strong> (ou seja, <span class="math notranslate nohighlight">\(v^2\)</span> nunca chegar a zero, não importa quão longe ele vá), precisamos que esse limite seja não negativo:</p>
+<div class="math notranslate nohighlight">
+\[
+v_0^2 - 2gR \geq 0 \quad\Longleftrightarrow\quad v_0 \geq \sqrt{2gR}.
+\]</div>
+<p>A menor velocidade inicial que garante o escape é, portanto, a famosa <strong>velocidade de escape</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+v_e = \sqrt{2gR}.
+\]</div>
+<p>Usando <span class="math notranslate nohighlight">\(g=9{,}8\ \text{m/s}^2\)</span> e <span class="math notranslate nohighlight">\(R\approx 6371\ \text{km}\)</span>, obtemos <span class="math notranslate nohighlight">\(v_e \approx 11{,}2\ \text{km/s}\)</span> — bem acima da velocidade de qualquer avião comercial, e uma das razões pelas quais colocar algo em órbita (ou além) exige tanto combustível.</p>
+<p>Podemos visualizar isso: para <span class="math notranslate nohighlight">\(v_0\)</span> abaixo da velocidade de escape, a velocidade cai a zero numa certa altitude (o objeto para e volta); para <span class="math notranslate nohighlight">\(v_0\)</span> igual ou acima da velocidade de escape, a velocidade nunca zera:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g_</span> <span class="o">=</span> <span class="mf">9.8</span>
+<span class="n">R_</span> <span class="o">=</span> <span class="mf">6371e3</span>  <span class="c1"># raio da Terra em metros</span>
+
+<span class="n">v_e</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">g_</span><span class="o">*</span><span class="n">R_</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Velocidade de escape: </span><span class="si">{</span><span class="n">v_e</span><span class="o">/</span><span class="mi">1000</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> km/s&quot;</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="o">*</span><span class="n">R_</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">frac</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">]:</span>
+    <span class="n">v0</span> <span class="o">=</span> <span class="n">frac</span><span class="o">*</span><span class="n">v_e</span>
+    <span class="n">v2</span> <span class="o">=</span> <span class="n">v0</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">g_</span><span class="o">*</span><span class="n">R_</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">g_</span><span class="o">*</span><span class="n">R_</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="n">R_</span><span class="o">+</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">v2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">v2</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">v2</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="mi">1000</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">v2</span><span class="p">)</span><span class="o">/</span><span class="mi">1000</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">fr</span><span class="s1">&#39;$v_0=</span><span class="si">{</span><span class="n">frac</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">\,v_e$&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;0.6&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Velocidade em função da altitude&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Altitude $x$ (km)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Velocidade $v$ (km/s)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Velocidade de escape: 11.17 km/s
+</pre></div>
+</div>
+<img alt="../_images/16136a2d47325ee82a7980e8978d2f9f6bd18dc4550fda85550127ff4af78670.png" src="../_images/16136a2d47325ee82a7980e8978d2f9f6bd18dc4550fda85550127ff4af78670.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="o-que-vem-a-seguir">
+<h2>O que vem a seguir<a class="headerlink" href="#o-que-vem-a-seguir" title="Permalink to this heading">#</a></h2>
+<p>Separação de variáveis é uma ferramenta poderosa — muito mais geral que o fator integrante, já que nem exige que a equação seja linear. Mas ela tem seu preço: em geral, a solução fica implícita, e às vezes a integral nem sequer tem uma primitiva elementar.</p>
+<p>Na próxima aula, vamos explorar mais modelos que se encaixam nessa forma — incluindo o crescimento logístico, que já apareceu de relance lá na aula de classificação — e, principalmente, vamos aprender a estudar equações <strong>autônomas</strong> sem sequer precisar resolvê-las, usando só a geometria da linha de fase.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -436,7 +860,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">próximo</p>
-        <p class="prev-next-title">Equações Autônomas</p>
+        <p class="prev-next-title">Equações Autônomas e Dinâmica Populacional</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -446,6 +870,34 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i>  
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivacao-e-se-a-resistencia-do-ar-nao-fosse-linear">Motivação: e se a resistência do ar não fosse linear?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-metodo-de-separacao-de-variaveis">O método de separação de variáveis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-1">Exemplo 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-2-um-pvi-que-da-para-resolver-explicitamente">Exemplo 2 (um PVI que dá para resolver explicitamente)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-3-as-vezes-so-da-para-deixar-implicito">Exemplo 3 (às vezes só dá para deixar implícito)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voltando-a-queda-livre-com-resistencia-quadratica">Voltando à queda livre com resistência quadrática</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#velocidade-de-escape">Velocidade de escape</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#o-truque-trocar-t-por-x-como-variavel-independente">O truque: trocar <span class="math notranslate nohighlight">\(t\)</span> por <span class="math notranslate nohighlight">\(x\)</span> como variável independente</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qual-e-a-menor-velocidade-inicial-que-escapa-da-terra">Qual é a menor velocidade inicial que escapa da Terra?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-vem-a-seguir">O que vem a seguir</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
