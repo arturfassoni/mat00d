@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="pt" data-content_root="" >
+<html lang="pt" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Classificação de EDs &#8212; Equações Diferenciais A</title>
   
@@ -29,45 +28,41 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/main.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/main.css?v=1cb71cee" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=0ff6c57f"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Clique para mostrar';</script>
     <script>let toggleHintHide = 'Clique para ocultar';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/main.js"></script>
-    <script src="../_static/translations.js"></script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script src="../_static/translations.js?v=5f54a428"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro/classificacao';</script>
+    <script src="../_static/main.js?v=65a91cec"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
     <link rel="next" title="Exercícios" href="exerc.html" />
@@ -168,7 +163,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Pesquisar" aria-label="Pesquisar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Pesquisar</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introdução às EDs</span></p>
 <ul class="current nav bd-sidenav">
@@ -192,8 +198,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de 2a Ordem</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../ord2/mod.html">Modelos</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ord2/h.html">Homogêneas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/mod.html">Modelagem com EDOs de 2ª Ordem</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ord2/h.html">Equações Homogêneas com Coeficientes Constantes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ord2/rrd.html">Raízes Reais Distintas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ord2/rcc.html">Raízes Complexas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ord2/rrr.html">Raízes Reais Repetidas</a></li>
@@ -268,9 +274,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -364,9 +370,9 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -416,11 +422,11 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="classificacao-de-eds">
-<h1>Classificação de EDs<a class="headerlink" href="#classificacao-de-eds" title="Permalink to this heading">#</a></h1>
+<h1>Classificação de EDs<a class="headerlink" href="#classificacao-de-eds" title="Link to this heading">#</a></h1>
 <p>Agora que sabemos o que significa «resolver» uma equação diferencial, vale a pena organizar o terreno antes de aprendermos técnicas de resolução. Existem muitos «tipos» de equações diferenciais, e cada tipo tem seu próprio conjunto de ferramentas — o que funciona bem para um tipo pode não servir para outro (ou pode ser um baita desperdício de esforço).</p>
 <p>Vamos organizar as equações diferenciais segundo alguns critérios. Pense neles como «etiquetas» que colamos em cada equação — uma mesma equação carrega várias etiquetas ao mesmo tempo.</p>
 <section id="equacoes-diferenciais-ordinarias-vs-parciais">
-<h2>Equações Diferenciais Ordinárias vs Parciais<a class="headerlink" href="#equacoes-diferenciais-ordinarias-vs-parciais" title="Permalink to this heading">#</a></h2>
+<h2>Equações Diferenciais Ordinárias vs Parciais<a class="headerlink" href="#equacoes-diferenciais-ordinarias-vs-parciais" title="Link to this heading">#</a></h2>
 <p>Já mencionamos essa distinção rapidamente na primeira aula, mas vale reforçar:</p>
 <ul class="simple">
 <li><p>Uma <strong>Equação Diferencial Ordinária (EDO)</strong> envolve uma função incógnita de <strong>uma única variável independente</strong>, como <span class="math notranslate nohighlight">\(y(t)\)</span>, e suas derivadas <em>ordinárias</em> <span class="math notranslate nohighlight">\(y', y'', \dots\)</span></p></li>
@@ -436,7 +442,7 @@ document.write(`
 <p>EDPs geralmente exigem ferramentas bem mais avançadas (séries de Fourier, separação de variáveis, métodos numéricos como elementos finitos) e costumam ser tema de uma disciplina própria. <strong>Neste curso, vamos trabalhar exclusivamente com EDOs.</strong></p>
 </section>
 <section id="ordem">
-<h2>Ordem<a class="headerlink" href="#ordem" title="Permalink to this heading">#</a></h2>
+<h2>Ordem<a class="headerlink" href="#ordem" title="Link to this heading">#</a></h2>
 <p>A <strong>ordem</strong> de uma equação diferencial é a ordem da maior derivada que aparece nela. Já usamos essa ideia desde a primeira aula, mesmo sem nomeá-la:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(y' = ky\)</span> é de <strong>primeira ordem</strong> (só aparece <span class="math notranslate nohighlight">\(y'\)</span>);</p></li>
@@ -447,7 +453,7 @@ document.write(`
 <p>Neste curso, vamos estudar principalmente equações de <strong>primeira</strong> e <strong>segunda</strong> ordem — estas últimas aparecem naturalmente em sistemas mecânicos e elétricos, onde a segunda lei de Newton ou as leis de Kirchhoff trazem uma segunda derivada — além de sistemas, que, como veremos mais adiante, sempre podem ser vistos como «várias equações de primeira ordem acopladas».</p>
 </section>
 <section id="equacoes-lineares-vs-nao-lineares">
-<h2>Equações Lineares vs Não Lineares<a class="headerlink" href="#equacoes-lineares-vs-nao-lineares" title="Permalink to this heading">#</a></h2>
+<h2>Equações Lineares vs Não Lineares<a class="headerlink" href="#equacoes-lineares-vs-nao-lineares" title="Link to this heading">#</a></h2>
 <p>Essa é, talvez, a distinção mais importante do curso — vamos usá-la o tempo todo.</p>
 <p><strong>Definição.</strong> Uma EDO de ordem <span class="math notranslate nohighlight">\(n\)</span> é <strong>linear</strong> se pode ser escrita na forma</p>
 <div class="math notranslate nohighlight">
@@ -469,7 +475,7 @@ y' = y^2, \qquad \theta'' + \frac{g}{L}\,\text{sen}\,\theta = 0 \ \ (\text{pênd
 <p><strong>Por que essa distinção importa tanto?</strong></p>
 <p>Equações lineares têm uma teoria muito bem comportada: existência e unicidade global de soluções, o <em>princípio da superposição</em> (soma de soluções ainda é solução) e métodos algébricos sistemáticos que sempre funcionam — é basicamente o que faremos nas próximas semanas. Equações não lineares costumam ser mais realistas (a natureza raramente é linear!), mas raramente têm fórmula fechada; exigem métodos qualitativos (como o campo de direções) ou numéricos (como o método de Euler).</p>
 <section id="homogenea-vs-nao-homogenea">
-<h3>Homogênea vs Não Homogênea<a class="headerlink" href="#homogenea-vs-nao-homogenea" title="Permalink to this heading">#</a></h3>
+<h3>Homogênea vs Não Homogênea<a class="headerlink" href="#homogenea-vs-nao-homogenea" title="Link to this heading">#</a></h3>
 <p>Dentro das equações lineares, <span class="math notranslate nohighlight">\(a_n(t)y^{(n)}+\cdots+a_0(t)y = g(t)\)</span>, existe uma subdivisão importante:</p>
 <ul class="simple">
 <li><p>Se <span class="math notranslate nohighlight">\(g(t)\equiv 0\)</span>, a equação é <strong>homogênea</strong>.</p></li>
@@ -478,7 +484,7 @@ y' = y^2, \qquad \theta'' + \frac{g}{L}\,\text{sen}\,\theta = 0 \ \ (\text{pênd
 <p><strong>Exemplos:</strong> <span class="math notranslate nohighlight">\(y'' + y = 0\)</span> é homogênea; <span class="math notranslate nohighlight">\(y'' + y = \cos t\)</span> é não homogênea (o termo <span class="math notranslate nohighlight">\(\cos t\)</span> é uma força externa oscilante). Fique de olho nesse vocabulário: os títulos dos próximos capítulos vão usar exatamente essas palavras (e as siglas <strong>h</strong> e <strong>nh</strong>)!</p>
 </section>
 <section id="coeficientes-constantes-vs-variaveis">
-<h3>Coeficientes Constantes vs Variáveis<a class="headerlink" href="#coeficientes-constantes-vs-variaveis" title="Permalink to this heading">#</a></h3>
+<h3>Coeficientes Constantes vs Variáveis<a class="headerlink" href="#coeficientes-constantes-vs-variaveis" title="Link to this heading">#</a></h3>
 <p>Ainda dentro das equações lineares, olhamos para os coeficientes <span class="math notranslate nohighlight">\(a_i(t)\)</span>:</p>
 <ul class="simple">
 <li><p>Se cada <span class="math notranslate nohighlight">\(a_i\)</span> é um número fixo (não depende de <span class="math notranslate nohighlight">\(t\)</span>), a equação tem <strong>coeficientes constantes</strong> — como <span class="math notranslate nohighlight">\(mx''+cx'+kx=0\)</span>, em que <span class="math notranslate nohighlight">\(m, c, k\)</span> são fixos.</p></li>
@@ -487,7 +493,7 @@ y' = y^2, \qquad \theta'' + \frac{g}{L}\,\text{sen}\,\theta = 0 \ \ (\text{pênd
 <p>Equações lineares com coeficientes constantes têm um método de solução direto e algébrico (a chamada «equação característica»), e serão nosso foco principal. Coeficientes variáveis, em geral, exigem técnicas mais avançadas (como séries de potências), que ficam fora do escopo deste curso.</p>
 </section>
 <section id="uma-observacao-sobre-equacoes-nao-lineares">
-<h3>Uma observação sobre equações não-lineares<a class="headerlink" href="#uma-observacao-sobre-equacoes-nao-lineares" title="Permalink to this heading">#</a></h3>
+<h3>Uma observação sobre equações não-lineares<a class="headerlink" href="#uma-observacao-sobre-equacoes-nao-lineares" title="Link to this heading">#</a></h3>
 <p>Uma técnica de engenharia muito comum é <strong>linearizar</strong> uma equação não linear perto de um ponto de interesse, trocando-a por uma aproximação linear mais fácil de analisar. Exemplo clássico: para ângulos pequenos, <span class="math notranslate nohighlight">\(\text{sen}\,\theta \approx \theta\)</span>, e a equação não linear do pêndulo vira a equação linear (e bem mais simples) <span class="math notranslate nohighlight">\(\theta'' + (g/L)\theta = 0\)</span>. Vamos comparar as duas na prática:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -512,13 +518,13 @@ y' = y^2, \qquad \theta'' + \frac{g}{L}\,\text{sen}\,\theta = 0 \ \ (\text{pênd
 <span class="k">for</span> <span class="n">theta0</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">],</span> <span class="n">axs</span><span class="p">):</span>
     <span class="n">sol_nl</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">pendulo_nao_linear</span><span class="p">,</span> <span class="p">[</span><span class="n">theta0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">t</span><span class="p">)</span>
     <span class="n">sol_l</span>  <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">pendulo_linear</span><span class="p">,</span> <span class="p">[</span><span class="n">theta0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">t</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">sol_nl</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Não linear (exata)&quot;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">sol_l</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;b--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Linear (aproximação)&quot;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">fr</span><span class="s2">&quot;$\theta_0=</span><span class="si">{</span><span class="n">theta0</span><span class="si">}</span><span class="s2">$ rad&quot;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;$t$ (s)&quot;</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$\theta(t)$&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">sol_nl</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="s1">'r'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Não linear (exata)"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">sol_l</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="s1">'b--'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Linear (aproximação)"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">fr</span><span class="s2">"$\theta_0=</span><span class="si">{</span><span class="n">theta0</span><span class="si">}</span><span class="s2">$ rad"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"$t$ (s)"</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">"$\theta(t)$"</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span> <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Pêndulo: $\theta&#39;&#39;+\frac</span><span class="si">{g}{L}</span><span class="s2">\text</span><span class="si">{sen}</span><span class="s2">\,\theta=0$  vs.  linearização  $\theta&#39;&#39;+\frac</span><span class="si">{g}{L}</span><span class="s2">\theta=0$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="sa">r</span><span class="s2">"Pêndulo: $\theta''+\frac</span><span class="si">{g}{L}</span><span class="s2">\text</span><span class="si">{sen}</span><span class="s2">\,\theta=0$  vs.  linearização  $\theta''+\frac</span><span class="si">{g}{L}</span><span class="s2">\theta=0$"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -532,7 +538,7 @@ y' = y^2, \qquad \theta'' + \frac{g}{L}\,\text{sen}\,\theta = 0 \ \ (\text{pênd
 </section>
 </section>
 <section id="sistemas-vs-equacoes-escalares">
-<h2>Sistemas vs Equações Escalares<a class="headerlink" href="#sistemas-vs-equacoes-escalares" title="Permalink to this heading">#</a></h2>
+<h2>Sistemas vs Equações Escalares<a class="headerlink" href="#sistemas-vs-equacoes-escalares" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Uma <strong>equação escalar</strong> envolve uma única função incógnita, <span class="math notranslate nohighlight">\(y(t)\)</span>.</p></li>
 <li><p>Um <strong>sistema de EDs</strong> envolve <strong>várias</strong> funções incógnitas, <span class="math notranslate nohighlight">\(x_1(t), x_2(t), \dots, x_n(t)\)</span>, relacionadas por várias equações simultaneamente.</p></li>
@@ -561,10 +567,10 @@ v' &amp;= -\frac{c}{m}v - \frac{k}{m}x.
 <p>Esse truque — chamado <strong>redução de ordem</strong> — é extremamente útil, porque boa parte dos métodos numéricos (como o método de Euler, que já vimos) e boa parte da teoria são desenvolvidos diretamente para sistemas de primeira ordem. Vamos explorar isso a fundo mais adiante, no capítulo de Sistemas de EDs Lineares.</p>
 </section>
 <section id="tipos-importantes-de-eds-de-1a-ordem">
-<h2>Tipos importantes de EDs de 1ª ordem<a class="headerlink" href="#tipos-importantes-de-eds-de-1a-ordem" title="Permalink to this heading">#</a></h2>
+<h2>Tipos importantes de EDs de 1ª ordem<a class="headerlink" href="#tipos-importantes-de-eds-de-1a-ordem" title="Link to this heading">#</a></h2>
 <p>Boa parte do curso vai começar justamente pelas equações de primeira ordem, <span class="math notranslate nohighlight">\(y'=f(t,y)\)</span>. Dentro delas, três formas especiais aparecem com tanta frequência — e têm técnicas de solução tão diretas — que merecem nome próprio. São exatamente os três primeiros métodos que vamos aprender.</p>
 <section id="equacoes-lineares">
-<h3>Equações lineares<a class="headerlink" href="#equacoes-lineares" title="Permalink to this heading">#</a></h3>
+<h3>Equações lineares<a class="headerlink" href="#equacoes-lineares" title="Link to this heading">#</a></h3>
 <p>O caso <span class="math notranslate nohighlight">\(n=1\)</span> da forma linear que vimos acima fica</p>
 <div class="math notranslate nohighlight">
 \[
@@ -573,7 +579,7 @@ y' + p(t)\,y = q(t).
 <p>Já vimos um exemplo: <span class="math notranslate nohighlight">\(y' + 2y = e^{-t}\)</span>. Resolvê-las vai envolver uma técnica elegante chamada <strong>fator integrante</strong>, que transforma o lado esquerdo numa derivada de produto — vamos ver isso em detalhe em breve.</p>
 </section>
 <section id="equacoes-separaveis">
-<h3>Equações separáveis<a class="headerlink" href="#equacoes-separaveis" title="Permalink to this heading">#</a></h3>
+<h3>Equações separáveis<a class="headerlink" href="#equacoes-separaveis" title="Link to this heading">#</a></h3>
 <p>Uma equação é <strong>separável</strong> quando pode ser escrita na forma</p>
 <div class="math notranslate nohighlight">
 \[
@@ -587,7 +593,7 @@ y' = g(t)\,h(y),
 <p>Aliás — reparou? A equação <span class="math notranslate nohighlight">\(y'=ky\)</span> que resolvemos há duas aulas <strong>já era separável</strong> (com <span class="math notranslate nohighlight">\(h(y)=y\)</span> e <span class="math notranslate nohighlight">\(g(t)=k\)</span>)! As categorias que estamos vendo não são compartimentos estanques: uma mesma equação pode se encaixar em várias delas ao mesmo tempo.</p>
 </section>
 <section id="equacoes-autonomas">
-<h3>Equações autônomas<a class="headerlink" href="#equacoes-autonomas" title="Permalink to this heading">#</a></h3>
+<h3>Equações autônomas<a class="headerlink" href="#equacoes-autonomas" title="Link to this heading">#</a></h3>
 <p>Uma equação de primeira ordem é <strong>autônoma</strong> quando <span class="math notranslate nohighlight">\(f\)</span> não depende explicitamente de <span class="math notranslate nohighlight">\(t\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -609,15 +615,15 @@ y' = f(y).
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">))</span>
 
-<span class="k">for</span> <span class="n">f</span><span class="p">,</span> <span class="n">titulo</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span> <span class="p">[(</span><span class="n">f_autonoma</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;Autônoma: $y&#39;=y(1-y)$&quot;</span><span class="p">,</span> <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
-                       <span class="p">(</span><span class="n">f_nao_autonoma</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;Não autônoma: $y&#39;=y\,\text</span><span class="si">{sen}</span><span class="s2">(t)$&quot;</span><span class="p">,</span> <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">])]:</span>
+<span class="k">for</span> <span class="n">f</span><span class="p">,</span> <span class="n">titulo</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span> <span class="p">[(</span><span class="n">f_autonoma</span><span class="p">,</span> <span class="sa">r</span><span class="s2">"Autônoma: $y'=y(1-y)$"</span><span class="p">,</span> <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
+                       <span class="p">(</span><span class="n">f_nao_autonoma</span><span class="p">,</span> <span class="sa">r</span><span class="s2">"Não autônoma: $y'=y\,\text</span><span class="si">{sen}</span><span class="s2">(t)$"</span><span class="p">,</span> <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">])]:</span>
     <span class="n">dT</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">T</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
     <span class="n">dY</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">T</span><span class="p">)</span>
     <span class="n">Lnorm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dT</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dY</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">dT</span><span class="o">/</span><span class="n">Lnorm</span><span class="p">,</span> <span class="n">dY</span><span class="o">/</span><span class="n">Lnorm</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">pivot</span><span class="o">=</span><span class="s1">&#39;mid&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">dT</span><span class="o">/</span><span class="n">Lnorm</span><span class="p">,</span> <span class="n">dY</span><span class="o">/</span><span class="n">Lnorm</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'gray'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">pivot</span><span class="o">=</span><span class="s1">'mid'</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">titulo</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;$t$&quot;</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;$y$&quot;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"$t$"</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"$y$"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -634,7 +640,7 @@ y' = f(y).
 </section>
 </section>
 <section id="resumo-um-mapa-das-classificacoes">
-<h2>Resumo: um mapa das classificações<a class="headerlink" href="#resumo-um-mapa-das-classificacoes" title="Permalink to this heading">#</a></h2>
+<h2>Resumo: um mapa das classificações<a class="headerlink" href="#resumo-um-mapa-das-classificacoes" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Critério</p></th>
@@ -677,7 +683,7 @@ y' = f(y).
 <p>Essas etiquetas não são só «burocracia matemática»: elas dizem exatamente qual ferramenta usar. O restante do curso está organizado justamente seguindo esse mapa — começando pelas equações mais simples e progressivamente relaxando cada hipótese.</p>
 </section>
 <section id="o-que-vem-a-seguir">
-<h2>O que vem a seguir<a class="headerlink" href="#o-que-vem-a-seguir" title="Permalink to this heading">#</a></h2>
+<h2>O que vem a seguir<a class="headerlink" href="#o-que-vem-a-seguir" title="Link to this heading">#</a></h2>
 <p>Antes de começar a resolver sistematicamente, vamos dar um passo atrás e ver de onde as equações diferenciais realmente vêm: como transformar uma situação real — um tanque enchendo, um circuito, uma população — em uma equação diferencial. É o processo de <strong>modelagem</strong>, tema da próxima aula.</p>
 </section>
 </section>

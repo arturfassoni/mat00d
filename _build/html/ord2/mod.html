@@ -1,15 +1,14 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="pt" data-content_root="" >
+<html lang="pt" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Modelos &#8212; Equações Diferenciais A</title>
+    <title>Modelagem com EDOs de 2ª Ordem &#8212; Equações Diferenciais A</title>
   
   
   
@@ -29,46 +28,44 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/main.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/main.css?v=1cb71cee" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=0ff6c57f"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Clique para mostrar';</script>
     <script>let toggleHintHide = 'Clique para ocultar';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/main.js"></script>
-    <script src="../_static/translations.js"></script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script src="../_static/translations.js?v=5f54a428"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ord2/mod';</script>
+    <script src="../_static/main.js?v=65a91cec"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
-    <link rel="next" title="Homogêneas" href="h.html" />
+    <link rel="next" title="Equações Homogêneas com Coeficientes Constantes" href="h.html" />
     <link rel="prev" title="Vídeos" href="../ord1/videos.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="pt"/>
@@ -166,7 +163,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Pesquisar" aria-label="Pesquisar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Pesquisar</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introdução às EDs</span></p>
 <ul class="nav bd-sidenav">
@@ -190,8 +198,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de 2a Ordem</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Modelos</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="h.html">Homogêneas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Modelagem com EDOs de 2ª Ordem</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="h.html">Equações Homogêneas com Coeficientes Constantes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="rrd.html">Raízes Reais Distintas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rcc.html">Raízes Complexas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rrr.html">Raízes Reais Repetidas</a></li>
@@ -266,9 +274,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -362,7 +370,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -373,11 +383,24 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Modelos</h1>
+    <h1>Modelagem com EDOs de 2ª Ordem</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2>   </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistema-massa-mola-o-nosso-prototipo">1. Sistema massa-mola: o nosso protótipo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-pendulo-linearizado">2. O pêndulo (linearizado)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#circuito-rlc-em-serie">3. Circuito RLC em série</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-mesma-equacao-tres-disfarces">A mesma equação, três disfarces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulando-o-oscilador-harmonico-sem-resolver-ainda">Simulando o oscilador harmônico (sem resolver ainda)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-vem-a-seguir">O que vem a seguir</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -387,9 +410,213 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="modelos">
-<h1>Modelos<a class="headerlink" href="#modelos" title="Permalink to this heading">#</a></h1>
-<p><em>Em construção</em></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="modelagem-com-edos-de-2a-ordem">
+<h1>Modelagem com EDOs de 2ª Ordem<a class="headerlink" href="#modelagem-com-edos-de-2a-ordem" title="Link to this heading">#</a></h1>
+<p>Equações de segunda ordem aparecem naturalmente sempre que a segunda lei de Newton entra em jogo: força é proporcional à <em>aceleração</em>, ou seja, à segunda derivada da posição. E não são só sistemas mecânicos: circuitos elétricos com indutores também produzem uma segunda derivada, dessa vez da carga elétrica.</p>
+<p>Nesta aula, vamos ver três sistemas físicos completamente diferentes: um sistema massa-mola, um pêndulo e um circuito elétrico. Os três, surpreendentemente, recaem exatamente na mesma equação diferencial:</p>
+<div class="math notranslate nohighlight">
+\[
+a\,y'' + b\,y' + c\,y = F(t).
+\]</div>
+<p>Essa vai ser a equação mais importante do resto do curso. Vamos entender de onde vem cada termo em cada um dos três sistemas e, no final, fazer algumas simulações numéricas, sem resolver a equação analiticamente ainda, só para ter uma ideia visual dos tipos de comportamento que ela pode produzir.</p>
+<section id="sistema-massa-mola-o-nosso-prototipo">
+<h2>1. Sistema massa-mola: o nosso protótipo<a class="headerlink" href="#sistema-massa-mola-o-nosso-prototipo" title="Link to this heading">#</a></h2>
+<p>Considere um bloco de massa <span class="math notranslate nohighlight">\(m\)</span>, preso a uma mola, que pode deslizar sobre uma superfície (com atrito, ou imerso num fluido viscoso, como um amortecedor). Seja <span class="math notranslate nohighlight">\(x(t)\)</span> o deslocamento do bloco em relação à posição de equilíbrio da mola. Três forças atuam sobre o bloco:</p>
+<ul class="simple">
+<li><p><strong>A força da mola</strong> (Lei de Hooke): proporcional ao deslocamento, e sempre puxando de volta para o equilíbrio: <span class="math notranslate nohighlight">\(F_{\text{mola}} = -kx\)</span>, onde <span class="math notranslate nohighlight">\(k&gt;0\)</span> é a rigidez da mola.</p></li>
+<li><p><strong>A força de amortecimento</strong>: um amortecedor (ou o atrito/resistência do meio) se opõe ao movimento, com força proporcional à velocidade: <span class="math notranslate nohighlight">\(F_{\text{amort}} = -\gamma x'\)</span>, onde <span class="math notranslate nohighlight">\(\gamma\geq0\)</span> é o coeficiente de amortecimento.</p></li>
+<li><p><strong>Uma força externa</strong> <span class="math notranslate nohighlight">\(F(t)\)</span>, aplicada de fora (alguém empurrando o bloco periodicamente, por exemplo).</p></li>
+</ul>
+<img src="../_static/figuras/massa_mola.svg" alt="Sistema massa-mola-amortecedor" width="450">
+<p><em>Sistema massa-mola-amortecedor: <span class="math notranslate nohighlight">\(m\)</span> é a massa, <span class="math notranslate nohighlight">\(k\)</span> é a rigidez da mola, <span class="math notranslate nohighlight">\(\gamma\)</span> é o amortecimento.</em></p>
+<p>Pela segunda lei de Newton, a força resultante (soma das três forças) é igual a massa vezes aceleração: <span class="math notranslate nohighlight">\(mx'' = \sum F\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+mx'' = -kx - \gamma x' + F(t) \quad\Longrightarrow\quad mx'' + \gamma x' + kx = F(t).
+\]</div>
+<p>Vamos chamar essa equação de <strong>oscilador harmônico</strong>, e ela vai ser o nosso modelo-protótipo para todo o resto do capítulo: <span class="math notranslate nohighlight">\(m\)</span> é a <strong>inércia</strong> (quanto mais massa, mais devagar o sistema reage), <span class="math notranslate nohighlight">\(\gamma\)</span> é o <strong>amortecimento</strong> (dissipa energia), <span class="math notranslate nohighlight">\(k\)</span> é a <strong>rigidez</strong> (a força restauradora) e <span class="math notranslate nohighlight">\(F(t)\)</span> é a <strong>força externa</strong>.</p>
+</section>
+<section id="o-pendulo-linearizado">
+<h2>2. O pêndulo (linearizado)<a class="headerlink" href="#o-pendulo-linearizado" title="Link to this heading">#</a></h2>
+<p>Já vimos, lá na aula de classificação, a equação do pêndulo simples: <span class="math notranslate nohighlight">\(\theta'' + (g/L)\,\text{sen}\,\theta = 0\)</span>. Vamos generalizar um pouco, incluindo amortecimento (atrito no eixo, resistência do ar) e uma força externa (um torque aplicado).</p>
+<p>A ideia é a mesma da segunda lei de Newton, só que na versão rotacional: momento de inércia vezes aceleração angular é igual à soma dos torques, <span class="math notranslate nohighlight">\(I\theta'' = \sum \tau\)</span>. Para um pêndulo simples (massa <span class="math notranslate nohighlight">\(m\)</span> na ponta de uma haste de comprimento <span class="math notranslate nohighlight">\(L\)</span>), o momento de inércia é <span class="math notranslate nohighlight">\(I=mL^2\)</span>, e os torques são:</p>
+<ul class="simple">
+<li><p><strong>Torque da gravidade</strong>: <span class="math notranslate nohighlight">\(-mgL\,\text{sen}\,\theta\)</span> (a componente do peso perpendicular à haste).</p></li>
+<li><p><strong>Torque de amortecimento</strong>: <span class="math notranslate nohighlight">\(-c\,\theta'\)</span>, proporcional à velocidade angular.</p></li>
+<li><p><strong>Torque externo</strong>: <span class="math notranslate nohighlight">\(\tau(t)\)</span>.</p></li>
+</ul>
+<img src="../_static/figuras/pendulo.svg" alt="Pêndulo simples" width="200">
+<p><em>Pêndulo simples de comprimento <span class="math notranslate nohighlight">\(L\)</span> e massa <span class="math notranslate nohighlight">\(m\)</span>.</em></p>
+<p>Então:</p>
+<div class="math notranslate nohighlight">
+\[
+mL^2\theta'' + c\theta' + mgL\,\text{sen}\,\theta = \tau(t).
+\]</div>
+<p>Já conhecemos, da aula de classificação, o truque para lidar com o <span class="math notranslate nohighlight">\(\text{sen}\,\theta\)</span>: para ângulos pequenos, <span class="math notranslate nohighlight">\(\text{sen}\,\theta\approx\theta\)</span>. Linearizando:</p>
+<div class="math notranslate nohighlight">
+\[
+\underbrace{mL^2}_{a}\,\theta'' + \underbrace{c}_{b}\,\theta' + \underbrace{mgL}_{c}\,\theta = \tau(t).
+\]</div>
+<p>Mesma estrutura de antes: inércia (agora rotacional), amortecimento, «rigidez» (a gravidade fazendo o papel da mola) e forçamento externo.</p>
+</section>
+<section id="circuito-rlc-em-serie">
+<h2>3. Circuito RLC em série<a class="headerlink" href="#circuito-rlc-em-serie" title="Link to this heading">#</a></h2>
+<p>Já mencionamos essa equação de relance lá na aula «Por que Equações Diferenciais». Considere um circuito com um resistor (<span class="math notranslate nohighlight">\(R\)</span>), um indutor (<span class="math notranslate nohighlight">\(L\)</span>) e um capacitor (<span class="math notranslate nohighlight">\(C\)</span>) ligados em série a uma fonte de tensão <span class="math notranslate nohighlight">\(E(t)\)</span>. A Lei de Kirchhoff das tensões diz que a soma das quedas de tensão ao longo do circuito é igual à tensão da fonte. Usando a carga <span class="math notranslate nohighlight">\(q(t)\)</span> no capacitor (com corrente <span class="math notranslate nohighlight">\(I=q'\)</span>):</p>
+<ul class="simple">
+<li><p><strong>Queda de tensão no indutor</strong>: <span class="math notranslate nohighlight">\(L\,I' = L\,q''\)</span> (o indutor se opõe a mudanças na corrente — é a «inércia elétrica»).</p></li>
+<li><p><strong>Queda de tensão no resistor</strong>: <span class="math notranslate nohighlight">\(R\,I = R\,q'\)</span> (dissipa energia — é o «amortecimento elétrico»).</p></li>
+<li><p><strong>Queda de tensão no capacitor</strong>: <span class="math notranslate nohighlight">\(q/C\)</span> (a «rigidez elétrica»: quanto mais carga acumulada, mais ele «empurra de volta»).</p></li>
+</ul>
+<img src="../_static/figuras/rlc.svg" alt="Circuito RLC em série" width="400">
+<p><em>Circuito RLC em série, com fonte de tensão <span class="math notranslate nohighlight">\(E(t)\)</span>.</em></p>
+<p>Somando tudo e igualando à fonte:</p>
+<div class="math notranslate nohighlight">
+\[
+Lq'' + Rq' + \frac{1}{C}q = E(t).
+\]</div>
+<p>De novo, exatamente a mesma estrutura: <span class="math notranslate nohighlight">\(L\)</span> faz o papel de inércia, <span class="math notranslate nohighlight">\(R\)</span> de amortecimento, <span class="math notranslate nohighlight">\(1/C\)</span> de rigidez, e <span class="math notranslate nohighlight">\(E(t)\)</span> de forçamento externo.</p>
+</section>
+<section id="a-mesma-equacao-tres-disfarces">
+<h2>A mesma equação, três disfarces<a class="headerlink" href="#a-mesma-equacao-tres-disfarces" title="Link to this heading">#</a></h2>
+<p>Essa é mais uma daquelas ideias bonitas que atravessam o curso inteiro: sistemas físicos completamente diferentes, descritos exatamente pela mesma matemática. Todos estes exemplos são equivalentes à EDO</p>
+<div class="math notranslate nohighlight">
+\[
+a\,y'' + b\,y' + c\,y = F(t).
+\]</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>Massa-mola</p></th>
+<th class="head"><p>Pêndulo (linearizado)</p></th>
+<th class="head"><p>Circuito RLC</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Variável (<span class="math notranslate nohighlight">\(y\)</span>)</p></td>
+<td><p>posição <span class="math notranslate nohighlight">\(x\)</span></p></td>
+<td><p>ângulo <span class="math notranslate nohighlight">\(\theta\)</span></p></td>
+<td><p>carga <span class="math notranslate nohighlight">\(q\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Inércia (<span class="math notranslate nohighlight">\(a\)</span>)</p></td>
+<td><p>massa <span class="math notranslate nohighlight">\(m\)</span></p></td>
+<td><p>momento de inércia <span class="math notranslate nohighlight">\(mL^2\)</span></p></td>
+<td><p>indutância <span class="math notranslate nohighlight">\(L\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Amortecimento (<span class="math notranslate nohighlight">\(b\)</span>)</p></td>
+<td><p>coef. de amortecimento <span class="math notranslate nohighlight">\(\gamma\)</span></p></td>
+<td><p>atrito rotacional <span class="math notranslate nohighlight">\(c\)</span></p></td>
+<td><p>resistência <span class="math notranslate nohighlight">\(R\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Rigidez (<span class="math notranslate nohighlight">\(c\)</span>)</p></td>
+<td><p>rigidez da mola <span class="math notranslate nohighlight">\(k\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(mgL\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1/C\)</span> (capacitância)</p></td>
+</tr>
+<tr class="row-even"><td><p>Forçamento (<span class="math notranslate nohighlight">\(F(t)\)</span>)</p></td>
+<td><p>força externa <span class="math notranslate nohighlight">\(F(t)\)</span></p></td>
+<td><p>torque externo <span class="math notranslate nohighlight">\(\tau(t)\)</span></p></td>
+<td><p>tensão da fonte <span class="math notranslate nohighlight">\(E(t)\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Resolver essa equação <strong>uma vez</strong> resolve, ao mesmo tempo, o movimento de um carro com suspensão, as oscilações de um pêndulo de relógio, e a corrente num circuito de rádio.</p>
+</section>
+<section id="simulando-o-oscilador-harmonico-sem-resolver-ainda">
+<h2>Simulando o oscilador harmônico (sem resolver ainda)<a class="headerlink" href="#simulando-o-oscilador-harmonico-sem-resolver-ainda" title="Link to this heading">#</a></h2>
+<p>Ainda não vamos resolver essa equação analiticamente — isso é assunto das próximas aulas. Por enquanto, vamos usar o computador para simular numericamente alguns comportamentos típicos, só para ter uma ideia visual do que está por vir. Vamos usar a notação do sistema massa-mola (<span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(m\)</span>, <span class="math notranslate nohighlight">\(\gamma\)</span>, <span class="math notranslate nohighlight">\(k\)</span>), mas lembre-se: é a mesma equação para os três sistemas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.integrate</span><span class="w"> </span><span class="kn">import</span> <span class="n">odeint</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">oscilador</span><span class="p">(</span><span class="n">estado</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">F</span><span class="p">):</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">estado</span>
+    <span class="n">dx</span> <span class="o">=</span> <span class="n">v</span>
+    <span class="n">dv</span> <span class="o">=</span> <span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">-</span> <span class="n">gamma</span><span class="o">*</span><span class="n">v</span> <span class="o">-</span> <span class="n">k</span><span class="o">*</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">m</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">dx</span><span class="p">,</span> <span class="n">dv</span><span class="p">]</span>
+
+<span class="n">m_</span><span class="p">,</span> <span class="n">k_</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">gamma_crit</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">k_</span><span class="o">*</span><span class="n">m_</span><span class="p">)</span>  <span class="c1"># o "amortecimento crítico" -- vamos entender essa fórmula em breve</span>
+
+<span class="n">casos</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">"Sem amortecimento"</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"Subamortecido"</span><span class="p">,</span> <span class="mf">0.3</span><span class="o">*</span><span class="n">gamma_crit</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"Superamortecido"</span><span class="p">,</span> <span class="mf">2.5</span><span class="o">*</span><span class="n">gamma_crit</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">gamma_</span> <span class="ow">in</span> <span class="n">casos</span><span class="p">:</span>
+    <span class="n">sol</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">oscilador</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">t</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">m_</span><span class="p">,</span> <span class="n">gamma_</span><span class="p">,</span> <span class="n">k_</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">sol</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'0.7'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">"Oscilador harmônico livre: $mx''+\gamma x'+kx=0$"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"$t$"</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"$x(t)$"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/47d29e248a08a5963027d6f3de6f0d09db3c1995863fa4f6173a1fdae9378477.png" src="../_images/47d29e248a08a5963027d6f3de6f0d09db3c1995863fa4f6173a1fdae9378477.png" />
+</div>
+</div>
+<p>Repare nos três comportamentos bem diferentes, todos partindo do mesmo estado inicial (<span class="math notranslate nohighlight">\(x(0)=1\)</span>, parado):</p>
+<ul class="simple">
+<li><p><strong>Sem amortecimento</strong>: oscila para sempre, com amplitude constante — nenhuma energia é dissipada.</p></li>
+<li><p><strong>Subamortecido</strong>: oscila, mas a amplitude vai diminuindo até sumir — o sistema «balança» algumas vezes antes de estabilizar.</p></li>
+<li><p><strong>Superamortecido</strong>: volta para o equilíbrio suavemente, sem nenhuma oscilação — o amortecimento é forte demais para permitir qualquer «balanço».</p></li>
+</ul>
+<p>Já demos uma espiada nesse tipo de comparação lá na aula «Por que Equações Diferenciais» (para o caso massa-mola-amortecedor/RLC); agora incluímos também o caso sem amortecimento nenhum. Nas próximas aulas vamos entender exatamente de onde vêm esses três regimes — inclusive a fórmula do tal «amortecimento crítico» que apareceu escondida no código.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">k_</span><span class="o">/</span><span class="n">m_</span><span class="p">)</span>
+<span class="n">F0</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+<span class="n">w_bat</span> <span class="o">=</span> <span class="mf">0.9</span><span class="o">*</span><span class="n">w0</span>
+<span class="n">t_bat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
+<span class="n">sol_bat</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">oscilador</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">t_bat</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">m_</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">k_</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">F0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">w_bat</span><span class="o">*</span><span class="n">t</span><span class="p">)))</span>
+
+<span class="n">t_res</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
+<span class="n">sol_res</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">oscilador</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">t_res</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">m_</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">k_</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">F0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">w0</span><span class="o">*</span><span class="n">t</span><span class="p">)))</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">))</span>
+
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_bat</span><span class="p">,</span> <span class="n">sol_bat</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="s1">'b'</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">r</span><span class="s2">"Batimento ($\omega$ perto de $\omega_0$)"</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"$t$"</span><span class="p">);</span> <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"$x(t)$"</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_res</span><span class="p">,</span> <span class="n">sol_res</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="s1">'r'</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">r</span><span class="s2">"Ressonância ($\omega = \omega_0$)"</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"$t$"</span><span class="p">);</span> <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"$x(t)$"</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/c84e370dbafc204a7a98527d4c1510883eb65a3ac4c7d5846f77bfcf83d9dd06.png" src="../_images/c84e370dbafc204a7a98527d4c1510883eb65a3ac4c7d5846f77bfcf83d9dd06.png" />
+</div>
+</div>
+<p>Agora, sem amortecimento, mas com uma força externa oscilante <span class="math notranslate nohighlight">\(F(t)=F_0\cos(\omega t)\)</span>:</p>
+<ul class="simple">
+<li><p><strong>Batimento</strong> (esquerda): quando a frequência de forçamento <span class="math notranslate nohighlight">\(\omega\)</span> está <em>perto</em>, mas não é igual, à frequência natural <span class="math notranslate nohighlight">\(\omega_0\)</span> do sistema, a amplitude oscila lentamente entre quase zero e um valor máximo — o famoso fenômeno de <strong>batimento</strong> (o mesmo que você ouve quando dois instrumentos musicais estão quase, mas não perfeitamente, afinados).</p></li>
+<li><p><strong>Ressonância</strong> (direita): quando <span class="math notranslate nohighlight">\(\omega=\omega_0\)</span> exatamente, a amplitude cresce sem parar — não há mais um «teto». Foi exatamente esse fenômeno, lá na aula «Por que Equações Diferenciais», que ajudou a derrubar a ponte de Tacoma Narrows.</p></li>
+</ul>
+<p>Vamos voltar a esse assunto de vibrações com todo o cuidado — incluindo como calcular exatamente a frequência natural, o amortecimento crítico, e as amplitudes de batimento e ressonância — nas próximas aulas.</p>
+</section>
+<section id="o-que-vem-a-seguir">
+<h2>O que vem a seguir<a class="headerlink" href="#o-que-vem-a-seguir" title="Link to this heading">#</a></h2>
+<p>Agora que sabemos de onde vem a equação <span class="math notranslate nohighlight">\(ay''+by'+cy=F(t)\)</span>, e já demos uma espiada visual nos comportamentos possíveis, é hora de aprender a resolvê-la de verdade. Vamos começar pelo caso mais simples — sem forçamento externo (<span class="math notranslate nohighlight">\(F(t)=0\)</span>), a chamada equação <strong>homogênea</strong> — usando a mesma ideia de «adivinhar e verificar» que já funcionou tão bem para a equação de primeira ordem <span class="math notranslate nohighlight">\(y'=ky\)</span>.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -436,7 +663,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">próximo</p>
-        <p class="prev-next-title">Homogêneas</p>
+        <p class="prev-next-title">Equações Homogêneas com Coeficientes Constantes</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -446,6 +673,26 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i>  
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistema-massa-mola-o-nosso-prototipo">1. Sistema massa-mola: o nosso protótipo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-pendulo-linearizado">2. O pêndulo (linearizado)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#circuito-rlc-em-serie">3. Circuito RLC em série</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-mesma-equacao-tres-disfarces">A mesma equação, três disfarces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulando-o-oscilador-harmonico-sem-resolver-ainda">Simulando o oscilador harmônico (sem resolver ainda)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-vem-a-seguir">O que vem a seguir</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

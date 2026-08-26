@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="pt" data-content_root="" >
+<html lang="pt" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Modelagem com EDOs de 1ª Ordem &#8212; Equações Diferenciais A</title>
   
@@ -29,45 +28,41 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/main.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/main.css?v=1cb71cee" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=0ff6c57f"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Clique para mostrar';</script>
     <script>let toggleHintHide = 'Clique para ocultar';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/main.js"></script>
-    <script src="../_static/translations.js"></script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script src="../_static/translations.js?v=5f54a428"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ord1/modelagem';</script>
+    <script src="../_static/main.js?v=65a91cec"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
     <link rel="next" title="Equações Lineares e o Fator Integrante" href="lineares.html" />
@@ -168,7 +163,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Pesquisar" aria-label="Pesquisar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Pesquisar</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introdução às EDs</span></p>
 <ul class="nav bd-sidenav">
@@ -192,8 +198,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de 2a Ordem</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../ord2/mod.html">Modelos</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ord2/h.html">Homogêneas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/mod.html">Modelagem com EDOs de 2ª Ordem</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ord2/h.html">Equações Homogêneas com Coeficientes Constantes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ord2/rrd.html">Raízes Reais Distintas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ord2/rcc.html">Raízes Complexas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ord2/rrr.html">Raízes Reais Repetidas</a></li>
@@ -268,9 +274,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -364,9 +370,9 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -416,14 +422,14 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="modelagem-com-edos-de-1a-ordem">
-<h1>Modelagem com EDOs de 1ª Ordem<a class="headerlink" href="#modelagem-com-edos-de-1a-ordem" title="Permalink to this heading">#</a></h1>
+<h1>Modelagem com EDOs de 1ª Ordem<a class="headerlink" href="#modelagem-com-edos-de-1a-ordem" title="Link to this heading">#</a></h1>
 <p>Na introdução do curso, vimos que as EDOs são a linguagem natural para descrever fenômenos que variam no tempo. O exemplo mais clássico de todos é a equação que descreve uma taxa de variação proporcional à própria quantidade existente:</p>
 <div class="math notranslate nohighlight">
 \[y' = ay\]</div>
 <p>Esta equação modela desde o <strong>crescimento populacional irrestrito</strong> (Malthus, onde <span class="math notranslate nohighlight">\(a &gt; 0\)</span> representa a taxa de crescimento natural) até o <strong>decaimento radioativo</strong> (onde <span class="math notranslate nohighlight">\(a &lt; 0\)</span> representa a taxa de desintegração de isótopos). A solução, como já vimos intuitivamente, é a função exponencial <span class="math notranslate nohighlight">\(y(t) = C e^{at}\)</span>.</p>
 <p>Mas a natureza e a engenharia costumam ser um pouco mais complexas. O que acontece quando introduzimos termos extras nesses sistemas? Vamos explorar uma série de modelos clássicos que adicionam apenas uma constante <span class="math notranslate nohighlight">\(b\)</span> à nossa equação fundamental, transformando-a em <span class="math notranslate nohighlight">\(y' = ay + b\)</span>.</p>
 <section id="queda-livre-com-resistencia-do-ar">
-<h2>1. Queda Livre com Resistência do Ar<a class="headerlink" href="#queda-livre-com-resistencia-do-ar" title="Permalink to this heading">#</a></h2>
+<h2>1. Queda Livre com Resistência do Ar<a class="headerlink" href="#queda-livre-com-resistencia-do-ar" title="Link to this heading">#</a></h2>
 <p>Imagine um objeto caindo na atmosfera. Pela Segunda Lei de Newton, a massa do objeto multiplicada por sua aceleração é igual à força resultante sobre ele (<span class="math notranslate nohighlight">\(F = ma\)</span>). A força resultante tem duas componentes: a gravidade puxando para baixo (positiva, <span class="math notranslate nohighlight">\(mg\)</span>) e a resistência do ar empurrando para cima (negativa, modelada como proporcional à velocidade, <span class="math notranslate nohighlight">\(\gamma v\)</span>).</p>
 <p>Isso nos dá a equação:</p>
 <div class="math notranslate nohighlight">
@@ -452,29 +458,29 @@ document.write(`
 
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 
-<span class="c1"># Definindo um &quot;passo&quot; no tempo visual para o tamanho das setas</span>
+<span class="c1"># Definindo um "passo" no tempo visual para o tamanho das setas</span>
 <span class="n">dt_step</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span> <span class="o">-</span> <span class="mi">0</span><span class="p">)</span> <span class="o">/</span> <span class="mi">20</span> <span class="o">*</span> <span class="mf">0.6</span>  <span class="c1"># 60% do espaçamento da grade no eixo t</span>
 
 <span class="n">dT</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">T</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">*</span> <span class="n">dt_step</span>
 <span class="n">dV</span> <span class="o">=</span> <span class="n">f_queda</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span> <span class="o">*</span> <span class="n">dt_step</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="c1"># angles=&#39;xy&#39;, scale_units=&#39;xy&#39;, scale=1 força a seta a ter exatamente a largura dt_step e altura dV</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">dT</span><span class="p">,</span> <span class="n">dV</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">pivot</span><span class="o">=</span><span class="s1">&#39;mid&#39;</span><span class="p">,</span>
-           <span class="n">angles</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale_units</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># angles='xy', scale_units='xy', scale=1 força a seta a ter exatamente a largura dt_step e altura dV</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">dT</span><span class="p">,</span> <span class="n">dV</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'gray'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">pivot</span><span class="o">=</span><span class="s1">'mid'</span><span class="p">,</span>
+           <span class="n">angles</span><span class="o">=</span><span class="s1">'xy'</span><span class="p">,</span> <span class="n">scale_units</span><span class="o">=</span><span class="s1">'xy'</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># Soluções com diferentes velocidades iniciais</span>
 <span class="n">t_smooth</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">v0</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">]:</span>
     <span class="n">v_sol</span> <span class="o">=</span> <span class="mi">49</span> <span class="o">+</span> <span class="p">(</span><span class="n">v0</span> <span class="o">-</span> <span class="mi">49</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span> <span class="o">*</span> <span class="n">t_smooth</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_smooth</span><span class="p">,</span> <span class="n">v_sol</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;v(0)=</span><span class="si">{</span><span class="n">v0</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_smooth</span><span class="p">,</span> <span class="n">v_sol</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">'v(0)=</span><span class="si">{</span><span class="n">v0</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">49</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Velocidade Terminal (v=49)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Queda Livre com Resistência do Ar&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Tempo (s)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Velocidade (m/s)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">49</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Velocidade Terminal (v=49)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Queda Livre com Resistência do Ar"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Tempo (s)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"Velocidade (m/s)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">'upper right'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -493,7 +499,7 @@ document.write(`
 <p>Para os valores acima, temos <span class="math notranslate nohighlight">\(v_{eq}=9.8/0.2=49m/s\)</span>. Assim, a velocidade terminal não é <span class="math notranslate nohighlight">\(49 m/s\)</span> por acaso. Esta é a velocidade de equilíbrio, onde a força de resistência do ar iguala a acelaração da força peso, e a velocidade não muda!</p>
 </section>
 <section id="ratos-e-corujas-dinamica-populacional">
-<h2>2. Ratos e Corujas (Dinâmica Populacional)<a class="headerlink" href="#ratos-e-corujas-dinamica-populacional" title="Permalink to this heading">#</a></h2>
+<h2>2. Ratos e Corujas (Dinâmica Populacional)<a class="headerlink" href="#ratos-e-corujas-dinamica-populacional" title="Link to this heading">#</a></h2>
 <p>Considere uma população de ratos do campo que, sem predadores, cresce a uma taxa de 50% ao mês. Sua EDO seria <span class="math notranslate nohighlight">\(p' = 0.5p\)</span>. Agora, introduza corujas que caçam e comem 450 ratos por mês. O modelo passa a ser:</p>
 <div class="math notranslate nohighlight">
 \[\frac{dp}{dt} = 0.5p - 450\]</div>
@@ -523,20 +529,20 @@ document.write(`
 <span class="n">dP</span> <span class="o">=</span> <span class="n">f_ratos</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">P</span><span class="p">)</span> <span class="o">*</span> <span class="n">dt_step</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">dT</span><span class="p">,</span> <span class="n">dP</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">pivot</span><span class="o">=</span><span class="s1">&#39;mid&#39;</span><span class="p">,</span>
-           <span class="n">angles</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale_units</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">dT</span><span class="p">,</span> <span class="n">dP</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'gray'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">pivot</span><span class="o">=</span><span class="s1">'mid'</span><span class="p">,</span>
+           <span class="n">angles</span><span class="o">=</span><span class="s1">'xy'</span><span class="p">,</span> <span class="n">scale_units</span><span class="o">=</span><span class="s1">'xy'</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="n">t_smooth</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">p0</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">880</span><span class="p">,</span> <span class="mi">890</span><span class="p">,</span> <span class="mi">910</span><span class="p">,</span> <span class="mi">920</span><span class="p">]:</span>
     <span class="n">p_sol</span> <span class="o">=</span> <span class="mi">900</span> <span class="o">+</span> <span class="p">(</span><span class="n">p0</span> <span class="o">-</span> <span class="mi">900</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">t_smooth</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_smooth</span><span class="p">,</span> <span class="n">p_sol</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;p(0)=</span><span class="si">{</span><span class="n">p0</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_smooth</span><span class="p">,</span> <span class="n">p_sol</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">'p(0)=</span><span class="si">{</span><span class="n">p0</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">900</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Equilíbrio (p=900)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;População de Ratos caçados por Corujas&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Tempo (meses)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;População&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">900</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Equilíbrio (p=900)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"População de Ratos caçados por Corujas"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Tempo (meses)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"População"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">'upper left'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -551,14 +557,14 @@ document.write(`
 <p>Observe a diferença qualitativa para o modelo de queda livre. Aqui, o equilíbrio em <span class="math notranslate nohighlight">\(p=900\)</span> é instável. Se houver 901 ratos no início, a população explode. Se houver 899, as corujas eventualmente extinguem os ratos.</p>
 </section>
 <section id="a-lei-de-resfriamento-de-newton">
-<h2>3. A Lei de Resfriamento de Newton<a class="headerlink" href="#a-lei-de-resfriamento-de-newton" title="Permalink to this heading">#</a></h2>
+<h2>3. A Lei de Resfriamento de Newton<a class="headerlink" href="#a-lei-de-resfriamento-de-newton" title="Link to this heading">#</a></h2>
 <p>Quando você tira uma peça quente do forno, a taxa com a qual ela perde calor é proporcional à diferença de temperatura entre a peça (<span class="math notranslate nohighlight">\(T\)</span>) e o ambiente ao seu redor (<span class="math notranslate nohighlight">\(T_a\)</span>).</p>
 <div class="math notranslate nohighlight">
 \[\frac{dT}{dt} = -k(T - T_a)\]</div>
 <p>Expandindo, temos <span class="math notranslate nohighlight">\(T' = -kT + kT_a\)</span>. Novamente, a mesma estrutura <span class="math notranslate nohighlight">\(y' = ay + b\)</span>, onde <span class="math notranslate nohighlight">\(a = -k\)</span> (garantindo que a temperatura não exploda para o infinito). Todas as soluções fluem gradativamente para a temperatura ambiente.</p>
 </section>
 <section id="mistura-em-tanques">
-<h2>4. Mistura em Tanques<a class="headerlink" href="#mistura-em-tanques" title="Permalink to this heading">#</a></h2>
+<h2>4. Mistura em Tanques<a class="headerlink" href="#mistura-em-tanques" title="Link to this heading">#</a></h2>
 <p>Um tanque contém 100 galões de água. Água com concentração de sal de 0.25 lb/gal entra no tanque a uma taxa de 3 gal/min, e a mistura homogênea é drenada na mesma taxa de 3 gal/min.</p>
 <p>A variação de sal <span class="math notranslate nohighlight">\(Q(t)\)</span> é a diferença entre a taxa de entrada e a taxa de saída.</p>
 <ul class="simple">
@@ -581,19 +587,19 @@ $<span class="math notranslate nohighlight">\(\frac{dQ}{dt} = -0.03Q + 0.75\)</s
 <span class="n">L</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dT</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dQ</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">Q</span><span class="p">,</span> <span class="n">dT</span><span class="o">/</span><span class="n">L</span><span class="p">,</span> <span class="n">dQ</span><span class="o">/</span><span class="n">L</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">pivot</span><span class="o">=</span><span class="s1">&#39;mid&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">Q</span><span class="p">,</span> <span class="n">dT</span><span class="o">/</span><span class="n">L</span><span class="p">,</span> <span class="n">dQ</span><span class="o">/</span><span class="n">L</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'gray'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">pivot</span><span class="o">=</span><span class="s1">'mid'</span><span class="p">)</span>
 
 <span class="n">t_smooth</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">q0</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]:</span>
     <span class="n">q_sol</span> <span class="o">=</span> <span class="mi">25</span> <span class="o">+</span> <span class="p">(</span><span class="n">q0</span> <span class="o">-</span> <span class="mi">25</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.03</span> <span class="o">*</span> <span class="n">t_smooth</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_smooth</span><span class="p">,</span> <span class="n">q_sol</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Q(0)=</span><span class="si">{</span><span class="n">q0</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_smooth</span><span class="p">,</span> <span class="n">q_sol</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">'Q(0)=</span><span class="si">{</span><span class="n">q0</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Concentração Limite (Q=25)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Mistura de Sal no Tanque&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Tempo (min)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Quantidade de Sal (lb)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Concentração Limite (Q=25)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Mistura de Sal no Tanque"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Tempo (min)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"Quantidade de Sal (lb)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">'upper right'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -604,14 +610,14 @@ $<span class="math notranslate nohighlight">\(\frac{dQ}{dt} = -0.03Q + 0.75\)</s
 </div>
 </section>
 <section id="investimentos-e-juros-compostos">
-<h2>5. Investimentos e Juros Compostos<a class="headerlink" href="#investimentos-e-juros-compostos" title="Permalink to this heading">#</a></h2>
+<h2>5. Investimentos e Juros Compostos<a class="headerlink" href="#investimentos-e-juros-compostos" title="Link to this heading">#</a></h2>
 <p>Suponha um investimento com rendimento contínuo de 8% ao ano (<span class="math notranslate nohighlight">\(r=0.08\)</span>). Além disso, o investidor faz aportes contínuos de R<span class="math notranslate nohighlight">\( 2000 por ano. A taxa de variação do saldo \)</span>S(t)$ será os juros rendendo sobre o saldo atual mais a entrada fixa de dinheiro:</p>
 <div class="math notranslate nohighlight">
 \[\frac{dS}{dt} = 0.08S + 2000\]</div>
 <p>Como a taxa que multiplica a variável (<span class="math notranslate nohighlight">\(0.08\)</span>) é positiva, o saldo decolará exponencialmente. Se a pessoa fizesse <em>retiradas</em> de R$ 2000, o termo seria negativo, e o saldo poderia eventualmente zerar se não houvesse capital suficiente para sustentar as retiradas através dos juros.</p>
 </section>
 <section id="algo-em-comum">
-<h2>Algo em comum<a class="headerlink" href="#algo-em-comum" title="Permalink to this heading">#</a></h2>
+<h2>Algo em comum<a class="headerlink" href="#algo-em-comum" title="Link to this heading">#</a></h2>
 <p>O que um objeto caindo de um avião, ratos sendo caçados por corujas, uma barra de metal esfriando, o fluxo de poluentes num lago e sua conta bancária têm em comum?</p>
 <p>Em todos os exemplos acima, a equação que modelou o fenômeno tinha exatamente o mesmo formato matemático:</p>
 <div class="math notranslate nohighlight">
@@ -621,10 +627,10 @@ $<span class="math notranslate nohighlight">\(\frac{dQ}{dt} = -0.03Q + 0.75\)</s
 <p>Ainda mais: na matemática, quando diversos problemas diferentes culminam na mesma equação abstrata, ganhamos uma vantagem tremenda: resolvemos a equação de uma vez por todas, e a solução servirá para todos os problemas simultaneamente.</p>
 </section>
 <section id="resolvendo-a-equacao-y-ay-b">
-<h2>Resolvendo a Equação <span class="math notranslate nohighlight">\(y' = ay + b\)</span><a class="headerlink" href="#resolvendo-a-equacao-y-ay-b" title="Permalink to this heading">#</a></h2>
+<h2>Resolvendo a Equação <span class="math notranslate nohighlight">\(y' = ay + b\)</span><a class="headerlink" href="#resolvendo-a-equacao-y-ay-b" title="Link to this heading">#</a></h2>
 <p>Repare que essa equação é, ao mesmo tempo, <strong>linear</strong> (é da forma <span class="math notranslate nohighlight">\(y' + p(t)y = q(t)\)</span>, com <span class="math notranslate nohighlight">\(p(t)=-a\)</span> e <span class="math notranslate nohighlight">\(q(t)=b\)</span> constantes) e <strong>separável</strong> (o lado direito, <span class="math notranslate nohighlight">\(ay+b\)</span>, depende só de <span class="math notranslate nohighlight">\(y\)</span>, então trivialmente se fatora como <span class="math notranslate nohighlight">\(g(t)h(y)\)</span> com <span class="math notranslate nohighlight">\(g(t)\equiv 1\)</span>). Isso significa que existem <strong>dois caminhos diferentes</strong> para resolvê-la — e vale a pena conhecer os dois, porque cada um vai generalizar de um jeito diferente para modelos mais complexos, como veremos mais adiante.</p>
 <section id="metodo-1-separacao-de-variaveis">
-<h3>Método 1: separação de variáveis<a class="headerlink" href="#metodo-1-separacao-de-variaveis" title="Permalink to this heading">#</a></h3>
+<h3>Método 1: separação de variáveis<a class="headerlink" href="#metodo-1-separacao-de-variaveis" title="Link to this heading">#</a></h3>
 <p>Vamos encontrar a fórmula geral que soluciona essa EDO. Assumindo que <span class="math notranslate nohighlight">\(a \neq 0\)</span>, podemos colocar a constante <span class="math notranslate nohighlight">\(a\)</span> em evidência no lado direito:</p>
 <div class="math notranslate nohighlight">
 \[\frac{dy}{dt} = a \left( y + \frac{b}{a} \right)\]</div>
@@ -644,7 +650,7 @@ $<span class="math notranslate nohighlight">\(\frac{dQ}{dt} = -0.03Q + 0.75\)</s
 \[y(t) = -\frac{b}{a} + \left( y_0 + \frac{b}{a} \right) e^{at}\]</div>
 </section>
 <section id="metodo-2-fator-integrante">
-<h3>Método 2: fator integrante<a class="headerlink" href="#metodo-2-fator-integrante" title="Permalink to this heading">#</a></h3>
+<h3>Método 2: fator integrante<a class="headerlink" href="#metodo-2-fator-integrante" title="Link to this heading">#</a></h3>
 <p>Existe um segundo caminho, que vai ser nosso principal instrumento nas próximas aulas: o <strong>método do fator integrante</strong>. A ideia é multiplicar a equação inteira por um fator especialmente escolhido, de forma que o lado esquerdo vire a derivada de um produto.</p>
 <p>Reescrevendo a equação com os termos em <span class="math notranslate nohighlight">\(y\)</span> do mesmo lado:</p>
 <div class="math notranslate nohighlight">
@@ -676,7 +682,7 @@ y(t) = -\frac{b}{a} + c\,e^{at}.
 </section>
 </section>
 <section id="o-segredo-esta-no-sinal-de-a">
-<h2>O segredo está no sinal de <span class="math notranslate nohighlight">\(a\)</span><a class="headerlink" href="#o-segredo-esta-no-sinal-de-a" title="Permalink to this heading">#</a></h2>
+<h2>O segredo está no sinal de <span class="math notranslate nohighlight">\(a\)</span><a class="headerlink" href="#o-segredo-esta-no-sinal-de-a" title="Link to this heading">#</a></h2>
 <p>Olhando para a fórmula da solução, notamos um termo fixo (<span class="math notranslate nohighlight">\(-b/a\)</span>) e um termo exponencial que multiplica o desvio inicial. A constante <span class="math notranslate nohighlight">\(a\)</span> dita o destino de todo o sistema!</p>
 <p>Se calcularmos o equilíbrio (ou seja, quando a taxa de variação zera, <span class="math notranslate nohighlight">\(y' = 0\)</span>), descobrimos que o equilíbrio é exatamente <span class="math notranslate nohighlight">\(y = -b/a\)</span>.</p>
 <ol class="arabic simple">
@@ -685,10 +691,10 @@ y(t) = -\frac{b}{a} + c\,e^{at}.
 </ol>
 </section>
 <section id="generalizacoes-para-o-futuro">
-<h2>Generalizações para o futuro<a class="headerlink" href="#generalizacoes-para-o-futuro" title="Permalink to this heading">#</a></h2>
+<h2>Generalizações para o futuro<a class="headerlink" href="#generalizacoes-para-o-futuro" title="Link to this heading">#</a></h2>
 <p>Construir modelos onde as taxas são constantes é um ótimo ponto de partida, mas em projetos de engenharia complexos, o cenário muda. E é exatamente aqui que a dupla natureza da equação <span class="math notranslate nohighlight">\(y'=ay+b\)</span> — linear e separável — se torna útil: cada característica aponta para uma direção diferente de generalização, com seu próprio método de solução. Os dois serão igualmente importantes ao longo do curso.</p>
 <section id="generalizando-pela-linearidade-o-fator-integrante">
-<h3>Generalizando pela linearidade: o fator integrante<a class="headerlink" href="#generalizando-pela-linearidade-o-fator-integrante" title="Permalink to this heading">#</a></h3>
+<h3>Generalizando pela linearidade: o fator integrante<a class="headerlink" href="#generalizando-pela-linearidade-o-fator-integrante" title="Link to this heading">#</a></h3>
 <p>O método do fator integrante não depende de <span class="math notranslate nohighlight">\(a\)</span> e <span class="math notranslate nohighlight">\(b\)</span> serem constantes — ele continua funcionando (com pequenos ajustes) mesmo quando os coeficientes variam com o tempo, desde que a equação continue linear:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -697,7 +703,7 @@ y' = a(t)\,y + b(t).
 <p>É exatamente isso que acontece se a taxa de juros do banco mudar mês a mês, se a temperatura ambiente oscilar ao longo do dia, ou se o coeficiente de resistência do ar de um foguete mudar à medida que ele consome combustível e fica mais leve. Essas são as <strong>EDs lineares de 1ª ordem</strong> (possivelmente não autônomas), e vamos resolvê-las sistematicamente com o fator integrante já na próxima aula.</p>
 </section>
 <section id="generalizando-pela-separabilidade-separacao-de-variaveis">
-<h3>Generalizando pela separabilidade: separação de variáveis<a class="headerlink" href="#generalizando-pela-separabilidade-separacao-de-variaveis" title="Permalink to this heading">#</a></h3>
+<h3>Generalizando pela separabilidade: separação de variáveis<a class="headerlink" href="#generalizando-pela-separabilidade-separacao-de-variaveis" title="Link to this heading">#</a></h3>
 <p>Já a separação de variáveis não exige que a equação seja linear — só exige que o lado direito se fatore como <span class="math notranslate nohighlight">\(g(t)h(y)\)</span>. Isso permite generalizar a equação trocando a forma como a taxa depende de <span class="math notranslate nohighlight">\(y\)</span>, mesmo que isso quebre a linearidade, desde que a equação continue sem depender explicitamente de <span class="math notranslate nohighlight">\(t\)</span> (ou seja, continue <strong>autônoma</strong> — um caso particular, e especialmente importante, de equação separável). Dois exemplos:</p>
 <ul class="simple">
 <li><p>Se a resistência do ar for proporcional ao <strong>quadrado</strong> da velocidade (mais realista em altas velocidades), a equação da queda livre vira <span class="math notranslate nohighlight">\(v' = g - \dfrac{\gamma}{m}v^2\)</span> — não linear, mas ainda autônoma (e, portanto, ainda separável).</p></li>

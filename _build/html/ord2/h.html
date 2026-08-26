@@ -1,15 +1,14 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="pt" data-content_root="" >
+<html lang="pt" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Homogêneas &#8212; Equações Diferenciais A</title>
+    <title>Equações Homogêneas com Coeficientes Constantes &#8212; Equações Diferenciais A</title>
   
   
   
@@ -29,47 +28,45 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/main.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/main.css?v=1cb71cee" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=0ff6c57f"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Clique para mostrar';</script>
     <script>let toggleHintHide = 'Clique para ocultar';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/main.js"></script>
-    <script src="../_static/translations.js"></script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script src="../_static/translations.js?v=5f54a428"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ord2/h';</script>
+    <script src="../_static/main.js?v=65a91cec"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
     <link rel="next" title="Raízes Reais Distintas" href="rrd.html" />
-    <link rel="prev" title="Modelos" href="mod.html" />
+    <link rel="prev" title="Modelagem com EDOs de 2ª Ordem" href="mod.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="pt"/>
   </head>
@@ -166,7 +163,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Pesquisar" aria-label="Pesquisar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Pesquisar</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introdução às EDs</span></p>
 <ul class="nav bd-sidenav">
@@ -190,8 +198,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de 2a Ordem</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="mod.html">Modelos</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Homogêneas</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1"><a class="reference internal" href="mod.html">Modelagem com EDOs de 2ª Ordem</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Equações Homogêneas com Coeficientes Constantes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="rrd.html">Raízes Reais Distintas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rcc.html">Raízes Complexas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rrr.html">Raízes Reais Repetidas</a></li>
@@ -266,9 +274,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -362,7 +370,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -373,11 +383,30 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Homogêneas</h1>
+    <h1>Equações Homogêneas com Coeficientes Constantes</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2>   </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#um-chute-inteligente-y-e-rt">Um chute inteligente: <span class="math notranslate nohighlight">\(y=e^{rt}\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-1">Exemplo 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-2">Exemplo 2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalizando-a-equacao-caracteristica">Generalizando: a equação característica</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-3">Exemplo 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-4">Exemplo 4</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tres-comportamentos-possiveis">Três comportamentos possíveis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-vem-a-seguir">O que vem a seguir</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -387,9 +416,230 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="homogeneas">
-<h1>Homogêneas<a class="headerlink" href="#homogeneas" title="Permalink to this heading">#</a></h1>
-<p><em>Em construção</em></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="equacoes-homogeneas-com-coeficientes-constantes">
+<h1>Equações Homogêneas com Coeficientes Constantes<a class="headerlink" href="#equacoes-homogeneas-com-coeficientes-constantes" title="Link to this heading">#</a></h1>
+<p>Terminamos a aula passada prometendo resolver a equação homogênea</p>
+<div class="math notranslate nohighlight">
+\[
+ay'' + by' + cy = 0, \qquad a\neq0,
+\]</div>
+<p>usando a mesma ideia de «adivinhar e verificar» que funcionou tão bem para <span class="math notranslate nohighlight">\(y'=ky\)</span>. É exatamente isso que vamos fazer agora.</p>
+<section id="um-chute-inteligente-y-e-rt">
+<h2>Um chute inteligente: <span class="math notranslate nohighlight">\(y=e^{rt}\)</span><a class="headerlink" href="#um-chute-inteligente-y-e-rt" title="Link to this heading">#</a></h2>
+<p>Para a equação de primeira ordem <span class="math notranslate nohighlight">\(y'=ky\)</span>, a solução era uma exponencial, <span class="math notranslate nohighlight">\(y=Ce^{kt}\)</span>. Vamos tentar a mesma ideia aqui: procurar soluções da forma</p>
+<div class="math notranslate nohighlight">
+\[
+y = e^{rt},
+\]</div>
+<p>onde <span class="math notranslate nohighlight">\(r\)</span> é uma constante a ser determinada. Como <span class="math notranslate nohighlight">\(y'=re^{rt}\)</span> e <span class="math notranslate nohighlight">\(y''=r^2e^{rt}\)</span>, substituir esse chute na equação vai transformar a equação diferencial numa equação <strong>algébrica</strong> para <span class="math notranslate nohighlight">\(r\)</span>, que será bem mais fácil de resolver. Vamos ver como isso funciona na prática, com dois exemplos concretos.</p>
+<section id="exemplo-1">
+<h3>Exemplo 1<a class="headerlink" href="#exemplo-1" title="Link to this heading">#</a></h3>
+<p>Resolva</p>
+<div class="math notranslate nohighlight">
+\[
+y'' - y = 0, \qquad y(0)=2,\ y'(0)=-1.
+\]</div>
+<p>Aqui <span class="math notranslate nohighlight">\(a=1\)</span>, <span class="math notranslate nohighlight">\(b=0\)</span>, <span class="math notranslate nohighlight">\(c=-1\)</span>. Substituindo <span class="math notranslate nohighlight">\(y=e^{rt}\)</span>, <span class="math notranslate nohighlight">\(y'=re^{rt}\)</span>, <span class="math notranslate nohighlight">\(y''=r^2e^{rt}\)</span> na equação:</p>
+<div class="math notranslate nohighlight">
+\[
+r^2e^{rt} - e^{rt} = 0 \quad\Longrightarrow\quad e^{rt}\big(r^2-1\big) = 0.
+\]</div>
+<p>Como <span class="math notranslate nohighlight">\(e^{rt}\)</span> nunca é zero (para nenhum valor de <span class="math notranslate nohighlight">\(t\)</span>), a única forma de essa igualdade valer é</p>
+<div class="math notranslate nohighlight">
+\[
+r^2 - 1 = 0 \quad\Longrightarrow\quad r = \pm1.
+\]</div>
+<p>Ou seja: <span class="math notranslate nohighlight">\(y_1=e^{t}\)</span> e <span class="math notranslate nohighlight">\(y_2=e^{-t}\)</span> são soluções. Assim como aconteceu para <span class="math notranslate nohighlight">\(y'=ay+b\)</span>, qualquer combinação linear dessas duas soluções também é solução (vale a pena verificar isso, porque vamos usar esse fato o tempo todo):</p>
+<div class="math notranslate nohighlight">
+\[
+y = c_1e^{t} + c_2e^{-t}.
+\]</div>
+<p>Usando as condições iniciais: em <span class="math notranslate nohighlight">\(t=0\)</span>, <span class="math notranslate nohighlight">\(y=c_1+c_2=2\)</span>. Derivando, <span class="math notranslate nohighlight">\(y'=c_1e^{t}-c_2e^{-t}\)</span>, e em <span class="math notranslate nohighlight">\(t=0\)</span>: <span class="math notranslate nohighlight">\(c_1-c_2=-1\)</span>. Resolvendo o sistema (some as duas equações): <span class="math notranslate nohighlight">\(c_1=\tfrac12\)</span>, <span class="math notranslate nohighlight">\(c_2=\tfrac32\)</span>. Logo,</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = \frac12 e^{t} + \frac32 e^{-t}.
+\]</div>
+<p>Vamos conferir essa solução — a equação e as duas condições iniciais — com o Python:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">'t'</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">t</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"y'' - y ="</span><span class="p">,</span> <span class="n">sp</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="n">y</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"y(0)    ="</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"y'(0)   ="</span><span class="p">,</span> <span class="n">sp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y'' - y = 0
+y(0)    = 2
+y'(0)   = -1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">t_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">y_vals</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">t_vals</span><span class="p">)</span> <span class="o">+</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">t_vals</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_vals</span><span class="p">,</span> <span class="n">y_vals</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">'ro'</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'$(0,</span><span class="se">\\</span><span class="s1">,2)$'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">"Solução de $y''-y=0,\ y(0)=2,\ y'(0)=-1$"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"$t$"</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"$y$"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/b9a0626836b8beeb86c0c42bc896045ddba4da4aedad0d1ce55d0c7554485e75.png" src="../_images/b9a0626836b8beeb86c0c42bc896045ddba4da4aedad0d1ce55d0c7554485e75.png" />
+</div>
+</div>
+</section>
+<section id="exemplo-2">
+<h3>Exemplo 2<a class="headerlink" href="#exemplo-2" title="Link to this heading">#</a></h3>
+<p>Encontre a solução geral de</p>
+<div class="math notranslate nohighlight">
+\[
+y'' + 5y' + 6y = 0.
+\]</div>
+<p>De novo, <span class="math notranslate nohighlight">\(y=e^{rt}\)</span> dá</p>
+<div class="math notranslate nohighlight">
+\[
+r^2e^{rt} + 5re^{rt} + 6e^{rt}=0 \quad\Longrightarrow\quad r^2+5r+6=0.
+\]</div>
+<p>Essa é uma equação do segundo grau em <span class="math notranslate nohighlight">\(r\)</span> — dá para resolver por fatoração:</p>
+<div class="math notranslate nohighlight">
+\[
+r^2+5r+6 = (r+2)(r+3) = 0 \quad\Longrightarrow\quad r=-2 \ \text{ou}\ r=-3.
+\]</div>
+<p>Logo, a solução geral é</p>
+<div class="math notranslate nohighlight">
+\[
+y = c_1e^{-2t} + c_2e^{-3t}.
+\]</div>
+</section>
+</section>
+<section id="generalizando-a-equacao-caracteristica">
+<h2>Generalizando: a equação característica<a class="headerlink" href="#generalizando-a-equacao-caracteristica" title="Link to this heading">#</a></h2>
+<p>Repare no padrão dos dois exemplos: em ambos os casos, substituir <span class="math notranslate nohighlight">\(y=e^{rt}\)</span> transformou a equação diferencial numa equação algébrica em <span class="math notranslate nohighlight">\(r\)</span>, e o fator <span class="math notranslate nohighlight">\(e^{rt}\)</span> sempre «sai de graça» (já que nunca é zero). Vamos fazer isso agora para a equação geral, sem números:</p>
+<div class="math notranslate nohighlight">
+\[
+ay'' + by' + cy = 0, \qquad a\neq 0.
+\]</div>
+<p>Substituindo <span class="math notranslate nohighlight">\(y=e^{rt}\)</span>, <span class="math notranslate nohighlight">\(y'=re^{rt}\)</span>, <span class="math notranslate nohighlight">\(y''=r^2e^{rt}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+ar^2e^{rt} + bre^{rt} + ce^{rt} = 0 \quad\Longrightarrow\quad e^{rt}\big(ar^2+br+c\big) = 0 \quad\Longrightarrow\quad ar^2+br+c=0.
+\]</div>
+<p>Essa equação que envolve só <span class="math notranslate nohighlight">\(r\)</span>, <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span> e <span class="math notranslate nohighlight">\(c\)</span>, sem nenhuma derivada, é chamada de <strong>equação característica</strong> da EDO. E é só uma equação do segundo grau. Já sabemos resolver isso: pela fórmula de Bhaskara, o sinal do discriminante <span class="math notranslate nohighlight">\(\Delta=b^2-4ac\)</span> decide o tipo das raízes:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\Delta&gt;0\)</span>: duas raízes <strong>reais e distintas</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Delta&lt;0\)</span>: duas raízes <strong>complexas conjugadas</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Delta=0\)</span>: uma raiz <strong>real repetida</strong>.</p></li>
+</ul>
+<p>Nesta aula, vamos tratar apenas o primeiro caso. Os outros dois, junto com um teorema geral que garante que não estamos deixando nenhuma solução de fora, ficam para as próximas aulas.</p>
+<p><strong>Caso <span class="math notranslate nohighlight">\(\Delta&gt;0\)</span>: raízes reais e distintas <span class="math notranslate nohighlight">\(r_1\neq r_2\)</span>.</strong> Repetindo o argumento dos exemplos: <span class="math notranslate nohighlight">\(y_1=e^{r_1t}\)</span> e <span class="math notranslate nohighlight">\(y_2=e^{r_2t}\)</span> são soluções, e qualquer combinação linear delas também é:</p>
+<div class="math notranslate nohighlight">
+\[
+y = c_1e^{r_1t} + c_2e^{r_2t}.
+\]</div>
+<p>De fato, como <span class="math notranslate nohighlight">\(r_1\)</span> e <span class="math notranslate nohighlight">\(r_2\)</span> são raízes de <span class="math notranslate nohighlight">\(ar^2+br+c=0\)</span>, substituir essa combinação na equação original faz os dois termos zerarem separadamente, pelo mesmo motivo que <span class="math notranslate nohighlight">\(y_1\)</span> e <span class="math notranslate nohighlight">\(y_2\)</span> já eram soluções.</p>
+<p>Ainda, como <span class="math notranslate nohighlight">\(r_1\neq r_2\)</span>, sempre é possível achar <span class="math notranslate nohighlight">\(c_1,c_2\)</span> para satisfazer qualquer condição inicial <span class="math notranslate nohighlight">\(y(t_0)=y_0,\ y'(t_0)=y_0'\)</span> — basta resolver um sistema linear <span class="math notranslate nohighlight">\(2\times2\)</span>, exatamente como fizemos nos exemplos.</p>
+<section id="exemplo-3">
+<h3>Exemplo 3<a class="headerlink" href="#exemplo-3" title="Link to this heading">#</a></h3>
+<p>Volte à equação do Exemplo 2, agora com condições iniciais:</p>
+<div class="math notranslate nohighlight">
+\[
+y'' + 5y' + 6y = 0, \qquad y(0)=2,\ y'(0)=3.
+\]</div>
+<p>Já sabemos que a solução geral é <span class="math notranslate nohighlight">\(y=c_1e^{-2t}+c_2e^{-3t}\)</span>. Usando as condições iniciais: <span class="math notranslate nohighlight">\(c_1+c_2=2\)</span> e (derivando) <span class="math notranslate nohighlight">\(-2c_1-3c_2=3\)</span>. Resolvendo o sistema, <span class="math notranslate nohighlight">\(c_1=9\)</span> e <span class="math notranslate nohighlight">\(c_2=-7\)</span>. Logo,</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = 9e^{-2t} - 7e^{-3t}.
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">y_vals</span> <span class="o">=</span> <span class="mi">9</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">t_vals</span><span class="p">)</span> <span class="o">-</span> <span class="mi">7</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">t_vals</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_vals</span><span class="p">,</span> <span class="n">y_vals</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'0.7'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">"Solução de $y''+5y'+6y=0,\ y(0)=2,\ y'(0)=3$"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"$t$"</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"$y$"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/5726578d747d85afbd079cff51bd60c647e9c41e216d9769c673f64e3399f41e.png" src="../_images/5726578d747d85afbd079cff51bd60c647e9c41e216d9769c673f64e3399f41e.png" />
+</div>
+</div>
+</section>
+<section id="exemplo-4">
+<h3>Exemplo 4<a class="headerlink" href="#exemplo-4" title="Link to this heading">#</a></h3>
+<p>Encontre a solução do problema de valor inicial</p>
+<div class="math notranslate nohighlight">
+\[
+4y'' - 8y' + 3y = 0, \qquad y(0)=2,\ y'(0)=\tfrac12.
+\]</div>
+<p>A equação característica é <span class="math notranslate nohighlight">\(4r^2-8r+3=0\)</span>. Pela fórmula de Bhaskara:</p>
+<div class="math notranslate nohighlight">
+\[
+r = \frac{8\pm\sqrt{64-48}}{8} = \frac{8\pm4}{8} \quad\Longrightarrow\quad r=\frac32 \ \text{ou}\ r=\frac12.
+\]</div>
+<p>A solução geral é <span class="math notranslate nohighlight">\(y=c_1e^{3t/2}+c_2e^{t/2}\)</span>. Usando as condições iniciais e resolvendo o sistema (é um bom exercício refazer essas contas), chega-se a <span class="math notranslate nohighlight">\(c_1=-\tfrac12\)</span> e <span class="math notranslate nohighlight">\(c_2=\tfrac52\)</span>, então</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = -\frac12e^{3t/2} + \frac52e^{t/2}.
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">y_vals</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">1.5</span><span class="o">*</span><span class="n">t_vals</span><span class="p">)</span> <span class="o">+</span> <span class="mf">2.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="n">t_vals</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_vals</span><span class="p">,</span> <span class="n">y_vals</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'0.7'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">"Solução de $4y''-8y'+3y=0,\ y(0)=2,\ y'(0)=1/2$"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"$t$"</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"$y$"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/df0af0d98e3fc28d850c205ac2d52422856d0502b97c4bbbf26ccd274390016d.png" src="../_images/df0af0d98e3fc28d850c205ac2d52422856d0502b97c4bbbf26ccd274390016d.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="tres-comportamentos-possiveis">
+<h2>Três comportamentos possíveis<a class="headerlink" href="#tres-comportamentos-possiveis" title="Link to this heading">#</a></h2>
+<p>Compare os Exemplos 3 e 4: no primeiro, as duas raízes são negativas, e a solução tende a zero. No segundo, uma das raízes é positiva (<span class="math notranslate nohighlight">\(r=3/2\)</span>), e a solução acaba disparando; nesse caso, para <span class="math notranslate nohighlight">\(-\infty\)</span>, porque o coeficiente da exponencial com a raiz positiva (o termo dominante quando <span class="math notranslate nohighlight">\(t\to\infty\)</span>) é negativo.</p>
+<p>De modo geral, quando <span class="math notranslate nohighlight">\(r_1\neq r_2\)</span> são reais, só existem três comportamentos possíveis para <span class="math notranslate nohighlight">\(y=c_1e^{r_1t}+c_2e^{r_2t}\)</span> quando <span class="math notranslate nohighlight">\(t\to\infty\)</span>:</p>
+<ul class="simple">
+<li><p>Se <strong>as duas raízes são negativas</strong>, ambos os termos morrem: <span class="math notranslate nohighlight">\(y\to0\)</span>.</p></li>
+<li><p>Se <strong>pelo menos uma raiz é positiva</strong>, esse termo domina e <span class="math notranslate nohighlight">\(|y|\to\infty\)</span> (para <span class="math notranslate nohighlight">\(+\infty\)</span> ou <span class="math notranslate nohighlight">\(-\infty\)</span>, dependendo do sinal do seu coeficiente).</p></li>
+<li><p>Se <strong>uma raiz é zero e a outra negativa</strong> (caso raro), <span class="math notranslate nohighlight">\(y\)</span> tende a um valor constante.</p></li>
+</ul>
+<p>Isso deve lembrar uma ideia que já apareceu antes: lá na aula de modelagem, o sinal de <span class="math notranslate nohighlight">\(a\)</span> decidia se a solução de <span class="math notranslate nohighlight">\(y'=ay+b\)</span> explodia ou se acomodava num equilíbrio. Aqui, quem manda é o sinal das <strong>raízes da equação característica</strong>; uma pista de que existe uma conexão profunda entre os dois mundos (e, de fato, existe: vamos revisitar essa ideia quando estudarmos sistemas de EDs lineares).</p>
+</section>
+<section id="o-que-vem-a-seguir">
+<h2>O que vem a seguir<a class="headerlink" href="#o-que-vem-a-seguir" title="Link to this heading">#</a></h2>
+<p>Ficou de fora, por enquanto, o que fazer quando a equação característica tem raízes complexas (<span class="math notranslate nohighlight">\(\Delta&lt;0\)</span>) ou uma raiz repetida (<span class="math notranslate nohighlight">\(\Delta=0\)</span>);  dois casos que vão aparecer com frequência em sistemas físicos reais (sistemas subamortecidos, lembra?). Também ainda não provamos, de fato, que a família <span class="math notranslate nohighlight">\(y=c_1e^{r_1t}+c_2e^{r_2t}\)</span> contém <em>todas</em> as soluções da equação, apenas verificamos que ela funciona. Isso é assunto das próximas aulas.</p>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -430,7 +680,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">Modelos</p>
+        <p class="prev-next-title">Modelagem com EDOs de 2ª Ordem</p>
       </div>
     </a>
     <a class="right-next"
@@ -448,6 +698,32 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i>  
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#um-chute-inteligente-y-e-rt">Um chute inteligente: <span class="math notranslate nohighlight">\(y=e^{rt}\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-1">Exemplo 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-2">Exemplo 2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalizando-a-equacao-caracteristica">Generalizando: a equação característica</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-3">Exemplo 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-4">Exemplo 4</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tres-comportamentos-possiveis">Três comportamentos possíveis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-vem-a-seguir">O que vem a seguir</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
