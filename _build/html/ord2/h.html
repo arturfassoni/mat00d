@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Equações Homogêneas com Coeficientes Constantes &#8212; Equações Diferenciais A</title>
+    <title>Equações Homogêneas e o Caso de Raízes Reais Distintas &#8212; Equações Diferenciais A</title>
   
   
   
@@ -65,7 +65,7 @@
     <script src="../_static/main.js?v=65a91cec"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
-    <link rel="next" title="Raízes Reais Distintas" href="rrd.html" />
+    <link rel="next" title="Raízes Reais Repetidas" href="rrr.html" />
     <link rel="prev" title="Modelagem com EDOs de 2ª Ordem" href="mod.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="pt"/>
@@ -199,23 +199,15 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de 2a Ordem</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="mod.html">Modelagem com EDOs de 2ª Ordem</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Equações Homogêneas com Coeficientes Constantes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="rrd.html">Raízes Reais Distintas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rcc.html">Raízes Complexas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rrr.html">Raízes Reais Repetidas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="teo.html">Resumo da Teoria</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="nh.html">Equações Não Homogêneas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="ci.html">Coeficientes Indeterminados</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vp.html">Variação dos Parâmetros</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="vib.html">Vibrações</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="vibl.html">Vibrações Livres</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vibf.html">Vibrações Forçadas</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Equações Homogêneas e o Caso de Raízes Reais Distintas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rrr.html">Raízes Reais Repetidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rcc.html">Raízes Complexas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="teo.html">Teoria Geral: Existência, Unicidade e Solução Geral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vib.html">Vibrações Livres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nh.html">Equações Não Homogêneas e Método dos Coeficientes a Determinar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vibf.html">Vibrações Forçadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exerc.html">Exercícios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="videos.html">Vídeos</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de Ordem Superior</span></p>
 <ul class="nav bd-sidenav">
@@ -383,7 +375,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Equações Homogêneas com Coeficientes Constantes</h1>
+    <h1>Equações Homogêneas e o Caso de Raízes Reais Distintas</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -416,14 +408,14 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="equacoes-homogeneas-com-coeficientes-constantes">
-<h1>Equações Homogêneas com Coeficientes Constantes<a class="headerlink" href="#equacoes-homogeneas-com-coeficientes-constantes" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="equacoes-homogeneas-e-o-caso-de-raizes-reais-distintas">
+<h1>Equações Homogêneas e o Caso de Raízes Reais Distintas<a class="headerlink" href="#equacoes-homogeneas-e-o-caso-de-raizes-reais-distintas" title="Link to this heading">#</a></h1>
 <p>Terminamos a aula passada prometendo resolver a equação homogênea</p>
 <div class="math notranslate nohighlight">
 \[
 ay'' + by' + cy = 0, \qquad a\neq0,
 \]</div>
-<p>usando a mesma ideia de «adivinhar e verificar» que funcionou tão bem para <span class="math notranslate nohighlight">\(y'=ky\)</span>. É exatamente isso que vamos fazer agora.</p>
+<p>usando a mesma ideia de “adivinhar e verificar” que funcionou tão bem para <span class="math notranslate nohighlight">\(y'=ky\)</span>. É exatamente isso que vamos fazer agora.</p>
 <section id="um-chute-inteligente-y-e-rt">
 <h2>Um chute inteligente: <span class="math notranslate nohighlight">\(y=e^{rt}\)</span><a class="headerlink" href="#um-chute-inteligente-y-e-rt" title="Link to this heading">#</a></h2>
 <p>Para a equação de primeira ordem <span class="math notranslate nohighlight">\(y'=ky\)</span>, a solução era uma exponencial, <span class="math notranslate nohighlight">\(y=Ce^{kt}\)</span>. Vamos tentar a mesma ideia aqui: procurar soluções da forma</p>
@@ -467,9 +459,9 @@ y(t) = \frac12 e^{t} + \frac32 e^{-t}.
 <span class="n">t</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">'t'</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">t</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"y'' - y ="</span><span class="p">,</span> <span class="n">sp</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="n">y</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"y(0)    ="</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"y'(0)   ="</span><span class="p">,</span> <span class="n">sp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">r</span><span class="s2">"y'' - y ="</span><span class="p">,</span> <span class="n">sp</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="n">y</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">r</span><span class="s2">"y(0)    ="</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">r</span><span class="s2">"y'(0)   ="</span><span class="p">,</span> <span class="n">sp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -491,9 +483,9 @@ y'(0)   = -1
 
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_vals</span><span class="p">,</span> <span class="n">y_vals</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">'ro'</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'$(0,</span><span class="se">\\</span><span class="s1">,2)$'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">'ro'</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">"(0,2)"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">"Solução de $y''-y=0,\ y(0)=2,\ y'(0)=-1$"</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"$t$"</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"$y$"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">"$t$"</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">"$y$"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -501,7 +493,7 @@ y'(0)   = -1
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/b9a0626836b8beeb86c0c42bc896045ddba4da4aedad0d1ce55d0c7554485e75.png" src="../_images/b9a0626836b8beeb86c0c42bc896045ddba4da4aedad0d1ce55d0c7554485e75.png" />
+<img alt="../_images/cc7744b75f6dc8c776c54f40a36a65fc56ea06182e023619f2a266fb4c7d88e6.png" src="../_images/cc7744b75f6dc8c776c54f40a36a65fc56ea06182e023619f2a266fb4c7d88e6.png" />
 </div>
 </div>
 </section>
@@ -531,7 +523,7 @@ y = c_1e^{-2t} + c_2e^{-3t}.
 </section>
 <section id="generalizando-a-equacao-caracteristica">
 <h2>Generalizando: a equação característica<a class="headerlink" href="#generalizando-a-equacao-caracteristica" title="Link to this heading">#</a></h2>
-<p>Repare no padrão dos dois exemplos: em ambos os casos, substituir <span class="math notranslate nohighlight">\(y=e^{rt}\)</span> transformou a equação diferencial numa equação algébrica em <span class="math notranslate nohighlight">\(r\)</span>, e o fator <span class="math notranslate nohighlight">\(e^{rt}\)</span> sempre «sai de graça» (já que nunca é zero). Vamos fazer isso agora para a equação geral, sem números:</p>
+<p>Repare no padrão dos dois exemplos: em ambos os casos, substituir <span class="math notranslate nohighlight">\(y=e^{rt}\)</span> transformou a equação diferencial numa equação algébrica em <span class="math notranslate nohighlight">\(r\)</span>, e o fator <span class="math notranslate nohighlight">\(e^{rt}\)</span> sempre “sai de graça” (já que nunca é zero). Vamos fazer isso agora para a equação geral, sem números:</p>
 <div class="math notranslate nohighlight">
 \[
 ay'' + by' + cy = 0, \qquad a\neq 0.
@@ -576,7 +568,7 @@ y(t) = 9e^{-2t} - 7e^{-3t}.
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_vals</span><span class="p">,</span> <span class="n">y_vals</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'0.7'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">"Solução de $y''+5y'+6y=0,\ y(0)=2,\ y'(0)=3$"</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"$t$"</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"$y$"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">"$t$"</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">"$y$"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -613,7 +605,7 @@ y(t) = -\frac12e^{3t/2} + \frac52e^{t/2}.
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_vals</span><span class="p">,</span> <span class="n">y_vals</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'0.7'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">"Solução de $4y''-8y'+3y=0,\ y(0)=2,\ y'(0)=1/2$"</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"$t$"</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"$y$"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">"$t$"</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">"$y$"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -640,8 +632,6 @@ y(t) = -\frac12e^{3t/2} + \frac52e^{t/2}.
 <h2>O que vem a seguir<a class="headerlink" href="#o-que-vem-a-seguir" title="Link to this heading">#</a></h2>
 <p>Ficou de fora, por enquanto, o que fazer quando a equação característica tem raízes complexas (<span class="math notranslate nohighlight">\(\Delta&lt;0\)</span>) ou uma raiz repetida (<span class="math notranslate nohighlight">\(\Delta=0\)</span>);  dois casos que vão aparecer com frequência em sistemas físicos reais (sistemas subamortecidos, lembra?). Também ainda não provamos, de fato, que a família <span class="math notranslate nohighlight">\(y=c_1e^{r_1t}+c_2e^{r_2t}\)</span> contém <em>todas</em> as soluções da equação, apenas verificamos que ela funciona. Isso é assunto das próximas aulas.</p>
 </section>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -684,11 +674,11 @@ y(t) = -\frac12e^{3t/2} + \frac52e^{t/2}.
       </div>
     </a>
     <a class="right-next"
-       href="rrd.html"
+       href="rrr.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">próximo</p>
-        <p class="prev-next-title">Raízes Reais Distintas</p>
+        <p class="prev-next-title">Raízes Reais Repetidas</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

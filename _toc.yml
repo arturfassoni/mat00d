@@ -28,20 +28,14 @@ parts:
     chapters:
       - file: ord2/mod.ipynb
       - file: ord2/h.ipynb
-        sections:
-        - file: ord2/rrd.ipynb
-        - file: ord2/rcc.ipynb
-        - file: ord2/rrr.ipynb
-        - file: ord2/teo.ipynb
-      - file: ord2/nh.ipynb
-        sections:
-        - file: ord2/ci.ipynb
-        - file: ord2/vp.ipynb
+      - file: ord2/rrr.ipynb
+      - file: ord2/rcc.ipynb
+      - file: ord2/teo.ipynb
       - file: ord2/vib.ipynb
-        sections:
-        - file: ord2/vibl.ipynb
-        - file: ord2/vibf.ipynb
+      - file: ord2/nh.ipynb
+      - file: ord2/vibf.ipynb
       - file: ord2/exerc.ipynb
+      - file: ord2/videos.ipynb
 
   - caption: EDs de Ordem Superior
     chapters:

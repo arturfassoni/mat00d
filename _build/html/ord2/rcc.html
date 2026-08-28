@@ -59,12 +59,14 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ord2/rcc';</script>
     <script src="../_static/main.js?v=65a91cec"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
-    <link rel="next" title="Raízes Reais Repetidas" href="rrr.html" />
-    <link rel="prev" title="Raízes Reais Distintas" href="rrd.html" />
+    <link rel="next" title="Teoria Geral: Existência, Unicidade e Solução Geral" href="teo.html" />
+    <link rel="prev" title="Raízes Reais Repetidas" href="rrr.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="pt"/>
   </head>
@@ -197,23 +199,15 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de 2a Ordem</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="mod.html">Modelagem com EDOs de 2ª Ordem</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="h.html">Equações Homogêneas com Coeficientes Constantes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="rrd.html">Raízes Reais Distintas</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Raízes Complexas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rrr.html">Raízes Reais Repetidas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="teo.html">Resumo da Teoria</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="nh.html">Equações Não Homogêneas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="ci.html">Coeficientes Indeterminados</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vp.html">Variação dos Parâmetros</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="vib.html">Vibrações</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="vibl.html">Vibrações Livres</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vibf.html">Vibrações Forçadas</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="h.html">Equações Homogêneas e o Caso de Raízes Reais Distintas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rrr.html">Raízes Reais Repetidas</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Raízes Complexas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="teo.html">Teoria Geral: Existência, Unicidade e Solução Geral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vib.html">Vibrações Livres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nh.html">Equações Não Homogêneas e Método dos Coeficientes a Determinar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vibf.html">Vibrações Forçadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exerc.html">Exercícios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="videos.html">Vídeos</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de Ordem Superior</span></p>
 <ul class="nav bd-sidenav">
@@ -368,7 +362,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -384,6 +380,25 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2>   </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#um-exemplo-que-quebra-tudo-de-novo">Um exemplo que “quebra” tudo de novo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uma-pausa-para-numeros-complexos">Uma pausa para números complexos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#representando-numeros-complexos-como-vetores">Representando números complexos como vetores</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-serie-de-potencias-e-a-formula-de-euler">A série de potências e a fórmula de Euler</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voltando-a-edo-a-solucao-geral">Voltando à EDO: a solução geral</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-1">Exemplo 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-2">Exemplo 2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-vem-a-seguir">O que vem a seguir</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -393,9 +408,215 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="raizes-complexas">
+  <section class="tex2jax_ignore mathjax_ignore" id="raizes-complexas">
 <h1>Raízes Complexas<a class="headerlink" href="#raizes-complexas" title="Link to this heading">#</a></h1>
-<p><em>Em construção</em></p>
+<p>Já resolvemos <span class="math notranslate nohighlight">\(ay''+by'+cy=0\)</span> para <span class="math notranslate nohighlight">\(\Delta&gt;0\)</span> (raízes reais distintas) e <span class="math notranslate nohighlight">\(\Delta=0\)</span> (raiz repetida). Falta o terceiro e último caso: <span class="math notranslate nohighlight">\(\Delta&lt;0\)</span>.</p>
+<section id="um-exemplo-que-quebra-tudo-de-novo">
+<h2>Um exemplo que “quebra” tudo de novo<a class="headerlink" href="#um-exemplo-que-quebra-tudo-de-novo" title="Link to this heading">#</a></h2>
+<p>Vamos tentar resolver, do jeito de sempre,</p>
+<div class="math notranslate nohighlight">
+\[
+y'' - 2y' + 5y = 0.
+\]</div>
+<p>Substituindo <span class="math notranslate nohighlight">\(y=e^{rt}\)</span>, a equação característica é</p>
+<div class="math notranslate nohighlight">
+\[
+r^2 - 2r + 5 = 0.
+\]</div>
+<p>Pela fórmula de Bhaskara,</p>
+<div class="math notranslate nohighlight">
+\[
+r = \frac{2 \pm \sqrt{4-20}}{2} = \frac{2\pm\sqrt{-16}}{2}.
+\]</div>
+<p>E aqui travamos: <span class="math notranslate nohighlight">\(\sqrt{-16}\)</span> não existe, pelo menos não entre os números que conhecemos até agora; nenhum número real, multiplicado por ele mesmo, dá <span class="math notranslate nohighlight">\(-16\)</span>.</p>
+<p>Mesmo assim, vamos dar um “spoiler”: a solução geral dessa equação é</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = e^{t}\big(c_1\cos(2t) + c_2\,\text{sen}(2t)\big).
+\]</div>
+<p>É fácil verificar que essa função satisfaz a equação, substituindo e simplificando (ou deixando o Python fazer as contas):</p>
+<p>Repare nos números que apareceram: o expoente da exponencial é <span class="math notranslate nohighlight">\(1\)</span>, e o argumento do cosseno e do seno é <span class="math notranslate nohighlight">\(2t\)</span>. Compare com a fórmula de Bhaskara: se a gente ousasse escrever <span class="math notranslate nohighlight">\(\sqrt{-16}=4i\)</span> (usando um tal de <span class="math notranslate nohighlight">\(i\)</span> que ainda não definimos direito), teríamos</p>
+<div class="math notranslate nohighlight">
+\[
+r = \frac{2\pm 4i}{2} = 1 \pm 2i.
+\]</div>
+<p>O <span class="math notranslate nohighlight">\(1\)</span> é exatamente o expoente da exponencial que apareceu na solução. O <span class="math notranslate nohighlight">\(2\)</span> é exatamente o número que multiplica <span class="math notranslate nohighlight">\(t\)</span> dentro do cosseno e do seno. Não é coincidência, e para entender por quê, precisamos aprender (ou relembrar) um pouco sobre números complexos.</p>
+</section>
+<section id="uma-pausa-para-numeros-complexos">
+<h2>Uma pausa para números complexos<a class="headerlink" href="#uma-pausa-para-numeros-complexos" title="Link to this heading">#</a></h2>
+<p>Você provavelmente já ouviu, no ensino médio, que “não existe raiz quadrada de número negativo”. Isso é verdade <em>entre os números reais</em>, mas nada nos impede de <strong>definir</strong> um novo número que resolva esse problema. Chamamos esse número de <span class="math notranslate nohighlight">\(i\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+i = \sqrt{-1}, \qquad \text{ou seja,}\qquad i^2=-1.
+\]</div>
+<p>Com essa única peça nova, conseguimos escrever a raiz quadrada de qualquer número negativo: <span class="math notranslate nohighlight">\(\sqrt{-16}=\sqrt{16}\cdot\sqrt{-1}=4i\)</span>.</p>
+<p>Um <strong>número complexo</strong> é uma expressão da forma <span class="math notranslate nohighlight">\(z=a+bi\)</span>, com <span class="math notranslate nohighlight">\(a,b\)</span> reais: <span class="math notranslate nohighlight">\(a\)</span> é a <strong>parte real</strong> de <span class="math notranslate nohighlight">\(z\)</span>, e <span class="math notranslate nohighlight">\(b\)</span> é a <strong>parte imaginária</strong>.</p>
+<section id="representando-numeros-complexos-como-vetores">
+<h3>Representando números complexos como vetores<a class="headerlink" href="#representando-numeros-complexos-como-vetores" title="Link to this heading">#</a></h3>
+<p>Uma forma muito útil de visualizar números complexos é como pontos (ou vetores) num plano: o eixo horizontal representa a parte real, e o eixo vertical, a parte imaginária.</p>
+<p>O que acontece quando multiplicamos um número complexo por <span class="math notranslate nohighlight">\(i\)</span>? Vamos testar, partindo do número real <span class="math notranslate nohighlight">\(2\)</span> (o vetor <span class="math notranslate nohighlight">\((2,0)\)</span>) e multiplicando por <span class="math notranslate nohighlight">\(i\)</span> repetidamente:</p>
+<div class="math notranslate nohighlight">
+\[
+2 \ \xrightarrow{\times i}\ 2i \ \xrightarrow{\times i}\ 2i^2=-2 \ \xrightarrow{\times i}\ -2i \ \xrightarrow{\times i}\ -2i^2 = 2.
+\]</div>
+<p>Vamos desenhar esses quatro vetores:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">desenha_vetor</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">cor</span><span class="p">,</span> <span class="n">rotulo</span><span class="p">):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="n">z</span><span class="o">.</span><span class="n">imag</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+                <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">'-|&gt;'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">cor</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">2.5</span><span class="p">))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">rotulo</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="n">z</span><span class="o">.</span><span class="n">imag</span><span class="p">),</span>
+                <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">real</span><span class="o">*</span><span class="mf">1.2</span> <span class="o">+</span> <span class="mf">0.15</span><span class="p">,</span> <span class="n">z</span><span class="o">.</span><span class="n">imag</span><span class="o">*</span><span class="mf">1.2</span> <span class="o">+</span> <span class="mf">0.15</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="n">z</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">0</span><span class="n">j</span>
+<span class="n">zs</span> <span class="o">=</span> <span class="p">[</span><span class="n">z</span><span class="p">,</span> <span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">z</span><span class="p">,</span> <span class="mi">1</span><span class="n">j</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">z</span><span class="p">,</span> <span class="mi">1</span><span class="n">j</span><span class="o">**</span><span class="mi">3</span><span class="o">*</span><span class="n">z</span><span class="p">]</span>
+<span class="n">rotulos</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'$2$'</span><span class="p">,</span> <span class="s1">'$2i$'</span><span class="p">,</span> <span class="s1">'$-2$'</span><span class="p">,</span> <span class="s1">'$-2i$'</span><span class="p">]</span>
+<span class="n">cores</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'b'</span><span class="p">,</span> <span class="s1">'g'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">,</span> <span class="s1">'purple'</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">zz</span><span class="p">,</span> <span class="n">rot</span><span class="p">,</span> <span class="n">cor</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">zs</span><span class="p">,</span> <span class="n">rotulos</span><span class="p">,</span> <span class="n">cores</span><span class="p">):</span>
+    <span class="n">desenha_vetor</span><span class="p">(</span><span class="n">zz</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">cor</span><span class="p">,</span> <span class="n">rot</span><span class="p">)</span>
+
+<span class="n">lim</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="n">lim</span><span class="p">,</span> <span class="n">lim</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="n">lim</span><span class="p">,</span> <span class="n">lim</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'0.7'</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'0.7'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">'equal'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'parte real'</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'parte imaginária'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">r</span><span class="s2">"Multiplicar por $i$ gira $90°$"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/5bebc831f1ed5d5f76de820aec13c31c3680b3f4de30108aeafb1c3b235e6c8a.png" src="../_images/5bebc831f1ed5d5f76de820aec13c31c3680b3f4de30108aeafb1c3b235e6c8a.png" />
+</div>
+</div>
+<p>Cada multiplicação por <span class="math notranslate nohighlight">\(i\)</span> girou o vetor exatamente <span class="math notranslate nohighlight">\(90°\)</span> (um quarto de volta), sem mudar o tamanho.</p>
+<p>Isso não vale só para números reais, funciona para qualquer número complexo. E multiplicar por <span class="math notranslate nohighlight">\(2i\)</span>, por exemplo, gira <span class="math notranslate nohighlight">\(90°\)</span> <strong>e</strong> dobra o tamanho (afinal, <span class="math notranslate nohighlight">\(2i\)</span> “vale” o dobro de <span class="math notranslate nohighlight">\(i\)</span>):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="n">z</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">1</span><span class="n">j</span>
+<span class="n">zs</span> <span class="o">=</span> <span class="p">[</span><span class="n">z</span><span class="p">,</span> <span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">z</span><span class="p">,</span> <span class="mi">2</span><span class="n">j</span><span class="o">*</span><span class="n">z</span><span class="p">]</span>
+<span class="n">rotulos</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'$z=3+i$'</span><span class="p">,</span> <span class="s1">'$iz$'</span><span class="p">,</span> <span class="s1">'$2iz$'</span><span class="p">]</span>
+<span class="n">cores</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'b'</span><span class="p">,</span> <span class="s1">'g'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">zz</span><span class="p">,</span> <span class="n">rot</span><span class="p">,</span> <span class="n">cor</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">zs</span><span class="p">,</span> <span class="n">rotulos</span><span class="p">,</span> <span class="n">cores</span><span class="p">):</span>
+    <span class="n">desenha_vetor</span><span class="p">(</span><span class="n">zz</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">cor</span><span class="p">,</span> <span class="n">rot</span><span class="p">)</span>
+
+<span class="n">lim</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="n">lim</span><span class="p">,</span> <span class="n">lim</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="n">lim</span><span class="p">,</span> <span class="n">lim</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'0.7'</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'0.7'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">'equal'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'parte real'</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'parte imaginária'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">r</span><span class="s2">"Multiplicar $z$ por $i$ (gira) e por $2i$ (gira e dobra)"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/5845de4b005ac4170889970c8a32f16f7ab44b610fec978e38c900e8cd7e0d94.png" src="../_images/5845de4b005ac4170889970c8a32f16f7ab44b610fec978e38c900e8cd7e0d94.png" />
+</div>
+</div>
+<p>Essa rotação de <span class="math notranslate nohighlight">\(90°\)</span> tem tudo a ver com oscilações: numa oscilação (um pêndulo, uma mola, um circuito), a velocidade está sempre defasada da posição por um quarto de período, exatamente <span class="math notranslate nohighlight">\(90°\)</span>. Não é à toa que números complexos aparecem naturalmente quando resolvemos equações que descrevem oscilações.</p>
+</section>
+</section>
+<section id="a-serie-de-potencias-e-a-formula-de-euler">
+<h2>A série de potências e a fórmula de Euler<a class="headerlink" href="#a-serie-de-potencias-e-a-formula-de-euler" title="Link to this heading">#</a></h2>
+<p>No cálculo de séries, aprendemos que a função exponencial pode ser escrita como uma série de potências:</p>
+<div class="math notranslate nohighlight">
+\[
+e^{x} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \cdots
+\]</div>
+<p>Essa fórmula vale para qualquer número <span class="math notranslate nohighlight">\(x\)</span>. E vale inclusive para <span class="math notranslate nohighlight">\(x=i\theta\)</span> (com <span class="math notranslate nohighlight">\(\theta\)</span> real):</p>
+<div class="math notranslate nohighlight">
+\[
+e^{i\theta} = 1 + i\theta + \frac{(i\theta)^2}{2!} + \frac{(i\theta)^3}{3!} + \frac{(i\theta)^4}{4!} + \cdots
+\]</div>
+<p>Usando <span class="math notranslate nohighlight">\(i^2=-1,\ i^3=-i,\ i^4=1,\ i^5=i,\dots\)</span> (as potências de <span class="math notranslate nohighlight">\(i\)</span> se repetem a cada 4) e separando os termos com <span class="math notranslate nohighlight">\(i\)</span> dos termos sem <span class="math notranslate nohighlight">\(i\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+e^{i\theta} = \underbrace{\left(1 - \frac{\theta^2}{2!} + \frac{\theta^4}{4!} - \cdots\right)}_{\text{série do } \cos\theta} \ +\ i\underbrace{\left(\theta - \frac{\theta^3}{3!} + \frac{\theta^5}{5!} - \cdots\right)}_{\text{série do sen}\,\theta}.
+\]</div>
+<p>Cada uma dessas séries entre parênteses já é uma velha conhecida do Cálculo: são exatamente as séries de Taylor do cosseno e do seno!</p>
+<p>Chegamos, então, à famosa <strong>fórmula de Euler</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+e^{i\theta} = \cos\theta + i\,\text{sen}\,\theta.
+\]</div>
+</section>
+<section id="voltando-a-edo-a-solucao-geral">
+<h2>Voltando à EDO: a solução geral<a class="headerlink" href="#voltando-a-edo-a-solucao-geral" title="Link to this heading">#</a></h2>
+<p>Agora podemos entender de onde veio a “mágica” do início da aula. Para <span class="math notranslate nohighlight">\(ay''+by'+cy=0\)</span> com <span class="math notranslate nohighlight">\(\Delta=b^2-4ac&lt;0\)</span>, a fórmula de Bhaskara dá raízes complexas conjugadas:</p>
+<div class="math notranslate nohighlight">
+\[
+r = \lambda \pm i\mu, \qquad \lambda=-\frac{b}{2a}, \qquad \mu = \frac{\sqrt{-\Delta}}{2a}.
+\]</div>
+<p>Como sempre, <span class="math notranslate nohighlight">\(y_1=e^{r_1t}\)</span> e <span class="math notranslate nohighlight">\(y_2=e^{r_2t}\)</span> são soluções, só que, agora, são funções <em>complexas</em>. Usando a fórmula de Euler:</p>
+<div class="math notranslate nohighlight">
+\[
+y_1 = e^{(\lambda+i\mu)t} = e^{\lambda t}e^{i\mu t} = e^{\lambda t}\big(\cos\mu t + i\,\text{sen}\,\mu t\big),
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+y_2 = e^{(\lambda-i\mu)t} = e^{\lambda t}e^{-i\mu t} = e^{\lambda t}\big(\cos\mu t - i\,\text{sen}\,\mu t\big).
+\]</div>
+<p>Lembre-se que, para raízes reais e distintas, tínhamos duas soluções fundamentais <span class="math notranslate nohighlight">\(e^{r_1t}\)</span> e <span class="math notranslate nohighlight">\(e^{r_2t}\)</span>, e a solução geral era qualquer combinação linear delas, formando um espaço de soluções de “dimensão 2” (duas constantes livres, ajustáveis a qualquer condição inicial). Aqui é a mesma história, <span class="math notranslate nohighlight">\(y_1\)</span> e <span class="math notranslate nohighlight">\(y_2\)</span> formam uma base para esse mesmo espaço de soluções, só que uma base <em>complexa</em>.</p>
+<p>Assim como num espaço vetorial comum podemos trocar de base sem mudar o espaço (trocar <span class="math notranslate nohighlight">\(\{(1,0),(0,1)\}\)</span> por qualquer outro par de vetores independentes, por exemplo), podemos trocar <span class="math notranslate nohighlight">\(\{y_1,y_2\}\)</span> por qualquer combinação linear independente delas. Em particular:</p>
+<div class="math notranslate nohighlight">
+\[
+Y_1 = \frac{y_1+y_2}{2} = e^{\lambda t}\cos\mu t, \qquad\qquad Y_2 = \frac{y_1-y_2}{2i} = e^{\lambda t}\,\text{sen}\,\mu t
+\]</div>
+<p>são soluções (combinação linear de soluções continua sendo solução) e, com uma vantagem enorme, são <strong>reais</strong>. Trocamos a base complexa e pouco intuitiva <span class="math notranslate nohighlight">\(\{y_1,y_2\}\)</span> pela base real <span class="math notranslate nohighlight">\(\{Y_1,Y_2\}\)</span>. A solução geral fica</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = e^{\lambda t}\big(c_1\cos\mu t + c_2\,\text{sen}\,\mu t\big).
+\]</div>
+<p>Exatamente a fórmula que usamos, sem explicar, lá no início da aula!</p>
+<section id="exemplo-1">
+<h3>Exemplo 1<a class="headerlink" href="#exemplo-1" title="Link to this heading">#</a></h3>
+<p>Encontre a solução geral de</p>
+<div class="math notranslate nohighlight">
+\[
+y'' + 4y' + 13y = 0.
+\]</div>
+<p>Equação característica: <span class="math notranslate nohighlight">\(r^2+4r+13=0\)</span>. O discriminante é <span class="math notranslate nohighlight">\(\Delta=16-52=-36&lt;0\)</span>, então</p>
+<div class="math notranslate nohighlight">
+\[
+r = \frac{-4\pm\sqrt{-36}}{2} = \frac{-4\pm6i}{2} = -2\pm3i.
+\]</div>
+<p>Aqui <span class="math notranslate nohighlight">\(\lambda=-2\)</span> e <span class="math notranslate nohighlight">\(\mu=3\)</span>, então a solução geral é</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = e^{-2t}\big(c_1\cos 3t + c_2\,\text{sen}\,3t\big).
+\]</div>
+</section>
+<section id="exemplo-2">
+<h3>Exemplo 2<a class="headerlink" href="#exemplo-2" title="Link to this heading">#</a></h3>
+<p>Encontre a solução geral de</p>
+<div class="math notranslate nohighlight">
+\[
+y'' + y = 0.
+\]</div>
+<p>Equação característica: <span class="math notranslate nohighlight">\(r^2+1=0 \Rightarrow r^2=-1 \Rightarrow r=\pm i\)</span>. Aqui <span class="math notranslate nohighlight">\(\lambda=0\)</span> e <span class="math notranslate nohighlight">\(\mu=1\)</span>. Como <span class="math notranslate nohighlight">\(e^{\lambda t}=e^{0}=1\)</span>, a solução geral é simplesmente</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = c_1\cos t + c_2\,\text{sen}\,t.
+\]</div>
+</section>
+</section>
+<section id="o-que-vem-a-seguir">
+<h2>O que vem a seguir<a class="headerlink" href="#o-que-vem-a-seguir" title="Link to this heading">#</a></h2>
+<p>Agora as três peças do quebra-cabeça estão completas: sabemos resolver <span class="math notranslate nohighlight">\(ay''+by'+cy=0\)</span> para <span class="math notranslate nohighlight">\(\Delta&gt;0\)</span>, <span class="math notranslate nohighlight">\(\Delta=0\)</span> e <span class="math notranslate nohighlight">\(\Delta&lt;0\)</span>. E de brinde, ganhamos uma explicação para algo que já tínhamos visto, mas não explicado: lá na aula de modelagem, o caso <strong>subamortecido</strong> do sistema massa-mola (e do circuito RLC) era justamente aquele que oscilava enquanto decaía, e agora sabemos por quê: é exatamente quando a equação característica tem raízes complexas, com <span class="math notranslate nohighlight">\(\lambda&lt;0\)</span> ditando o decaimento e <span class="math notranslate nohighlight">\(\mu\)</span> ditando a frequência da oscilação.</p>
+<p>Nas próximas aulas, vamos usar essas três receitas como base para resolver equações <strong>não homogêneas</strong> (<span class="math notranslate nohighlight">\(F(t)\neq0\)</span>) — e, com isso, finalmente entender de verdade o oscilador harmônico forçado, incluindo batimento e ressonância.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -429,20 +650,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="rrd.html"
+       href="rrr.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">Raízes Reais Distintas</p>
+        <p class="prev-next-title">Raízes Reais Repetidas</p>
       </div>
     </a>
     <a class="right-next"
-       href="rrr.html"
+       href="teo.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">próximo</p>
-        <p class="prev-next-title">Raízes Reais Repetidas</p>
+        <p class="prev-next-title">Teoria Geral: Existência, Unicidade e Solução Geral</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -452,6 +673,32 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i>  
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#um-exemplo-que-quebra-tudo-de-novo">Um exemplo que “quebra” tudo de novo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uma-pausa-para-numeros-complexos">Uma pausa para números complexos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#representando-numeros-complexos-como-vetores">Representando números complexos como vetores</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-serie-de-potencias-e-a-formula-de-euler">A série de potências e a fórmula de Euler</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#voltando-a-edo-a-solucao-geral">Voltando à EDO: a solução geral</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-1">Exemplo 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-2">Exemplo 2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-vem-a-seguir">O que vem a seguir</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

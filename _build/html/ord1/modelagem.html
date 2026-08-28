@@ -199,23 +199,15 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de 2a Ordem</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../ord2/mod.html">Modelagem com EDOs de 2ª Ordem</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ord2/h.html">Equações Homogêneas com Coeficientes Constantes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/rrd.html">Raízes Reais Distintas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/rcc.html">Raízes Complexas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/rrr.html">Raízes Reais Repetidas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/teo.html">Resumo da Teoria</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ord2/nh.html">Equações Não Homogêneas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/ci.html">Coeficientes Indeterminados</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/vp.html">Variação dos Parâmetros</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ord2/vib.html">Vibrações</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/vibl.html">Vibrações Livres</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/vibf.html">Vibrações Forçadas</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/h.html">Equações Homogêneas e o Caso de Raízes Reais Distintas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/rrr.html">Raízes Reais Repetidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/rcc.html">Raízes Complexas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/teo.html">Teoria Geral: Existência, Unicidade e Solução Geral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/vib.html">Vibrações Livres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/nh.html">Equações Não Homogêneas e Método dos Coeficientes a Determinar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/vibf.html">Vibrações Forçadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/exerc.html">Exercícios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/videos.html">Vídeos</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de Ordem Superior</span></p>
 <ul class="nav bd-sidenav">
@@ -492,7 +484,7 @@ document.write(`
 <img alt="../_images/e45be15f0d0ff360a795336e036c857ec2595bd847488f37f0eafe715d285fe5.png" src="../_images/e45be15f0d0ff360a795336e036c857ec2595bd847488f37f0eafe715d285fe5.png" />
 </div>
 </div>
-<p>O modelo mostra claramente uma «velocidade terminal» de 49 m/s. Não importa se o objeto é solto do repouso ou atirado rapidamente para baixo: a resistência do ar entra em equilíbrio com a gravidade, estabilizando a queda.</p>
+<p>O modelo mostra claramente uma “velocidade terminal” de 49 m/s. Não importa se o objeto é solto do repouso ou atirado rapidamente para baixo: a resistência do ar entra em equilíbrio com a gravidade, estabilizando a queda.</p>
 <p>Note que se resolvermos igualarmos a taxa de variação da velocidade à zero, <span class="math notranslate nohighlight">\(dv/dt=0\)</span>, temos</p>
 <div class="math notranslate nohighlight">
 \[\frac{dv}{dt} = -\frac{\gamma}{m}v + g = 0 \Rightarrow v=\dfrac{g}{\gamma}=v_{eq}\]</div>
@@ -628,7 +620,7 @@ $<span class="math notranslate nohighlight">\(\frac{dQ}{dt} = -0.03Q + 0.75\)</s
 </section>
 <section id="resolvendo-a-equacao-y-ay-b">
 <h2>Resolvendo a Equação <span class="math notranslate nohighlight">\(y' = ay + b\)</span><a class="headerlink" href="#resolvendo-a-equacao-y-ay-b" title="Link to this heading">#</a></h2>
-<p>Repare que essa equação é, ao mesmo tempo, <strong>linear</strong> (é da forma <span class="math notranslate nohighlight">\(y' + p(t)y = q(t)\)</span>, com <span class="math notranslate nohighlight">\(p(t)=-a\)</span> e <span class="math notranslate nohighlight">\(q(t)=b\)</span> constantes) e <strong>separável</strong> (o lado direito, <span class="math notranslate nohighlight">\(ay+b\)</span>, depende só de <span class="math notranslate nohighlight">\(y\)</span>, então trivialmente se fatora como <span class="math notranslate nohighlight">\(g(t)h(y)\)</span> com <span class="math notranslate nohighlight">\(g(t)\equiv 1\)</span>). Isso significa que existem <strong>dois caminhos diferentes</strong> para resolvê-la — e vale a pena conhecer os dois, porque cada um vai generalizar de um jeito diferente para modelos mais complexos, como veremos mais adiante.</p>
+<p>Repare que essa equação é, ao mesmo tempo, <strong>linear</strong> (é da forma <span class="math notranslate nohighlight">\(y' + p(t)y = q(t)\)</span>, com <span class="math notranslate nohighlight">\(p(t)=-a\)</span> e <span class="math notranslate nohighlight">\(q(t)=b\)</span> constantes) e <strong>separável</strong> (o lado direito, <span class="math notranslate nohighlight">\(ay+b\)</span>, depende só de <span class="math notranslate nohighlight">\(y\)</span>, então trivialmente se fatora como <span class="math notranslate nohighlight">\(g(t)h(y)\)</span> com <span class="math notranslate nohighlight">\(g(t)\equiv 1\)</span>). Isso significa que existem <strong>dois caminhos diferentes</strong> para resolvê-la, e vale a pena conhecer os dois, porque cada um vai generalizar de um jeito diferente para modelos mais complexos, como veremos mais adiante.</p>
 <section id="metodo-1-separacao-de-variaveis">
 <h3>Método 1: separação de variáveis<a class="headerlink" href="#metodo-1-separacao-de-variaveis" title="Link to this heading">#</a></h3>
 <p>Vamos encontrar a fórmula geral que soluciona essa EDO. Assumindo que <span class="math notranslate nohighlight">\(a \neq 0\)</span>, podemos colocar a constante <span class="math notranslate nohighlight">\(a\)</span> em evidência no lado direito:</p>
@@ -662,7 +654,7 @@ y' - ay = b.
 \[
 e^{-at}y' - a\,e^{-at}y = b\,e^{-at}.
 \]</div>
-<p>O truque é que o lado esquerdo é exatamente a derivada de um produto (verifique com a regra do produto!):</p>
+<p>O truque é que o lado esquerdo é exatamente a derivada de um produto (verifique com a regra do produto):</p>
 <div class="math notranslate nohighlight">
 \[
 \frac{d}{dt}\Big(e^{-at}y\Big) = b\,e^{-at}.
@@ -677,8 +669,8 @@ e^{-at}y = -\frac{b}{a}e^{-at} + c,
 \[
 y(t) = -\frac{b}{a} + c\,e^{at}.
 \]</div>
-<p>A mesma solução de antes — ótimo sinal de que os dois métodos são, de fato, consistentes!</p>
-<p>Por enquanto, não vamos explicar <em>como</em> descobrir que <span class="math notranslate nohighlight">\(e^{-at}\)</span> é o fator certo — esse é justamente o próximo tópico do curso: o método do fator integrante para EDs lineares de 1ª ordem em geral. Por ora, fica a ideia: existe sempre um fator que, multiplicado na equação certa, transforma qualquer ED linear de 1ª ordem numa integração direta.</p>
+<p>A mesma solução de antes, um bom sinal de que os dois métodos são, de fato, consistentes.</p>
+<p>Por enquanto, não vamos explicar <em>como</em> descobrir que <span class="math notranslate nohighlight">\(e^{-at}\)</span> é o fator certo; esse é justamente o próximo tópico do curso: o método do fator integrante para EDs lineares de 1ª ordem em geral. Por ora, fica a ideia: existe sempre um fator que, multiplicado na equação certa, transforma qualquer ED linear de 1ª ordem numa integração direta.</p>
 </section>
 </section>
 <section id="o-segredo-esta-no-sinal-de-a">
@@ -687,7 +679,7 @@ y(t) = -\frac{b}{a} + c\,e^{at}.
 <p>Se calcularmos o equilíbrio (ou seja, quando a taxa de variação zera, <span class="math notranslate nohighlight">\(y' = 0\)</span>), descobrimos que o equilíbrio é exatamente <span class="math notranslate nohighlight">\(y = -b/a\)</span>.</p>
 <ol class="arabic simple">
 <li><p><strong>Se <span class="math notranslate nohighlight">\(a &gt; 0\)</span>:</strong> A exponencial <span class="math notranslate nohighlight">\(e^{at}\)</span> cresce para o infinito. Isso significa que qualquer pequeno desvio da posição de equilíbrio será amplificado explosivamente. O sistema «foge» do equilíbrio. É o que vimos acontecer no <strong>Modelo de Ratos e Corujas</strong> (explosão populacional ou extinção) e na <strong>Conta Bancária</strong> (juros compostos).</p></li>
-<li><p><strong>Se <span class="math notranslate nohighlight">\(a &lt; 0\)</span>:</strong> A exponencial <span class="math notranslate nohighlight">\(e^{at}\)</span> tende a zero com o passar do tempo. Isso significa que a parte transitória da solução morre, e o sistema é inevitavelmente «sugado» para o equilíbrio <span class="math notranslate nohighlight">\(-b/a\)</span>. É o que garante que o <strong>Objeto em Queda Livre</strong> encontre a velocidade terminal, que o metal atinja a <strong>Temperatura Ambiente</strong>, e que a <strong>Mistura de Sal</strong> estabilize.</p></li>
+<li><p><strong>Se <span class="math notranslate nohighlight">\(a &lt; 0\)</span>:</strong> A exponencial <span class="math notranslate nohighlight">\(e^{at}\)</span> tende a zero com o passar do tempo. Isso significa que a parte transitória da solução morre, e o sistema é inevitavelmente “”sugado”” para o equilíbrio <span class="math notranslate nohighlight">\(-b/a\)</span>. É o que garante que o <strong>Objeto em Queda Livre</strong> encontre a velocidade terminal, que o metal atinja a <strong>Temperatura Ambiente</strong>, e que a <strong>Mistura de Sal</strong> estabilize.</p></li>
 </ol>
 </section>
 <section id="generalizacoes-para-o-futuro">
@@ -704,13 +696,13 @@ y' = a(t)\,y + b(t).
 </section>
 <section id="generalizando-pela-separabilidade-separacao-de-variaveis">
 <h3>Generalizando pela separabilidade: separação de variáveis<a class="headerlink" href="#generalizando-pela-separabilidade-separacao-de-variaveis" title="Link to this heading">#</a></h3>
-<p>Já a separação de variáveis não exige que a equação seja linear — só exige que o lado direito se fatore como <span class="math notranslate nohighlight">\(g(t)h(y)\)</span>. Isso permite generalizar a equação trocando a forma como a taxa depende de <span class="math notranslate nohighlight">\(y\)</span>, mesmo que isso quebre a linearidade, desde que a equação continue sem depender explicitamente de <span class="math notranslate nohighlight">\(t\)</span> (ou seja, continue <strong>autônoma</strong> — um caso particular, e especialmente importante, de equação separável). Dois exemplos:</p>
+<p>Já a separação de variáveis não exige que a equação seja linear, só exige que o lado direito se fatore como <span class="math notranslate nohighlight">\(g(t)h(y)\)</span>. Isso permite generalizar a equação trocando a forma como a taxa depende de <span class="math notranslate nohighlight">\(y\)</span>, mesmo que isso quebre a linearidade, desde que a equação continue sem depender explicitamente de <span class="math notranslate nohighlight">\(t\)</span> (ou seja, continue <strong>autônoma</strong>, um caso particular, e especialmente importante, de equação separável). Dois exemplos:</p>
 <ul class="simple">
 <li><p>Se a resistência do ar for proporcional ao <strong>quadrado</strong> da velocidade (mais realista em altas velocidades), a equação da queda livre vira <span class="math notranslate nohighlight">\(v' = g - \dfrac{\gamma}{m}v^2\)</span> — não linear, mas ainda autônoma (e, portanto, ainda separável).</p></li>
-<li><p>Se a predação das corujas não for constante, mas seguir uma resposta do tipo <strong>Holling tipo II</strong> — em que a taxa de predação satura conforme há mais ratos disponíveis —, a equação vira <span class="math notranslate nohighlight">\(p' = rp - \dfrac{kp}{c+p}\)</span> — de novo, não linear, mas ainda autônoma.</p></li>
+<li><p>Se a predação das corujas não for constante, mas seguir uma resposta do tipo <strong>Holling tipo II</strong> em que a taxa de predação satura conforme há mais ratos disponíveis, a equação vira <span class="math notranslate nohighlight">\(p' = rp - \dfrac{kp}{c+p}\)</span> — de novo, não linear, mas ainda autônoma.</p></li>
 </ul>
 <p>Vamos resolver equações desse tipo, mais gerais, quando estudarmos separação de variáveis e equações autônomas em detalhe.</p>
-<p>Nas próximas aulas, deixaremos de apenas contemplar campos de direções para aprender essas duas técnicas analíticas — o fator integrante e a separação de variáveis — capazes de extrair soluções exatas para modelos bem mais robustos que os que vimos hoje.</p>
+<p>Nas próximas aulas, deixaremos de apenas contemplar campos de direções para aprender essas duas técnicas analíticas, o fator integrante e a separação de variáveis, capazes de extrair soluções exatas para modelos bem mais robustos que os que vimos hoje.</p>
 </section>
 </section>
 </section>

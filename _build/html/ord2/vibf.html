@@ -59,12 +59,14 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ord2/vibf';</script>
     <script src="../_static/main.js?v=65a91cec"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
-    <link rel="next" title="Modelos" href="../ordn/mod.html" />
-    <link rel="prev" title="Vibrações Livres" href="vibl.html" />
+    <link rel="next" title="Exercícios" href="exerc.html" />
+    <link rel="prev" title="Equações Não Homogêneas e Método dos Coeficientes a Determinar" href="nh.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="pt"/>
   </head>
@@ -197,23 +199,15 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de 2a Ordem</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="mod.html">Modelagem com EDOs de 2ª Ordem</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="h.html">Equações Homogêneas com Coeficientes Constantes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="rrd.html">Raízes Reais Distintas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rcc.html">Raízes Complexas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rrr.html">Raízes Reais Repetidas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="teo.html">Resumo da Teoria</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="nh.html">Equações Não Homogêneas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="ci.html">Coeficientes Indeterminados</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vp.html">Variação dos Parâmetros</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="vib.html">Vibrações</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="vibl.html">Vibrações Livres</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Vibrações Forçadas</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="h.html">Equações Homogêneas e o Caso de Raízes Reais Distintas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rrr.html">Raízes Reais Repetidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rcc.html">Raízes Complexas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="teo.html">Teoria Geral: Existência, Unicidade e Solução Geral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vib.html">Vibrações Livres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nh.html">Equações Não Homogêneas e Método dos Coeficientes a Determinar</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Vibrações Forçadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exerc.html">Exercícios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="videos.html">Vídeos</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de Ordem Superior</span></p>
 <ul class="nav bd-sidenav">
@@ -368,7 +362,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -384,6 +380,23 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2>   </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parte-1-vibracao-amortecida-forcada">Parte 1: vibração amortecida forçada</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#um-exemplo-com-contas">Um exemplo com contas</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parte-2-vibracao-nao-amortecida-forcada-batimento-e-ressonancia">Parte 2: vibração não amortecida forçada — batimento e ressonância</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#o-limite-de-ressonancia-via-l-hopital">O limite de ressonância, via L’Hôpital</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-curva-de-amplitude-e-a-assintota-da-ressonancia">A curva de amplitude e a “”assíntota”” da ressonância</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fechando-o-capitulo">Fechando o capítulo</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -393,9 +406,250 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="vibracoes-forcadas">
+  <section class="tex2jax_ignore mathjax_ignore" id="vibracoes-forcadas">
 <h1>Vibrações Forçadas<a class="headerlink" href="#vibracoes-forcadas" title="Link to this heading">#</a></h1>
-<p><em>Em construção</em></p>
+<p>Já entendemos as vibrações livres (todos os regimes, ditados pelo discriminante) e já sabemos resolver equações não homogêneas com o método dos coeficientes a determinar. Chegou a hora de juntar tudo: vamos forçar o oscilador com a força harmônica mais natural que existe,</p>
+<div class="math notranslate nohighlight">
+\[
+F(t) = F_0\cos(\omega t),
+\]</div>
+<p>e ver o que acontece. Vamos em duas partes: primeiro <strong>com</strong> amortecimento, depois <strong>sem</strong>.</p>
+<section id="parte-1-vibracao-amortecida-forcada">
+<h2>Parte 1: vibração amortecida forçada<a class="headerlink" href="#parte-1-vibracao-amortecida-forcada" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[
+mx'' + \gamma x' + kx = F_0\cos(\omega t), \qquad m,\gamma,k&gt;0.
+\]</div>
+<p>Vamos resolver um exemplo com números concretos, prestando atenção em dois fatos que — já adianto — vão se revelar completamente gerais.</p>
+<section id="um-exemplo-com-contas">
+<h3>Um exemplo com contas<a class="headerlink" href="#um-exemplo-com-contas" title="Link to this heading">#</a></h3>
+<p>Resolva</p>
+<div class="math notranslate nohighlight">
+\[
+x''+2x'+5x=3\cos t, \qquad x(0)=0,\ x'(0)=0.
+\]</div>
+<p><strong>Homogênea associada:</strong> <span class="math notranslate nohighlight">\(r^2+2r+5=0 \Rightarrow r=-1\pm2i\)</span>, então <span class="math notranslate nohighlight">\(x_h=e^{-t}(c_1\cos2t+c_2\,\text{sen}\,2t)\)</span> — subamortecida.</p>
+<p><strong>Solução particular:</strong> tentativa <span class="math notranslate nohighlight">\(x_p=A\cos t+B\,\text{sen}\,t\)</span> (sem risco de ressonância, já que <span class="math notranslate nohighlight">\(\omega=1\neq\mu=2\)</span>). Substituindo e agrupando:</p>
+<div class="math notranslate nohighlight">
+\[
+4A+2B=3, \qquad 4B-2A=0 \quad\Longrightarrow\quad A=\frac{3}{5},\ B=\frac{3}{10}.
+\]</div>
+<p><strong>Solução geral:</strong> <span class="math notranslate nohighlight">\(x(t)=e^{-t}(c_1\cos2t+c_2\,\text{sen}\,2t) + \dfrac35\cos t+\dfrac{3}{10}\,\text{sen}\,t\)</span>. Usando as condições iniciais (contas de sempre): <span class="math notranslate nohighlight">\(c_1=-\tfrac35\)</span>, <span class="math notranslate nohighlight">\(c_2=-\tfrac{9}{20}\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">'t'</span><span class="p">,</span> <span class="n">real</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">c1</span><span class="p">,</span> <span class="n">c2</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">c1</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="n">c2</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">t</span><span class="p">))</span> <span class="o">+</span> <span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Resíduo:"</span><span class="p">,</span> <span class="n">sp</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="mi">5</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mi">3</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"x(0)  ="</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"x'(0) ="</span><span class="p">,</span> <span class="n">sp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+
+<span class="n">t_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+<span class="n">x_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">t_vals</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="o">-</span><span class="mf">0.6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">t_vals</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.45</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">t_vals</span><span class="p">))</span> <span class="o">+</span> <span class="mf">0.6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t_vals</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.3</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t_vals</span><span class="p">)</span>
+<span class="n">x_estacionaria</span> <span class="o">=</span> <span class="mf">0.6</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t_vals</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.3</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t_vals</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_vals</span><span class="p">,</span> <span class="n">x_vals</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'solução completa'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_vals</span><span class="p">,</span> <span class="n">x_estacionaria</span><span class="p">,</span> <span class="s1">'g--'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'parte estacionária ($x_p$)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'0.7'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">"$x''+2x'+5x=3\cos t,\ x(0)=0,\ x'(0)=0$"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"$t$"</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"$x$"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Resíduo: 0
+x(0)  = 0
+x'(0) = 0
+</pre></div>
+</div>
+<img alt="../_images/9046cdee75208dcb4acbc931142a09c0c63cf9f6aa6ad00d3d90dbade508850c.png" src="../_images/9046cdee75208dcb4acbc931142a09c0c63cf9f6aa6ad00d3d90dbade508850c.png" />
+</div>
+</div>
+<p>Repare em dois fatos, bem visíveis no gráfico:</p>
+<ol class="arabic simple">
+<li><p>A parte da homogênea, <span class="math notranslate nohighlight">\(e^{-t}(\ldots)\)</span>, <strong>desaparece</strong> conforme <span class="math notranslate nohighlight">\(t\)</span> cresce — depois de pouco tempo, a solução completa gruda na curva verde tracejada.</p></li>
+<li><p>Essa curva verde, a solução particular, é uma <strong>onda pura na frequência da força</strong> (<span class="math notranslate nohighlight">\(\omega=1\)</span>, não a frequência natural <span class="math notranslate nohighlight">\(\mu=2\)</span>!) — um cosseno defasado.</p></li>
+</ol>
+<p>Chamamos <span class="math notranslate nohighlight">\(x_p\)</span> de <strong>solução estacionária</strong> (ou de regime permanente): é o que sobra depois de “esquecido” o passado, e depende só da força aplicada, não da condição inicial.</p>
+<p>Chamamos <span class="math notranslate nohighlight">\(x_h\)</span> de <strong>solução transiente</strong>: carrega a “memória” da condição inicial e da natureza intrínseca do sistema (a equação homogênea), mas se dissipa com o tempo.</p>
+<p>Isso não foi coincidência dos números escolhidos. Para <strong>quaisquer</strong> <span class="math notranslate nohighlight">\(m,\gamma,k&gt;0\)</span> (e qualquer um dos três casos do discriminante, sub, crítico ou superamortecido), o mesmo padrão se repete:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x_h\to0\)</span> quando <span class="math notranslate nohighlight">\(t\to\infty\)</span>, porque a parte real de toda raiz é <span class="math notranslate nohighlight">\(-\gamma/(2m)&lt;0\)</span> sempre que <span class="math notranslate nohighlight">\(\gamma&gt;0\)</span> (confira nas três fórmulas gerais da aula de vibrações livres).</p></li>
+<li><p><span class="math notranslate nohighlight">\(x_p\)</span> é sempre uma onda pura na frequência de forçamento <span class="math notranslate nohighlight">\(\omega\)</span>, com amplitude e fase que dependem de <span class="math notranslate nohighlight">\(m,\gamma,k,\omega\)</span>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+x_p(t) = R(\omega)\cos\big(\omega t-\delta(\omega)\big),
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\qquad R(\omega)=\frac{F_0}{\sqrt{(k-m\omega^2)^2+(\gamma\omega)^2}}, \qquad \tan\delta(\omega)=\frac{\gamma\omega}{k-m\omega^2}.
+\]</div>
+</section>
+</section>
+<section id="parte-2-vibracao-nao-amortecida-forcada-batimento-e-ressonancia">
+<h2>Parte 2: vibração não amortecida forçada — batimento e ressonância<a class="headerlink" href="#parte-2-vibracao-nao-amortecida-forcada-batimento-e-ressonancia" title="Link to this heading">#</a></h2>
+<p>Agora tiramos o amortecimento (<span class="math notranslate nohighlight">\(\gamma=0\)</span>): a homogênea deixa de morrer, e a interação entre a frequência natural <span class="math notranslate nohighlight">\(\omega_0=\sqrt{k/m}\)</span> e a frequência de forçamento <span class="math notranslate nohighlight">\(\omega\)</span> vira o centro das atenções.</p>
+<div class="math notranslate nohighlight">
+\[
+mx''+kx=F_0\cos(\omega t), \qquad x(0)=0,\ x'(0)=0.
+\]</div>
+<p>Usando a fórmula geral da Parte 1 com <span class="math notranslate nohighlight">\(\gamma=0\)</span> temos:</p>
+<div class="math notranslate nohighlight">
+\[x_p=\dfrac{F_0}{k-m\omega^2}\cos\omega t = \dfrac{F_0}{m(\omega_0^2-\omega^2)}\cos\omega t\]</div>
+<p>(supondo <span class="math notranslate nohighlight">\(\omega\neq\omega_0\)</span>). A homogênea é <span class="math notranslate nohighlight">\(x_h=c_1\cos\omega_0t+c_2\,\text{sen}\,\omega_0t\)</span>.</p>
+<p>Aplicando as condições iniciais <span class="math notranslate nohighlight">\(x(0)=x'(0)=0\)</span> (contas de sempre): <span class="math notranslate nohighlight">\(c_1=-\dfrac{F_0}{m(\omega_0^2-\omega^2)}\)</span>, <span class="math notranslate nohighlight">\(c_2=0\)</span>.</p>
+<p>Logo,</p>
+<div class="math notranslate nohighlight">
+\[
+x(t) = \frac{F_0}{m(\omega_0^2-\omega^2)}\Big[\cos(\omega t)-\cos(\omega_0t)\Big].
+\]</div>
+<p>Usando a identidade trigonométrica <span class="math notranslate nohighlight">\(\cos A-\cos B=-2\,\text{sen}\!\left(\frac{A+B}{2}\right)\text{sen}\!\left(\frac{A-B}{2}\right)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+x(t) = \frac{2F_0}{m(\omega_0^2-\omega^2)}\,\text{sen}\!\left(\frac{\omega_0-\omega}{2}t\right)\text{sen}\!\left(\frac{\omega_0+\omega}{2}t\right).
+\]</div>
+<p>Quando <span class="math notranslate nohighlight">\(\omega\)</span> está <strong>perto</strong> de <span class="math notranslate nohighlight">\(\omega_0\)</span>:</p>
+<ul class="simple">
+<li><p>O segundo fator, <span class="math notranslate nohighlight">\(\text{sen}\big(\frac{\omega_0+\omega}{2}t\big)\)</span>, oscila rápido (frequência próxima de <span class="math notranslate nohighlight">\(\omega_0\)</span>), é a “portadora”.</p></li>
+<li><p>O primeiro fator, <span class="math notranslate nohighlight">\(\text{sen}\big(\frac{\omega_0-\omega}{2}t\big)\)</span>, oscila devagar (frequência pequena, já que <span class="math notranslate nohighlight">\(\omega_0-\omega\approx0\)</span>), é o <strong>envelope</strong>, que modula lentamente a amplitude da portadora.</p></li>
+</ul>
+<p>Esse é o fenômeno do <strong>batimento</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w0_s</span><span class="p">,</span> <span class="n">w_s</span><span class="p">,</span> <span class="n">m_s</span><span class="p">,</span> <span class="n">F0_s</span><span class="p">,</span> <span class="n">t_s</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">'omega_0 omega m F_0 t'</span><span class="p">,</span> <span class="n">positive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">x_bat</span> <span class="o">=</span> <span class="n">F0_s</span><span class="o">/</span><span class="p">(</span><span class="n">m_s</span><span class="o">*</span><span class="p">(</span><span class="n">w0_s</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">w_s</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span> <span class="o">*</span> <span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">w_s</span><span class="o">*</span><span class="n">t_s</span><span class="p">)</span> <span class="o">-</span> <span class="n">sp</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">w0_s</span><span class="o">*</span><span class="n">t_s</span><span class="p">))</span>
+
+<span class="n">m_</span><span class="p">,</span> <span class="n">k_</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">w0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">k_</span><span class="o">/</span><span class="n">m_</span><span class="p">)</span>
+<span class="n">w_bat</span> <span class="o">=</span> <span class="mf">0.9</span><span class="o">*</span><span class="n">w0</span>
+<span class="n">F0</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+<span class="n">t_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
+<span class="n">x_vals</span> <span class="o">=</span> <span class="n">F0</span><span class="o">/</span><span class="p">(</span><span class="n">m_</span><span class="o">*</span><span class="p">(</span><span class="n">w0</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">w_bat</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">w_bat</span><span class="o">*</span><span class="n">t_vals</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">w0</span><span class="o">*</span><span class="n">t_vals</span><span class="p">))</span>
+<span class="n">envelope</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">F0</span><span class="o">/</span><span class="p">(</span><span class="n">m_</span><span class="o">*</span><span class="p">(</span><span class="n">w0</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">w_bat</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">((</span><span class="n">w0</span> <span class="o">-</span> <span class="n">w_bat</span><span class="p">)</span><span class="o">*</span><span class="n">t_vals</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_vals</span><span class="p">,</span> <span class="n">x_vals</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_vals</span><span class="p">,</span> <span class="n">envelope</span><span class="p">,</span> <span class="s1">'r--'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'envelope'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_vals</span><span class="p">,</span> <span class="o">-</span><span class="n">envelope</span><span class="p">,</span> <span class="s1">'r--'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">"Batimento: $\omega=0{,}9\,\omega_0$"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">"$t$"</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">"$x$"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/06c08f2d3d670bd896e30364d71470b83a9bdcf7ca9015d9939e7d49bb670e8d.png" src="../_images/06c08f2d3d670bd896e30364d71470b83a9bdcf7ca9015d9939e7d49bb670e8d.png" />
+</div>
+</div>
+<section id="o-limite-de-ressonancia-via-l-hopital">
+<h3>O limite de ressonância, via L’Hôpital<a class="headerlink" href="#o-limite-de-ressonancia-via-l-hopital" title="Link to this heading">#</a></h3>
+<p>O que acontece com essa fórmula quando <span class="math notranslate nohighlight">\(\omega\to\omega_0\)</span>, ou seja, quando a força é aplicada exatamente na frequência natural? Olhando para</p>
+<div class="math notranslate nohighlight">
+\[
+x(t) = \frac{F_0}{m}\cdot\frac{\cos(\omega t)-\cos(\omega_0t)}{\omega_0^2-\omega^2},
+\]</div>
+<p>conforme <span class="math notranslate nohighlight">\(\omega\to\omega_0\)</span>, tanto o numerador quanto o denominador tendem a <span class="math notranslate nohighlight">\(0\)</span>, levando a uma indeterminação <span class="math notranslate nohighlight">\(0/0\)</span>.</p>
+<p>Assim, podemos aplicar a regra de L’Hôpital (derivando em relação a <span class="math notranslate nohighlight">\(\omega\)</span>, com <span class="math notranslate nohighlight">\(t\)</span> fixo):</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{\omega\to\omega_0}\frac{\cos(\omega t)-\cos(\omega_0t)}{\omega_0^2-\omega^2} = \lim_{\omega\to\omega_0}\frac{-t\,\text{sen}(\omega t)}{-2\omega} = \frac{t\,\text{sen}(\omega_0t)}{2\omega_0}.
+\]</div>
+<p>Logo,</p>
+<div class="math notranslate nohighlight">
+\[
+x(t) \ \longrightarrow\ \frac{F_0}{2m\omega_0}\,t\,\text{sen}(\omega_0t) \qquad \text{quando } \omega\to\omega_0.
+\]</div>
+<p>Repare: é exatamente a forma <span class="math notranslate nohighlight">\(t\,\text{sen}(\omega_0t)\)</span> que já tínhamos encontrado pelo método dos coeficientes a determinar, no caso de ressonância.</p>
+<p>Confira com o Exemplo 7 da aula passada: lá tínhamos <span class="math notranslate nohighlight">\(m=1,\ F_0=1,\ \omega_0=2\)</span>, e a fórmula acima dá <span class="math notranslate nohighlight">\(x_p=\frac{1}{4}t\,\text{sen}(2t)\)</span>, exatamente o que encontramos.</p>
+<p>As duas estradas (o limite do batimento, e o “”chute”” <span class="math notranslate nohighlight">\(t(A\cos\omega_0t+B\,\text{sen}\,\omega_0t)\)</span>) chegam ao mesmo lugar.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span> <span class="o">=</span> <span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">w_s</span><span class="o">*</span><span class="n">t_s</span><span class="p">)</span> <span class="o">-</span> <span class="n">sp</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">w0_s</span><span class="o">*</span><span class="n">t_s</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="n">w0_s</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">w_s</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">limite</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">w_s</span><span class="p">,</span> <span class="n">w0_s</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Limite quando ω→ω₀:"</span><span class="p">,</span> <span class="n">limite</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"x_p no limite:"</span><span class="p">,</span> <span class="n">sp</span><span class="o">.</span><span class="n">simplify</span><span class="p">((</span><span class="n">F0_s</span><span class="o">/</span><span class="n">m_s</span><span class="p">)</span><span class="o">*</span><span class="n">limite</span><span class="p">))</span>
+
+<span class="n">t_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
+<span class="n">x_res</span> <span class="o">=</span> <span class="n">F0</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">m_</span><span class="o">*</span><span class="n">w0</span><span class="p">)</span> <span class="o">*</span> <span class="n">t_vals</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">w0</span><span class="o">*</span><span class="n">t_vals</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_vals</span><span class="p">,</span> <span class="n">x_res</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_vals</span><span class="p">,</span> <span class="n">F0</span><span class="o">*</span><span class="n">t_vals</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">m_</span><span class="o">*</span><span class="n">w0</span><span class="p">),</span> <span class="s1">'r--'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'envelope'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_vals</span><span class="p">,</span> <span class="o">-</span><span class="n">F0</span><span class="o">*</span><span class="n">t_vals</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">m_</span><span class="o">*</span><span class="n">w0</span><span class="p">),</span> <span class="s1">'r--'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">"Ressonância: $\omega=\omega_0$"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"$t$"</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"$x$"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Limite quando ω→ω₀: t*sin(omega_0*t)/(2*omega_0)
+x_p no limite: F_0*t*sin(omega_0*t)/(2*m*omega_0)
+</pre></div>
+</div>
+<img alt="../_images/c3878495415e5bb1dc49e2393215b3a8b640c5e314499b78693780a95e367733.png" src="../_images/c3878495415e5bb1dc49e2393215b3a8b640c5e314499b78693780a95e367733.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="a-curva-de-amplitude-e-a-assintota-da-ressonancia">
+<h2>A curva de amplitude e a “”assíntota”” da ressonância<a class="headerlink" href="#a-curva-de-amplitude-e-a-assintota-da-ressonancia" title="Link to this heading">#</a></h2>
+<p>Voltando à fórmula geral (com amortecimento) da Parte 1:</p>
+<div class="math notranslate nohighlight">
+\[
+R(\omega)=\dfrac{F_0}{\sqrt{(k-m\omega^2)^2+(\gamma\omega)^2}}
+\]</div>
+<p>O que acontece com essa amplitude quando <span class="math notranslate nohighlight">\(\gamma\)</span> fica cada vez menor? No limite <span class="math notranslate nohighlight">\(\gamma\to0\)</span> e <span class="math notranslate nohighlight">\(\omega\to\omega_0\)</span>, o denominador vai a zero e <span class="math notranslate nohighlight">\(R\to\infty\)</span>; a “explosão” da ressonância que acabamos de calcular é, na verdade, o caso limite de um pico de amplitude que fica cada vez mais alto e mais estreito à medida que o amortecimento diminui.</p>
+<p>Vamos reproduzir aquele gráfico clássico que já apareceu, de relance, lá em “Por que Equações Diferenciais”:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">omega</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">2.5</span><span class="o">*</span><span class="n">w0</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">zeta</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="p">[(</span><span class="mf">0.02</span><span class="p">,</span> <span class="sa">r</span><span class="s2">"$\zeta=0.02$ (quase sem amortecimento)"</span><span class="p">),</span>
+                     <span class="p">(</span><span class="mf">0.10</span><span class="p">,</span> <span class="sa">r</span><span class="s2">"$\zeta=0.10$"</span><span class="p">),</span>
+                     <span class="p">(</span><span class="mf">0.30</span><span class="p">,</span> <span class="sa">r</span><span class="s2">"$\zeta=0.30$"</span><span class="p">)]:</span>
+    <span class="n">gam</span> <span class="o">=</span> <span class="n">zeta</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">k_</span><span class="o">*</span><span class="n">m_</span><span class="p">)</span>
+    <span class="n">amp</span> <span class="o">=</span> <span class="n">F0</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">k_</span> <span class="o">-</span> <span class="n">m_</span><span class="o">*</span><span class="n">omega</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">gam</span><span class="o">*</span><span class="n">omega</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">omega</span><span class="o">/</span><span class="n">w0</span><span class="p">,</span> <span class="n">amp</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'0.4'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">':'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">'$\omega=\omega_0$ (assíntota quando $\gamma\to0$)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">"$\omega/\omega_0$"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">"Amplitude $R(\omega)$"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">"Curva de amplitude: quanto menor o amortecimento, mais afiado o pico"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/8b900d062e81390769b8015f92715a8a2515f7da95c84461be7b8bbd1fd02c1d.png" src="../_images/8b900d062e81390769b8015f92715a8a2515f7da95c84461be7b8bbd1fd02c1d.png" />
+</div>
+</div>
+</section>
+<section id="fechando-o-capitulo">
+<h2>Fechando o capítulo<a class="headerlink" href="#fechando-o-capitulo" title="Link to this heading">#</a></h2>
+<p>Com isso, fechamos o círculo completo das EDOs lineares de segunda ordem: modelagem, homogêneas (nos três casos), a teoria geral, vibrações livres, o método dos coeficientes a determinar, e agora vibrações forçadas, com batimento e ressonância explicados de ponta a ponta, com fórmulas exatas por trás de cada gráfico que só tínhamos simulado numericamente lá no começo do capítulo.</p>
+<p>Ainda fica pendente a <strong>variação de parâmetros</strong> (para quando <span class="math notranslate nohighlight">\(F(t)\)</span> não se encaixa na tabela de coeficientes a determinar), um tema para retomar mais adiante.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -429,20 +683,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="vibl.html"
+       href="nh.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">Vibrações Livres</p>
+        <p class="prev-next-title">Equações Não Homogêneas e Método dos Coeficientes a Determinar</p>
       </div>
     </a>
     <a class="right-next"
-       href="../ordn/mod.html"
+       href="exerc.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">próximo</p>
-        <p class="prev-next-title">Modelos</p>
+        <p class="prev-next-title">Exercícios</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -452,6 +706,30 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i>  
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parte-1-vibracao-amortecida-forcada">Parte 1: vibração amortecida forçada</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#um-exemplo-com-contas">Um exemplo com contas</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parte-2-vibracao-nao-amortecida-forcada-batimento-e-ressonancia">Parte 2: vibração não amortecida forçada — batimento e ressonância</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#o-limite-de-ressonancia-via-l-hopital">O limite de ressonância, via L’Hôpital</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-curva-de-amplitude-e-a-assintota-da-ressonancia">A curva de amplitude e a “”assíntota”” da ressonância</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fechando-o-capitulo">Fechando o capítulo</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

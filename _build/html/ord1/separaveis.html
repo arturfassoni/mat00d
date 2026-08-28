@@ -199,23 +199,15 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de 2a Ordem</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../ord2/mod.html">Modelagem com EDOs de 2ª Ordem</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ord2/h.html">Equações Homogêneas com Coeficientes Constantes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/rrd.html">Raízes Reais Distintas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/rcc.html">Raízes Complexas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/rrr.html">Raízes Reais Repetidas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/teo.html">Resumo da Teoria</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ord2/nh.html">Equações Não Homogêneas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/ci.html">Coeficientes Indeterminados</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/vp.html">Variação dos Parâmetros</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ord2/vib.html">Vibrações</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/vibl.html">Vibrações Livres</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/vibf.html">Vibrações Forçadas</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/h.html">Equações Homogêneas e o Caso de Raízes Reais Distintas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/rrr.html">Raízes Reais Repetidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/rcc.html">Raízes Complexas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/teo.html">Teoria Geral: Existência, Unicidade e Solução Geral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/vib.html">Vibrações Livres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/nh.html">Equações Não Homogêneas e Método dos Coeficientes a Determinar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/vibf.html">Vibrações Forçadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/exerc.html">Exercícios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/videos.html">Vídeos</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de Ordem Superior</span></p>
 <ul class="nav bd-sidenav">
@@ -427,7 +419,7 @@ document.write(`
 \[
 m\frac{dv}{dt} = mg - \gamma v^2 \quad\Longrightarrow\quad \frac{dv}{dt} = g - \frac{\gamma}{m}v^2.
 \]</div>
-<p>Essa equação <strong>não é linear</strong> (por causa do <span class="math notranslate nohighlight">\(v^2\)</span>) — o fator integrante não se aplica diretamente. Mas repare: o lado direito depende só de <span class="math notranslate nohighlight">\(v\)</span>, não de <span class="math notranslate nohighlight">\(t\)</span>. Isso significa que a equação é <strong>autônoma</strong> — e toda equação autônoma é, automaticamente, <strong>separável</strong>. Vamos usar esta aula para desenvolver a técnica de separação de variáveis e, no final, resolver essa equação (e também um outro exemplo clássico: a velocidade de escape de um foguete).</p>
+<p>Essa equação <strong>não é linear</strong> (por causa do <span class="math notranslate nohighlight">\(v^2\)</span>) e assim o fator integrante não se aplica diretamente. Mas repare: o lado direito depende só de <span class="math notranslate nohighlight">\(v\)</span>, não de <span class="math notranslate nohighlight">\(t\)</span>. Isso significa que a equação é <strong>autônoma</strong>, e toda equação autônoma é, automaticamente, <strong>separável</strong>. Vamos usar esta aula para desenvolver a técnica de separação de variáveis e, no final, resolver essa equação (e também um outro exemplo clássico: a velocidade de escape de um foguete).</p>
 </section>
 <section id="o-metodo-de-separacao-de-variaveis">
 <h2>O método de separação de variáveis<a class="headerlink" href="#o-metodo-de-separacao-de-variaveis" title="Link to this heading">#</a></h2>
@@ -449,7 +441,7 @@ y' = g(t)\,h(y),
 \[
 \int \frac{dy}{h(y)} = \int g(t)\,dt.
 \]</div>
-<p>Calculando as duas primitivas, chegamos a uma equação envolvendo <span class="math notranslate nohighlight">\(t\)</span>, <span class="math notranslate nohighlight">\(y\)</span> e uma constante arbitrária <span class="math notranslate nohighlight">\(c\)</span> — em geral, uma equação <strong>implícita</strong> para <span class="math notranslate nohighlight">\(y\)</span>. Às vezes dá para isolar <span class="math notranslate nohighlight">\(y(t)\)</span> explicitamente, às vezes não — e tudo bem, a forma implícita já é uma solução legítima. Se houver uma condição inicial <span class="math notranslate nohighlight">\(y(t_0)=y_0\)</span>, usamos ela para determinar <span class="math notranslate nohighlight">\(c\)</span>, exatamente como já fizemos antes.</p>
+<p>Calculando as duas primitivas, chegamos a uma equação envolvendo <span class="math notranslate nohighlight">\(t\)</span>, <span class="math notranslate nohighlight">\(y\)</span> e uma constante arbitrária <span class="math notranslate nohighlight">\(c\)</span>; em geral, uma equação <strong>implícita</strong> para <span class="math notranslate nohighlight">\(y\)</span>. Às vezes dá para isolar <span class="math notranslate nohighlight">\(y(t)\)</span> explicitamente, às vezes não, e tudo bem, a forma implícita já é uma solução legítima. Se houver uma condição inicial <span class="math notranslate nohighlight">\(y(t_0)=y_0\)</span>, usamos ela para determinar <span class="math notranslate nohighlight">\(c\)</span>, exatamente como já fizemos antes.</p>
 <section id="exemplo-1">
 <h3>Exemplo 1<a class="headerlink" href="#exemplo-1" title="Link to this heading">#</a></h3>
 <p>Resolva</p>
@@ -472,7 +464,7 @@ y - \frac{y^3}{3} = \frac{t^3}{3} + C.
 \[
 t^3 - 3y + y^3 = c.
 \]</div>
-<p>Essa é uma família de curvas — uma para cada valor de <span class="math notranslate nohighlight">\(c\)</span> — chamadas <strong>curvas integrais</strong> da equação. Repare que não conseguimos (nem vamos tentar) isolar <span class="math notranslate nohighlight">\(y\)</span> explicitamente aqui: a solução fica naturalmente na forma implícita. Vamos usar o Python para visualizar a família inteira, junto com o campo de direções:</p>
+<p>Essa é uma família de curvas, uma para cada valor de <span class="math notranslate nohighlight">\(c\)</span>, chamadas <strong>curvas integrais</strong> da equação. Repare que não conseguimos (nem vamos tentar) isolar <span class="math notranslate nohighlight">\(y\)</span> explicitamente aqui: a solução fica naturalmente na forma implícita. Vamos usar o Python para visualizar a família inteira, junto com o campo de direções:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -512,7 +504,7 @@ t^3 - 3y + y^3 = c.
 <img alt="../_images/2ed595469a902e72743ce4cc3a543a102da1955ec8350dc2e2ca59565268574d.png" src="../_images/2ed595469a902e72743ce4cc3a543a102da1955ec8350dc2e2ca59565268574d.png" />
 </div>
 </div>
-<p>Repare como as curvas azuis (as curvas integrais, para diferentes valores de <span class="math notranslate nohighlight">\(c\)</span>) seguem exatamente a direção indicada pelo campo cinza — como já esperávamos. Cada escolha de <span class="math notranslate nohighlight">\(c\)</span> corresponde a uma condição inicial diferente.</p>
+<p>Repare como as curvas azuis (as curvas integrais, para diferentes valores de <span class="math notranslate nohighlight">\(c\)</span>) seguem exatamente a direção indicada pelo campo cinza, como já esperávamos. Cada escolha de <span class="math notranslate nohighlight">\(c\)</span> corresponde a uma condição inicial diferente.</p>
 </section>
 <section id="exemplo-2-um-pvi-que-da-para-resolver-explicitamente">
 <h3>Exemplo 2 (um PVI que dá para resolver explicitamente)<a class="headerlink" href="#exemplo-2-um-pvi-que-da-para-resolver-explicitamente" title="Link to this heading">#</a></h3>
@@ -589,7 +581,7 @@ y^4 + 16y + t^4 - 8t^2 = c.
 \[
 y^4 + 16y + t^4 - 8t^2 = 17.
 \]</div>
-<p>Aqui a equação em <span class="math notranslate nohighlight">\(y\)</span> é do <strong>quarto grau</strong> — não vale a pena tentar isolar <span class="math notranslate nohighlight">\(y(t)\)</span> na mão. Sem problema: a forma implícita já é uma solução perfeitamente válida. Vamos visualizar a família inteira (e destacar a curva que passa por <span class="math notranslate nohighlight">\((0,1)\)</span>) com o Python:</p>
+<p>Aqui a equação em <span class="math notranslate nohighlight">\(y\)</span> é do <strong>quarto grau</strong>, e não vale a pena tentar isolar <span class="math notranslate nohighlight">\(y(t)\)</span> na mão. Sem problema: a forma implícita já é uma solução perfeitamente válida. Vamos visualizar a família inteira (e destacar a curva que passa por <span class="math notranslate nohighlight">\((0,1)\)</span>) com o Python:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t_fine</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
@@ -623,7 +615,7 @@ y^4 + 16y + t^4 - 8t^2 = 17.
 \frac{dv}{dt} = g - \frac{\gamma}{m}v^2.
 \]</div>
 <p>Agora temos a ferramenta certa. Essa é uma equação <strong>autônoma</strong> (o lado direito só depende de <span class="math notranslate nohighlight">\(v\)</span>), logo automaticamente separável, com <span class="math notranslate nohighlight">\(g(t)\equiv 1\)</span> e <span class="math notranslate nohighlight">\(h(v) = g - \frac{\gamma}{m}v^2\)</span>.</p>
-<p>Vale a pena reescrever a constante: chamando <span class="math notranslate nohighlight">\(k=\gamma/m\)</span> e <span class="math notranslate nohighlight">\(v_{eq}=\sqrt{g/k}=\sqrt{mg/\gamma}\)</span> (a nova velocidade terminal — verifique que <span class="math notranslate nohighlight">\(dv/dt=0\)</span> exatamente em <span class="math notranslate nohighlight">\(v=v_{eq}\)</span>, igual fizemos no caso linear!), a equação vira</p>
+<p>Vale a pena reescrever a constante: chamando <span class="math notranslate nohighlight">\(k=\gamma/m\)</span> e <span class="math notranslate nohighlight">\(v_{eq}=\sqrt{g/k}=\sqrt{mg/\gamma}\)</span> (a nova velocidade terminal, verifique que <span class="math notranslate nohighlight">\(dv/dt=0\)</span> exatamente em <span class="math notranslate nohighlight">\(v=v_{eq}\)</span>, igual fizemos no caso linear), a equação vira</p>
 <div class="math notranslate nohighlight">
 \[
 \frac{dv}{dt} = k\left(v_{eq}^2 - v^2\right).
@@ -638,7 +630,7 @@ y^4 + 16y + t^4 - 8t^2 = 17.
 \[
 v(t) = v_{eq}\,\tanh\!\big(v_{eq}\,k\,t\big).
 \]</div>
-<p>Repare que, quando <span class="math notranslate nohighlight">\(t\to\infty\)</span>, <span class="math notranslate nohighlight">\(\tanh(\cdot)\to 1\)</span> e <span class="math notranslate nohighlight">\(v(t)\to v_{eq}\)</span> — exatamente como esperávamos: a velocidade se aproxima da velocidade terminal, só que agora seguindo uma curva diferente da exponencial que vimos no caso linear.</p>
+<p>Repare que, quando <span class="math notranslate nohighlight">\(t\to\infty\)</span>, <span class="math notranslate nohighlight">\(\tanh(\cdot)\to 1\)</span> e <span class="math notranslate nohighlight">\(v(t)\to v_{eq}\)</span>, exatamente como esperávamos: a velocidade se aproxima da velocidade terminal, só que agora seguindo uma curva diferente da exponencial que vimos no caso linear.</p>
 <p>Vamos verificar essa solução, do jeito que já viramos fãs: substituindo de volta na equação.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -707,12 +699,12 @@ v(t) = v_{eq}\,\tanh\!\big(v_{eq}\,k\,t\big).
 <img alt="../_images/8df8f1c05b5c4bf035c9f4e3c58255d29e020212ef18d12482742ac73a64b2e6.png" src="../_images/8df8f1c05b5c4bf035c9f4e3c58255d29e020212ef18d12482742ac73a64b2e6.png" />
 </div>
 </div>
-<p>Compare com o caso linear que vimos na aula de modelagem: lá, a velocidade se aproximava do equilíbrio seguindo uma exponencial, <span class="math notranslate nohighlight">\(v(t) = v_{eq} + (v_0-v_{eq})e^{-kt}\)</span>; aqui, seguindo uma tangente hiperbólica. Formas diferentes, mas a mesma ideia física: a resistência do ar sempre «puxa» a velocidade de volta para o equilíbrio.</p>
-<p>Vamos ver mais um exemplo clássico em que a separação de variáveis é essencial — dessa vez, olhando para cima, não para baixo.</p>
+<p>Compare com o caso linear que vimos na aula de modelagem: lá, a velocidade se aproximava do equilíbrio seguindo uma exponencial, <span class="math notranslate nohighlight">\(v(t) = v_{eq} + (v_0-v_{eq})e^{-kt}\)</span>; aqui, seguindo uma tangente hiperbólica. Formas diferentes, mas a mesma ideia física: a resistência do ar sempre “”puxa”” a velocidade de volta para o equilíbrio.</p>
+<p>Vamos ver mais um exemplo clássico em que a separação de variáveis é essencial.</p>
 </section>
 <section id="velocidade-de-escape">
 <h2>Velocidade de escape<a class="headerlink" href="#velocidade-de-escape" title="Link to this heading">#</a></h2>
-<p>Um foguete (ou qualquer objeto) lançado da superfície da Terra, na vertical, com velocidade inicial <span class="math notranslate nohighlight">\(v_0\)</span>, sofre a força da gravidade — mas, diferente da queda livre perto do chão, a força gravitacional <strong>muda com a altitude</strong>: ela é mais fraca quanto mais longe do centro da Terra o objeto está.</p>
+<p>Um foguete (ou qualquer objeto) lançado da superfície da Terra, na vertical, com velocidade inicial <span class="math notranslate nohighlight">\(v_0\)</span>, sofre a força da gravidade mas, diferente da queda livre perto do chão, a força gravitacional <strong>muda com a altitude</strong>: ela é mais fraca quanto mais longe do centro da Terra o objeto está.</p>
 <p>Seja <span class="math notranslate nohighlight">\(x\)</span> a altura acima da superfície da Terra (<span class="math notranslate nohighlight">\(x=0\)</span> na superfície) e <span class="math notranslate nohighlight">\(R\)</span> o raio da Terra. A lei da gravitação de Newton diz que a força (peso) sobre um objeto de massa <span class="math notranslate nohighlight">\(m\)</span> é</p>
 <div class="math notranslate nohighlight">
 \[
@@ -724,7 +716,7 @@ F(x) = -\frac{mgR^2}{(R+x)^2},
 \[
 m\frac{dv}{dt} = -\frac{mgR^2}{(R+x)^2}, \qquad v(0) = v_0.
 \]</div>
-<p>Só que aqui temos um problema: essa equação envolve <span class="math notranslate nohighlight">\(t\)</span>, <span class="math notranslate nohighlight">\(x\)</span> <strong>e</strong> <span class="math notranslate nohighlight">\(v\)</span> ao mesmo tempo — três variáveis! Não é separável do jeito que está, porque o lado direito depende de <span class="math notranslate nohighlight">\(x\)</span>, não de <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<p>Só que aqui temos um problema: essa equação envolve <span class="math notranslate nohighlight">\(t\)</span>, <span class="math notranslate nohighlight">\(x\)</span> <strong>e</strong> <span class="math notranslate nohighlight">\(v\)</span> ao mesmo tempo, três variáveis. Não é separável do jeito que está, porque o lado direito depende de <span class="math notranslate nohighlight">\(x\)</span>, não de <span class="math notranslate nohighlight">\(t\)</span>.</p>
 <section id="o-truque-trocar-t-por-x-como-variavel-independente">
 <h3>O truque: trocar <span class="math notranslate nohighlight">\(t\)</span> por <span class="math notranslate nohighlight">\(x\)</span> como variável independente<a class="headerlink" href="#o-truque-trocar-t-por-x-como-variavel-independente" title="Link to this heading">#</a></h3>
 <p>Como queremos <span class="math notranslate nohighlight">\(v\)</span> em função de <span class="math notranslate nohighlight">\(x\)</span> (a velocidade em função da altura, não do tempo), vamos usar a regra da cadeia para reescrever <span class="math notranslate nohighlight">\(dv/dt\)</span> em termos de <span class="math notranslate nohighlight">\(dv/dx\)</span>:</p>
@@ -737,7 +729,7 @@ m\frac{dv}{dt} = -\frac{mgR^2}{(R+x)^2}, \qquad v(0) = v_0.
 \[
 v\,\frac{dv}{dx} = -\frac{gR^2}{(R+x)^2}.
 \]</div>
-<p>Agora sim: uma equação envolvendo só <span class="math notranslate nohighlight">\(v\)</span> e <span class="math notranslate nohighlight">\(x\)</span> — e <strong>separável</strong>!</p>
+<p>Agora sim: uma equação envolvendo só <span class="math notranslate nohighlight">\(v\)</span> e <span class="math notranslate nohighlight">\(x\)</span>, e <strong>separável</strong>.</p>
 <p>Separando as variáveis:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -758,7 +750,7 @@ v\,dv = -\frac{gR^2}{(R+x)^2}\,dx.
 \[
 v^2 = v_0^2 - 2gR + \frac{2gR^2}{R+x}.
 \]</div>
-<p>Essa fórmula nos dá a velocidade em função da altitude <span class="math notranslate nohighlight">\(x\)</span> (e não do tempo!) — repare como a mudança de variável independente foi essencial para isso.</p>
+<p>Essa fórmula nos dá a velocidade em função da altitude <span class="math notranslate nohighlight">\(x\)</span> (e não do tempo!); repare como a mudança de variável independente foi essencial para isso.</p>
 </section>
 <section id="qual-e-a-menor-velocidade-inicial-que-escapa-da-terra">
 <h3>Qual é a menor velocidade inicial que escapa da Terra?<a class="headerlink" href="#qual-e-a-menor-velocidade-inicial-que-escapa-da-terra" title="Link to this heading">#</a></h3>
@@ -777,7 +769,7 @@ v_0^2 - 2gR \geq 0 \quad\Longleftrightarrow\quad v_0 \geq \sqrt{2gR}.
 \[
 v_e = \sqrt{2gR}.
 \]</div>
-<p>Usando <span class="math notranslate nohighlight">\(g=9{,}8\ \text{m/s}^2\)</span> e <span class="math notranslate nohighlight">\(R\approx 6371\ \text{km}\)</span>, obtemos <span class="math notranslate nohighlight">\(v_e \approx 11{,}2\ \text{km/s}\)</span> — bem acima da velocidade de qualquer avião comercial, e uma das razões pelas quais colocar algo em órbita (ou além) exige tanto combustível.</p>
+<p>Usando <span class="math notranslate nohighlight">\(g=9{,}8\ \text{m/s}^2\)</span> e <span class="math notranslate nohighlight">\(R\approx 6371\ \text{km}\)</span>, obtemos <span class="math notranslate nohighlight">\(v_e \approx 11{,}2\ \text{km/s}\)</span>, bem acima da velocidade de qualquer avião comercial, e uma das razões pelas quais colocar algo em órbita (ou além) exige tanto combustível.</p>
 <p>Podemos visualizar isso: para <span class="math notranslate nohighlight">\(v_0\)</span> abaixo da velocidade de escape, a velocidade cai a zero numa certa altitude (o objeto para e volta); para <span class="math notranslate nohighlight">\(v_0\)</span> igual ou acima da velocidade de escape, a velocidade nunca zera:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -817,8 +809,8 @@ v_e = \sqrt{2gR}.
 </section>
 <section id="o-que-vem-a-seguir">
 <h2>O que vem a seguir<a class="headerlink" href="#o-que-vem-a-seguir" title="Link to this heading">#</a></h2>
-<p>Separação de variáveis é uma ferramenta poderosa — muito mais geral que o fator integrante, já que nem exige que a equação seja linear. Mas ela tem seu preço: em geral, a solução fica implícita, e às vezes a integral nem sequer tem uma primitiva elementar.</p>
-<p>Na próxima aula, vamos explorar mais modelos que se encaixam nessa forma — incluindo o crescimento logístico, que já apareceu de relance lá na aula de classificação — e, principalmente, vamos aprender a estudar equações <strong>autônomas</strong> sem sequer precisar resolvê-las, usando só a geometria da linha de fase.</p>
+<p>Separação de variáveis é uma ferramenta poderosa e mais geral que o fator integrante, já que nem exige que a equação seja linear. Mas ela tem seu preço: em geral, a solução fica implícita, e às vezes a integral nem sequer tem uma primitiva elementar.</p>
+<p>Na próxima aula, vamos explorar mais modelos que se encaixam nessa forma, incluindo o crescimento logístico, que já apareceu de relance lá na aula de classificação e, principalmente, vamos aprender a estudar equações <strong>autônomas</strong> sem sequer precisar resolvê-las, usando só a geometria da linha de fase.</p>
 </section>
 </section>
 

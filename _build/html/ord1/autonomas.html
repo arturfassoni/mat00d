@@ -199,23 +199,15 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de 2a Ordem</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../ord2/mod.html">Modelagem com EDOs de 2ª Ordem</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ord2/h.html">Equações Homogêneas com Coeficientes Constantes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/rrd.html">Raízes Reais Distintas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/rcc.html">Raízes Complexas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/rrr.html">Raízes Reais Repetidas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/teo.html">Resumo da Teoria</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ord2/nh.html">Equações Não Homogêneas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/ci.html">Coeficientes Indeterminados</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/vp.html">Variação dos Parâmetros</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ord2/vib.html">Vibrações</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/vibl.html">Vibrações Livres</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/vibf.html">Vibrações Forçadas</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/h.html">Equações Homogêneas e o Caso de Raízes Reais Distintas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/rrr.html">Raízes Reais Repetidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/rcc.html">Raízes Complexas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/teo.html">Teoria Geral: Existência, Unicidade e Solução Geral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/vib.html">Vibrações Livres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/nh.html">Equações Não Homogêneas e Método dos Coeficientes a Determinar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/vibf.html">Vibrações Forçadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/exerc.html">Exercícios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/videos.html">Vídeos</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de Ordem Superior</span></p>
 <ul class="nav bd-sidenav">
@@ -619,14 +611,14 @@ tau = 3.095 anos
 <section id="analise-geometrica-pontos-de-equilibrio-e-a-reta-de-fase">
 <h2>Análise geométrica: pontos de equilíbrio e a reta de fase<a class="headerlink" href="#analise-geometrica-pontos-de-equilibrio-e-a-reta-de-fase" title="Link to this heading">#</a></h2>
 <p>Repare que o gráfico da solução geral, lá em cima, já contém a resposta: para qualquer <span class="math notranslate nohighlight">\(y_0&gt;0\)</span>, a solução converge para <span class="math notranslate nohighlight">\(K\)</span>; as retas <span class="math notranslate nohighlight">\(y=0\)</span> e <span class="math notranslate nohighlight">\(y=K\)</span> nunca são cruzadas por nenhuma outra curva. Será que dava para prever esse comportamento <strong>sem resolver a equação</strong>, só olhando para ela?</p>
-<p>A resposta é sim — e a ideia é surpreendentemente simples. Como a equação é autônoma, <span class="math notranslate nohighlight">\(y'=f(y)\)</span>, o valor de <span class="math notranslate nohighlight">\(f(y)\)</span> (a inclinação) depende só da altura <span class="math notranslate nohighlight">\(y\)</span>, não do instante <span class="math notranslate nohighlight">\(t\)</span>. Então basta estudar o <strong>gráfico de <span class="math notranslate nohighlight">\(f(y)\)</span> em função de <span class="math notranslate nohighlight">\(y\)</span></strong> para saber tudo sobre o comportamento qualitativo das soluções — sem integrar nada!</p>
-<p><strong>Pontos de equilíbrio (ou pontos críticos).</strong> São os valores de <span class="math notranslate nohighlight">\(y\)</span> onde <span class="math notranslate nohighlight">\(f(y)=0\)</span> — ali, <span class="math notranslate nohighlight">\(y'=0\)</span>, então a função constante <span class="math notranslate nohighlight">\(y(t)\equiv y^*\)</span> é uma solução (uma <strong>solução de equilíbrio</strong>). Para a equação logística, <span class="math notranslate nohighlight">\(f(y)=r(1-y/K)y=0\)</span> dá <span class="math notranslate nohighlight">\(y=0\)</span> e <span class="math notranslate nohighlight">\(y=K\)</span> — exatamente as duas retas horizontais que vimos no gráfico.</p>
+<p>A resposta é sim, e a ideia é surpreendentemente simples. Como a equação é autônoma, <span class="math notranslate nohighlight">\(y'=f(y)\)</span>, o valor de <span class="math notranslate nohighlight">\(f(y)\)</span> (a inclinação) depende só da altura <span class="math notranslate nohighlight">\(y\)</span>, não do instante <span class="math notranslate nohighlight">\(t\)</span>. Então basta estudar o <strong>gráfico de <span class="math notranslate nohighlight">\(f(y)\)</span> em função de <span class="math notranslate nohighlight">\(y\)</span></strong> para saber tudo sobre o comportamento qualitativo das soluções, sem integrar nada!</p>
+<p><strong>Pontos de equilíbrio (ou pontos críticos).</strong> São os valores de <span class="math notranslate nohighlight">\(y\)</span> onde <span class="math notranslate nohighlight">\(f(y)=0\)</span>; nestes pontos temos <span class="math notranslate nohighlight">\(y'=0\)</span>, então a função constante <span class="math notranslate nohighlight">\(y(t)\equiv y^*\)</span> é uma solução (uma <strong>solução de equilíbrio</strong>). Para a equação logística, <span class="math notranslate nohighlight">\(f(y)=r(1-y/K)y=0\)</span> dá <span class="math notranslate nohighlight">\(y=0\)</span> e <span class="math notranslate nohighlight">\(y=K\)</span>, exatamente as duas retas horizontais que vimos no gráfico.</p>
 <p>Fora dos pontos de equilíbrio, o sinal de <span class="math notranslate nohighlight">\(f(y)\)</span> diz se <span class="math notranslate nohighlight">\(y\)</span> está crescendo ou decrescendo:</p>
 <ul class="simple">
 <li><p>Onde <span class="math notranslate nohighlight">\(f(y)&gt;0\)</span>, temos <span class="math notranslate nohighlight">\(y'&gt;0\)</span>: <span class="math notranslate nohighlight">\(y\)</span> cresce.</p></li>
 <li><p>Onde <span class="math notranslate nohighlight">\(f(y)&lt;0\)</span>, temos <span class="math notranslate nohighlight">\(y'&lt;0\)</span>: <span class="math notranslate nohighlight">\(y\)</span> decresce.</p></li>
 </ul>
-<p>Isso é tudo que precisamos! Vamos visualizar o gráfico de <span class="math notranslate nohighlight">\(f(y)\)</span>, com setas indicando essa direção de crescimento/decrescimento, e também a versão vertical dessa mesma informação — o eixo <span class="math notranslate nohighlight">\(y\)</span> sozinho, chamado de <strong>reta de fase</strong>:</p>
+<p>Isso é tudo que precisamos! Vamos visualizar o gráfico de <span class="math notranslate nohighlight">\(f(y)\)</span>, com setas indicando essa direção de crescimento/decrescimento, e também a versão vertical dessa mesma informação, o eixo <span class="math notranslate nohighlight">\(y\)</span> sozinho, chamado de <strong>reta de fase</strong>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">plot_fy_e_reta_de_fase</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">,</span> <span class="n">equilibrios</span><span class="p">,</span> <span class="n">titulo</span><span class="p">):</span>
@@ -692,8 +684,8 @@ tau = 3.095 anos
 <li><p><strong>Equilíbrio assintoticamente estável</strong>: soluções que começam perto dele tendem a ele quando <span class="math notranslate nohighlight">\(t\to\infty\)</span>. Aqui, <span class="math notranslate nohighlight">\(y=K\)</span>.</p></li>
 <li><p><strong>Equilíbrio instável</strong>: soluções que começam perto dele se afastam. Aqui, <span class="math notranslate nohighlight">\(y=0\)</span>.</p></li>
 </ul>
-<p>Ou seja: por menor que seja a população inicial (desde que positiva), ela cresce e se aproxima de <span class="math notranslate nohighlight">\(K\)</span>; e se a população começar acima de <span class="math notranslate nohighlight">\(K\)</span>, ela decresce até <span class="math notranslate nohighlight">\(K\)</span>. Tudo isso, <strong>sem resolver a equação diferencial</strong> — só olhando para o sinal de <span class="math notranslate nohighlight">\(f(y)\)</span>!</p>
-<p>Vale registrar um ponto sutil: mesmo um termo não linear «pequeno» (o <span class="math notranslate nohighlight">\(-ay^2\)</span> que diferencia a equação logística da exponencial pura) muda completamente o destino da solução no longo prazo — de crescimento ilimitado para uma acomodação em <span class="math notranslate nohighlight">\(K\)</span>. É um bom lembrete de por que a distinção linear/não linear, que vimos lá na aula de classificação, importa tanto.</p>
+<p>Ou seja: por menor que seja a população inicial (desde que positiva), ela cresce e se aproxima de <span class="math notranslate nohighlight">\(K\)</span>; e se a população começar acima de <span class="math notranslate nohighlight">\(K\)</span>, ela decresce até <span class="math notranslate nohighlight">\(K\)</span>. Tudo isso, <strong>sem resolver a equação diferencial</strong>, só olhando para o sinal de <span class="math notranslate nohighlight">\(f(y)\)</span>!</p>
+<p>Vale registrar um ponto sutil: mesmo um termo não linear “pequeno» (o <span class="math notranslate nohighlight">\(-ay^2\)</span> que diferencia a equação logística da exponencial pura) muda completamente o destino da solução no longo prazo, de crescimento ilimitado para uma acomodação em <span class="math notranslate nohighlight">\(K\)</span>. É um bom lembrete de por que a distinção linear/não linear, que vimos lá na aula de classificação, importa tanto.</p>
 </section>
 <section id="um-limiar-critico">
 <h2>Um limiar crítico<a class="headerlink" href="#um-limiar-critico" title="Link to this heading">#</a></h2>
@@ -729,7 +721,7 @@ tau = 3.095 anos
 \[
 y(t) = \frac{y_0 T}{y_0 + (T-y_0)e^{rt}}.
 \]</div>
-<p>Repare no expoente <strong>positivo</strong>: se <span class="math notranslate nohighlight">\(y_0&gt;T\)</span>, o termo <span class="math notranslate nohighlight">\((T-y_0)e^{rt}\)</span> é negativo e cresce em módulo sem parar — o denominador zera num instante finito <span class="math notranslate nohighlight">\(t^*\)</span>, e a população <strong>explode em tempo finito</strong> (não só quando <span class="math notranslate nohighlight">\(t\to\infty\)</span>, como no crescimento exponencial comum)! Vamos visualizar:</p>
+<p>Repare no expoente <strong>positivo</strong>: se <span class="math notranslate nohighlight">\(y_0&gt;T\)</span>, o termo <span class="math notranslate nohighlight">\((T-y_0)e^{rt}\)</span> é negativo e cresce em módulo sem parar: o denominador zera num instante finito <span class="math notranslate nohighlight">\(t^*\)</span>, e a população <strong>explode em tempo finito</strong> (não só quando <span class="math notranslate nohighlight">\(t\to\infty\)</span>, como no crescimento exponencial comum). Vamos visualizar:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t_s2</span><span class="p">,</span> <span class="n">r_s2</span><span class="p">,</span> <span class="n">T_s2</span><span class="p">,</span> <span class="n">y0_s2</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">'t r T y0'</span><span class="p">,</span> <span class="n">positive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -780,7 +772,7 @@ y(t) = \frac{y_0 T}{y_0 + (T-y_0)e^{rt}}.
 </section>
 <section id="crescimento-logistico-com-limiar">
 <h2>Crescimento logístico com limiar<a class="headerlink" href="#crescimento-logistico-com-limiar" title="Link to this heading">#</a></h2>
-<p>O modelo de limiar da seção anterior tem um problema: ele prevê crescimento <em>ilimitado</em> para <span class="math notranslate nohighlight">\(y_0&gt;T\)</span>, o que não é realista — toda população real esbarra, cedo ou tarde, numa capacidade de suporte. A correção natural é combinar os dois efeitos, o limiar <strong>e</strong> a capacidade de suporte, numa equação só:</p>
+<p>O modelo de limiar da seção anterior tem um problema: ele prevê crescimento <em>ilimitado</em> para <span class="math notranslate nohighlight">\(y_0&gt;T\)</span>, o que não é realista pois toda população real esbarra, cedo ou tarde, numa capacidade de suporte. A correção natural é combinar os dois efeitos, o limiar <strong>e</strong> a capacidade de suporte, numa equação só:</p>
 <div class="math notranslate nohighlight">
 \[
 \frac{dy}{dt} = -r\left(1-\frac{y}{T}\right)\left(1-\frac{y}{K}\right)y, \qquad r&gt;0,\ 0&lt;T&lt;K.
@@ -836,13 +828,13 @@ y(t) = \frac{y_0 T}{y_0 + (T-y_0)e^{rt}}.
 <img alt="../_images/b532fd7fb99746980eacf4152e7c5020a7ac318c9707abac306a132b61a872fa.png" src="../_images/b532fd7fb99746980eacf4152e7c5020a7ac318c9707abac306a132b61a872fa.png" />
 </div>
 </div>
-<p>Repare que, dessa vez, não escrevemos uma fórmula fechada para <span class="math notranslate nohighlight">\(y(t)\)</span> — a decomposição em frações parciais fica bem mais trabalhosa com três raízes, e usamos integração numérica (<code class="docutils literal notranslate"><span class="pre">odeint</span></code>) para desenhar as curvas. Isso ilustra bem o valor da abordagem geométrica: mesmo sem uma fórmula explícita, sabíamos exatamente qual seria o formato qualitativo das soluções antes mesmo de calcular qualquer coisa.</p>
-<p>Esse tipo de modelo (com limiar) já foi usado para descrever a extinção do <strong>pombo-passageiro</strong> nos Estados Unidos. Até o final do século XIX, a espécie existia em quantidades imensas — bilhões de indivíduos. Mas ela só conseguia se reproduzir com sucesso quando presente em grandes concentrações (um limiar <span class="math notranslate nohighlight">\(T\)</span> relativamente alto). A caça intensa reduziu a densidade local da espécie abaixo desse limiar, mesmo com um número absoluto de indivíduos ainda grande — e a população, presa no lado errado do limiar, entrou em colapso. O último pombo-passageiro morreu em 1914. É um exemplo real (e triste) de como um limiar crítico, e não só o tamanho absoluto da população, pode decidir o destino de uma espécie.</p>
+<p>Repare que, dessa vez, não escrevemos uma fórmula fechada para <span class="math notranslate nohighlight">\(y(t)\)</span>, pois a decomposição em frações parciais fica bem mais trabalhosa com três raízes, e usamos integração numérica (<code class="docutils literal notranslate"><span class="pre">odeint</span></code>) para desenhar as curvas. Isso ilustra bem o valor da abordagem geométrica: mesmo sem uma fórmula explícita, sabíamos exatamente qual seria o formato qualitativo das soluções antes mesmo de calcular qualquer coisa.</p>
+<p>Esse tipo de modelo (com limiar) já foi usado para descrever a extinção do <strong>pombo-passageiro</strong> nos Estados Unidos. Até o final do século XIX, a espécie existia em quantidades imensas — bilhões de indivíduos. Mas ela só conseguia se reproduzir com sucesso quando presente em grandes concentrações (um limiar <span class="math notranslate nohighlight">\(T\)</span> relativamente alto). A caça intensa reduziu a densidade local da espécie abaixo desse limiar, mesmo com um número absoluto de indivíduos ainda grande, e a população, presa no lado errado do limiar, entrou em colapso. O último pombo-passageiro morreu em 1914. É um exemplo real (e triste) de como um limiar crítico, e não só o tamanho absoluto da população, pode decidir o destino de uma espécie.</p>
 </section>
 <section id="o-que-vem-a-seguir">
 <h2>O que vem a seguir<a class="headerlink" href="#o-que-vem-a-seguir" title="Link to this heading">#</a></h2>
-<p>Com isso, fechamos o estudo das equações de primeira ordem: lineares (fator integrante), separáveis (separação de variáveis) e autônomas (reta de fase e estabilidade) — três ferramentas complementares, cada uma com seu domínio de aplicação.</p>
-<p>Vamos guardar essa ideia de reta de fase e estabilidade — ela vai reaparecer, de um jeito mais rico, quando estudarmos <strong>sistemas</strong> de equações lineares mais adiante no curso. Por enquanto, seguimos para o próximo grande tema: equações diferenciais de <strong>segunda ordem</strong>, que aparecem naturalmente em sistemas mecânicos e elétricos.</p>
+<p>Com isso, fechamos o estudo das equações de primeira ordem: lineares (fator integrante), separáveis (separação de variáveis) e autônomas (reta de fase e estabilidade): três ferramentas complementares, cada uma com seu domínio de aplicação.</p>
+<p>Vamos guardar essa ideia de reta de fase e estabilidade; ela vai reaparecer, de um jeito mais rico, quando estudarmos <strong>sistemas</strong> de equações lineares mais adiante no curso. Por enquanto, seguimos para o próximo grande tema: equações diferenciais de <strong>segunda ordem</strong>, que aparecem naturalmente em sistemas mecânicos e elétricos.</p>
 </section>
 </section>
 

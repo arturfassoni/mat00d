@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Resumo da Teoria &#8212; Equações Diferenciais A</title>
+    <title>Teoria Geral: Existência, Unicidade e Solução Geral &#8212; Equações Diferenciais A</title>
   
   
   
@@ -59,12 +59,14 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ord2/teo';</script>
     <script src="../_static/main.js?v=65a91cec"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
-    <link rel="next" title="Equações Não Homogêneas" href="nh.html" />
-    <link rel="prev" title="Raízes Reais Repetidas" href="rrr.html" />
+    <link rel="next" title="Vibrações Livres" href="vib.html" />
+    <link rel="prev" title="Raízes Complexas" href="rcc.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="pt"/>
   </head>
@@ -197,23 +199,15 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de 2a Ordem</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="mod.html">Modelagem com EDOs de 2ª Ordem</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="h.html">Equações Homogêneas com Coeficientes Constantes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="rrd.html">Raízes Reais Distintas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rcc.html">Raízes Complexas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rrr.html">Raízes Reais Repetidas</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Resumo da Teoria</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="nh.html">Equações Não Homogêneas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="ci.html">Coeficientes Indeterminados</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vp.html">Variação dos Parâmetros</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="vib.html">Vibrações</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="vibl.html">Vibrações Livres</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vibf.html">Vibrações Forçadas</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="h.html">Equações Homogêneas e o Caso de Raízes Reais Distintas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rrr.html">Raízes Reais Repetidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rcc.html">Raízes Complexas</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Teoria Geral: Existência, Unicidade e Solução Geral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vib.html">Vibrações Livres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nh.html">Equações Não Homogêneas e Método dos Coeficientes a Determinar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vibf.html">Vibrações Forçadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exerc.html">Exercícios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="videos.html">Vídeos</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de Ordem Superior</span></p>
 <ul class="nav bd-sidenav">
@@ -368,7 +362,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -379,11 +375,28 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Resumo da Teoria</h1>
+    <h1>Teoria Geral: Existência, Unicidade e Solução Geral</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2>   </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#um-teorema-geral">Um Teorema Geral</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#por-que-o-wronskiano">Por que o Wronskiano?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verificando-os-tres-casos">Verificando os três casos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resumo-dos-tres-casos">Resumo dos três casos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tres-exemplos-relampago-para-fixar-as-ideias">Três exemplos-relâmpago para fixar as ideias</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-vem-a-seguir">O que vem a seguir</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -393,9 +406,129 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="resumo-da-teoria">
-<h1>Resumo da Teoria<a class="headerlink" href="#resumo-da-teoria" title="Link to this heading">#</a></h1>
-<p><em>Em construção</em></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="teoria-geral-existencia-unicidade-e-solucao-geral">
+<h1>Teoria Geral: Existência, Unicidade e Solução Geral<a class="headerlink" href="#teoria-geral-existencia-unicidade-e-solucao-geral" title="Link to this heading">#</a></h1>
+<p>Nas últimas três aulas, resolvemos <span class="math notranslate nohighlight">\(ay''+by'+cy=0\)</span> nos três casos possíveis do discriminante.</p>
+<p>Guiados pela intuição, chutamos <span class="math notranslate nohighlight">\(y=e^{rt}\)</span>, encontramos os casos em que isso falha (raiz repetida) ou “quebra” (raízes complexas), e consertamos cada um.</p>
+<p>Funcionou muito bem, mas fica uma pergunta em aberto: como sabemos que não existe nenhuma outra solução escondida, fora da família que encontramos em cada caso?</p>
+<p>Esta aula fecha essa lacuna com um teorema geral. É um resultado que vale até para equações lineares com coeficientes variáveis, mas, como neste curso só trabalhamos com coeficientes constantes, vamos usá-lo apenas para confirmar que os três casos já resolvidos realmente esgotam todas as soluções possíveis.</p>
+<section id="um-teorema-geral">
+<h2>Um Teorema Geral<a class="headerlink" href="#um-teorema-geral" title="Link to this heading">#</a></h2>
+<p><strong>Teorema.</strong> Considere o problema de valor inicial</p>
+<div class="math notranslate nohighlight">
+\[
+ay''+by'+cy=0, \qquad y(t_0)=y_0,\ \ y'(t_0)=y_0',
+\]</div>
+<p>com <span class="math notranslate nohighlight">\(a,b,c\)</span> constantes reais, <span class="math notranslate nohighlight">\(a\neq0\)</span>. Esse problema sempre tem <strong>uma única solução</strong>, definida para todo <span class="math notranslate nohighlight">\(t\)</span> real.</p>
+<p>Além disso, se <span class="math notranslate nohighlight">\(y_1(t)\)</span> e <span class="math notranslate nohighlight">\(y_2(t)\)</span> são duas soluções da equação <span class="math notranslate nohighlight">\(ay''+by'+cy=0\)</span> tais que o <strong>Wronskiano</strong></p>
+<div class="math notranslate nohighlight">
+\[
+W(y_1,y_2)(t) = y_1(t)y_2'(t) - y_2(t)y_1'(t)
+\]</div>
+<p>não se anula em <em>algum</em> ponto <span class="math notranslate nohighlight">\(t\)</span>, então <strong>toda solução</strong> da equação pode ser escrita como combinação linear destas duas soluções,</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = c_1y_1(t) + c_2y_2(t)
+\]</div>
+<p>para alguma escolha das constantes <span class="math notranslate nohighlight">\(c_1,c_2\)</span>. Nesse caso, dizemos que <span class="math notranslate nohighlight">\(\{y_1,y_2\}\)</span> é um <strong>conjunto fundamental de soluções</strong>.</p>
+<section id="por-que-o-wronskiano">
+<h3>Por que o Wronskiano?<a class="headerlink" href="#por-que-o-wronskiano" title="Link to this heading">#</a></h3>
+<p>Não vamos provar esse teorema aqui, mas vale entender <strong>por que</strong> a condição <span class="math notranslate nohighlight">\(W\neq0\)</span> faz tanto sentido.</p>
+<p>Lembra do que fizemos, exemplo após exemplo: dadas duas soluções <span class="math notranslate nohighlight">\(y_1,y_2\)</span>, para achar <span class="math notranslate nohighlight">\(c_1,c_2\)</span> que satisfazem <span class="math notranslate nohighlight">\(y(t_0)=y_0\)</span> e <span class="math notranslate nohighlight">\(y'(t_0)=y_0'\)</span>, montamos e resolvemos o sistema linear</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+c_1y_1(t_0) + c_2y_2(t_0) = y_0\\[2pt]
+c_1y_1'(t_0) + c_2y_2'(t_0) = y_0'
+\end{cases}
+\end{split}\]</div>
+<p>Da álgebra linear, esse sistema <span class="math notranslate nohighlight">\(2\times2\)</span> tem solução única para <strong>quaisquer</strong> <span class="math notranslate nohighlight">\(y_0,y_0'\)</span> exatamente quando o determinante da matriz de coeficientes é diferente de zero:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\det\begin{pmatrix} y_1(t_0) &amp; y_2(t_0) \\ y_1'(t_0) &amp; y_2'(t_0)\end{pmatrix} = y_1(t_0)y_2'(t_0)-y_2(t_0)y_1'(t_0) = W(y_1,y_2)(t_0).
+\end{split}\]</div>
+<p>Ou seja, <span class="math notranslate nohighlight">\(W\neq0\)</span> é exatamente a condição para o sistema que já resolvíamos, na marra, em todos os exemplos anteriores. O Wronskiano só dá um nome (e uma checagem rápida, sem precisar de nenhuma condição inicial específica) para algo que já fazíamos manualmente toda vez.</p>
+</section>
+</section>
+<section id="verificando-os-tres-casos">
+<h2>Verificando os três casos<a class="headerlink" href="#verificando-os-tres-casos" title="Link to this heading">#</a></h2>
+<p>Vamos conferir que, nos três casos já resolvidos, o par de soluções fundamentais <span class="math notranslate nohighlight">\(y_1,y_2\)</span> encontrado realmente tem Wronskiano diferente de zero, confirmando que encontramos, de fato, <em>todas</em> as soluções em cada caso.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+
+<span class="n">t</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">r1</span><span class="p">,</span> <span class="n">r2</span><span class="p">,</span> <span class="n">lam</span><span class="p">,</span> <span class="n">mu</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">'t r r1 r2 lambda mu'</span><span class="p">,</span> <span class="n">real</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">wronskiano</span><span class="p">(</span><span class="n">y1</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">var</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">sp</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">factor</span><span class="p">(</span><span class="n">y1</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">y2</span><span class="p">,</span> <span class="n">var</span><span class="p">)</span> <span class="o">-</span> <span class="n">y2</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">y1</span><span class="p">,</span> <span class="n">var</span><span class="p">)))</span>
+
+<span class="c1"># Caso 1: raízes reais distintas</span>
+<span class="n">y1a</span><span class="p">,</span> <span class="n">y2a</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">r1</span><span class="o">*</span><span class="n">t</span><span class="p">),</span> <span class="n">sp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">r2</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">r</span><span class="s2">"Raízes reais distintas:  W ="</span><span class="p">,</span> <span class="n">wronskiano</span><span class="p">(</span><span class="n">y1a</span><span class="p">,</span> <span class="n">y2a</span><span class="p">,</span> <span class="n">t</span><span class="p">))</span>
+
+<span class="c1"># Caso 2: raiz repetida</span>
+<span class="n">y1b</span><span class="p">,</span> <span class="n">y2b</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">r</span><span class="o">*</span><span class="n">t</span><span class="p">),</span> <span class="n">t</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">r</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">r</span><span class="s2">"Raiz repetida:           W ="</span><span class="p">,</span> <span class="n">wronskiano</span><span class="p">(</span><span class="n">y1b</span><span class="p">,</span> <span class="n">y2b</span><span class="p">,</span> <span class="n">t</span><span class="p">))</span>
+
+<span class="c1"># Caso 3: raízes complexas</span>
+<span class="n">y1c</span><span class="p">,</span> <span class="n">y2c</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">lam</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">mu</span><span class="o">*</span><span class="n">t</span><span class="p">),</span> <span class="n">sp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">lam</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">mu</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">r</span><span class="s2">"Raízes complexas:        W ="</span><span class="p">,</span> <span class="n">wronskiano</span><span class="p">(</span><span class="n">y1c</span><span class="p">,</span> <span class="n">y2c</span><span class="p">,</span> <span class="n">t</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Raízes reais distintas:  W = (-r1 + r2)*exp(t*(r1 + r2))
+Raiz repetida:           W = exp(2*r*t)
+Raízes complexas:        W = mu*exp(2*lambda*t)
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><strong>Raízes reais distintas</strong> (<span class="math notranslate nohighlight">\(r_1\neq r_2\)</span>): <span class="math notranslate nohighlight">\(W=(r_2-r_1)e^{(r_1+r_2)t}\)</span>. Como <span class="math notranslate nohighlight">\(r_1\neq r_2\)</span> e a exponencial nunca é zero, <span class="math notranslate nohighlight">\(W\neq0\)</span> sempre.</p></li>
+<li><p><strong>Raiz repetida</strong>: <span class="math notranslate nohighlight">\(W=e^{2rt}\)</span>, que nunca é zero.</p></li>
+<li><p><strong>Raízes complexas</strong> (<span class="math notranslate nohighlight">\(\mu\neq0\)</span>, já que <span class="math notranslate nohighlight">\(\mu\)</span> é a parte imaginária de uma raiz genuinamente complexa): <span class="math notranslate nohighlight">\(W=\mu\,e^{2\lambda t}\)</span>, que também nunca é zero.</p></li>
+</ul>
+<p>Assim, o teorema confirma que não deixamos nada de fora: nos três casos, o par de soluções que encontramos por intuição já era, o tempo todo, um conjunto fundamental de soluções.</p>
+</section>
+<section id="resumo-dos-tres-casos">
+<h2>Resumo dos três casos<a class="headerlink" href="#resumo-dos-tres-casos" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(\Delta=b^2-4ac\)</span></p></th>
+<th class="head"><p>Raízes</p></th>
+<th class="head"><p>Solução geral</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\Delta&gt;0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(r_1\neq r_2\)</span> reais</p></td>
+<td><p><span class="math notranslate nohighlight">\(y=c_1e^{r_1t}+c_2e^{r_2t}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\Delta=0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(r\)</span> real, repetida</p></td>
+<td><p><span class="math notranslate nohighlight">\(y=(c_1+c_2t)e^{rt}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\Delta&lt;0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(r=\lambda\pm i\mu\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(y=e^{\lambda t}(c_1\cos\mu t+c_2\,\text{sen}\,\mu t)\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Essas três fórmulas resolvem <em>qualquer</em> equação <span class="math notranslate nohighlight">\(ay''+by'+cy=0\)</span> com coeficientes constantes.</p>
+<section id="tres-exemplos-relampago-para-fixar-as-ideias">
+<h3>Três exemplos-relâmpago para fixar as ideias<a class="headerlink" href="#tres-exemplos-relampago-para-fixar-as-ideias" title="Link to this heading">#</a></h3>
+<p>Apresentamos abaixo um exemplo de cada caso, só para fixar a relação entre a equação e a solução geral (sem resolver PVI):</p>
+<p><strong><span class="math notranslate nohighlight">\(\Delta&gt;0\)</span>:</strong> <span class="math notranslate nohighlight">\(y''-y=0 \ \Rightarrow\ r=\pm1 \ \Rightarrow\ y=c_1e^{t}+c_2e^{-t}\)</span>.</p>
+<p><strong><span class="math notranslate nohighlight">\(\Delta=0\)</span>:</strong> <span class="math notranslate nohighlight">\(y''-6y'+9y=0 \ \Rightarrow\ r=3 \ \Rightarrow\ y=(c_1+c_2t)e^{3t}\)</span>.</p>
+<p><strong><span class="math notranslate nohighlight">\(\Delta&lt;0\)</span>:</strong> <span class="math notranslate nohighlight">\(y''-2y'+5y=0 \ \Rightarrow\ r=1\pm2i \ \Rightarrow\ y=e^{t}(c_1\cos2t+c_2\,\text{sen}\,2t)\)</span>.</p>
+</section>
+</section>
+<section id="o-que-vem-a-seguir">
+<h2>O que vem a seguir<a class="headerlink" href="#o-que-vem-a-seguir" title="Link to this heading">#</a></h2>
+<p>A teoria de segunda ordem homogênea está fechada. No próximo tópico, vamos usar tudo isso para entender <strong>vibrações livres</strong>, e ver como cada um dos três casos do discriminante corresponde exatamente a um comportamento físico diferente: sistemas que oscilam, sistemas que não oscilam, e o caso limite entre os dois.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -429,20 +562,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="rrr.html"
+       href="rcc.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">Raízes Reais Repetidas</p>
+        <p class="prev-next-title">Raízes Complexas</p>
       </div>
     </a>
     <a class="right-next"
-       href="nh.html"
+       href="vib.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">próximo</p>
-        <p class="prev-next-title">Equações Não Homogêneas</p>
+        <p class="prev-next-title">Vibrações Livres</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -452,6 +585,30 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i>  
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#um-teorema-geral">Um Teorema Geral</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#por-que-o-wronskiano">Por que o Wronskiano?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verificando-os-tres-casos">Verificando os três casos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resumo-dos-tres-casos">Resumo dos três casos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tres-exemplos-relampago-para-fixar-as-ideias">Três exemplos-relâmpago para fixar as ideias</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-vem-a-seguir">O que vem a seguir</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

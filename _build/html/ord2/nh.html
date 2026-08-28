@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Equações Não Homogêneas &#8212; Equações Diferenciais A</title>
+    <title>Equações Não Homogêneas e Método dos Coeficientes a Determinar &#8212; Equações Diferenciais A</title>
   
   
   
@@ -59,12 +59,14 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ord2/nh';</script>
     <script src="../_static/main.js?v=65a91cec"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
-    <link rel="next" title="Coeficientes Indeterminados" href="ci.html" />
-    <link rel="prev" title="Resumo da Teoria" href="teo.html" />
+    <link rel="next" title="Vibrações Forçadas" href="vibf.html" />
+    <link rel="prev" title="Vibrações Livres" href="vib.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="pt"/>
   </head>
@@ -197,23 +199,15 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de 2a Ordem</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="mod.html">Modelagem com EDOs de 2ª Ordem</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="h.html">Equações Homogêneas com Coeficientes Constantes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="rrd.html">Raízes Reais Distintas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rcc.html">Raízes Complexas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rrr.html">Raízes Reais Repetidas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="teo.html">Resumo da Teoria</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Equações Não Homogêneas</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="ci.html">Coeficientes Indeterminados</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vp.html">Variação dos Parâmetros</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="vib.html">Vibrações</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="vibl.html">Vibrações Livres</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vibf.html">Vibrações Forçadas</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="h.html">Equações Homogêneas e o Caso de Raízes Reais Distintas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rrr.html">Raízes Reais Repetidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rcc.html">Raízes Complexas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="teo.html">Teoria Geral: Existência, Unicidade e Solução Geral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vib.html">Vibrações Livres</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Equações Não Homogêneas e Método dos Coeficientes a Determinar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vibf.html">Vibrações Forçadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exerc.html">Exercícios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="videos.html">Vídeos</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de Ordem Superior</span></p>
 <ul class="nav bd-sidenav">
@@ -368,7 +362,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -379,11 +375,33 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Equações Não Homogêneas</h1>
+    <h1>Equações Não Homogêneas e Método dos Coeficientes a Determinar</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2>   </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#um-resultado-que-organiza-tudo-y-y-h-y-p">Um resultado que organiza tudo: <span class="math notranslate nohighlight">\(y=y_h+y_p\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-1-quando-f-t-e-uma-exponencial">Exemplo 1: quando <span class="math notranslate nohighlight">\(F(t)\)</span> é uma exponencial</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-2-quando-f-t-e-seno-ou-cosseno">Exemplo 2: quando <span class="math notranslate nohighlight">\(F(t)\)</span> é seno ou cosseno</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-3-quando-f-t-e-um-polinomio">Exemplo 3: quando <span class="math notranslate nohighlight">\(F(t)\)</span> é um polinômio</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-4-quando-f-t-e-um-produto-exponencial-vezes-trigonometrica">Exemplo 4: quando <span class="math notranslate nohighlight">\(F(t)\)</span> é um produto exponencial vezes trigonométrica</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quando-o-chute-ja-e-solucao-da-homogenea">Quando o “”chute”” já é solução da homogênea</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-5-ressonancia-simples">Exemplo 5: ressonância simples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-ressonancia-dupla-raiz-repetida">Exemplo 6: ressonância dupla (raiz repetida)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-7-ressonancia-com-oscilacao-o-caso-da-ressonancia-fisica">Exemplo 7: ressonância com oscilação — o caso da ressonância física</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-tabela-geral">A tabela geral</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-vem-a-seguir">O que vem a seguir</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -393,11 +411,267 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="equacoes-nao-homogeneas">
-<h1>Equações Não Homogêneas<a class="headerlink" href="#equacoes-nao-homogeneas" title="Link to this heading">#</a></h1>
-<p><em>Em construção</em></p>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="equacoes-nao-homogeneas-e-metodo-dos-coeficientes-a-determinar">
+<h1>Equações Não Homogêneas e Método dos Coeficientes a Determinar<a class="headerlink" href="#equacoes-nao-homogeneas-e-metodo-dos-coeficientes-a-determinar" title="Link to this heading">#</a></h1>
+<p>Até agora, resolvemos <span class="math notranslate nohighlight">\(ay''+by'+cy=0\)</span>, onde o lado direito era sempre zero. Chegou a hora de resolver</p>
+<div class="math notranslate nohighlight">
+\[
+ay''+by'+cy=F(t), \qquad F(t)\not\equiv0,
+\]</div>
+<p>a equação <strong>não homogênea</strong>. Essa aula (e a próxima) desenvolvem um único método, chamado <strong>coeficientes a determinar</strong>, através de uma sequência de exemplos, cada um revelando uma sutileza nova. No final, chegamos a uma tabela que resume tudo.</p>
+<section id="um-resultado-que-organiza-tudo-y-y-h-y-p">
+<h2>Um resultado que organiza tudo: <span class="math notranslate nohighlight">\(y=y_h+y_p\)</span><a class="headerlink" href="#um-resultado-que-organiza-tudo-y-y-h-y-p" title="Link to this heading">#</a></h2>
+<p>Apresentamos a seguir um resultado que resume como serão escritas as soluções da equação não homogênea acima.</p>
+<p><strong>Resultado.</strong> A solução geral de <span class="math notranslate nohighlight">\(ay'+by'+cy=F(t)\)</span> é</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = y_h(t) + y_p(t),
+\]</div>
+<p>em que <span class="math notranslate nohighlight">\(y_p\)</span> é <strong>qualquer</strong> solução particular da equação não homogênea, e <span class="math notranslate nohighlight">\(y_h=c_1y_1+c_2y_2\)</span> é a solução geral da equação homogênea associada <span class="math notranslate nohighlight">\(ay'+by'+cy=0\)</span> (que já sabemos encontrar, nos três casos do discriminante).</p>
+<p><em>Por que isso funciona:</em> se <span class="math notranslate nohighlight">\(y\)</span> é uma solução qualquer da equação não homogênea, e <span class="math notranslate nohighlight">\(y_p\)</span> é uma solução particular fixada, considere <span class="math notranslate nohighlight">\(w=y-y_p\)</span>. Então</p>
+<div class="math notranslate nohighlight">
+\[
+aw''+bw'+cw = \big(ay''+by'+cy\big) - \big(ay_p''+by_p'+cy_p\big) = F(t)-F(t) = 0,
+\]</div>
+<p>ou seja, <span class="math notranslate nohighlight">\(w\)</span> resolve a equação <strong>homogênea</strong>. Pelo teorema da aula passada, <span class="math notranslate nohighlight">\(w=c_1y_1+c_2y_2\)</span> para alguma escolha de <span class="math notranslate nohighlight">\(c_1,c_2\)</span>. Logo, <span class="math notranslate nohighlight">\(y=y_p+c_1y_1+c_2y_2\)</span>, que é exatamente a fórmula acima.</p>
+<p>Este resultado nos mostra que resolver a equação não homogênea vira duas tarefas: <strong>(1)</strong> resolver a homogênea associada, e <strong>(2)</strong> achar <strong>uma</strong> solução particular qualquer, <span class="math notranslate nohighlight">\(y_p\)</span>.</p>
+<p>O método dos coeficientes a determinar é uma receita prática para achar essa <span class="math notranslate nohighlight">\(y_p\)</span> quando <span class="math notranslate nohighlight">\(F(t)\)</span> tem uma forma “simples” — exponencial, polinômio, seno/cosseno, ou combinações desses. A ideia central, em todos os exemplos a seguir, é <strong>tentar uma solução particular com a mesma “cara” de <span class="math notranslate nohighlight">\(F(t)\)</span></strong>.</p>
+<section id="exemplo-1-quando-f-t-e-uma-exponencial">
+<h3>Exemplo 1: quando <span class="math notranslate nohighlight">\(F(t)\)</span> é uma exponencial<a class="headerlink" href="#exemplo-1-quando-f-t-e-uma-exponencial" title="Link to this heading">#</a></h3>
+<p>Resolva</p>
+<div class="math notranslate nohighlight">
+\[
+y''-3y'+2y = e^{4t}.
+\]</div>
+<p><strong>Homogênea associada:</strong> <span class="math notranslate nohighlight">\(r^2-3r+2=(r-1)(r-2)=0 \Rightarrow r=1,2\)</span>, então <span class="math notranslate nohighlight">\(y_h=c_1e^{t}+c_2e^{2t}\)</span>.</p>
+<p><strong>Solução particular:</strong> já que <span class="math notranslate nohighlight">\(F(t)=e^{4t}\)</span>, a ideia é tentar <span class="math notranslate nohighlight">\(y_p\)</span> com a mesma cara:</p>
+<div class="math notranslate nohighlight">
+\[
+y_p = Ae^{4t}.
+\]</div>
+<p>Então <span class="math notranslate nohighlight">\(y_p'=4Ae^{4t}\)</span> e <span class="math notranslate nohighlight">\(y_p''=16Ae^{4t}\)</span>. Substituindo:</p>
+<div class="math notranslate nohighlight">
+\[
+16Ae^{4t} - 3(4Ae^{4t}) + 2Ae^{4t} = e^{4t} \ \Longrightarrow\ (16-12+2)Ae^{4t}=e^{4t} \ \Longrightarrow\ 6A=1 \ \Longrightarrow\ A=\tfrac16.
+\]</div>
+<p>Logo <span class="math notranslate nohighlight">\(y_p=\tfrac16e^{4t}\)</span>, e a solução geral é</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = c_1e^{t}+c_2e^{2t}+\frac16e^{4t}.
+\]</div>
+</section>
+<section id="exemplo-2-quando-f-t-e-seno-ou-cosseno">
+<h3>Exemplo 2: quando <span class="math notranslate nohighlight">\(F(t)\)</span> é seno ou cosseno<a class="headerlink" href="#exemplo-2-quando-f-t-e-seno-ou-cosseno" title="Link to this heading">#</a></h3>
+<p>Resolva</p>
+<div class="math notranslate nohighlight">
+\[
+y''+y'-2y = \cos t.
+\]</div>
+<p><strong>Homogênea associada:</strong> <span class="math notranslate nohighlight">\(r^2+r-2=(r+2)(r-1)=0 \Rightarrow r=-2,1\)</span>, então <span class="math notranslate nohighlight">\(y_h=c_1e^{-2t}+c_2e^{t}\)</span>.</p>
+<p><strong>Primeira tentativa (que vai falhar):</strong> já que <span class="math notranslate nohighlight">\(F(t)=\cos t\)</span>, seria natural tentar <span class="math notranslate nohighlight">\(y_p=A\cos t\)</span>. Mas <span class="math notranslate nohighlight">\(y_p'=-A\,\text{sen}\,t\)</span> e <span class="math notranslate nohighlight">\(y_p''=-A\cos t\)</span>, então</p>
+<div class="math notranslate nohighlight">
+\[
+-A\cos t + (-A\,\text{sen}\,t) - 2A\cos t = \cos t \ \Longrightarrow\ -3A\cos t - A\,\text{sen}\,t = \cos t.
+\]</div>
+<p>Para essa igualdade valer para todo <span class="math notranslate nohighlight">\(t\)</span>, precisaríamos de <span class="math notranslate nohighlight">\(-A=0\)</span> (coeficiente do seno) <strong>e</strong> <span class="math notranslate nohighlight">\(-3A=1\)</span> (coeficiente do cosseno) ao mesmo tempo.</p>
+<p>O problema é que derivar um cosseno produz um seno, e vice-versa, então <strong>as duas funções aparecem misturadas</strong> e precisam estar as duas na tentativa.</p>
+<p><strong>Tentativa certa:</strong> <span class="math notranslate nohighlight">\(y_p = A\cos t + B\,\text{sen}\,t\)</span>. Substituindo (contas análogas às de cima) e agrupando cosseno e seno separadamente, chega-se ao sistema</p>
+<div class="math notranslate nohighlight">
+\[
+-3A+B=1, \qquad -A-3B=0,
+\]</div>
+<p>cuja solução é <span class="math notranslate nohighlight">\(A=-\tfrac{3}{10}\)</span>, <span class="math notranslate nohighlight">\(B=\tfrac{1}{10}\)</span>. A solução geral é</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = c_1e^{-2t}+c_2e^{t} -\frac{3}{10}\cos t + \frac{1}{10}\,\text{sen}\,t.
+\]</div>
+</section>
+<section id="exemplo-3-quando-f-t-e-um-polinomio">
+<h3>Exemplo 3: quando <span class="math notranslate nohighlight">\(F(t)\)</span> é um polinômio<a class="headerlink" href="#exemplo-3-quando-f-t-e-um-polinomio" title="Link to this heading">#</a></h3>
+<p>Resolva</p>
+<div class="math notranslate nohighlight">
+\[
+y''-y'-2y = t.
+\]</div>
+<p><strong>Homogênea associada:</strong> <span class="math notranslate nohighlight">\(r^2-r-2=(r-2)(r+1)=0 \Rightarrow r=2,-1\)</span>, então <span class="math notranslate nohighlight">\(y_h=c_1e^{2t}+c_2e^{-t}\)</span>.</p>
+<p><strong>Primeira tentativa (que vai falhar):</strong> já que <span class="math notranslate nohighlight">\(F(t)=t\)</span>, seria natural tentar <span class="math notranslate nohighlight">\(y_p=At\)</span>. Mas <span class="math notranslate nohighlight">\(y_p'=A\)</span> e <span class="math notranslate nohighlight">\(y_p''=0\)</span>, então</p>
+<div class="math notranslate nohighlight">
+\[
+0 - A - 2At = t \ \Longrightarrow\ -2At - A = t.
+\]</div>
+<p>Comparando os coeficientes de <span class="math notranslate nohighlight">\(t\)</span>: <span class="math notranslate nohighlight">\(-2A=1\Rightarrow A=-\tfrac12\)</span>. Mas comparando os termos constantes: <span class="math notranslate nohighlight">\(-A=0\Rightarrow A=0\)</span>. De novo, impossível de resolver. O problema, dessa vez é que derivar <span class="math notranslate nohighlight">\(At\)</span> produz uma <strong>constante</strong>, que também precisa ser “absorvida” por alguém na tentativa.</p>
+<p><strong>Tentativa certa:</strong> um polinômio <em>completo</em> do mesmo grau, <span class="math notranslate nohighlight">\(y_p=At+B\)</span>. Substituindo: <span class="math notranslate nohighlight">\(y_p'=A\)</span>, <span class="math notranslate nohighlight">\(y_p''=0\)</span>, então</p>
+<div class="math notranslate nohighlight">
+\[
+0 - A - 2(At+B) = t \ \Longrightarrow\ -2At + (-A-2B) = t.
+\]</div>
+<p>Daí <span class="math notranslate nohighlight">\(-2A=1\Rightarrow A=-\tfrac12\)</span>, e <span class="math notranslate nohighlight">\(-A-2B=0\Rightarrow B=\tfrac14\)</span>. A solução geral é</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = c_1e^{2t}+c_2e^{-t} -\frac{t}{2}+\frac14.
+\]</div>
+</section>
+<section id="exemplo-4-quando-f-t-e-um-produto-exponencial-vezes-trigonometrica">
+<h3>Exemplo 4: quando <span class="math notranslate nohighlight">\(F(t)\)</span> é um produto exponencial vezes trigonométrica<a class="headerlink" href="#exemplo-4-quando-f-t-e-um-produto-exponencial-vezes-trigonometrica" title="Link to this heading">#</a></h3>
+<p>Resolva</p>
+<div class="math notranslate nohighlight">
+\[
+y''+4y = e^{t}\cos t.
+\]</div>
+<p><strong>Homogênea associada:</strong> <span class="math notranslate nohighlight">\(r^2+4=0 \Rightarrow r=\pm2i\)</span>, então <span class="math notranslate nohighlight">\(y_h=c_1\cos2t+c_2\,\text{sen}\,2t\)</span>.</p>
+<p><strong>Tentativa:</strong> juntando as duas lições anteriores, precisamos da exponencial <strong>e</strong> do par cosseno/seno; tentamos</p>
+<div class="math notranslate nohighlight">
+\[
+y_p = e^{t}\big(A\cos t + B\,\text{sen}\,t\big).
+\]</div>
+<p>Calculando as derivadas (regra do produto):</p>
+<div class="math notranslate nohighlight">
+\[
+y_p' = e^{t}\big[(A+B)\cos t+(B-A)\,\text{sen}\,t\big], \qquad y_p''=e^{t}\big[2B\cos t - 2A\,\text{sen}\,t\big].
+\]</div>
+<p>Substituindo em <span class="math notranslate nohighlight">\(y''+4y\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+e^{t}\big[2B\cos t-2A\,\text{sen}\,t\big] + 4e^{t}\big(A\cos t+B\,\text{sen}\,t\big) = e^{t}\cos t
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\Longrightarrow\quad e^{t}\big[(2B+4A)\cos t + (4B-2A)\,\text{sen}\,t\big] = e^{t}\cos t.
+\]</div>
+<p>Igualando os coeficientes: <span class="math notranslate nohighlight">\(2B+4A=1\)</span> e <span class="math notranslate nohighlight">\(4B-2A=0\)</span> (ou seja, <span class="math notranslate nohighlight">\(A=2B\)</span>).
+Substituindo: <span class="math notranslate nohighlight">\(2B+8B=1 \Rightarrow B=\tfrac1{10}\)</span>, <span class="math notranslate nohighlight">\(A=\tfrac15\)</span>.</p>
+<p>A solução geral é</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = c_1\cos2t + c_2\,\text{sen}\,2t + e^{t}\left(\frac15\cos t+\frac{1}{10}\,\text{sen}\,t\right).
+\]</div>
+</section>
+</section>
+<section id="quando-o-chute-ja-e-solucao-da-homogenea">
+<h2>Quando o “”chute”” já é solução da homogênea<a class="headerlink" href="#quando-o-chute-ja-e-solucao-da-homogenea" title="Link to this heading">#</a></h2>
+<p>Em todos os exemplos acima, a tentativa (depois de ajustada) sempre deu certo. Mas existe uma armadilha que ainda não apareceu: <strong>o que fazer quando a forma natural de <span class="math notranslate nohighlight">\(y_p\)</span> já é, ela mesma, solução da equação homogênea?</strong></p>
+<p>Quando isso acontece, substituir a tentativa na equação sempre dá <span class="math notranslate nohighlight">\(0\)</span> do lado esquerdo (afinal, é uma solução da homogênea!) e <span class="math notranslate nohighlight">\(0\)</span> nunca vai ser igual a <span class="math notranslate nohighlight">\(F(t)\not\equiv0\)</span>. A tentativa é automaticamente contraditória, não importa quais valores dermos aos coeficientes.</p>
+<p>A correção é sempre a mesma ideia que já usamos antes, lá nas raízes repetidas: <strong>multiplicar a tentativa por <span class="math notranslate nohighlight">\(t\)</span></strong> (e, se ainda assim colidir, por <span class="math notranslate nohighlight">\(t^2\)</span>).</p>
+<section id="exemplo-5-ressonancia-simples">
+<h3>Exemplo 5: ressonância simples<a class="headerlink" href="#exemplo-5-ressonancia-simples" title="Link to this heading">#</a></h3>
+<p>Resolva</p>
+<div class="math notranslate nohighlight">
+\[
+y''-3y'+2y = e^{2t}.
+\]</div>
+<p><strong>Homogênea associada:</strong> <span class="math notranslate nohighlight">\(r^2-3r+2=(r-1)(r-2)=0 \Rightarrow r=1,2\)</span>, então <span class="math notranslate nohighlight">\(y_h=c_1e^{t}+c_2e^{2t}\)</span>.</p>
+<p>Repare: a tentativa natural seria <span class="math notranslate nohighlight">\(y_p=Ae^{2t}\)</span>, mas <span class="math notranslate nohighlight">\(e^{2t}\)</span> já é solução da homogênea (é <span class="math notranslate nohighlight">\(y_2\)</span>)! Substituir daria <span class="math notranslate nohighlight">\(0=e^{2t}\)</span>, impossível. Seguindo a correção, multiplicamos por <span class="math notranslate nohighlight">\(t\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+y_p = Ate^{2t}.
+\]</div>
+<p>Calculando as derivadas e substituindo (fica de exercício), chega-se a <span class="math notranslate nohighlight">\(A=1\)</span>. A solução geral é</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = c_1e^{t}+c_2e^{2t}+te^{2t}.
+\]</div>
+</section>
+<section id="exemplo-6-ressonancia-dupla-raiz-repetida">
+<h3>Exemplo 6: ressonância dupla (raiz repetida)<a class="headerlink" href="#exemplo-6-ressonancia-dupla-raiz-repetida" title="Link to this heading">#</a></h3>
+<p>Resolva</p>
+<div class="math notranslate nohighlight">
+\[
+y''-4y'+4y = e^{2t}.
+\]</div>
+<p><strong>Homogênea associada:</strong> <span class="math notranslate nohighlight">\(r^2-4r+4=(r-2)^2=0 \Rightarrow r=2\)</span> (repetida), então <span class="math notranslate nohighlight">\(y_h=(c_1+c_2t)e^{2t}\)</span>.</p>
+<p>Aqui a armadilha é dupla: a tentativa <span class="math notranslate nohighlight">\(y_p=Ae^{2t}\)</span> falha (colide com <span class="math notranslate nohighlight">\(e^{2t}\)</span>), e a correção “óbvia” <span class="math notranslate nohighlight">\(y_p=Ate^{2t}\)</span> <strong>também falha</strong>, porque <span class="math notranslate nohighlight">\(te^{2t}\)</span> já é a <em>outra</em> solução da homogênea.</p>
+<p>Precisamos multiplicar por <span class="math notranslate nohighlight">\(t\)</span> mais uma vez:</p>
+<div class="math notranslate nohighlight">
+\[
+y_p = At^2e^{2t}.
+\]</div>
+<p>Substituindo (mais uma vez, uma boa conta para treinar), chega-se a <span class="math notranslate nohighlight">\(A=\tfrac12\)</span>. A solução geral é</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = (c_1+c_2t)e^{2t} + \frac12t^2e^{2t}.
+\]</div>
+</section>
+<section id="exemplo-7-ressonancia-com-oscilacao-o-caso-da-ressonancia-fisica">
+<h3>Exemplo 7: ressonância com oscilação — o caso da ressonância física<a class="headerlink" href="#exemplo-7-ressonancia-com-oscilacao-o-caso-da-ressonancia-fisica" title="Link to this heading">#</a></h3>
+<p>Resolva</p>
+<div class="math notranslate nohighlight">
+\[
+y''+4y = \cos2t.
+\]</div>
+<p><strong>Homogênea associada:</strong> <span class="math notranslate nohighlight">\(r^2+4=0 \Rightarrow r=\pm2i\)</span>, então <span class="math notranslate nohighlight">\(y_h=c_1\cos2t+c_2\,\text{sen}\,2t\)</span>.</p>
+<p>A tentativa natural, <span class="math notranslate nohighlight">\(y_p=A\cos2t+B\,\text{sen}\,2t\)</span>, colide de novo com a homogênea (é exatamente a cara de <span class="math notranslate nohighlight">\(y_h\)</span>). Multiplicando por <span class="math notranslate nohighlight">\(t\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+y_p = t\big(A\cos2t+B\,\text{sen}\,2t\big).
+\]</div>
+<p>Substituindo, chega-se a <span class="math notranslate nohighlight">\(A=0\)</span> e <span class="math notranslate nohighlight">\(B=\tfrac14\)</span>, então</p>
+<div class="math notranslate nohighlight">
+\[
+y(t) = c_1\cos2t+c_2\,\text{sen}\,2t + \frac{t}{4}\,\text{sen}\,2t.
+\]</div>
+<p>Repare no termo novo: <span class="math notranslate nohighlight">\(\frac{t}{4}\,\text{sen}\,2t\)</span> tem uma amplitude que <strong>cresce sem parar</strong> conforme <span class="math notranslate nohighlight">\(t\)</span> aumenta (o fator <span class="math notranslate nohighlight">\(t\)</span> na frente). Isso acontece quando a frequência de forçamento (<span class="math notranslate nohighlight">\(\omega=2\)</span>, o coeficiente dentro do <span class="math notranslate nohighlight">\(\cos2t\)</span> de <span class="math notranslate nohighlight">\(F(t)\)</span>) coincide com a frequência natural do sistema (<span class="math notranslate nohighlight">\(\omega_0=2\)</span>, o coeficiente dentro do seno e cosseno na solução homogêmea, vindo de <span class="math notranslate nohighlight">\(r=\pm2i\)</span>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">c1_</span><span class="p">,</span> <span class="n">c2_</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>  <span class="c1"># apenas para ilustrar y_p isoladamente (não é PVI da aula)</span>
+<span class="n">t_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+<span class="n">y_vals</span> <span class="o">=</span> <span class="n">c1_</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">t_vals</span><span class="p">)</span> <span class="o">+</span> <span class="n">c2_</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">t_vals</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">t_vals</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">t_vals</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_vals</span><span class="p">,</span> <span class="n">y_vals</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_vals</span><span class="p">,</span> <span class="n">t_vals</span><span class="o">/</span><span class="mi">4</span><span class="p">,</span> <span class="s1">'r--'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">'envelope $\pm t/4$'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_vals</span><span class="p">,</span> <span class="o">-</span><span class="n">t_vals</span><span class="o">/</span><span class="mi">4</span><span class="p">,</span> <span class="s1">'r--'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">"Ressonância: $y_p(t)=\frac</span><span class="si">{t}{4}</span><span class="s2">\,\mathrm</span><span class="si">{sen}</span><span class="s2">(2t)$ — amplitude crescendo linearmente"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">"$t$"</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">"$y$"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/88af01b14983efa4bf651660b4168ddb2b306fdc357600441fb65ceeffa1163d.png" src="../_images/88af01b14983efa4bf651660b4168ddb2b306fdc357600441fb65ceeffa1163d.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="a-tabela-geral">
+<h2>A tabela geral<a class="headerlink" href="#a-tabela-geral" title="Link to this heading">#</a></h2>
+<p>Juntando os sete exemplos numa receita só: para resolver <span class="math notranslate nohighlight">\(ay''+by'+cy=F(t)\)</span>, a tentativa de <span class="math notranslate nohighlight">\(y_p\)</span> depende da forma de <span class="math notranslate nohighlight">\(F(t)\)</span>:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(F(t)\)</span></p></th>
+<th class="head"><p>Tentativa inicial para <span class="math notranslate nohighlight">\(y_p(t)\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(P_n(t)\)</span> (polinômio de grau <span class="math notranslate nohighlight">\(n\)</span>)</p></td>
+<td><p><span class="math notranslate nohighlight">\(t^s\big(A_0+A_1t+\cdots+A_nt^n\big)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(P_n(t)\,e^{\alpha t}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(t^s\big(A_0+A_1t+\cdots+A_nt^n\big)e^{\alpha t}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(P_n(t)\,e^{\alpha t}\cos\beta t\)</span> ou <span class="math notranslate nohighlight">\(P_n(t)\,e^{\alpha t}\,\text{sen}\,\beta t\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(t^s e^{\alpha t}\Big[\big(A_0+\cdots+A_nt^n\big)\cos\beta t + \big(B_0+\cdots+B_nt^n\big)\,\text{sen}\,\beta t\Big]\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>em que <span class="math notranslate nohighlight">\(s\in\{0,1,2\}\)</span> é o <strong>menor</strong> inteiro que evita que algum termo da tentativa coincida com uma solução da homogênea associada:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(s=0\)</span>: nada colide (Exemplos 1 a 4).</p></li>
+<li><p><span class="math notranslate nohighlight">\(s=1\)</span>: a tentativa “crua” colide com <strong>uma</strong> solução da homogênea (Exemplos 5 e 7).</p></li>
+<li><p><span class="math notranslate nohighlight">\(s=2\)</span>: mesmo multiplicando por <span class="math notranslate nohighlight">\(t\)</span> ainda colide e é necessário multiplicar mais uma vez; esse caso só acontece quando a raiz correspondente é repetida (Exemplo 6).</p></li>
+</ul>
+<p>Essa tabela cobre exponenciais puras (<span class="math notranslate nohighlight">\(\beta=0\)</span>), polinômios puros (<span class="math notranslate nohighlight">\(\alpha=\beta=0\)</span>), senos/cossenos puros (<span class="math notranslate nohighlight">\(\alpha=0\)</span>, <span class="math notranslate nohighlight">\(P_n\)</span> constante) e todas as combinações.</p>
+</section>
+<section id="o-que-vem-a-seguir">
+<h2>O que vem a seguir<a class="headerlink" href="#o-que-vem-a-seguir" title="Link to this heading">#</a></h2>
+<p>O método dos coeficientes a determinar resolve a equação não homogênea sempre que <span class="math notranslate nohighlight">\(F(t)\)</span> tiver uma das formas da tabela (o que cobre a grande maioria dos casos de interesse em engenharia). Existe um método mais geral a <strong>variação de parâmetros</strong> que funciona para qualquer <span class="math notranslate nohighlight">\(F(t)\)</span>, ao custo de mais trabalho algébrico; fica para um outro tópico.</p>
+<p>Por ora, já temos tudo que precisamos para voltar ao oscilador harmônico forçado e entender, de vez, o batimento e a ressonância que só simulamos numericamente lá em modelagem.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -431,20 +705,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="teo.html"
+       href="vib.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">Resumo da Teoria</p>
+        <p class="prev-next-title">Vibrações Livres</p>
       </div>
     </a>
     <a class="right-next"
-       href="ci.html"
+       href="vibf.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">próximo</p>
-        <p class="prev-next-title">Coeficientes Indeterminados</p>
+        <p class="prev-next-title">Vibrações Forçadas</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -454,6 +728,35 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i>  
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#um-resultado-que-organiza-tudo-y-y-h-y-p">Um resultado que organiza tudo: <span class="math notranslate nohighlight">\(y=y_h+y_p\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-1-quando-f-t-e-uma-exponencial">Exemplo 1: quando <span class="math notranslate nohighlight">\(F(t)\)</span> é uma exponencial</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-2-quando-f-t-e-seno-ou-cosseno">Exemplo 2: quando <span class="math notranslate nohighlight">\(F(t)\)</span> é seno ou cosseno</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-3-quando-f-t-e-um-polinomio">Exemplo 3: quando <span class="math notranslate nohighlight">\(F(t)\)</span> é um polinômio</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-4-quando-f-t-e-um-produto-exponencial-vezes-trigonometrica">Exemplo 4: quando <span class="math notranslate nohighlight">\(F(t)\)</span> é um produto exponencial vezes trigonométrica</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quando-o-chute-ja-e-solucao-da-homogenea">Quando o “”chute”” já é solução da homogênea</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-5-ressonancia-simples">Exemplo 5: ressonância simples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-6-ressonancia-dupla-raiz-repetida">Exemplo 6: ressonância dupla (raiz repetida)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-7-ressonancia-com-oscilacao-o-caso-da-ressonancia-fisica">Exemplo 7: ressonância com oscilação — o caso da ressonância física</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-tabela-geral">A tabela geral</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-que-vem-a-seguir">O que vem a seguir</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

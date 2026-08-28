@@ -199,23 +199,15 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de 2a Ordem</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../ord2/mod.html">Modelagem com EDOs de 2ª Ordem</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ord2/h.html">Equações Homogêneas com Coeficientes Constantes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/rrd.html">Raízes Reais Distintas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/rcc.html">Raízes Complexas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/rrr.html">Raízes Reais Repetidas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/teo.html">Resumo da Teoria</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ord2/nh.html">Equações Não Homogêneas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/ci.html">Coeficientes Indeterminados</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/vp.html">Variação dos Parâmetros</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ord2/vib.html">Vibrações</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/vibl.html">Vibrações Livres</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ord2/vibf.html">Vibrações Forçadas</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/h.html">Equações Homogêneas e o Caso de Raízes Reais Distintas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/rrr.html">Raízes Reais Repetidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/rcc.html">Raízes Complexas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/teo.html">Teoria Geral: Existência, Unicidade e Solução Geral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/vib.html">Vibrações Livres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/nh.html">Equações Não Homogêneas e Método dos Coeficientes a Determinar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/vibf.html">Vibrações Forçadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/exerc.html">Exercícios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/videos.html">Vídeos</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de Ordem Superior</span></p>
 <ul class="nav bd-sidenav">
@@ -438,7 +430,7 @@ document.write(`
 <li><p><strong>Taxa de entrada:</strong> <span class="math notranslate nohighlight">\((5 \times 10^6 \text{ gal/ano}) \times (2 + \sin(2t) \text{ g/gal})\)</span></p></li>
 <li><p><strong>Taxa de saída:</strong> <span class="math notranslate nohighlight">\((5 \times 10^6 \text{ gal/ano}) \times \left(\frac{Q(t)}{10^7} \text{ g/gal}\right) = \frac{Q(t)}{2} \text{ g/ano}\)</span></p></li>
 </ul>
-<p>Para simplificar os números imensos, vamos medir a poluição em «toneladas» (megagramas), fazendo <span class="math notranslate nohighlight">\(q(t) = Q(t)/10^6\)</span>. Se dividirmos tudo por <span class="math notranslate nohighlight">\(10^6\)</span>, chegamos à nossa Equação Diferencial:</p>
+<p>Para simplificar os números imensos, vamos medir a poluição em “toneladas” (megagramas), fazendo <span class="math notranslate nohighlight">\(q(t) = Q(t)/10^6\)</span>. Se dividirmos tudo por <span class="math notranslate nohighlight">\(10^6\)</span>, chegamos à nossa Equação Diferencial:</p>
 <div class="math notranslate nohighlight">
 \[\frac{dq}{dt} = 5(2 + \sin(2t)) - \frac{1}{2}q\]</div>
 <div class="math notranslate nohighlight">
@@ -455,22 +447,22 @@ document.write(`
 <li><p><span class="math notranslate nohighlight">\(p(t)\)</span> é uma função que multiplica a variável dependente <span class="math notranslate nohighlight">\(y\)</span>.</p></li>
 <li><p><span class="math notranslate nohighlight">\(g(t)\)</span> é o termo forçante (ou fonte) do lado direito.</p></li>
 </ul>
-<p>Se <span class="math notranslate nohighlight">\(g(t)\)</span> fosse zero, a equação seria «homogênea» e facilmente separável. O desafio aqui é lidar com o termo <span class="math notranslate nohighlight">\(g(t)\)</span> sem destruir a relação da derivada.</p>
-<p>Antes de resolvermos a lagoa, vamos ver como um «truque» matemático resolve equações muito parecidas com ela.</p>
+<p>Se <span class="math notranslate nohighlight">\(g(t)\)</span> fosse zero, a equação seria “homogênea” e facilmente separável. O desafio aqui é lidar com o termo <span class="math notranslate nohighlight">\(g(t)\)</span> sem destruir a relação da derivada.</p>
+<p>Antes de resolvermos a lagoa, vamos ver como um “truque” matemático resolve equações muito parecidas com ela.</p>
 </section>
 <section id="resolvendo-casos-simples-um-truque-elegante">
 <h2>3. Resolvendo Casos Simples: Um Truque Elegante<a class="headerlink" href="#resolvendo-casos-simples-um-truque-elegante" title="Link to this heading">#</a></h2>
 <p>A ideia principal para resolver essas equações vem do Cálculo 1: <strong>a Regra do Produto</strong>. Lembre-se que</p>
 <div class="math notranslate nohighlight">
 \[\frac{d}{dt}[u \cdot y] = u y' + u' y\]</div>
-<p>O truque consiste em multiplicar a equação inteira por uma função «mágica» que transforma o lado esquerdo em uma derivada de produto exata.</p>
+<p>O truque consiste em multiplicar a equação inteira por uma função “mágica” que transforma o lado esquerdo em uma derivada de produto exata.</p>
 <p>Veja dois exemplos.</p>
 <section id="exemplo-simples-1">
 <h3>Exemplo Simples 1<a class="headerlink" href="#exemplo-simples-1" title="Link to this heading">#</a></h3>
 <p>Considere a equação:</p>
 <div class="math notranslate nohighlight">
 \[\frac{dy}{dt} + \frac{1}{2}y = \frac{1}{2}e^{t/3}\]</div>
-<p>Se, «do nada», decidirmos multiplicar todos os termos por <span class="math notranslate nohighlight">\(e^{t/2}\)</span>, veja o que acontece:</p>
+<p>Se, “do nada”, decidirmos multiplicar todos os termos por <span class="math notranslate nohighlight">\(e^{t/2}\)</span>, veja o que acontece:</p>
 <div class="math notranslate nohighlight">
 \[e^{t/2}\frac{dy}{dt} + \frac{1}{2}e^{t/2}y = \frac{1}{2}e^{5t/6}\]</div>
 <p>Perceba que o lado esquerdo é exatamente o resultado de derivar o produto <span class="math notranslate nohighlight">\((e^{t/2}y)\)</span>. Podemos reescrever a equação como:</p>
