@@ -57,3 +57,5 @@ parts:
       - file: sist/teo.ipynb
       - file: sist/app.ipynb
       - file: sist/nh.ipynb
+      - file: sist/exerc.ipynb
+      - file: sist/videos.ipynb

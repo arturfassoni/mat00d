@@ -65,6 +65,8 @@
     <script src="../_static/main.js?v=65a91cec"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Vídeos" href="videos.html" />
+    <link rel="prev" title="Sistemas Lineares Não Homogêneos" href="nh.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="pt"/>
   </head>
@@ -126,8 +128,6 @@
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -217,7 +217,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../ordn/exerc.html">Exercícios</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Sistemas de EDs Lineares</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="mod.html">Modelagem com Sistemas de EDOs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mat.html">Matrizes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sis.html">Sistemas de Equações Lineares</a></li>
@@ -228,7 +228,9 @@
 <li class="toctree-l1"><a class="reference internal" href="arr.html">Autovalores Repetidos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="teo.html">Resumo: os Três Casos e a Estabilidade</a></li>
 <li class="toctree-l1"><a class="reference internal" href="app.html">Aplicações</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nh.html">Não-Homogêneas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nh.html">Sistemas Lineares Não Homogêneos</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Exercícios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="videos.html">Vídeos</a></li>
 </ul>
 
     </div>
@@ -380,6 +382,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelagem-com-sistemas">Modelagem com Sistemas</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrizes">Matrizes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autovalores-e-autovetores">Autovalores e Autovetores</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teoria-de-sistemas-lineares-homogeneos">Teoria de Sistemas Lineares Homogêneos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autovalores-reais-e-distintos">Autovalores Reais e Distintos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autovalores-complexos">Autovalores Complexos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autovalores-repetidos">Autovalores Repetidos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistemas-nao-homogeneos">Sistemas Não Homogêneos</a></li>
 </ul>
             </nav>
         </div>
@@ -425,6 +432,111 @@ u^{\prime\prime}+0{,}25u^{\prime}+4u=2\cos(3t), \qquad u(0)=1,\ u^{\prime}(0)=-2
 <p>b. <span class="math notranslate nohighlight">\(\begin{pmatrix} -2 &amp; 1\\ 1 &amp; -2\end{pmatrix}\)</span></p>
 <p>c. <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; \sqrt3\\ \sqrt3 &amp; -1\end{pmatrix}\)</span></p>
 </section>
+<section id="teoria-de-sistemas-lineares-homogeneos">
+<h2>Teoria de Sistemas Lineares Homogêneos<a class="headerlink" href="#teoria-de-sistemas-lineares-homogeneos" title="Link to this heading">#</a></h2>
+<p><strong>Exercício 6.</strong> [Seção 7.4, Exerc. 10] Se <span class="math notranslate nohighlight">\(x_1=y\)</span> e <span class="math notranslate nohighlight">\(x_2=y^{\prime}\)</span>, então a equação de segunda ordem</p>
+<div class="math notranslate nohighlight">
+\[
+y^{\prime\prime}+p(t)y^{\prime}+q(t)y=0
+\]</div>
+<p>corresponde ao sistema</p>
+<div class="math notranslate nohighlight">
+\[
+x_1^{\prime}=x_2, \qquad x_2^{\prime}=-q(t)x_1-p(t)x_2.
+\]</div>
+<p>Mostre que, se <span class="math notranslate nohighlight">\(\mathbf{x}^{(1)}\)</span> e <span class="math notranslate nohighlight">\(\mathbf{x}^{(2)}\)</span> formarem um conjunto fundamental de soluções para o sistema e se <span class="math notranslate nohighlight">\(y^{(1)}\)</span> e <span class="math notranslate nohighlight">\(y^{(2)}\)</span> formarem um conjunto fundamental de soluções para a equação de segunda ordem, então <span class="math notranslate nohighlight">\(W[y^{(1)},y^{(2)}]=c\,W[\mathbf{x}^{(1)},\mathbf{x}^{(2)}]\)</span>, em que <span class="math notranslate nohighlight">\(c\)</span> é uma constante não nula.</p>
+<p><em>Sugestão:</em> <span class="math notranslate nohighlight">\(y^{(1)}(t)\)</span> e <span class="math notranslate nohighlight">\(y^{(2)}(t)\)</span> têm que ser combinações lineares de <span class="math notranslate nohighlight">\(x_{11}(t)\)</span> e <span class="math notranslate nohighlight">\(x_{12}(t)\)</span>.</p>
+<p><strong>Exercício 7.</strong> [Seção 7.4, Exerc. 12] Considere os vetores <span class="math notranslate nohighlight">\(\mathbf{x}^{(1)}(t)=\begin{pmatrix} t\\ 1\end{pmatrix}\)</span> e <span class="math notranslate nohighlight">\(\mathbf{x}^{(2)}(t)=\begin{pmatrix} t^2\\ 2t\end{pmatrix}\)</span>.</p>
+<p>a. Calcule o wronskiano de <span class="math notranslate nohighlight">\(\mathbf{x}^{(1)}\)</span> e <span class="math notranslate nohighlight">\(\mathbf{x}^{(2)}\)</span>.</p>
+<p>b. Em que intervalos <span class="math notranslate nohighlight">\(\mathbf{x}^{(1)}\)</span> e <span class="math notranslate nohighlight">\(\mathbf{x}^{(2)}\)</span> são linearmente independentes?</p>
+<p>c. Que conclusão podemos tirar sobre os coeficientes no sistema homogêneo de equações diferenciais satisfeito por <span class="math notranslate nohighlight">\(\mathbf{x}^{(1)}\)</span> e <span class="math notranslate nohighlight">\(\mathbf{x}^{(2)}\)</span>?</p>
+<p>d. Encontre este sistema de equações e verifique as conclusões do item (c).</p>
+</section>
+<section id="autovalores-reais-e-distintos">
+<h2>Autovalores Reais e Distintos<a class="headerlink" href="#autovalores-reais-e-distintos" title="Link to this heading">#</a></h2>
+<p><strong>Exercício 8.</strong> [Seção 7.5, Exerc. 1,2,3] Em cada um dos itens abaixo: desenhe um campo de direções; encontre a solução geral do sistema de equações dado e descreva o comportamento das soluções quando <span class="math notranslate nohighlight">\(t\to\infty\)</span>; faça o gráfico de algumas trajetórias do sistema.</p>
+<p>a. <span class="math notranslate nohighlight">\(\mathbf{x}^{\prime}=\begin{pmatrix} 3 &amp; -2\\ 2 &amp; -2\end{pmatrix}\mathbf{x}\)</span></p>
+<p>b. <span class="math notranslate nohighlight">\(\mathbf{x}^{\prime}=\begin{pmatrix} 1 &amp; -2\\ 3 &amp; -4\end{pmatrix}\mathbf{x}\)</span></p>
+<p>c. <span class="math notranslate nohighlight">\(\mathbf{x}^{\prime}=\begin{pmatrix} 2 &amp; -1\\ 3 &amp; -2\end{pmatrix}\mathbf{x}\)</span></p>
+<p><strong>Exercício 9.</strong> [Seção 7.5, Exerc. 7] Encontre a solução geral do sistema de equações dado:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x}^{\prime}=\begin{pmatrix} 1 &amp; 1 &amp; 2\\ 1 &amp; 2 &amp; 1\\ 2 &amp; 1 &amp; 1\end{pmatrix}\mathbf{x}.
+\end{split}\]</div>
+<p><strong>Exercício 10.</strong> [Seção 7.5, Exerc. 10,11] Em cada um dos itens abaixo, resolva o problema de valor inicial dado. Descreva o comportamento da solução quando <span class="math notranslate nohighlight">\(t\to\infty\)</span>.</p>
+<p>a. <span class="math notranslate nohighlight">\(\mathbf{x}^{\prime}=\begin{pmatrix} 5 &amp; -1\\ 3 &amp; 1\end{pmatrix}\mathbf{x}, \quad \mathbf{x}(0)=\begin{pmatrix} 2\\ -1\end{pmatrix}\)</span></p>
+<p>b. <span class="math notranslate nohighlight">\(\mathbf{x}^{\prime}=\begin{pmatrix} -2 &amp; 1\\ -5 &amp; 4\end{pmatrix}\mathbf{x}, \quad \mathbf{x}(0)=\begin{pmatrix} 1\\ 3\end{pmatrix}\)</span></p>
+<p><strong>Exercício 11.</strong> [Seção 7.5, Exerc. 17(a,b)] Uma matriz <span class="math notranslate nohighlight">\(A\)</span> tem autovalores e autovetores</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\lambda_1=-1,\ \ \mathbf{v}^{(1)}=\begin{pmatrix} -1\\ 2\end{pmatrix}; \qquad \lambda_2=-2,\ \ \mathbf{v}^{(2)}=\begin{pmatrix} 1\\ 2\end{pmatrix}.
+\end{split}\]</div>
+<p>Considere o sistema correspondente <span class="math notranslate nohighlight">\(\mathbf{x}^{\prime}=A\mathbf{x}\)</span>.</p>
+<p>a. Esboce um retrato de fase do sistema.</p>
+<p>b. Esboce a trajetória que contém o ponto inicial <span class="math notranslate nohighlight">\((2,3)\)</span>.</p>
+<p><strong>Exercício 12.</strong> [Seção 7.5, Exerc. 23] Considere o sistema</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x}^{\prime}=\begin{pmatrix} -1 &amp; -1\\ -\alpha &amp; -1\end{pmatrix}\mathbf{x}.
+\end{split}\]</div>
+<p>a. Resolva o sistema para <span class="math notranslate nohighlight">\(\alpha=\tfrac12\)</span>. Quais são os autovalores da matriz de coeficientes? Classifique o ponto de equilíbrio na origem em relação ao tipo.</p>
+<p>b. Resolva o sistema para <span class="math notranslate nohighlight">\(\alpha=2\)</span>. Quais são os autovalores da matriz de coeficientes? Classifique o ponto de equilíbrio na origem em relação ao tipo.</p>
+<p>c. As soluções encontradas nos itens (a) e (b) exibem dois tipos de comportamento bem diferentes. Encontre os autovalores da matriz de coeficientes em função de <span class="math notranslate nohighlight">\(\alpha\)</span> e determine o valor de <span class="math notranslate nohighlight">\(\alpha\)</span> entre <span class="math notranslate nohighlight">\(\tfrac12\)</span> e <span class="math notranslate nohighlight">\(2\)</span> em que ocorre a transição de um tipo de comportamento para outro. Este valor de <span class="math notranslate nohighlight">\(\alpha\)</span> é chamado de <strong>valor de bifurcação</strong> para este problema.</p>
+</section>
+<section id="autovalores-complexos">
+<h2>Autovalores Complexos<a class="headerlink" href="#autovalores-complexos" title="Link to this heading">#</a></h2>
+<p><strong>Exercício 13.</strong> [Seção 7.6, Exerc. 1,2] Em cada um dos itens abaixo: desenhe um campo de direções e esboce algumas trajetórias; expresse a solução geral do sistema de equações dado em termos de funções reais; descreva o comportamento das soluções quando <span class="math notranslate nohighlight">\(t\to\infty\)</span>.</p>
+<p>a. <span class="math notranslate nohighlight">\(\mathbf{x}^{\prime}=\begin{pmatrix} -1 &amp; -4\\ 1 &amp; -1\end{pmatrix}\mathbf{x}\)</span></p>
+<p>b. <span class="math notranslate nohighlight">\(\mathbf{x}^{\prime}=\begin{pmatrix} 2 &amp; -5\\ 1 &amp; -2\end{pmatrix}\mathbf{x}\)</span></p>
+<p><strong>Exercício 14.</strong> [Seção 7.6, Exerc. 7,8] Em cada um dos itens abaixo, encontre a solução do problema de valor inicial dado. Descreva o comportamento da solução quando <span class="math notranslate nohighlight">\(t\to\infty\)</span>.</p>
+<p>a. <span class="math notranslate nohighlight">\(\mathbf{x}^{\prime}=\begin{pmatrix} 1 &amp; -5\\ 1 &amp; -3\end{pmatrix}\mathbf{x}, \quad \mathbf{x}(0)=\begin{pmatrix} 1\\ 1\end{pmatrix}\)</span></p>
+<p>b. <span class="math notranslate nohighlight">\(\mathbf{x}^{\prime}=\begin{pmatrix} -3 &amp; 2\\ -1 &amp; -1\end{pmatrix}\mathbf{x}, \quad \mathbf{x}(0)=\begin{pmatrix} 1\\ -2\end{pmatrix}\)</span></p>
+<p><strong>Exercício 15.</strong> [Seção 7.6, Exerc. 12] A matriz de coeficientes do sistema abaixo contém um parâmetro <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x}^{\prime}=\begin{pmatrix} 0 &amp; -5\\ 1 &amp; \alpha\end{pmatrix}\mathbf{x}
+\end{split}\]</div>
+<p>a. Determine os autovalores em função de <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+<p>b. Encontre o valor ou valores de bifurcação de <span class="math notranslate nohighlight">\(\alpha\)</span> em que muda a natureza qualitativa do retrato de fase para o sistema.</p>
+<p>c. Desenhe retratos de fase para um valor de <span class="math notranslate nohighlight">\(\alpha\)</span> ligeiramente menor, e para outro valor ligeiramente maior, do que cada valor de bifurcação.</p>
+<p><strong>Exercício 16.</strong> [Seção 7.6, Exerc. 19(a,b)] Considere o sistema</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x}^{\prime}=\begin{pmatrix} -\tfrac14 &amp; 1 &amp; 0\\ -1 &amp; -\tfrac14 &amp; 0\\ 0 &amp; 0 &amp; \tfrac{1}{10}\end{pmatrix}\mathbf{x}.
+\end{split}\]</div>
+<p>a. Encontre os autovalores do sistema dado.</p>
+<p>b. Escolha um ponto inicial (diferente da origem) e desenhe as trajetórias correspondentes no plano <span class="math notranslate nohighlight">\(x_1x_2\)</span>. Desenhe, também, as trajetórias nos planos <span class="math notranslate nohighlight">\(x_1x_3\)</span> e <span class="math notranslate nohighlight">\(x_2x_3\)</span>.</p>
+</section>
+<section id="autovalores-repetidos">
+<h2>Autovalores Repetidos<a class="headerlink" href="#autovalores-repetidos" title="Link to this heading">#</a></h2>
+<p><strong>Exercício 17.</strong> [Seção 7.8, Exerc. 2,3] Em cada um dos itens abaixo: desenhe um campo de direções e esboce algumas trajetórias; descreva o comportamento das soluções quando <span class="math notranslate nohighlight">\(t\to\infty\)</span>; encontre a solução geral do sistema de equações.</p>
+<p>a. <span class="math notranslate nohighlight">\(\mathbf{x}^{\prime}=\begin{pmatrix} 4 &amp; -2\\ 8 &amp; -4\end{pmatrix}\mathbf{x}\)</span></p>
+<p>b. <span class="math notranslate nohighlight">\(\mathbf{x}^{\prime}=\begin{pmatrix} -\tfrac32 &amp; 1\\ -\tfrac14 &amp; -\tfrac12\end{pmatrix}\mathbf{x}\)</span></p>
+<p><strong>Exercício 18.</strong> [Seção 7.8, Exerc. 7,8] Em cada um dos itens abaixo, encontre a solução do problema de valor inicial dado. Desenhe a trajetória da solução no plano <span class="math notranslate nohighlight">\(x_1x_2\)</span> e desenhe, também, o gráfico de <span class="math notranslate nohighlight">\(x_1\)</span> em função de <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<p>a. <span class="math notranslate nohighlight">\(\mathbf{x}^{\prime}=\begin{pmatrix} -\tfrac52 &amp; \tfrac32\\ -\tfrac32 &amp; \tfrac12\end{pmatrix}\mathbf{x}, \quad \mathbf{x}(0)=\begin{pmatrix} 3\\ -1\end{pmatrix}\)</span></p>
+<p>b. <span class="math notranslate nohighlight">\(\mathbf{x}^{\prime}=\begin{pmatrix} 3 &amp; 9\\ -1 &amp; -3\end{pmatrix}\mathbf{x}, \quad \mathbf{x}(0)=\begin{pmatrix} 2\\ 4\end{pmatrix}\)</span></p>
+</section>
+<section id="sistemas-nao-homogeneos">
+<h2>Sistemas Não Homogêneos<a class="headerlink" href="#sistemas-nao-homogeneos" title="Link to this heading">#</a></h2>
+<p><strong>Exercício 19.</strong> [Seção 7.9, Exerc. 1,3,5,7] Em cada um dos itens abaixo, encontre a solução geral do sistema de equações dado.</p>
+<p>a. <span class="math notranslate nohighlight">\(\mathbf{x}^{\prime}=\begin{pmatrix} 2 &amp; -1\\ 3 &amp; -2\end{pmatrix}\mathbf{x}+\begin{pmatrix} e^t\\ t\end{pmatrix}\)</span></p>
+<p>b. <span class="math notranslate nohighlight">\(\mathbf{x}^{\prime}=\begin{pmatrix} 1 &amp; 1\\ 4 &amp; -2\end{pmatrix}\mathbf{x}+\begin{pmatrix} e^{-2t}\\ -2e^t\end{pmatrix}\)</span></p>
+<p>c. <span class="math notranslate nohighlight">\(\mathbf{x}^{\prime}=\begin{pmatrix} 1 &amp; 1\\ 4 &amp; 1\end{pmatrix}\mathbf{x}+\begin{pmatrix} 2\\ -1\end{pmatrix}e^t\)</span></p>
+<p>d. <span class="math notranslate nohighlight">\(\mathbf{x}^{\prime}=\begin{pmatrix} -3 &amp; \sqrt2\\ \sqrt2 &amp; -2\end{pmatrix}\mathbf{x}+\begin{pmatrix} 1\\ -1\end{pmatrix}e^{-t}\)</span></p>
+<p><strong>Exercício 20.</strong> [Seção 7.9, Exerc. 9] Um circuito elétrico é descrito pelo sistema de equações diferenciais</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac{d\mathbf{x}}{dt}=\begin{pmatrix} -\tfrac12 &amp; -\tfrac18\\ 2 &amp; -\tfrac12\end{pmatrix}\mathbf{x}+\begin{pmatrix} \tfrac12\\ 0\end{pmatrix}I(t),
+\end{split}\]</div>
+<p>em que <span class="math notranslate nohighlight">\(x_1\)</span> é a corrente através do indutor, <span class="math notranslate nohighlight">\(x_2\)</span> é a queda de tensão no capacitor e <span class="math notranslate nohighlight">\(I(t)\)</span> é a corrente fornecida pela fonte externa.</p>
+<p>a. Determine a solução geral do sistema homogêneo associado.</p>
+<p>b. Se <span class="math notranslate nohighlight">\(I(t)=e^{-t/2}\)</span>, determine a solução do sistema que satisfaz a condição inicial <span class="math notranslate nohighlight">\(\mathbf{x}(0)=\mathbf{0}\)</span>.</p>
+<p><strong>Exercício 21.</strong> [Seção 7.9, Exerc. 6] Encontre a solução geral do sistema de equações dado:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x}^{\prime}=\begin{pmatrix} 2 &amp; -1\\ 3 &amp; -2\end{pmatrix}\mathbf{x}+\begin{pmatrix} 1\\ -1\end{pmatrix}e^t.
+\end{split}\]</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -457,6 +569,24 @@ u^{\prime\prime}+0{,}25u^{\prime}+4u=2\cos(3t), \qquad u(0)=1,\ u^{\prime}(0)=-2
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="nh.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">Sistemas Lineares Não Homogêneos</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="videos.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">Vídeos</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -476,6 +606,11 @@ u^{\prime\prime}+0{,}25u^{\prime}+4u=2\cos(3t), \qquad u(0)=1,\ u^{\prime}(0)=-2
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelagem-com-sistemas">Modelagem com Sistemas</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrizes">Matrizes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autovalores-e-autovetores">Autovalores e Autovetores</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#teoria-de-sistemas-lineares-homogeneos">Teoria de Sistemas Lineares Homogêneos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autovalores-reais-e-distintos">Autovalores Reais e Distintos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autovalores-complexos">Autovalores Complexos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autovalores-repetidos">Autovalores Repetidos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistemas-nao-homogeneos">Sistemas Não Homogêneos</a></li>
 </ul>
   </nav></div>
 

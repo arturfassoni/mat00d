@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Não-Homogêneas &#8212; Equações Diferenciais A</title>
+    <title>Sistemas Lineares Não Homogêneos &#8212; Equações Diferenciais A</title>
   
   
   
@@ -59,10 +59,13 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'sist/nh';</script>
     <script src="../_static/main.js?v=65a91cec"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Exercícios" href="exerc.html" />
     <link rel="prev" title="Aplicações" href="app.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="pt"/>
@@ -225,7 +228,9 @@
 <li class="toctree-l1"><a class="reference internal" href="arr.html">Autovalores Repetidos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="teo.html">Resumo: os Três Casos e a Estabilidade</a></li>
 <li class="toctree-l1"><a class="reference internal" href="app.html">Aplicações</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Não-Homogêneas</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Sistemas Lineares Não Homogêneos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exerc.html">Exercícios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="videos.html">Vídeos</a></li>
 </ul>
 
     </div>
@@ -351,7 +356,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -362,11 +369,26 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Não-Homogêneas</h1>
+    <h1>Sistemas Lineares Não Homogêneos</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2>   </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-estrutura-da-solucao-mathbf-x-mathbf-x-h-mathbf-x-p">A estrutura da solução: <span class="math notranslate nohighlight">\(\mathbf{x}=\mathbf{x}_h+\mathbf{x}_p\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-metodo-dos-coeficientes-a-determinar">O método dos coeficientes a determinar</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-1-uma-exponencial">Exemplo 1: uma exponencial</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-2-dois-tanques-recebendo-agua-salgada">Exemplo 2: dois tanques recebendo água salgada</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-3-ressonancia-o-exemplo-do-boyce">Exemplo 3: ressonância (o exemplo do Boyce)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resumo">Resumo</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -376,9 +398,231 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="nao-homogeneas">
-<h1>Não-Homogêneas<a class="headerlink" href="#nao-homogeneas" title="Link to this heading">#</a></h1>
-<p><em>Em construção</em></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="sistemas-lineares-nao-homogeneos">
+<h1>Sistemas Lineares Não Homogêneos<a class="headerlink" href="#sistemas-lineares-nao-homogeneos" title="Link to this heading">#</a></h1>
+<p>Vamos agora acrescentar um termo forçante ao sistema:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{x}' = A\mathbf{x} + \mathbf{g}(t).
+\]</div>
+<p>O vetor <span class="math notranslate nohighlight">\(\mathbf{g}(t)\)</span> representa uma influência externa: sal entrando num tanque, uma infusão contínua de remédio, uma fonte num circuito, uma força agindo sobre uma massa. Assim como para as equações de segunda ordem, vamos usar o <strong>método dos coeficientes a determinar</strong>, que funciona quando <span class="math notranslate nohighlight">\(A\)</span> é constante e <span class="math notranslate nohighlight">\(\mathbf{g}(t)\)</span> é formado por polinômios, exponenciais, senos e cossenos.</p>
+<section id="a-estrutura-da-solucao-mathbf-x-mathbf-x-h-mathbf-x-p">
+<h2>A estrutura da solução: <span class="math notranslate nohighlight">\(\mathbf{x}=\mathbf{x}_h+\mathbf{x}_p\)</span><a class="headerlink" href="#a-estrutura-da-solucao-mathbf-x-mathbf-x-h-mathbf-x-p" title="Link to this heading">#</a></h2>
+<p><strong>Resultado.</strong> A solução geral de <span class="math notranslate nohighlight">\(\mathbf{x}'=A\mathbf{x}+\mathbf{g}(t)\)</span> é</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{x}(t) = \mathbf{x}_h(t) + \mathbf{x}_p(t),
+\]</div>
+<p>em que <span class="math notranslate nohighlight">\(\mathbf{x}_h\)</span> é a solução geral do sistema homogêneo associado <span class="math notranslate nohighlight">\(\mathbf{x}'=A\mathbf{x}\)</span> (que já sabemos encontrar) e <span class="math notranslate nohighlight">\(\mathbf{x}_p\)</span> é <strong>uma</strong> solução particular qualquer do sistema não homogêneo.</p>
+<p>A justificativa é a mesma de sempre: se <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> e <span class="math notranslate nohighlight">\(\mathbf{x}_p\)</span> são duas soluções do sistema não homogêneo, a diferença <span class="math notranslate nohighlight">\(\mathbf{w}=\mathbf{x}-\mathbf{x}_p\)</span> satisfaz <span class="math notranslate nohighlight">\(\mathbf{w}'=A\mathbf{x}+\mathbf{g}-(A\mathbf{x}_p+\mathbf{g})=A\mathbf{w}\)</span>, ou seja, resolve o homogêneo.</p>
+</section>
+<section id="o-metodo-dos-coeficientes-a-determinar">
+<h2>O método dos coeficientes a determinar<a class="headerlink" href="#o-metodo-dos-coeficientes-a-determinar" title="Link to this heading">#</a></h2>
+<p>A ideia é a mesma da segunda ordem: tentar uma solução particular com a mesma «cara» de <span class="math notranslate nohighlight">\(\mathbf{g}(t)\)</span>, só que agora com <strong>vetores</strong> como coeficientes a determinar.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(\mathbf{g}(t)\)</span></p></th>
+<th class="head"><p>Tentativa para <span class="math notranslate nohighlight">\(\mathbf{x}_p(t)\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>vetor constante <span class="math notranslate nohighlight">\(\mathbf{b}\)</span></p></td>
+<td><p>vetor constante <span class="math notranslate nohighlight">\(\mathbf{a}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>polinômio de grau <span class="math notranslate nohighlight">\(m\)</span> (com coeficientes vetoriais)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathbf{a}_mt^m+\cdots+\mathbf{a}_1t+\mathbf{a}_0\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\mathbf{u}\,e^{\alpha t}\)</span>, com <span class="math notranslate nohighlight">\(\alpha\)</span> <strong>não</strong> autovalor de <span class="math notranslate nohighlight">\(A\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathbf{a}\,e^{\alpha t}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\mathbf{u}\,e^{\alpha t}\)</span>, com <span class="math notranslate nohighlight">\(\alpha\)</span> autovalor (simples) de <span class="math notranslate nohighlight">\(A\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathbf{a}\,te^{\alpha t}+\mathbf{b}\,e^{\alpha t}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\mathbf{u}\cos\beta t+\mathbf{w}\,\text{sen}\,\beta t\)</span>, com <span class="math notranslate nohighlight">\(i\beta\)</span> não autovalor</p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathbf{a}\cos\beta t+\mathbf{b}\,\text{sen}\,\beta t\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Se <span class="math notranslate nohighlight">\(\mathbf{g}\)</span> for uma soma de termos desses tipos, somamos as tentativas. Os vetores <span class="math notranslate nohighlight">\(\mathbf{a},\mathbf{b},\dots\)</span> são encontrados substituindo a tentativa no sistema e igualando os coeficientes, o que leva a <strong>sistemas lineares algébricos</strong> — as ferramentas da aula de sistemas lineares.</p>
+<p>Repare numa diferença em relação à segunda ordem: na ressonância (quando <span class="math notranslate nohighlight">\(\alpha\)</span> é autovalor), não basta multiplicar por <span class="math notranslate nohighlight">\(t\)</span>; é preciso usar <span class="math notranslate nohighlight">\(\mathbf{a}\,te^{\alpha t}+\mathbf{b}\,e^{\alpha t}\)</span>, com os dois termos. Veremos por quê no Exemplo 3.</p>
+<section id="exemplo-1-uma-exponencial">
+<h3>Exemplo 1: uma exponencial<a class="headerlink" href="#exemplo-1-uma-exponencial" title="Link to this heading">#</a></h3>
+<p>Encontre a solução geral de</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x}' = \begin{pmatrix} 3 &amp; -1\\ 4 &amp; -2\end{pmatrix}\mathbf{x} + \begin{pmatrix} 0\\ 6\end{pmatrix}e^{t}.
+\end{split}\]</div>
+<p><strong>Homogêneo:</strong> já conhecemos essa matriz — autovalores <span class="math notranslate nohighlight">\(2\)</span> e <span class="math notranslate nohighlight">\(-1\)</span>, autovetores <span class="math notranslate nohighlight">\((1,1)\)</span> e <span class="math notranslate nohighlight">\((1,4)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x}_h = c_1\begin{pmatrix} 1\\ 1\end{pmatrix}e^{2t} + c_2\begin{pmatrix} 1\\ 4\end{pmatrix}e^{-t}.
+\end{split}\]</div>
+<p><strong>Particular:</strong> como <span class="math notranslate nohighlight">\(1\)</span> não é autovalor, tentamos <span class="math notranslate nohighlight">\(\mathbf{x}_p=\mathbf{a}\,e^{t}\)</span>. Então <span class="math notranslate nohighlight">\(\mathbf{x}_p'=\mathbf{a}\,e^{t}\)</span>, e substituindo:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{a}\,e^{t} = A\mathbf{a}\,e^{t} + \begin{pmatrix} 0\\ 6\end{pmatrix}e^{t}
+\quad\Longrightarrow\quad
+(I-A)\,\mathbf{a} = \begin{pmatrix} 0\\ 6\end{pmatrix}
+\quad\Longrightarrow\quad
+\begin{pmatrix} -2 &amp; 1\\ -4 &amp; 3\end{pmatrix}\begin{pmatrix} a_1\\ a_2\end{pmatrix} = \begin{pmatrix} 0\\ 6\end{pmatrix}.
+\end{split}\]</div>
+<p>Da primeira equação, <span class="math notranslate nohighlight">\(a_2=2a_1\)</span>; na segunda, <span class="math notranslate nohighlight">\(-4a_1+6a_1=6\)</span>, então <span class="math notranslate nohighlight">\(a_1=3\)</span> e <span class="math notranslate nohighlight">\(a_2=6\)</span>. Logo <span class="math notranslate nohighlight">\(\mathbf{x}_p=\begin{pmatrix} 3\\ 6\end{pmatrix}e^{t}\)</span>, e a solução geral é</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x}(t) = c_1\begin{pmatrix} 1\\ 1\end{pmatrix}e^{2t} + c_2\begin{pmatrix} 1\\ 4\end{pmatrix}e^{-t} + \begin{pmatrix} 3\\ 6\end{pmatrix}e^{t}.
+\end{split}\]</div>
+<p>Repare que o sistema para <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> tem solução única justamente porque <span class="math notranslate nohighlight">\(\det(I-A)\neq0\)</span>, ou seja, porque <span class="math notranslate nohighlight">\(1\)</span> não é autovalor de <span class="math notranslate nohighlight">\(A\)</span>. Se fosse, a matriz seria singular e a tentativa falharia — é a ressonância.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.integrate</span><span class="w"> </span><span class="kn">import</span> <span class="n">solve_ivp</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">'t'</span><span class="p">)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">]])</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="n">xp</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"x_p' - A x_p - g ="</span><span class="p">,</span> <span class="n">sp</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">xp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">-</span> <span class="n">A</span><span class="o">*</span><span class="n">xp</span> <span class="o">-</span> <span class="n">g</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x_p' - A x_p - g = Matrix([[0, 0]])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exemplo-2-dois-tanques-recebendo-agua-salgada">
+<h3>Exemplo 2: dois tanques recebendo água salgada<a class="headerlink" href="#exemplo-2-dois-tanques-recebendo-agua-salgada" title="Link to this heading">#</a></h3>
+<p>Voltemos aos dois tanques da aula de modelagem (cada um com <span class="math notranslate nohighlight">\(100\)</span> L; <span class="math notranslate nohighlight">\(8\)</span> L/min passam do Tanque 1 para o 2, <span class="math notranslate nohighlight">\(2\)</span> L/min voltam e <span class="math notranslate nohighlight">\(6\)</span> L/min saem do Tanque 2). Agora, em vez de água pura, entra no Tanque 1 <strong>água salgada</strong> com <span class="math notranslate nohighlight">\(0{,}5\)</span> g/L, a <span class="math notranslate nohighlight">\(6\)</span> L/min — ou seja, <span class="math notranslate nohighlight">\(3\)</span> g de sal por minuto. Os tanques começam com água pura. O sistema fica</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{pmatrix} Q_1\\ Q_2\end{pmatrix}' = \begin{pmatrix} -0{,}08 &amp; 0{,}02\\ 0{,}08 &amp; -0{,}08\end{pmatrix}\begin{pmatrix} Q_1\\ Q_2\end{pmatrix} + \begin{pmatrix} 3\\ 0\end{pmatrix},
+\qquad \begin{pmatrix} Q_1(0)\\ Q_2(0)\end{pmatrix} = \begin{pmatrix} 0\\ 0\end{pmatrix}.
+\end{split}\]</div>
+<p><strong>Particular:</strong> <span class="math notranslate nohighlight">\(\mathbf{g}\)</span> é constante, então tentamos <span class="math notranslate nohighlight">\(\mathbf{x}_p=\mathbf{a}\)</span> constante. Como <span class="math notranslate nohighlight">\(\mathbf{x}_p'=\mathbf{0}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{0} = M\mathbf{a} + \begin{pmatrix} 3\\ 0\end{pmatrix}
+\quad\Longrightarrow\quad
+\begin{cases} -0{,}08a_1 + 0{,}02a_2 = -3\\ \phantom{-}0{,}08a_1 - 0{,}08a_2 = 0\end{cases}
+\quad\Longrightarrow\quad a_1=a_2=50.
+\end{split}\]</div>
+<p>Uma solução constante é um <strong>equilíbrio</strong>: com <span class="math notranslate nohighlight">\(50\)</span> g em cada tanque (ou seja, <span class="math notranslate nohighlight">\(0{,}5\)</span> g/L, a mesma concentração da água que entra), nada muda. Faz todo o sentido físico.</p>
+<p><strong>Homogêneo:</strong> <span class="math notranslate nohighlight">\(\operatorname{tr}M=-0{,}16\)</span> e <span class="math notranslate nohighlight">\(\det M=0{,}0064-0{,}0016=0{,}0048\)</span>, então</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda^2+0{,}16\lambda+0{,}0048=0 \quad\Longrightarrow\quad \lambda_1=-0{,}04,\ \ \lambda_2=-0{,}12,
+\]</div>
+<p>com autovetores <span class="math notranslate nohighlight">\(\mathbf{v}^{(1)}=(1,2)\)</span> e <span class="math notranslate nohighlight">\(\mathbf{v}^{(2)}=(1,-2)\)</span> (confira!).</p>
+<p><strong>Solução geral e PVI:</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x}(t) = c_1\begin{pmatrix} 1\\ 2\end{pmatrix}e^{-0{,}04t} + c_2\begin{pmatrix} 1\\ -2\end{pmatrix}e^{-0{,}12t} + \begin{pmatrix} 50\\ 50\end{pmatrix}.
+\end{split}\]</div>
+<p>Com <span class="math notranslate nohighlight">\(\mathbf{x}(0)=\mathbf{0}\)</span>: <span class="math notranslate nohighlight">\(c_1+c_2=-50\)</span> e <span class="math notranslate nohighlight">\(2c_1-2c_2=-50\)</span>, então <span class="math notranslate nohighlight">\(c_1=-37{,}5\)</span> e <span class="math notranslate nohighlight">\(c_2=-12{,}5\)</span>.</p>
+<p><strong>Interpretação.</strong> Como os dois autovalores são negativos, a parte homogênea some com o tempo, e as quantidades de sal tendem ao equilíbrio <span class="math notranslate nohighlight">\((50,50)\)</span>. É a mesma divisão que vimos nas vibrações forçadas: a parte <strong>homogênea</strong> é o <strong>transiente</strong> (depende da condição inicial e morre) e a parte <strong>particular</strong> é o <strong>estado estacionário</strong> (determinado pela entrada de sal). A escala de tempo da aproximação é ditada pelo autovalor mais lento, <span class="math notranslate nohighlight">\(-0{,}04\)</span>/min: em cerca de <span class="math notranslate nohighlight">\(1/0{,}04=25\)</span> minutos o desvio do equilíbrio cai por um fator <span class="math notranslate nohighlight">\(e\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mf">0.08</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.08</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.08</span><span class="p">]])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"equilíbrio (x_p):"</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="o">-</span><span class="n">b</span><span class="p">))</span>
+
+<span class="n">tt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+<span class="n">Q1</span> <span class="o">=</span> <span class="o">-</span><span class="mf">37.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.04</span><span class="o">*</span><span class="n">tt</span><span class="p">)</span> <span class="o">-</span> <span class="mf">12.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.12</span><span class="o">*</span><span class="n">tt</span><span class="p">)</span> <span class="o">+</span> <span class="mi">50</span>
+<span class="n">Q2</span> <span class="o">=</span> <span class="o">-</span><span class="mi">75</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.04</span><span class="o">*</span><span class="n">tt</span><span class="p">)</span> <span class="o">+</span> <span class="mi">25</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.12</span><span class="o">*</span><span class="n">tt</span><span class="p">)</span> <span class="o">+</span> <span class="mi">50</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">solve_ivp</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">M</span> <span class="o">@</span> <span class="n">x</span> <span class="o">+</span> <span class="n">b</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">150</span><span class="p">),</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">t_eval</span><span class="o">=</span><span class="n">tt</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tt</span><span class="p">,</span> <span class="n">Q1</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'$Q_1$ (fórmula)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tt</span><span class="p">,</span> <span class="n">Q2</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'$Q_2$ (fórmula)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tt</span><span class="p">,</span> <span class="n">sol</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">'k:'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'simulação'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tt</span><span class="p">,</span> <span class="n">sol</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">'k:'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'g'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'equilíbrio (50 g)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"tempo (min)"</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"sal (g)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Tanques recebendo água salgada: transiente + estado estacionário"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span> <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>equilíbrio (x_p): [50. 50.]
+</pre></div>
+</div>
+<img alt="../_images/38393634d30186144db093a84fc08931511f0fa88029351840103d9ce9013ec1.png" src="../_images/38393634d30186144db093a84fc08931511f0fa88029351840103d9ce9013ec1.png" />
+</div>
+</div>
+</section>
+<section id="exemplo-3-ressonancia-o-exemplo-do-boyce">
+<h3>Exemplo 3: ressonância (o exemplo do Boyce)<a class="headerlink" href="#exemplo-3-ressonancia-o-exemplo-do-boyce" title="Link to this heading">#</a></h3>
+<p>Encontre uma solução particular de</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x}' = \begin{pmatrix} -2 &amp; 1\\ 1 &amp; -2\end{pmatrix}\mathbf{x} + \begin{pmatrix} 2e^{-t}\\ 3t\end{pmatrix}.
+\end{split}\]</div>
+<p>A matriz tem autovalores <span class="math notranslate nohighlight">\(-1\)</span> e <span class="math notranslate nohighlight">\(-3\)</span>, com autovetores <span class="math notranslate nohighlight">\((1,1)\)</span> e <span class="math notranslate nohighlight">\((1,-1)\)</span>. Separamos o forçamento em duas partes:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{g}(t) = \begin{pmatrix} 2\\ 0\end{pmatrix}e^{-t} + \begin{pmatrix} 0\\ 3\end{pmatrix}t.
+\end{split}\]</div>
+<p>O termo polinomial pede <span class="math notranslate nohighlight">\(\mathbf{c}\,t+\mathbf{d}\)</span>. O termo exponencial tem <span class="math notranslate nohighlight">\(\alpha=-1\)</span>, que <strong>é</strong> autovalor: ressonância. Pela tabela, tentamos</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{x}_p = \mathbf{a}\,te^{-t} + \mathbf{b}\,e^{-t} + \mathbf{c}\,t + \mathbf{d}.
+\]</div>
+<p>Substituindo e igualando os coeficientes de <span class="math notranslate nohighlight">\(te^{-t}\)</span>, <span class="math notranslate nohighlight">\(e^{-t}\)</span>, <span class="math notranslate nohighlight">\(t\)</span> e da constante, obtemos quatro equações vetoriais:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A\mathbf{a} = -\mathbf{a}, \qquad
+A\mathbf{b} = \mathbf{a} - \mathbf{b} - \begin{pmatrix} 2\\ 0\end{pmatrix}, \qquad
+A\mathbf{c} = -\begin{pmatrix} 0\\ 3\end{pmatrix}, \qquad
+A\mathbf{d} = \mathbf{c}.
+\end{split}\]</div>
+<ul class="simple">
+<li><p>A primeira diz que <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> é um <strong>autovetor</strong> de <span class="math notranslate nohighlight">\(-1\)</span>: <span class="math notranslate nohighlight">\(\mathbf{a}=k(1,1)\)</span>.</p></li>
+<li><p>A segunda, reescrita como <span class="math notranslate nohighlight">\((A+I)\mathbf{b}=\mathbf{a}-(2,0)\)</span>, é um sistema com matriz <strong>singular</strong> (<span class="math notranslate nohighlight">\(-1\)</span> é autovalor), que só tem solução para uma escolha específica de <span class="math notranslate nohighlight">\(k\)</span>. Fazendo as contas, isso força <span class="math notranslate nohighlight">\(k=1\)</span>, ou seja, <span class="math notranslate nohighlight">\(\mathbf{a}=(1,1)\)</span>, e então <span class="math notranslate nohighlight">\(\mathbf{b}=(0,-1)\)</span> serve.</p></li>
+<li><p>A terceira e a quarta são sistemas comuns: <span class="math notranslate nohighlight">\(\mathbf{c}=(1,2)\)</span> e <span class="math notranslate nohighlight">\(\mathbf{d}=-\tfrac13(4,5)\)</span>.</p></li>
+</ul>
+<p>Logo,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x}_p = \begin{pmatrix} 1\\ 1\end{pmatrix}te^{-t} - \begin{pmatrix} 0\\ 1\end{pmatrix}e^{-t} + \begin{pmatrix} 1\\ 2\end{pmatrix}t - \frac13\begin{pmatrix} 4\\ 5\end{pmatrix}.
+\end{split}\]</div>
+<p>Agora fica claro por que a tentativa <span class="math notranslate nohighlight">\(\mathbf{a}\,te^{-t}\)</span> sozinha não bastaria: a equação para <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> obriga <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> a ser autovetor, e o forçamento <span class="math notranslate nohighlight">\((2,0)\)</span> não está na direção do autovetor <span class="math notranslate nohighlight">\((1,1)\)</span>. O termo extra <span class="math notranslate nohighlight">\(\mathbf{b}\,e^{-t}\)</span> «absorve» a parte do forçamento que não está nessa direção.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">]])</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="mi">2</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">t</span><span class="p">),</span> <span class="mi">3</span><span class="o">*</span><span class="n">t</span><span class="p">])</span>
+<span class="n">xp</span> <span class="o">=</span> <span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span><span class="o">*</span><span class="n">t</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">t</span><span class="p">)</span> <span class="o">-</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">t</span><span class="p">)</span>
+      <span class="o">+</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span><span class="o">*</span><span class="n">t</span> <span class="o">-</span> <span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"x_p' - A x_p - g ="</span><span class="p">,</span> <span class="n">sp</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">xp</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">-</span> <span class="n">A</span><span class="o">*</span><span class="n">xp</span> <span class="o">-</span> <span class="n">g</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x_p' - A x_p - g = Matrix([[0, 0]])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="resumo">
+<h2>Resumo<a class="headerlink" href="#resumo" title="Link to this heading">#</a></h2>
+<p>Para resolver <span class="math notranslate nohighlight">\(\mathbf{x}'=A\mathbf{x}+\mathbf{g}(t)\)</span>:</p>
+<ol class="arabic simple">
+<li><p>Resolva o homogêneo <span class="math notranslate nohighlight">\(\mathbf{x}'=A\mathbf{x}\)</span> com autovalores e autovetores, obtendo <span class="math notranslate nohighlight">\(\mathbf{x}_h\)</span>.</p></li>
+<li><p>Monte a tentativa de <span class="math notranslate nohighlight">\(\mathbf{x}_p\)</span> pela tabela (atenção à ressonância, quando o expoente de <span class="math notranslate nohighlight">\(\mathbf{g}\)</span> é autovalor de <span class="math notranslate nohighlight">\(A\)</span>).</p></li>
+<li><p>Substitua, iguale coeficientes e resolva os sistemas lineares para os vetores desconhecidos.</p></li>
+<li><p>A solução geral é <span class="math notranslate nohighlight">\(\mathbf{x}=\mathbf{x}_h+\mathbf{x}_p\)</span>; se houver condição inicial, ajuste as constantes de <span class="math notranslate nohighlight">\(\mathbf{x}_h\)</span> resolvendo mais um sistema linear.</p></li>
+</ol>
+<p>Quando todos os autovalores de <span class="math notranslate nohighlight">\(A\)</span> têm parte real negativa, <span class="math notranslate nohighlight">\(\mathbf{x}_h\to\mathbf{0}\)</span> e, a longo prazo, a solução segue <span class="math notranslate nohighlight">\(\mathbf{x}_p\)</span>: o sistema «esquece» a condição inicial e responde só à entrada externa.</p>
+<p>Quando <span class="math notranslate nohighlight">\(\mathbf{g}(t)\)</span> não tem uma das formas da tabela (por exemplo, <span class="math notranslate nohighlight">\(t^{-1}\)</span> ou <span class="math notranslate nohighlight">\(\tan t\)</span>), existe o método de <strong>variação dos parâmetros</strong>, que não vamos abordar neste curso.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -420,12 +664,43 @@ document.write(`
         <p class="prev-next-title">Aplicações</p>
       </div>
     </a>
+    <a class="right-next"
+       href="exerc.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">Exercícios</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i>  
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-estrutura-da-solucao-mathbf-x-mathbf-x-h-mathbf-x-p">A estrutura da solução: <span class="math notranslate nohighlight">\(\mathbf{x}=\mathbf{x}_h+\mathbf{x}_p\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-metodo-dos-coeficientes-a-determinar">O método dos coeficientes a determinar</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-1-uma-exponencial">Exemplo 1: uma exponencial</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-2-dois-tanques-recebendo-agua-salgada">Exemplo 2: dois tanques recebendo água salgada</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-3-ressonancia-o-exemplo-do-boyce">Exemplo 3: ressonância (o exemplo do Boyce)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resumo">Resumo</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
