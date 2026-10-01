@@ -1,0 +1,796 @@
+
+<!DOCTYPE html>
+
+
+<html lang="pt" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Aplicações &#8212; Equações Diferenciais A</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/main.css?v=1cb71cee" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=0ff6c57f"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Clique para mostrar';</script>
+    <script>let toggleHintHide = 'Clique para ocultar';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script src="../_static/translations.js?v=5f54a428"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'sist/app';</script>
+    <script src="../_static/main.js?v=65a91cec"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Não-Homogêneas" href="nh.html" />
+    <link rel="prev" title="Resumo: os Três Casos e a Estabilidade" href="teo.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="pt"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../home.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.svg" class="logo__image only-light" alt="Equações Diferenciais A - Home"/>
+    <script>document.write(`<img src="../_static/logo.svg" class="logo__image only-dark" alt="Equações Diferenciais A - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Pesquisar" aria-label="Pesquisar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Pesquisar</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introdução às EDs</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../intro/oquee.html">O que são equações diferenciais?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/fund1.html">A equação diferencial fundamental <span class="math notranslate nohighlight">\(y' = ky\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/porque.html">Por que equações diferenciais?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/direcoes.html">Campos de Direções e o Método de Euler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/solucoes.html">Soluções de uma ED</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/classificacao.html">Classificação de EDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/exerc.html">Exercícios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/videos.html">Vídeos</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de 1a Ordem</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../ord1/modelagem.html">Modelagem com EDOs de 1ª Ordem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord1/lineares.html">Equações Lineares e o Fator Integrante</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord1/separaveis.html">Equações Diferenciais Separáveis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord1/autonomas.html">Equações Autônomas e Dinâmica Populacional</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord1/exerc.html">Exercícios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord1/videos.html">Vídeos</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de 2a Ordem</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../ord2/mod.html">Modelagem com EDOs de 2ª Ordem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/h.html">Equações Homogêneas e o Caso de Raízes Reais Distintas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/rrr.html">Raízes Reais Repetidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/rcc.html">Raízes Complexas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/teo.html">Teoria Geral: Existência, Unicidade e Solução Geral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/vib.html">Vibrações Livres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/nh.html">Equações Não Homogêneas e Método dos Coeficientes a Determinar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/vibf.html">Vibrações Forçadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/exerc.html">Exercícios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/videos.html">Vídeos</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de Ordem Superior</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../ordn/mod.html">Modelagem com EDOs de Ordem Superior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordn/h.html">Equações Homogêneas de Ordem Superior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordn/nh.html">Equações Não Homogêneas de Ordem Superior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordn/exerc.html">Exercícios</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Sistemas de EDs Lineares</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="mod.html">Modelagem com Sistemas de EDOs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mat.html">Matrizes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sis.html">Sistemas de Equações Lineares</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aut.html">Autovalores e Autovetores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="h.html">Sistemas Lineares Homogêneos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ard.html">Autovalores Reais e Distintos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acc.html">Autovalores Complexos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arr.html">Autovalores Repetidos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="teo.html">Resumo: os Três Casos e a Estabilidade</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Aplicações</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nh.html">Não-Homogêneas</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Baixe esta página">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/sist/app.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Baixar arquivo fonte"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimir em PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Modo tela cheia"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Pesquisar" aria-label="Pesquisar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Aplicações</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2>   </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#celulas-tronco-leucemicas-sob-tratamento">Células-tronco leucêmicas sob tratamento</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quando-o-tratamento-funciona">Quando o tratamento funciona?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#por-que-nunca-ha-oscilacao">Por que nunca há oscilação?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#os-autovalores-e-as-duas-fases">Os autovalores e as duas fases</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regulacao-da-glicose-no-sangue">Regulação da glicose no sangue</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-ligacao-com-a-segunda-ordem">A ligação com a segunda ordem</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moral-da-historia">Moral da história</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="aplicacoes">
+<h1>Aplicações<a class="headerlink" href="#aplicacoes" title="Link to this heading">#</a></h1>
+<p>Vamos aplicar o que aprendemos a dois modelos: o modelo de células-tronco leucêmicas da aula de modelagem (autovalores reais) e um modelo clássico da regulação da glicose no sangue (autovalores complexos). Nos dois, os autovalores e autovetores não servem só para escrever a fórmula da solução: eles <strong>explicam</strong> o que se observa.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.integrate</span><span class="w"> </span><span class="kn">import</span> <span class="n">solve_ivp</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">retrato</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">lim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">titulo</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">autovetores</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="c1"># Desenha o retrato de fase de x' = A x no quadrado [-lim, lim]^2</span>
+    <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">lim</span><span class="p">,</span> <span class="n">lim</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+    <span class="n">U</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">X</span> <span class="o">+</span> <span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">Y</span>
+    <span class="n">V</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">X</span> <span class="o">+</span> <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">Y</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">streamplot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'0.55'</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="mf">1.1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">arrowsize</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">autovetores</span><span class="p">:</span>
+        <span class="n">lam</span><span class="p">,</span> <span class="n">vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">lam</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1e-12</span><span class="p">):</span>
+            <span class="n">pares</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">lam</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="n">vec</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">real</span><span class="p">))</span>
+            <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">lam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">lam</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mf">1e-6</span><span class="p">:</span>
+                <span class="n">pares</span> <span class="o">=</span> <span class="n">pares</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">l</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">pares</span><span class="p">:</span>
+                <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">lim</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">3</span><span class="o">*</span><span class="n">lim</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">lim</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">3</span><span class="o">*</span><span class="n">lim</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span>
+                        <span class="s1">'--'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">fr</span><span class="s1">'$\lambda=</span><span class="si">{</span><span class="n">l</span><span class="si">:</span><span class="s1">.3g</span><span class="si">}</span><span class="s1">$'</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">'lower right'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">'ko'</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="n">lim</span><span class="p">,</span> <span class="n">lim</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="n">lim</span><span class="p">,</span> <span class="n">lim</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">'equal'</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'$x_1$'</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'$x_2$'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">titulo</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">titulo</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">trajetoria</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">cor</span><span class="o">=</span><span class="s1">'b'</span><span class="p">):</span>
+    <span class="c1"># Integra x' = A x a partir de x0 e desenha a trajetória</span>
+    <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+    <span class="n">sol</span> <span class="o">=</span> <span class="n">solve_ivp</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">A</span> <span class="o">@</span> <span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">T</span><span class="p">),</span> <span class="n">x0</span><span class="p">,</span> <span class="n">max_step</span><span class="o">=</span><span class="n">T</span><span class="o">/</span><span class="mi">500</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sol</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sol</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cor</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x0</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x0</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">'o'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">cor</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">sol</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="celulas-tronco-leucemicas-sob-tratamento">
+<h2>Células-tronco leucêmicas sob tratamento<a class="headerlink" href="#celulas-tronco-leucemicas-sob-tratamento" title="Link to this heading">#</a></h2>
+<p>Relembrando o modelo, com <span class="math notranslate nohighlight">\(Q\)</span> as células quiescentes e <span class="math notranslate nohighlight">\(A\)</span> as ativas:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{pmatrix} Q\\ A\end{pmatrix}' = M\begin{pmatrix} Q\\ A\end{pmatrix}, \qquad
+M = \begin{pmatrix} -a &amp; b\\ a &amp; p-k-b\end{pmatrix},
+\end{split}\]</div>
+<p>com <span class="math notranslate nohighlight">\(a\)</span> a taxa de ativação, <span class="math notranslate nohighlight">\(b\)</span> a de retorno à quiescência, <span class="math notranslate nohighlight">\(p\)</span> a de proliferação das ativas e <span class="math notranslate nohighlight">\(k\)</span> a de morte das ativas pelo tratamento.</p>
+<section id="quando-o-tratamento-funciona">
+<h3>Quando o tratamento funciona?<a class="headerlink" href="#quando-o-tratamento-funciona" title="Link to this heading">#</a></h3>
+<p>Sem resolver nada, o diagrama traço–determinante já responde. Calculando,</p>
+<div class="math notranslate nohighlight">
+\[
+\operatorname{tr}M = p-k-a-b, \qquad \det M = -a(p-k-b) - ab = a\,(k-p).
+\]</div>
+<ul class="simple">
+<li><p>Se <span class="math notranslate nohighlight">\(k&lt;p\)</span> (o remédio mata as células ativas mais devagar do que elas se dividem), <span class="math notranslate nohighlight">\(\det M&lt;0\)</span>: a origem é uma <strong>sela</strong>, e a doença cresce.</p></li>
+<li><p>Se <span class="math notranslate nohighlight">\(k&gt;p\)</span>, <span class="math notranslate nohighlight">\(\det M&gt;0\)</span>. Além disso, <span class="math notranslate nohighlight">\(\operatorname{tr}M=-(k-p)-a-b&lt;0\)</span>. A origem está no segundo quadrante do diagrama: é <strong>assintoticamente estável</strong>, e a doença é eliminada.</p></li>
+</ul>
+<p>O limiar é <span class="math notranslate nohighlight">\(k=p\)</span>: o tratamento precisa matar as células ativas mais rápido do que elas proliferam. Note que as quiescentes não entram na conta — mas, como veremos, elas decidem <strong>quanto tempo</strong> a eliminação leva.</p>
+</section>
+<section id="por-que-nunca-ha-oscilacao">
+<h3>Por que nunca há oscilação?<a class="headerlink" href="#por-que-nunca-ha-oscilacao" title="Link to this heading">#</a></h3>
+<p>Será que as populações poderiam oscilar (autovalores complexos)? O discriminante é</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta = (\operatorname{tr}M)^2 - 4\det M = (k-p-a+b)^2 + 4ab,
+\]</div>
+<p>que é <strong>sempre positivo</strong> (pois <span class="math notranslate nohighlight">\(a,b&gt;0\)</span>). Os autovalores são sempre reais: o modelo nunca produz oscilações, qualquer que seja o tratamento. Faz sentido biológico: as células só trocam de compartimento, se dividem ou morrem, sem nenhum mecanismo de «retorno» que gere ciclos.</p>
+</section>
+<section id="os-autovalores-e-as-duas-fases">
+<h3>Os autovalores e as duas fases<a class="headerlink" href="#os-autovalores-e-as-duas-fases" title="Link to this heading">#</a></h3>
+<p>Com os valores da aula de modelagem (<span class="math notranslate nohighlight">\(a=0{,}01\)</span>, <span class="math notranslate nohighlight">\(b=0{,}05\)</span>, <span class="math notranslate nohighlight">\(p=0{,}1\)</span>, <span class="math notranslate nohighlight">\(k=0{,}5\)</span>, por dia):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.5</span>
+<span class="n">M</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">],</span> <span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">p</span> <span class="o">-</span> <span class="n">k</span> <span class="o">-</span> <span class="n">b</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"tr M ="</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">trace</span><span class="p">(</span><span class="n">M</span><span class="p">),</span> <span class="s2">"  det M ="</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">M</span><span class="p">))</span>
+
+<span class="n">lam</span><span class="p">,</span> <span class="n">V</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">M</span><span class="p">)</span>
+<span class="n">V</span> <span class="o">=</span> <span class="n">V</span> <span class="o">/</span> <span class="n">V</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>                     <span class="c1"># normaliza: primeira componente igual a 1</span>
+<span class="k">for</span> <span class="n">l</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">lam</span><span class="p">,</span> <span class="n">V</span><span class="o">.</span><span class="n">T</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"autovalor </span><span class="si">{</span><span class="n">l</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">   autovetor </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tr M = -0.46   det M = 0.004000000000000002
+autovalor -0.0089   autovetor [1.     0.0227]
+autovalor -0.4511   autovetor [ 1.     -8.8227]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Os autovalores são <span class="math notranslate nohighlight">\(\lambda_{\text{lento}}\approx-0{,}0089\)</span> e <span class="math notranslate nohighlight">\(\lambda_{\text{rápido}}\approx-0{,}451\)</span>, os dois negativos: um <strong>nó estável</strong>. Os autovetores contam o resto da história:</p>
+<ul class="simple">
+<li><p>o autovetor rápido é <span class="math notranslate nohighlight">\(\approx(1,\,-8{,}8)\)</span>: aponta quase na direção do eixo <span class="math notranslate nohighlight">\(A\)</span>. A fase rápida é a <strong>morte das células ativas</strong>;</p></li>
+<li><p>o autovetor lento é <span class="math notranslate nohighlight">\(\approx(1,\,0{,}023)\)</span>: aponta quase na direção do eixo <span class="math notranslate nohighlight">\(Q\)</span>. Depois da fase rápida, a solução se alinha com ele, e a proporção entre as populações fica fixa em cerca de <span class="math notranslate nohighlight">\(2{,}3\)</span> ativas para cada <span class="math notranslate nohighlight">\(100\)</span> quiescentes. A <strong>doença residual é quase toda quiescente</strong>, e é eliminada no ritmo lento <span class="math notranslate nohighlight">\(e^{-0{,}0089t}\)</span> — o ritmo com que as quiescentes são ativadas e então mortas.</p></li>
+</ul>
+<p>Como sabemos os autovalores e autovetores, podemos escrever a solução exata, <span class="math notranslate nohighlight">\(\mathbf{x}(t)=c_1\mathbf{v}^{(1)}e^{\lambda_1t}+c_2\mathbf{v}^{(2)}e^{\lambda_2t}\)</span>, e achar <span class="math notranslate nohighlight">\(c_1,c_2\)</span> resolvendo um sistema linear com a condição inicial — exatamente as ferramentas das últimas aulas. Vamos comparar a fórmula com a simulação numérica e ver a trajetória no plano de fase:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">10000</span><span class="p">])</span>
+<span class="n">coef</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">V</span><span class="p">,</span> <span class="n">x0</span><span class="p">)</span>              <span class="c1"># c1 v1 + c2 v2 = x0</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"c1, c2 ="</span><span class="p">,</span> <span class="n">coef</span><span class="p">)</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">800</span><span class="p">)</span>
+<span class="n">x_exata</span> <span class="o">=</span> <span class="p">(</span><span class="n">V</span> <span class="o">*</span> <span class="n">coef</span><span class="p">)</span> <span class="o">@</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span><span class="n">lam</span><span class="p">,</span> <span class="n">t</span><span class="p">))</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">solve_ivp</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">M</span> <span class="o">@</span> <span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">400</span><span class="p">),</span> <span class="n">x0</span><span class="p">,</span> <span class="n">t_eval</span><span class="o">=</span><span class="n">t</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="mf">1e-9</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1e-12</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">sol</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">'b'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Q numérico'</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">sol</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">'r'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'A numérico'</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x_exata</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">'b--'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Q pela fórmula'</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">x_exata</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">'r--'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'A pela fórmula'</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"tempo (dias)"</span><span class="p">);</span> <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"células (escala log)"</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Fórmula com autovetores x simulação"</span><span class="p">);</span> <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span> <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sol</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sol</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">'k'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'trajetória'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">*</span><span class="n">x0</span><span class="p">,</span> <span class="s1">'ko'</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">i_lento</span><span class="p">,</span> <span class="n">i_rapido</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">lam</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">lam</span><span class="p">)</span>
+<span class="n">v_l</span><span class="p">,</span> <span class="n">v_r</span> <span class="o">=</span> <span class="n">V</span><span class="p">[:,</span> <span class="n">i_lento</span><span class="p">],</span> <span class="n">V</span><span class="p">[:,</span> <span class="n">i_rapido</span><span class="p">]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2500</span><span class="o">*</span><span class="n">v_l</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2500</span><span class="o">*</span><span class="n">v_l</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="s1">'g--'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'reta do autovetor lento'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">x0</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x0</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1100</span><span class="o">*</span><span class="n">v_r</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="n">x0</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">x0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1100</span><span class="o">*</span><span class="n">v_r</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="s1">'m--'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="s1">'direção do autovetor rápido'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2500</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">11000</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"quiescentes $Q$"</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"ativas $A$"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Plano de fase: cai rápido, depois desliza</span><span class="se">\n</span><span class="s2">pela direção lenta até a origem"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span> <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c1, c2 = [ 2127.97627393 -1127.97627393]
+</pre></div>
+</div>
+<img alt="../_images/7c1bcf1786041d35e17f63989a832f4fa8f14a7fd6c293ba133150b2ca6dbc83.png" src="../_images/7c1bcf1786041d35e17f63989a832f4fa8f14a7fd6c293ba133150b2ca6dbc83.png" />
+</div>
+</div>
+<p>No plano de fase, a trajetória primeiro <strong>despenca</strong> na direção do autovetor rápido (as ativas morrem, e algumas viram quiescentes, por isso <span class="math notranslate nohighlight">\(Q\)</span> aumenta um pouco) e depois <strong>desliza</strong> ao longo do autovetor lento até a origem. É o retrato de um nó estável com autovalores de escalas muito diferentes.</p>
+<p>Uma consequência prática, discutida em modelos desse tipo: como a fase lenta é ditada pela ativação das quiescentes, e não pela potência do remédio, aumentar <span class="math notranslate nohighlight">\(k\)</span> acelera a fase rápida mas quase não muda a fase lenta. Experimente: o autovalor lento fica preso perto de <span class="math notranslate nohighlight">\(-a=-0{,}01\)</span>, por mais que <span class="math notranslate nohighlight">\(k\)</span> cresça.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">k_</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
+    <span class="n">Mk</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">],</span> <span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">p</span> <span class="o">-</span> <span class="n">k_</span> <span class="o">-</span> <span class="n">b</span><span class="p">]])</span>
+    <span class="n">l</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigvals</span><span class="p">(</span><span class="n">Mk</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"k = </span><span class="si">{</span><span class="n">k_</span><span class="si">:</span><span class="s2">4</span><span class="si">}</span><span class="s2">:   autovalor rápido = </span><span class="si">{</span><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">8.4f</span><span class="si">}</span><span class="s2">   autovalor lento = </span><span class="si">{</span><span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">8.5f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>k =  0.2:   autovalor rápido =  -0.1535   autovalor lento = -0.00652
+k =  0.5:   autovalor rápido =  -0.4511   autovalor lento = -0.00887
+k =    1:   autovalor rápido =  -0.9505   autovalor lento = -0.00947
+k =    2:   autovalor rápido =  -1.9503   autovalor lento = -0.00974
+k =    5:   autovalor rápido =  -4.9501   autovalor lento = -0.00990
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="regulacao-da-glicose-no-sangue">
+<h2>Regulação da glicose no sangue<a class="headerlink" href="#regulacao-da-glicose-no-sangue" title="Link to this heading">#</a></h2>
+<p>Depois de uma refeição, o nível de glicose no sangue sobe e o pâncreas libera insulina, que faz a glicose baixar. Um modelo linear clássico desse mecanismo, proposto por Ackerman e colaboradores nos anos 1960 para interpretar o <strong>teste de tolerância à glicose</strong> (e apresentado, por exemplo, no livro <em>Differential Equations and Their Applications</em>, de M. Braun), usa os <strong>desvios</strong> em relação aos níveis de equilíbrio (em jejum): <span class="math notranslate nohighlight">\(g(t)\)</span> para a glicose e <span class="math notranslate nohighlight">\(h(t)\)</span> para a insulina (e outros hormônios que agem junto com ela):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+g' &amp;= -m_1\,g - m_2\,h,\\
+h' &amp;= m_4\,g - m_3\,h,
+\end{aligned}
+\qquad m_1,m_2,m_3,m_4&gt;0.
+\end{split}\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(-m_1g\)</span>: o próprio organismo consome o excesso de glicose;</p></li>
+<li><p><span class="math notranslate nohighlight">\(-m_2h\)</span>: a insulina <strong>reduz</strong> a glicose;</p></li>
+<li><p><span class="math notranslate nohighlight">\(m_4g\)</span>: glicose alta <strong>estimula</strong> a liberação de insulina;</p></li>
+<li><p><span class="math notranslate nohighlight">\(-m_3h\)</span>: a insulina em excesso é eliminada.</p></li>
+</ul>
+<p>É um mecanismo de <strong>realimentação negativa</strong>: glicose alta gera insulina, que baixa a glicose. Na matriz,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{pmatrix} g\\ h\end{pmatrix}' = \begin{pmatrix} -m_1 &amp; -m_2\\ m_4 &amp; -m_3\end{pmatrix}\begin{pmatrix} g\\ h\end{pmatrix},
+\qquad \operatorname{tr} = -(m_1+m_3) &lt; 0, \qquad \det = m_1m_3 + m_2m_4 &gt; 0.
+\end{split}\]</div>
+<p>Traço negativo e determinante positivo: segundo quadrante, a origem é <strong>sempre</strong> assintoticamente estável (a glicose volta ao normal). Mas, diferente do modelo de leucemia, aqui os coeficientes fora da diagonal têm <strong>sinais opostos</strong> (<span class="math notranslate nohighlight">\(-m_2\)</span> e <span class="math notranslate nohighlight">\(m_4\)</span>), e o determinante pode ser grande. Se <span class="math notranslate nohighlight">\(\Delta=(m_1+m_3)^2-4(m_1m_3+m_2m_4)=(m_1-m_3)^2-4m_2m_4&lt;0\)</span>, os autovalores são <strong>complexos</strong>: um foco estável. A glicose volta ao normal <strong>oscilando</strong>.</p>
+<p>Vamos ver com valores ilustrativos (por hora): <span class="math notranslate nohighlight">\(m_1=1\)</span>, <span class="math notranslate nohighlight">\(m_2=3\)</span>, <span class="math notranslate nohighlight">\(m_3=0{,}5\)</span>, <span class="math notranslate nohighlight">\(m_4=1\)</span>, e um desvio inicial de glicose de <span class="math notranslate nohighlight">\(80\)</span> mg/dL logo após uma ingestão rápida de açúcar (modelada como um aumento instantâneo).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">,</span> <span class="n">m3</span><span class="p">,</span> <span class="n">m4</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="n">m1</span><span class="p">,</span> <span class="o">-</span><span class="n">m2</span><span class="p">],</span> <span class="p">[</span><span class="n">m4</span><span class="p">,</span> <span class="o">-</span><span class="n">m3</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"tr ="</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">trace</span><span class="p">(</span><span class="n">G</span><span class="p">),</span> <span class="s2">"  det ="</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">G</span><span class="p">),</span> <span class="s2">"  Delta ="</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">trace</span><span class="p">(</span><span class="n">G</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">G</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"autovalores:"</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigvals</span><span class="p">(</span><span class="n">G</span><span class="p">))</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">600</span><span class="p">)</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">solve_ivp</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">G</span> <span class="o">@</span> <span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="p">[</span><span class="mi">80</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">t_eval</span><span class="o">=</span><span class="n">t</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">sol</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">'b'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'glicose $g(t)$'</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">sol</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">'r'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'insulina $h(t)$'</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'k'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">sol</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="n">sol</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'b'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"tempo (horas)"</span><span class="p">);</span> <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"desvio do nível de jejum"</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"A glicose fica abaixo do normal antes de se estabilizar"</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span> <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">retrato</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">lim</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span> <span class="n">autovetores</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">titulo</span><span class="o">=</span><span class="s2">"Plano de fase: foco estável"</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sol</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sol</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">'b'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">'bo'</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"$g$"</span><span class="p">);</span> <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"$h$"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tr = -1.5   det = 3.5   Delta = -11.75
+autovalores: [-0.75+1.71391365j -0.75-1.71391365j]
+</pre></div>
+</div>
+<img alt="../_images/3ce339d34583e0da91e6a05d7ad757a2b9d0a4af6f63b403de34d00d3598b2e0.png" src="../_images/3ce339d34583e0da91e6a05d7ad757a2b9d0a4af6f63b403de34d00d3598b2e0.png" />
+</div>
+</div>
+<p>O resultado não é óbvio: a glicose <strong>não</strong> desce suavemente até o nível normal. Ela passa do ponto e fica <strong>abaixo</strong> do nível de jejum por um tempo (a região sombreada), porque a insulina liberada continua agindo mesmo depois de a glicose já ter baixado. Esse «mergulho» depois da subida é observado na prática em testes de tolerância à glicose (algumas pessoas sentem sono ou fome algumas horas depois de uma refeição muito doce).</p>
+<section id="a-ligacao-com-a-segunda-ordem">
+<h3>A ligação com a segunda ordem<a class="headerlink" href="#a-ligacao-com-a-segunda-ordem" title="Link to this heading">#</a></h3>
+<p>Eliminando <span class="math notranslate nohighlight">\(h\)</span> do sistema (é o caminho inverso do que fizemos na aula de modelagem), obtém-se uma única equação para a glicose:</p>
+<div class="math notranslate nohighlight">
+\[
+g'' + (m_1+m_3)\,g' + (m_1m_3+m_2m_4)\,g = 0
+\qquad\text{ou seja}\qquad
+g'' + 2\alpha\,g' + \omega_0^2\,g = 0,
+\]</div>
+<p>com <span class="math notranslate nohighlight">\(2\alpha=-\operatorname{tr}\)</span> e <span class="math notranslate nohighlight">\(\omega_0^2=\det\)</span>. É um <strong>oscilador harmônico amortecido</strong>! A glicose se comporta como uma massa presa a uma mola, com o amortecimento e a rigidez dados pela fisiologia. Ackerman e colaboradores propuseram usar o <strong>período natural</strong> <span class="math notranslate nohighlight">\(T_0=2\pi/\omega_0\)</span>, estimado ajustando o modelo às medidas de um teste de tolerância à glicose, como indicador da qualidade da regulação: um período natural longo indica uma regulação lenta, associada ao diabetes. (Os valores acima são apenas ilustrativos.)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">G</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"omega_0 = </span><span class="si">{</span><span class="n">w0</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> rad/h   -&gt;   período natural T0 = 2*pi/omega_0 = </span><span class="si">{</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="n">w0</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> horas"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>omega_0 = 1.871 rad/h   -&gt;   período natural T0 = 2*pi/omega_0 = 3.36 horas
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="moral-da-historia">
+<h2>Moral da história<a class="headerlink" href="#moral-da-historia" title="Link to this heading">#</a></h2>
+<p>Nos dois modelos, a pergunta «o que acontece com o sistema?» foi respondida pelo <strong>traço e determinante</strong> (estabilidade), pelos <strong>autovalores</strong> (escalas de tempo e oscilação) e pelos <strong>autovetores</strong> (a «forma» da solução a longo prazo). A fórmula explícita da solução é útil, mas a informação mais valiosa costuma estar nessas estruturas.</p>
+<p>No próximo tema, vamos acrescentar um termo forçante: <span class="math notranslate nohighlight">\(\mathbf{x}'=A\mathbf{x}+\mathbf{g}(t)\)</span> — por exemplo, uma infusão contínua de remédio, ou refeições ao longo do dia.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./sist"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="teo.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">Resumo: os Três Casos e a Estabilidade</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="nh.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">Não-Homogêneas</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i>  
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#celulas-tronco-leucemicas-sob-tratamento">Células-tronco leucêmicas sob tratamento</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quando-o-tratamento-funciona">Quando o tratamento funciona?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#por-que-nunca-ha-oscilacao">Por que nunca há oscilação?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#os-autovalores-e-as-duas-fases">Os autovalores e as duas fases</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regulacao-da-glicose-no-sangue">Regulação da glicose no sangue</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-ligacao-com-a-segunda-ordem">A ligação com a segunda ordem</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moral-da-historia">Moral da história</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+De Artur Fassoni
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

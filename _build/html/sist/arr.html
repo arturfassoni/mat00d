@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Autovalores Reais Repetidos &#8212; Equações Diferenciais A</title>
+    <title>Autovalores Repetidos &#8212; Equações Diferenciais A</title>
   
   
   
@@ -59,11 +59,13 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'sist/arr';</script>
     <script src="../_static/main.js?v=65a91cec"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
-    <link rel="next" title="Resumo da Teoria" href="teo.html" />
+    <link rel="next" title="Resumo: os Três Casos e a Estabilidade" href="teo.html" />
     <link rel="prev" title="Autovalores Complexos" href="acc.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="pt"/>
@@ -209,32 +211,24 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de Ordem Superior</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../ordn/mod.html">Modelos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ordn/h.html">Homogêneas</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ordn/nh.html">Não Homogêneas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ordn/ci.html">Coeficientes Indeterminados</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ordn/vp.html">Variação dos Parâmetros</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordn/mod.html">Modelagem com EDOs de Ordem Superior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordn/h.html">Equações Homogêneas de Ordem Superior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordn/nh.html">Equações Não Homogêneas de Ordem Superior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordn/exerc.html">Exercícios</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Sistemas de EDs Lineares</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="mod.html">Modelos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mat.html">Revisão de Matrizes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod.html">Modelagem com Sistemas de EDOs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mat.html">Matrizes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sis.html">Sistemas de Equações Lineares</a></li>
 <li class="toctree-l1"><a class="reference internal" href="aut.html">Autovalores e Autovetores</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="h.html">Homogêneos</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ard.html">Autovalores Reais Distintos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="acc.html">Autovalores Complexos</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Autovalores Reais Repetidos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="teo.html">Resumo da Teoria</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="h.html">Sistemas Lineares Homogêneos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ard.html">Autovalores Reais e Distintos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acc.html">Autovalores Complexos</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Autovalores Repetidos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="teo.html">Resumo: os Três Casos e a Estabilidade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="app.html">Aplicações</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nh.html">Não-Homogêneas</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Provas</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../provas/p1.html">Prova 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../provas/p2.html">Prova 1</a></li>
 </ul>
 
     </div>
@@ -360,7 +354,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -371,11 +367,25 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Autovalores Reais Repetidos</h1>
+    <h1>Autovalores Repetidos</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2>   </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primeiro-caso-dois-autovetores">Primeiro caso: dois autovetores</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#segundo-caso-um-so-autovetor">Segundo caso: um só autovetor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-1">Exemplo 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-2-o-amortecimento-critico">Exemplo 2: o amortecimento crítico</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resumo-autovalor-repetido-2-times2">Resumo: autovalor repetido (<span class="math notranslate nohighlight">\(2\times2\)</span>)</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -385,9 +395,171 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="autovalores-reais-repetidos">
-<h1>Autovalores Reais Repetidos<a class="headerlink" href="#autovalores-reais-repetidos" title="Link to this heading">#</a></h1>
-<p><em>Em construção</em></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="autovalores-repetidos">
+<h1>Autovalores Repetidos<a class="headerlink" href="#autovalores-repetidos" title="Link to this heading">#</a></h1>
+<p>O último caso é quando a matriz tem um <strong>autovalor repetido</strong>. Para uma matriz <span class="math notranslate nohighlight">\(2\times2\)</span>, isso acontece quando <span class="math notranslate nohighlight">\(\Delta=(\operatorname{tr}A)^2-4\det A=0\)</span>, e então <span class="math notranslate nohighlight">\(\lambda=\tfrac12\operatorname{tr}A\)</span> é raiz dupla. Como vimos na aula de autovalores, há duas possibilidades:</p>
+<ul class="simple">
+<li><p>o autovalor duplo tem <strong>dois</strong> autovetores independentes — e então não há problema nenhum;</p></li>
+<li><p>o autovalor duplo tem <strong>um só</strong> autovetor (a matriz é chamada <strong>defeituosa</strong>) — e então falta uma solução.</p></li>
+</ul>
+<p>O segundo caso é o análogo exato das raízes repetidas na segunda ordem, e a solução também vai envolver um fator <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.integrate</span><span class="w"> </span><span class="kn">import</span> <span class="n">solve_ivp</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">retrato</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">lim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">titulo</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">autovetores</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="c1"># Desenha o retrato de fase de x' = A x no quadrado [-lim, lim]^2</span>
+    <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">lim</span><span class="p">,</span> <span class="n">lim</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+    <span class="n">U</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">X</span> <span class="o">+</span> <span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">Y</span>
+    <span class="n">V</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">X</span> <span class="o">+</span> <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">Y</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">streamplot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'0.55'</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="mf">1.1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">arrowsize</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">autovetores</span><span class="p">:</span>
+        <span class="n">lam</span><span class="p">,</span> <span class="n">vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">lam</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1e-12</span><span class="p">):</span>
+            <span class="n">pares</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">lam</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="n">vec</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">real</span><span class="p">))</span>
+            <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">lam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">lam</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mf">1e-6</span><span class="p">:</span>
+                <span class="n">pares</span> <span class="o">=</span> <span class="n">pares</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">l</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">pares</span><span class="p">:</span>
+                <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">lim</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">3</span><span class="o">*</span><span class="n">lim</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">lim</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">3</span><span class="o">*</span><span class="n">lim</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span>
+                        <span class="s1">'--'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">fr</span><span class="s1">'$\lambda=</span><span class="si">{</span><span class="n">l</span><span class="si">:</span><span class="s1">.3g</span><span class="si">}</span><span class="s1">$'</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">'lower right'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">'ko'</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="n">lim</span><span class="p">,</span> <span class="n">lim</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="n">lim</span><span class="p">,</span> <span class="n">lim</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">'equal'</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'$x_1$'</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'$x_2$'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">titulo</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">titulo</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">trajetoria</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">cor</span><span class="o">=</span><span class="s1">'b'</span><span class="p">):</span>
+    <span class="c1"># Integra x' = A x a partir de x0 e desenha a trajetória</span>
+    <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+    <span class="n">sol</span> <span class="o">=</span> <span class="n">solve_ivp</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">A</span> <span class="o">@</span> <span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">T</span><span class="p">),</span> <span class="n">x0</span><span class="p">,</span> <span class="n">max_step</span><span class="o">=</span><span class="n">T</span><span class="o">/</span><span class="mi">500</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sol</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sol</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cor</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x0</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x0</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">'o'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">cor</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">sol</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="primeiro-caso-dois-autovetores">
+<h2>Primeiro caso: dois autovetores<a class="headerlink" href="#primeiro-caso-dois-autovetores" title="Link to this heading">#</a></h2>
+<p>Se <span class="math notranslate nohighlight">\(\lambda\)</span> é duplo e tem dois autovetores independentes <span class="math notranslate nohighlight">\(\mathbf{v}^{(1)},\mathbf{v}^{(2)}\)</span>, a receita de sempre funciona: <span class="math notranslate nohighlight">\(\mathbf{x}(t)=c_1\mathbf{v}^{(1)}e^{\lambda t}+c_2\mathbf{v}^{(2)}e^{\lambda t}\)</span>. Para uma matriz <span class="math notranslate nohighlight">\(2\times2\)</span>, isso só acontece se <span class="math notranslate nohighlight">\(A=\lambda I\)</span> (múltiplo da identidade), e então <strong>todo</strong> vetor é autovetor. Por exemplo, para <span class="math notranslate nohighlight">\(A=\begin{pmatrix} -1 &amp; 0\\ 0 &amp; -1\end{pmatrix}\)</span>, o sistema é <span class="math notranslate nohighlight">\(x_1'=-x_1,\ x_2'=-x_2\)</span>, com solução <span class="math notranslate nohighlight">\(\mathbf{x}(t)=e^{-t}\begin{pmatrix} c_1\\ c_2\end{pmatrix}\)</span>: todas as soluções vão em linha reta para a origem. Esse retrato é chamado de <strong>nó próprio</strong> (ou <strong>estrela</strong>). (Já vimos, na aula de autovalores reais, um exemplo <span class="math notranslate nohighlight">\(3\times3\)</span> desse tipo, em que o autovalor duplo também tinha dois autovetores.)</p>
+</section>
+<section id="segundo-caso-um-so-autovetor">
+<h2>Segundo caso: um só autovetor<a class="headerlink" href="#segundo-caso-um-so-autovetor" title="Link to this heading">#</a></h2>
+<section id="exemplo-1">
+<h3>Exemplo 1<a class="headerlink" href="#exemplo-1" title="Link to this heading">#</a></h3>
+<p>Encontre a solução geral de</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x}' = \begin{pmatrix} 1 &amp; -1\\ 1 &amp; 3\end{pmatrix}\mathbf{x}.
+\end{split}\]</div>
+<p><strong>Autovalores:</strong> <span class="math notranslate nohighlight">\(\operatorname{tr}A=4\)</span> e <span class="math notranslate nohighlight">\(\det A=3+1=4\)</span>, então <span class="math notranslate nohighlight">\(\lambda^2-4\lambda+4=(\lambda-2)^2=0\)</span> e <span class="math notranslate nohighlight">\(\lambda=2\)</span> é duplo.</p>
+<p><strong>Autovetores:</strong> <span class="math notranslate nohighlight">\((A-2I)\mathbf{v}=\begin{pmatrix} -1 &amp; -1\\ 1 &amp; 1\end{pmatrix}\mathbf{v}=\mathbf{0}\)</span> dá apenas <span class="math notranslate nohighlight">\(v_1+v_2=0\)</span>, ou seja, só a direção <span class="math notranslate nohighlight">\(\mathbf{v}=\begin{pmatrix} 1\\ -1\end{pmatrix}\)</span>. Temos <strong>uma</strong> solução, <span class="math notranslate nohighlight">\(\mathbf{x}^{(1)}(t)=\begin{pmatrix} 1\\ -1\end{pmatrix}e^{2t}\)</span>, e precisamos de outra.</p>
+<p><strong>Procurando a segunda solução.</strong> Inspirados na segunda ordem, onde a segunda solução era <span class="math notranslate nohighlight">\(te^{rt}\)</span>, poderíamos tentar <span class="math notranslate nohighlight">\(\mathbf{x}=te^{\lambda t}\mathbf{v}\)</span>. Mas isso não funciona (derivando sobra um termo <span class="math notranslate nohighlight">\(e^{\lambda t}\mathbf{v}\)</span> que não se cancela). A correção é acrescentar mais um termo:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{x}(t) = te^{\lambda t}\mathbf{v} + e^{\lambda t}\mathbf{w},
+\]</div>
+<p>com <span class="math notranslate nohighlight">\(\mathbf{w}\)</span> um vetor constante a determinar. Derivando,</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{x}' = e^{\lambda t}\mathbf{v} + \lambda te^{\lambda t}\mathbf{v} + \lambda e^{\lambda t}\mathbf{w},
+\]</div>
+<p>e, do outro lado, usando <span class="math notranslate nohighlight">\(A\mathbf{v}=\lambda\mathbf{v}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+A\mathbf{x} = te^{\lambda t}A\mathbf{v} + e^{\lambda t}A\mathbf{w} = \lambda te^{\lambda t}\mathbf{v} + e^{\lambda t}A\mathbf{w}.
+\]</div>
+<p>Igualando e cancelando <span class="math notranslate nohighlight">\(\lambda te^{\lambda t}\mathbf{v}\)</span> e <span class="math notranslate nohighlight">\(e^{\lambda t}\)</span>, sobra <span class="math notranslate nohighlight">\(\mathbf{v}+\lambda\mathbf{w}=A\mathbf{w}\)</span>, ou seja,</p>
+<div class="math notranslate nohighlight">
+\[
+(A-\lambda I)\,\mathbf{w} = \mathbf{v}.
+\]</div>
+<p>Um sistema linear <strong>não homogêneo</strong> para <span class="math notranslate nohighlight">\(\mathbf{w}\)</span>, com a mesma matriz singular <span class="math notranslate nohighlight">\(A-\lambda I\)</span> e o autovetor do lado direito. O vetor <span class="math notranslate nohighlight">\(\mathbf{w}\)</span> é chamado de <strong>autovetor generalizado</strong>.</p>
+<p>Voltando ao exemplo: <span class="math notranslate nohighlight">\((A-2I)\mathbf{w}=\begin{pmatrix} -1 &amp; -1\\ 1 &amp; 1\end{pmatrix}\begin{pmatrix} w_1\\ w_2\end{pmatrix}=\begin{pmatrix} 1\\ -1\end{pmatrix}\)</span> dá a única condição <span class="math notranslate nohighlight">\(-w_1-w_2=1\)</span>. Qualquer solução serve; escolhendo <span class="math notranslate nohighlight">\(w_1=0\)</span>, temos <span class="math notranslate nohighlight">\(\mathbf{w}=\begin{pmatrix} 0\\ -1\end{pmatrix}\)</span>. (Escolhas diferentes de <span class="math notranslate nohighlight">\(\mathbf{w}\)</span> diferem por um múltiplo de <span class="math notranslate nohighlight">\(\mathbf{v}\)</span>, que só muda a constante <span class="math notranslate nohighlight">\(c_1\)</span>.)</p>
+<p><strong>Solução geral:</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x}(t) = c_1\begin{pmatrix} 1\\ -1\end{pmatrix}e^{2t} + c_2\left[\begin{pmatrix} 1\\ -1\end{pmatrix}te^{2t} + \begin{pmatrix} 0\\ -1\end{pmatrix}e^{2t}\right].
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="p">,</span> <span class="n">c1</span><span class="p">,</span> <span class="n">c2</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">'t c1 c2'</span><span class="p">)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]])</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]);</span> <span class="n">w</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"(A - 2I) w ="</span><span class="p">,</span> <span class="p">((</span><span class="n">A</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span><span class="o">*</span><span class="n">w</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="s2">" (deve ser v)"</span><span class="p">)</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="n">v</span><span class="o">*</span><span class="n">t</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="n">w</span><span class="o">*</span><span class="n">sp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"segunda solução é solução?"</span><span class="p">,</span> <span class="n">sp</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">x2</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">-</span> <span class="n">A</span><span class="o">*</span><span class="n">x2</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"W(0) ="</span><span class="p">,</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span><span class="o">.</span><span class="n">det</span><span class="p">())</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">retrato</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">),</span> <span class="n">ax</span><span class="p">,</span> <span class="n">lim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">titulo</span><span class="o">=</span><span class="sa">r</span><span class="s2">"Nó impróprio instável: $\lambda=2$ (duplo)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(A - 2I) w = Matrix([[1, -1]])  (deve ser v)
+segunda solução é solução? Matrix([[0, 0]])
+W(0) = -1
+</pre></div>
+</div>
+<img alt="../_images/608cc5ab8ab6ff3d5a14fbf07bf0947263588343e610c77e453775eb77e3cda9.png" src="../_images/608cc5ab8ab6ff3d5a14fbf07bf0947263588343e610c77e453775eb77e3cda9.png" />
+</div>
+</div>
+<p>O retrato de fase tem uma única reta invariante (a do autovetor), e todas as trajetórias saem da origem <strong>tangentes a ela</strong>, curvando-se para acompanhar a mesma direção quando se afastam. É o <strong>nó impróprio</strong> (ou <strong>nó degenerado</strong>), que aqui é <strong>instável</strong>, pois <span class="math notranslate nohighlight">\(\lambda=2&gt;0\)</span>. Ele é o caso de transição entre um nó (dois autovetores reais) e um foco (autovalores complexos): as trajetórias «quase giram», mas não chegam a dar a volta.</p>
+</section>
+<section id="exemplo-2-o-amortecimento-critico">
+<h3>Exemplo 2: o amortecimento crítico<a class="headerlink" href="#exemplo-2-o-amortecimento-critico" title="Link to this heading">#</a></h3>
+<p>Encontre a solução geral do oscilador criticamente amortecido <span class="math notranslate nohighlight">\(x''+2x'+x=0\)</span>, escrito como sistema:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x}' = \begin{pmatrix} 0 &amp; 1\\ -1 &amp; -2\end{pmatrix}\mathbf{x}.
+\end{split}\]</div>
+<p>Aqui <span class="math notranslate nohighlight">\(\operatorname{tr}A=-2\)</span>, <span class="math notranslate nohighlight">\(\det A=1\)</span> e <span class="math notranslate nohighlight">\(\Delta=4-4=0\)</span>: <span class="math notranslate nohighlight">\(\lambda=-1\)</span> é duplo, como esperado para o amortecimento crítico. Os autovetores: <span class="math notranslate nohighlight">\((A+I)\mathbf{v}=\begin{pmatrix} 1 &amp; 1\\ -1 &amp; -1\end{pmatrix}\mathbf{v}=\mathbf{0}\)</span> dá só <span class="math notranslate nohighlight">\(\mathbf{v}=\begin{pmatrix} 1\\ -1\end{pmatrix}\)</span>. O autovetor generalizado: <span class="math notranslate nohighlight">\((A+I)\mathbf{w}=\mathbf{v}\)</span> dá <span class="math notranslate nohighlight">\(w_1+w_2=1\)</span>, e escolhemos <span class="math notranslate nohighlight">\(\mathbf{w}=\begin{pmatrix} 1\\ 0\end{pmatrix}\)</span>. Então</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x}(t) = c_1\begin{pmatrix} 1\\ -1\end{pmatrix}e^{-t} + c_2\left[\begin{pmatrix} 1\\ -1\end{pmatrix}te^{-t} + \begin{pmatrix} 1\\ 0\end{pmatrix}e^{-t}\right].
+\end{split}\]</div>
+<p>A primeira componente é <span class="math notranslate nohighlight">\(x(t)=(c_1+c_2)e^{-t}+c_2te^{-t}\)</span>: exatamente a forma <span class="math notranslate nohighlight">\((C_1+C_2t)e^{-t}\)</span> que encontramos para raízes repetidas na segunda ordem. O fator <span class="math notranslate nohighlight">\(t\)</span> da segunda ordem e o autovetor generalizado do sistema são a mesma coisa, vista de dois ângulos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">]])</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">retrato</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">lim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">titulo</span><span class="o">=</span><span class="sa">r</span><span class="s2">"Nó impróprio estável: $\lambda=-1$ (duplo)"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">x0</span><span class="p">,</span> <span class="n">cor</span> <span class="ow">in</span> <span class="p">[([</span><span class="mf">2.8</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="s1">'b'</span><span class="p">),</span> <span class="p">([</span><span class="mf">1.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.9</span><span class="p">],</span> <span class="s1">'g'</span><span class="p">),</span> <span class="p">([</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.8</span><span class="p">],</span> <span class="s1">'m'</span><span class="p">)]:</span>
+    <span class="n">trajetoria</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">cor</span><span class="o">=</span><span class="n">cor</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/3994c81ec6de75e5ea908da3f204e40b8a05a29b10b42527838c650d51f31b38.png" src="../_images/3994c81ec6de75e5ea908da3f204e40b8a05a29b10b42527838c650d51f31b38.png" />
+</div>
+</div>
+<p>Agora <span class="math notranslate nohighlight">\(\lambda=-1&lt;0\)</span>: todas as trajetórias vão para a origem, chegando tangentes ao autovetor. É um <strong>nó impróprio estável</strong>, e a origem é assintoticamente estável. Repare na trajetória verde, que começa com a massa sendo lançada com velocidade forte em direção ao equilíbrio: ela cruza o eixo vertical (<span class="math notranslate nohighlight">\(x=0\)</span>) uma vez antes de chegar à origem (a massa passa uma vez pela posição de equilíbrio). Mas nenhuma trajetória dá a volta na origem — esse é o comportamento do amortecimento crítico.</p>
+<p>Em sistemas <span class="math notranslate nohighlight">\(3\times3\)</span>, um autovalor pode aparecer até três vezes, e então pode ser preciso um termo com <span class="math notranslate nohighlight">\(t^2\)</span>; não vamos tratar esse caso.</p>
+</section>
+</section>
+<section id="resumo-autovalor-repetido-2-times2">
+<h2>Resumo: autovalor repetido (<span class="math notranslate nohighlight">\(2\times2\)</span>)<a class="headerlink" href="#resumo-autovalor-repetido-2-times2" title="Link to this heading">#</a></h2>
+<p>Se <span class="math notranslate nohighlight">\(\lambda\)</span> é autovalor duplo:</p>
+<ul class="simple">
+<li><p><strong>com dois autovetores</strong> (<span class="math notranslate nohighlight">\(A=\lambda I\)</span>): <span class="math notranslate nohighlight">\(\mathbf{x}(t)=e^{\lambda t}\mathbf{c}\)</span>, retrato de <strong>nó próprio</strong> (estrela);</p></li>
+<li><p><strong>com um só autovetor</strong> <span class="math notranslate nohighlight">\(\mathbf{v}\)</span>: encontre <span class="math notranslate nohighlight">\(\mathbf{w}\)</span> com <span class="math notranslate nohighlight">\((A-\lambda I)\mathbf{w}=\mathbf{v}\)</span>, e
+$<span class="math notranslate nohighlight">\(
+\mathbf{x}(t) = c_1\mathbf{v}e^{\lambda t} + c_2\big(\mathbf{v}te^{\lambda t} + \mathbf{w}e^{\lambda t}\big),
+\)</span>$
+com retrato de <strong>nó impróprio</strong>.</p></li>
+</ul>
+<p>Em ambos os casos, a estabilidade depende só do sinal de <span class="math notranslate nohighlight">\(\lambda\)</span>: <span class="math notranslate nohighlight">\(\lambda&lt;0\)</span> assintoticamente estável, <span class="math notranslate nohighlight">\(\lambda&gt;0\)</span> instável. (O fator <span class="math notranslate nohighlight">\(t\)</span> não muda isso: <span class="math notranslate nohighlight">\(te^{\lambda t}\to0\)</span> quando <span class="math notranslate nohighlight">\(\lambda&lt;0\)</span>, porque a exponencial «vence» o <span class="math notranslate nohighlight">\(t\)</span>.)</p>
+<p><strong>Ligação com traço e determinante.</strong> Autovalor repetido acontece exatamente quando <span class="math notranslate nohighlight">\((\operatorname{tr}A)^2=4\det A\)</span>, e então <span class="math notranslate nohighlight">\(\lambda=\tfrac12\operatorname{tr}A\)</span>: o <strong>sinal do traço</strong> decide a estabilidade.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -434,7 +606,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">próximo</p>
-        <p class="prev-next-title">Resumo da Teoria</p>
+        <p class="prev-next-title">Resumo: os Três Casos e a Estabilidade</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -444,6 +616,27 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i>  
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primeiro-caso-dois-autovetores">Primeiro caso: dois autovetores</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#segundo-caso-um-so-autovetor">Segundo caso: um só autovetor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-1">Exemplo 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-2-o-amortecimento-critico">Exemplo 2: o amortecimento crítico</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resumo-autovalor-repetido-2-times2">Resumo: autovalor repetido (<span class="math notranslate nohighlight">\(2\times2\)</span>)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

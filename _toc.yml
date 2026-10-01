@@ -42,24 +42,18 @@ parts:
       - file: ordn/mod.ipynb
       - file: ordn/h.ipynb
       - file: ordn/nh.ipynb
-        sections:
-        - file: ordn/ci.ipynb
-        - file: ordn/vp.ipynb
+      - file: ordn/exerc.ipynb
 
   - caption: Sistemas de EDs Lineares
     chapters:
       - file: sist/mod.ipynb
       - file: sist/mat.ipynb
+      - file: sist/sis.ipynb
       - file: sist/aut.ipynb
       - file: sist/h.ipynb
-        sections:
-        - file: sist/ard.ipynb
-        - file: sist/acc.ipynb
-        - file: sist/arr.ipynb
-        - file: sist/teo.ipynb
+      - file: sist/ard.ipynb
+      - file: sist/acc.ipynb
+      - file: sist/arr.ipynb
+      - file: sist/teo.ipynb
+      - file: sist/app.ipynb
       - file: sist/nh.ipynb
-  
-  - caption: Provas
-    chapters:
-      - file: provas/p1.ipynb
-      - file: provas/p2.ipynb

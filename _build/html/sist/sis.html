@@ -1,0 +1,738 @@
+
+<!DOCTYPE html>
+
+
+<html lang="pt" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Sistemas de Equações Lineares &#8212; Equações Diferenciais A</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/main.css?v=1cb71cee" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=0ff6c57f"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Clique para mostrar';</script>
+    <script>let toggleHintHide = 'Clique para ocultar';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script src="../_static/translations.js?v=5f54a428"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'sist/sis';</script>
+    <script src="../_static/main.js?v=65a91cec"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Pesquisar" href="../search.html" />
+    <link rel="next" title="Autovalores e Autovetores" href="aut.html" />
+    <link rel="prev" title="Matrizes" href="mat.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="pt"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../home.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.svg" class="logo__image only-light" alt="Equações Diferenciais A - Home"/>
+    <script>document.write(`<img src="../_static/logo.svg" class="logo__image only-dark" alt="Equações Diferenciais A - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Pesquisar" aria-label="Pesquisar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Pesquisar</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introdução às EDs</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../intro/oquee.html">O que são equações diferenciais?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/fund1.html">A equação diferencial fundamental <span class="math notranslate nohighlight">\(y' = ky\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/porque.html">Por que equações diferenciais?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/direcoes.html">Campos de Direções e o Método de Euler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/solucoes.html">Soluções de uma ED</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/classificacao.html">Classificação de EDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/exerc.html">Exercícios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/videos.html">Vídeos</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de 1a Ordem</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../ord1/modelagem.html">Modelagem com EDOs de 1ª Ordem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord1/lineares.html">Equações Lineares e o Fator Integrante</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord1/separaveis.html">Equações Diferenciais Separáveis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord1/autonomas.html">Equações Autônomas e Dinâmica Populacional</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord1/exerc.html">Exercícios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord1/videos.html">Vídeos</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de 2a Ordem</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../ord2/mod.html">Modelagem com EDOs de 2ª Ordem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/h.html">Equações Homogêneas e o Caso de Raízes Reais Distintas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/rrr.html">Raízes Reais Repetidas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/rcc.html">Raízes Complexas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/teo.html">Teoria Geral: Existência, Unicidade e Solução Geral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/vib.html">Vibrações Livres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/nh.html">Equações Não Homogêneas e Método dos Coeficientes a Determinar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/vibf.html">Vibrações Forçadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/exerc.html">Exercícios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ord2/videos.html">Vídeos</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de Ordem Superior</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../ordn/mod.html">Modelagem com EDOs de Ordem Superior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordn/h.html">Equações Homogêneas de Ordem Superior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordn/nh.html">Equações Não Homogêneas de Ordem Superior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordn/exerc.html">Exercícios</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Sistemas de EDs Lineares</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="mod.html">Modelagem com Sistemas de EDOs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mat.html">Matrizes</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Sistemas de Equações Lineares</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aut.html">Autovalores e Autovetores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="h.html">Sistemas Lineares Homogêneos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ard.html">Autovalores Reais e Distintos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acc.html">Autovalores Complexos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arr.html">Autovalores Repetidos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="teo.html">Resumo: os Três Casos e a Estabilidade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="app.html">Aplicações</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nh.html">Não-Homogêneas</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Baixe esta página">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/sist/sis.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Baixar arquivo fonte"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimir em PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Modo tela cheia"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Pesquisar" aria-label="Pesquisar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Sistemas de Equações Lineares</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2>   </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duas-retas-no-plano">Duas retas no plano</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forma-matricial-e-a-inversa">Forma matricial e a inversa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistemas-homogeneos">Sistemas homogêneos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriz-aumentada-e-escalonamento">Matriz aumentada e escalonamento</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencia-e-independencia-linear">Dependência e independência linear</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="sistemas-de-equacoes-lineares">
+<h1>Sistemas de Equações Lineares<a class="headerlink" href="#sistemas-de-equacoes-lineares" title="Link to this heading">#</a></h1>
+<p>Nesta aula, as equações são <strong>algébricas</strong> (sem derivadas): queremos achar números <span class="math notranslate nohighlight">\(x_1,x_2,\dots\)</span> que satisfaçam várias equações lineares ao mesmo tempo. Isso vai aparecer em dois momentos ao resolver sistemas de EDOs: para achar autovetores e para ajustar condições iniciais.</p>
+<section id="duas-retas-no-plano">
+<h2>Duas retas no plano<a class="headerlink" href="#duas-retas-no-plano" title="Link to this heading">#</a></h2>
+<p>Uma equação linear em duas incógnitas, como <span class="math notranslate nohighlight">\(x_1+x_2=3\)</span>, descreve uma <strong>reta</strong> no plano <span class="math notranslate nohighlight">\(x_1x_2\)</span>. Resolver um sistema de duas equações é encontrar os pontos que estão nas <strong>duas</strong> retas ao mesmo tempo. Só há três possibilidades:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+
+<span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="mf">4.2</span><span class="p">))</span>
+
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="mi">3</span> <span class="o">-</span> <span class="n">x1</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'$x_1+x_2=3$'</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="p">(</span><span class="n">x1</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'$x_1-2x_2=1$'</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">7</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="s1">'ko'</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Solução única"</span><span class="p">)</span>
+
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="mi">3</span> <span class="o">-</span> <span class="n">x1</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'$x_1+x_2=3$'</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">x1</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'$x_1+x_2=1$'</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Nenhuma solução (paralelas)"</span><span class="p">)</span>
+
+<span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="mi">3</span> <span class="o">-</span> <span class="n">x1</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'$x_1+x_2=3$'</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="mi">3</span> <span class="o">-</span> <span class="n">x1</span><span class="p">,</span> <span class="s1">'r--'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'$2x_1+2x_2=6$'</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Infinitas soluções (mesma reta)"</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">ax</span> <span class="ow">in</span> <span class="n">axs</span><span class="p">:</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"$x_1$"</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"$x_2$"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">'upper right'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/8a39ce4833c61b9fb47df425097bb605ebaac10182657be12a6ee2b24afbc5a3.png" src="../_images/8a39ce4833c61b9fb47df425097bb605ebaac10182657be12a6ee2b24afbc5a3.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p><strong>Solução única:</strong> as retas se cruzam num ponto. Em <span class="math notranslate nohighlight">\(x_1+x_2=3,\ x_1-2x_2=1\)</span>, subtraindo as equações, <span class="math notranslate nohighlight">\(3x_2=2\)</span>, então <span class="math notranslate nohighlight">\(x_2=\tfrac23\)</span> e <span class="math notranslate nohighlight">\(x_1=\tfrac73\)</span>.</p></li>
+<li><p><strong>Nenhuma solução:</strong> retas paralelas, como <span class="math notranslate nohighlight">\(x_1+x_2=3\)</span> e <span class="math notranslate nohighlight">\(x_1+x_2=1\)</span> — as equações são contraditórias.</p></li>
+<li><p><strong>Infinitas soluções:</strong> as duas equações descrevem a mesma reta, como <span class="math notranslate nohighlight">\(x_1+x_2=3\)</span> e <span class="math notranslate nohighlight">\(2x_1+2x_2=6\)</span> — a segunda é só o dobro da primeira, e não traz informação nova.</p></li>
+</ul>
+<p>Com três incógnitas a figura é a mesma ideia com planos no espaço, e as mesmas três possibilidades aparecem.</p>
+</section>
+<section id="forma-matricial-e-a-inversa">
+<h2>Forma matricial e a inversa<a class="headerlink" href="#forma-matricial-e-a-inversa" title="Link to this heading">#</a></h2>
+<p>Em forma matricial, um sistema de <span class="math notranslate nohighlight">\(n\)</span> equações e <span class="math notranslate nohighlight">\(n\)</span> incógnitas é <span class="math notranslate nohighlight">\(A\mathbf{x}=\mathbf{b}\)</span>. Os três casos acima são:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\underbrace{\begin{pmatrix} 1 &amp; 1\\ 1 &amp; -2\end{pmatrix}}_{\det=-3}\mathbf{x} = \begin{pmatrix} 3\\ 1\end{pmatrix},
+\qquad
+\underbrace{\begin{pmatrix} 1 &amp; 1\\ 1 &amp; 1\end{pmatrix}}_{\det=0}\mathbf{x} = \begin{pmatrix} 3\\ 1\end{pmatrix},
+\qquad
+\underbrace{\begin{pmatrix} 1 &amp; 1\\ 2 &amp; 2\end{pmatrix}}_{\det=0}\mathbf{x} = \begin{pmatrix} 3\\ 6\end{pmatrix}.
+\end{split}\]</div>
+<p>Repare: só no caso de solução única o determinante é diferente de zero. Isso vale em geral:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Se <span class="math notranslate nohighlight">\(\det A\neq0\)</span>, o sistema <span class="math notranslate nohighlight">\(A\mathbf{x}=\mathbf{b}\)</span> tem <strong>uma única solução</strong>, <span class="math notranslate nohighlight">\(\mathbf{x}=A^{-1}\mathbf{b}\)</span>, para qualquer <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>.</p></li>
+<li><p>Se <span class="math notranslate nohighlight">\(\det A=0\)</span>, dependendo de <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>, o sistema <strong>não tem solução</strong> ou tem <strong>infinitas soluções</strong>.</p></li>
+</ul>
+</div></blockquote>
+<p>Geometricamente, <span class="math notranslate nohighlight">\(\det A=0\)</span> significa que as retas (ou planos) têm a mesma inclinação: são paralelas ou coincidentes. Por exemplo, no primeiro sistema,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x} = A^{-1}\mathbf{b} = \frac{1}{-3}\begin{pmatrix} -2 &amp; -1\\ -1 &amp; 1\end{pmatrix}\begin{pmatrix} 3\\ 1\end{pmatrix} = \begin{pmatrix} 7/3\\ 2/3\end{pmatrix}.
+\end{split}\]</div>
+</section>
+<section id="sistemas-homogeneos">
+<h2>Sistemas homogêneos<a class="headerlink" href="#sistemas-homogeneos" title="Link to this heading">#</a></h2>
+<p>Um sistema com <span class="math notranslate nohighlight">\(\mathbf{b}=\mathbf{0}\)</span>, ou seja, <span class="math notranslate nohighlight">\(A\mathbf{x}=\mathbf{0}\)</span>, é chamado <strong>homogêneo</strong>. Ele sempre tem pelo menos uma solução: a <strong>trivial</strong>, <span class="math notranslate nohighlight">\(\mathbf{x}=\mathbf{0}\)</span>. A pergunta é se existem outras. Pela regra acima:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Se <span class="math notranslate nohighlight">\(\det A\neq0\)</span>, a única solução de <span class="math notranslate nohighlight">\(A\mathbf{x}=\mathbf{0}\)</span> é a trivial <span class="math notranslate nohighlight">\(\mathbf{x}=\mathbf{0}\)</span>.</p></li>
+<li><p>Se <span class="math notranslate nohighlight">\(\det A=0\)</span>, existem <strong>infinitas</strong> soluções não nulas.</p></li>
+</ul>
+</div></blockquote>
+<p>Esse segundo caso é exatamente o que vai acontecer quando procurarmos autovetores, então vale a pena ver com calma.</p>
+<p><strong>Exemplo.</strong> Resolva</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+x_1 - 2x_2 &amp;= 0\\
+-3x_1 + 6x_2 &amp;= 0.
+\end{aligned}
+\end{split}\]</div>
+<p>Aqui <span class="math notranslate nohighlight">\(\det\begin{pmatrix} 1 &amp; -2\\ -3 &amp; 6\end{pmatrix} = 6-6=0\)</span>. De fato, a segunda equação é <span class="math notranslate nohighlight">\(-3\)</span> vezes a primeira: na verdade só temos <strong>uma</strong> equação, <span class="math notranslate nohighlight">\(x_1=2x_2\)</span>. Uma das incógnitas fica livre: escolhendo <span class="math notranslate nohighlight">\(x_2=c\)</span> (qualquer número), temos <span class="math notranslate nohighlight">\(x_1=2c\)</span>, e todas as soluções são</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x} = \begin{pmatrix} 2c\\ c\end{pmatrix} = c\begin{pmatrix} 2\\ 1\end{pmatrix}, \qquad c\in\mathbb{R}.
+\end{split}\]</div>
+<p>São todos os múltiplos de um mesmo vetor: uma reta passando pela origem. Dizemos que a solução tem <strong>um grau de liberdade</strong> (uma constante livre).</p>
+<p>Num sistema <span class="math notranslate nohighlight">\(3\times3\)</span> singular podem sobrar um ou dois graus de liberdade. Por exemplo, em</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+x_1 + x_2 + x_3 &amp;= 0\\
+2x_1 + 2x_2 + 2x_3 &amp;= 0\\
+-x_1 - x_2 - x_3 &amp;= 0,
+\end{aligned}
+\end{split}\]</div>
+<p>as três equações são a mesma. Escolhendo <span class="math notranslate nohighlight">\(x_1=c_1\)</span> e <span class="math notranslate nohighlight">\(x_2=c_2\)</span> livres, <span class="math notranslate nohighlight">\(x_3=-c_1-c_2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x} = \begin{pmatrix} c_1\\ c_2\\ -c_1-c_2\end{pmatrix} = c_1\begin{pmatrix} 1\\ 0\\ -1\end{pmatrix} + c_2\begin{pmatrix} 0\\ 1\\ -1\end{pmatrix}.
+\end{split}\]</div>
+<p>Dois graus de liberdade: as soluções formam um plano pela origem.</p>
+</section>
+<section id="matriz-aumentada-e-escalonamento">
+<h2>Matriz aumentada e escalonamento<a class="headerlink" href="#matriz-aumentada-e-escalonamento" title="Link to this heading">#</a></h2>
+<p>Quando o sistema é maior, o método sistemático é o de <strong>eliminação de Gauss</strong> (escalonamento). Escrevemos a <strong>matriz aumentada</strong> <span class="math notranslate nohighlight">\((A\,|\,\mathbf{b})\)</span> e usamos as mesmas operações elementares sobre as linhas da aula passada (trocar linhas, multiplicar uma linha por um número não nulo, somar a uma linha um múltiplo de outra) até obter uma matriz <strong>triangular superior</strong> (zeros abaixo da diagonal). Cada operação corresponde a uma manipulação legítima das equações, então o sistema não muda de solução.</p>
+<p><strong>Exemplo 1 (solução única).</strong> Resolva</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+x_1 - 2x_2 + 3x_3 &amp;= 7\\
+-x_1 + x_2 - 2x_3 &amp;= -5\\
+2x_1 - x_2 - x_3 &amp;= 4.
+\end{aligned}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left(\begin{array}{ccc|c} 1 &amp; -2 &amp; 3 &amp; 7\\ -1 &amp; 1 &amp; -2 &amp; -5\\ 2 &amp; -1 &amp; -1 &amp; 4\end{array}\right)
+\xrightarrow[L_3\leftarrow L_3-2L_1]{L_2\leftarrow L_2+L_1}
+\left(\begin{array}{ccc|c} 1 &amp; -2 &amp; 3 &amp; 7\\ 0 &amp; -1 &amp; 1 &amp; 2\\ 0 &amp; 3 &amp; -7 &amp; -10\end{array}\right)
+\xrightarrow{L_3\leftarrow L_3+3L_2}
+\left(\begin{array}{ccc|c} 1 &amp; -2 &amp; 3 &amp; 7\\ 0 &amp; -1 &amp; 1 &amp; 2\\ 0 &amp; 0 &amp; -4 &amp; -4\end{array}\right).
+\end{split}\]</div>
+<p>Agora resolvemos <strong>de baixo para cima</strong> (substituição regressiva): da última linha, <span class="math notranslate nohighlight">\(-4x_3=-4\)</span>, então <span class="math notranslate nohighlight">\(x_3=1\)</span>; da segunda, <span class="math notranslate nohighlight">\(-x_2+x_3=2\)</span>, então <span class="math notranslate nohighlight">\(x_2=-1\)</span>; da primeira, <span class="math notranslate nohighlight">\(x_1=7+2x_2-3x_3=2\)</span>. Logo <span class="math notranslate nohighlight">\(\mathbf{x}=(2,-1,1)\)</span>.</p>
+<p><strong>Exemplo 2 (matriz singular).</strong> Troque o coeficiente de <span class="math notranslate nohighlight">\(x_3\)</span> na terceira equação:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+x_1 - 2x_2 + 3x_3 &amp;= b_1\\
+-x_1 + x_2 - 2x_3 &amp;= b_2\\
+2x_1 - x_2 + 3x_3 &amp;= b_3.
+\end{aligned}
+\end{split}\]</div>
+<p>As mesmas operações levam a</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left(\begin{array}{ccc|c} 1 &amp; -2 &amp; 3 &amp; b_1\\ 0 &amp; -1 &amp; 1 &amp; b_1+b_2\\ 0 &amp; 0 &amp; 0 &amp; b_1+3b_2+b_3\end{array}\right).
+\end{split}\]</div>
+<p>A última linha diz <span class="math notranslate nohighlight">\(0=b_1+3b_2+b_3\)</span>. Então:</p>
+<ul class="simple">
+<li><p>se <span class="math notranslate nohighlight">\(b_1+3b_2+b_3\neq0\)</span>, o sistema é contraditório e <strong>não tem solução</strong>;</p></li>
+<li><p>se <span class="math notranslate nohighlight">\(b_1+3b_2+b_3=0\)</span>, a última equação é sempre verdadeira, sobram duas equações para três incógnitas e há <strong>infinitas soluções</strong>.</p></li>
+</ul>
+<p>Por exemplo, com <span class="math notranslate nohighlight">\(b_1=2,\ b_2=1,\ b_3=-5\)</span> (que satisfazem a condição), sobra <span class="math notranslate nohighlight">\(x_1-2x_2+3x_3=2\)</span> e <span class="math notranslate nohighlight">\(-x_2+x_3=3\)</span>. Escolhendo <span class="math notranslate nohighlight">\(x_3=\alpha\)</span> livre: <span class="math notranslate nohighlight">\(x_2=\alpha-3\)</span> e <span class="math notranslate nohighlight">\(x_1=2+2x_2-3x_3=-\alpha-4\)</span>, ou seja,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x} = \alpha\begin{pmatrix} -1\\ 1\\ 1\end{pmatrix} + \begin{pmatrix} -4\\ -3\\ 0\end{pmatrix}.
+\end{split}\]</div>
+<p>Repare na estrutura: uma <strong>solução particular</strong> <span class="math notranslate nohighlight">\((-4,-3,0)\)</span> mais a <strong>solução geral do sistema homogêneo</strong> <span class="math notranslate nohighlight">\(\alpha(-1,1,1)\)</span> — a mesma estrutura <span class="math notranslate nohighlight">\(y=y_p+y_h\)</span> das EDOs não homogêneas! O computador confirma os dois exemplos (o <code class="docutils literal notranslate"><span class="pre">sympy</span></code> também faz o escalonamento completo, com a função <code class="docutils literal notranslate"><span class="pre">rref</span></code>):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A1</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">b1</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Exemplo 1: det ="</span><span class="p">,</span> <span class="n">A1</span><span class="o">.</span><span class="n">det</span><span class="p">())</span>
+<span class="n">display</span><span class="p">(</span><span class="n">A1</span><span class="o">.</span><span class="n">LUsolve</span><span class="p">(</span><span class="n">b1</span><span class="p">))</span>
+
+<span class="n">A2</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Exemplo 2: det ="</span><span class="p">,</span> <span class="n">A2</span><span class="o">.</span><span class="n">det</span><span class="p">())</span>
+<span class="n">aumentada</span> <span class="o">=</span> <span class="n">A2</span><span class="o">.</span><span class="n">row_join</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">]))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">aumentada</span><span class="o">.</span><span class="n">rref</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>     <span class="c1"># forma escalonada reduzida</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Soluções do homogêneo A x = 0:"</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">A2</span><span class="o">.</span><span class="n">nullspace</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Exemplo 1: det = 4
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}2\\-1\\1\end{matrix}\right]\end{split}\]</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Exemplo 2: det = 0
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 0 &amp; 1 &amp; -4\\0 &amp; 1 &amp; -1 &amp; -3\\0 &amp; 0 &amp; 0 &amp; 0\end{matrix}\right]\end{split}\]</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Soluções do homogêneo A x = 0:
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Matrix([
+ [-1],
+ [ 1],
+ [ 1]])]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="dependencia-e-independencia-linear">
+<h2>Dependência e independência linear<a class="headerlink" href="#dependencia-e-independencia-linear" title="Link to this heading">#</a></h2>
+<p>Na aula sobre o Wronskiano, falamos de funções «linearmente independentes». A ideia para vetores é a mesma: vetores <span class="math notranslate nohighlight">\(\mathbf{x}^{(1)},\dots,\mathbf{x}^{(k)}\)</span> são <strong>linearmente dependentes</strong> se algum deles pode ser escrito como combinação dos outros, ou seja, se existem constantes <span class="math notranslate nohighlight">\(c_1,\dots,c_k\)</span>, <strong>não todas nulas</strong>, com</p>
+<div class="math notranslate nohighlight">
+\[
+c_1\mathbf{x}^{(1)} + c_2\mathbf{x}^{(2)} + \cdots + c_k\mathbf{x}^{(k)} = \mathbf{0}.
+\]</div>
+<p>Se a única forma de fazer isso é <span class="math notranslate nohighlight">\(c_1=\cdots=c_k=0\)</span>, eles são <strong>linearmente independentes</strong> (LI).</p>
+<p>Para <span class="math notranslate nohighlight">\(n\)</span> vetores com <span class="math notranslate nohighlight">\(n\)</span> componentes, escrevemos os vetores como colunas de uma matriz <span class="math notranslate nohighlight">\(X\)</span>. A equação acima vira o sistema homogêneo <span class="math notranslate nohighlight">\(X\mathbf{c}=\mathbf{0}\)</span> e, pela regra dos sistemas homogêneos:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(n\)</span> vetores com <span class="math notranslate nohighlight">\(n\)</span> componentes são LI se, e somente se, <span class="math notranslate nohighlight">\(\det X\neq0\)</span>.</p>
+</div></blockquote>
+<p><strong>Exemplo.</strong> Os vetores <span class="math notranslate nohighlight">\(\begin{pmatrix} 1\\ 2\\ -1\end{pmatrix}\)</span>, <span class="math notranslate nohighlight">\(\begin{pmatrix} 2\\ 1\\ 3\end{pmatrix}\)</span>, <span class="math notranslate nohighlight">\(\begin{pmatrix} -4\\ 1\\ -11\end{pmatrix}\)</span> são LI?</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\det\begin{pmatrix} 1 &amp; 2 &amp; -4\\ 2 &amp; 1 &amp; 1\\ -1 &amp; 3 &amp; -11\end{pmatrix} = 1(-11-3) - 2(-22+1) + (-4)(6+1) = -14+42-28 = 0.
+\end{split}\]</div>
+<p>Não: são linearmente dependentes. Resolvendo <span class="math notranslate nohighlight">\(X\mathbf{c}=\mathbf{0}\)</span> por escalonamento, encontra-se a relação <span class="math notranslate nohighlight">\(2\mathbf{x}^{(1)}-3\mathbf{x}^{(2)}-\mathbf{x}^{(3)}=\mathbf{0}\)</span> (confira!): o terceiro vetor é combinação dos dois primeiros e não traz «direção nova».</p>
+<p>Em dimensão <span class="math notranslate nohighlight">\(2\)</span>, dois vetores são dependentes exatamente quando são <strong>múltiplos</strong> um do outro (estão na mesma reta). É por isso que, ao procurar autovetores, vamos poder escolher qualquer múltiplo não nulo de um autovetor: todos representam a mesma direção.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./sist"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="mat.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">Matrizes</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="aut.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">próximo</p>
+        <p class="prev-next-title">Autovalores e Autovetores</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i>  
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duas-retas-no-plano">Duas retas no plano</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forma-matricial-e-a-inversa">Forma matricial e a inversa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistemas-homogeneos">Sistemas homogêneos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriz-aumentada-e-escalonamento">Matriz aumentada e escalonamento</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencia-e-independencia-linear">Dependência e independência linear</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+De Artur Fassoni
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

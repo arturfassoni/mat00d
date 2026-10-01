@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Homogêneos &#8212; Equações Diferenciais A</title>
+    <title>Sistemas Lineares Homogêneos &#8212; Equações Diferenciais A</title>
   
   
   
@@ -59,11 +59,13 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'sist/h';</script>
     <script src="../_static/main.js?v=65a91cec"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
-    <link rel="next" title="Autovalores Reais Distintos" href="ard.html" />
+    <link rel="next" title="Autovalores Reais e Distintos" href="ard.html" />
     <link rel="prev" title="Autovalores e Autovetores" href="aut.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="pt"/>
@@ -209,32 +211,24 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de Ordem Superior</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../ordn/mod.html">Modelos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ordn/h.html">Homogêneas</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ordn/nh.html">Não Homogêneas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ordn/ci.html">Coeficientes Indeterminados</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ordn/vp.html">Variação dos Parâmetros</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordn/mod.html">Modelagem com EDOs de Ordem Superior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordn/h.html">Equações Homogêneas de Ordem Superior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordn/nh.html">Equações Não Homogêneas de Ordem Superior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordn/exerc.html">Exercícios</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Sistemas de EDs Lineares</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="mod.html">Modelos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mat.html">Revisão de Matrizes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod.html">Modelagem com Sistemas de EDOs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mat.html">Matrizes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sis.html">Sistemas de Equações Lineares</a></li>
 <li class="toctree-l1"><a class="reference internal" href="aut.html">Autovalores e Autovetores</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Homogêneos</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="ard.html">Autovalores Reais Distintos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="acc.html">Autovalores Complexos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arr.html">Autovalores Reais Repetidos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="teo.html">Resumo da Teoria</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Sistemas Lineares Homogêneos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ard.html">Autovalores Reais e Distintos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acc.html">Autovalores Complexos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arr.html">Autovalores Repetidos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="teo.html">Resumo: os Três Casos e a Estabilidade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="app.html">Aplicações</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nh.html">Não-Homogêneas</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Provas</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../provas/p1.html">Prova 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../provas/p2.html">Prova 1</a></li>
 </ul>
 
     </div>
@@ -360,7 +354,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -371,11 +367,24 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Homogêneos</h1>
+    <h1>Sistemas Lineares Homogêneos</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2>   </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-resultado-geral">O resultado geral</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-onde-vem-a-solucao-mathbf-x-e-lambda-t-mathbf-v">De onde vem a solução: <span class="math notranslate nohighlight">\(\mathbf{x}=e^{\lambda t}\mathbf{v}\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#um-primeiro-exemplo">Um primeiro exemplo</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plano-de-fase-e-estabilidade">Plano de fase e estabilidade</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -385,11 +394,88 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="homogeneos">
-<h1>Homogêneos<a class="headerlink" href="#homogeneos" title="Link to this heading">#</a></h1>
-<p><em>Em construção</em></p>
-<div class="toctree-wrapper compound">
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="sistemas-lineares-homogeneos">
+<h1>Sistemas Lineares Homogêneos<a class="headerlink" href="#sistemas-lineares-homogeneos" title="Link to this heading">#</a></h1>
+<p>Vamos agora resolver sistemas lineares homogêneos com coeficientes constantes,</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{x}' = A\,\mathbf{x},
+\]</div>
+<p>em que <span class="math notranslate nohighlight">\(A\)</span> é uma matriz <span class="math notranslate nohighlight">\(n\times n\)</span> constante (no nosso caso, <span class="math notranslate nohighlight">\(2\times2\)</span> ou <span class="math notranslate nohighlight">\(3\times3\)</span>). Assim como fizemos para as equações de segunda ordem e de ordem superior, começamos com um resultado geral que diz <strong>o que</strong> procurar, e depois uma conta que diz <strong>como</strong> encontrar.</p>
+<section id="o-resultado-geral">
+<h2>O resultado geral<a class="headerlink" href="#o-resultado-geral" title="Link to this heading">#</a></h2>
+<p><strong>Teorema.</strong> Seja <span class="math notranslate nohighlight">\(A\)</span> uma matriz <span class="math notranslate nohighlight">\(n\times n\)</span> constante.</p>
+<ol class="arabic simple">
+<li><p><strong>(Existência e unicidade)</strong> Para qualquer vetor <span class="math notranslate nohighlight">\(\mathbf{x}_0\)</span>, o PVI <span class="math notranslate nohighlight">\(\mathbf{x}'=A\mathbf{x},\ \mathbf{x}(t_0)=\mathbf{x}_0\)</span> tem uma única solução, definida para todo <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
+<li><p><strong>(Superposição)</strong> Se <span class="math notranslate nohighlight">\(\mathbf{x}^{(1)}(t),\dots,\mathbf{x}^{(k)}(t)\)</span> são soluções, qualquer combinação <span class="math notranslate nohighlight">\(c_1\mathbf{x}^{(1)}+\cdots+c_k\mathbf{x}^{(k)}\)</span> também é solução.</p></li>
+<li><p><strong>(Solução geral)</strong> Se <span class="math notranslate nohighlight">\(\mathbf{x}^{(1)},\dots,\mathbf{x}^{(n)}\)</span> são <span class="math notranslate nohighlight">\(n\)</span> soluções tais que o determinante
+$<span class="math notranslate nohighlight">\(
+W(t) = \det\big(\,\mathbf{x}^{(1)}(t)\ \ \mathbf{x}^{(2)}(t)\ \cdots\ \mathbf{x}^{(n)}(t)\,\big)
+\)</span><span class="math notranslate nohighlight">\(
+(com as soluções colocadas como colunas) é diferente de zero, então **toda** solução do sistema é da forma
+\)</span><span class="math notranslate nohighlight">\(
+\mathbf{x}(t) = c_1\mathbf{x}^{(1)}(t) + c_2\mathbf{x}^{(2)}(t) + \cdots + c_n\mathbf{x}^{(n)}(t).
+\)</span>$</p></li>
+<li><p><strong>(Existência de soluções suficientes)</strong> Sempre é possível encontrar essas <span class="math notranslate nohighlight">\(n\)</span> soluções a partir dos autovalores e autovetores de <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
+</ol>
+<p>O item 3 é o mesmo raciocínio do Wronskiano da segunda ordem. Para ajustar uma condição inicial <span class="math notranslate nohighlight">\(\mathbf{x}(t_0)=\mathbf{x}_0\)</span>, precisamos resolver o sistema linear algébrico <span class="math notranslate nohighlight">\(c_1\mathbf{x}^{(1)}(t_0)+\cdots+c_n\mathbf{x}^{(n)}(t_0)=\mathbf{x}_0\)</span>, cuja matriz tem as soluções como colunas. Ele tem solução única para todo <span class="math notranslate nohighlight">\(\mathbf{x}_0\)</span> exatamente quando o determinante <span class="math notranslate nohighlight">\(W(t_0)\)</span> não é zero — ou seja, quando os vetores <span class="math notranslate nohighlight">\(\mathbf{x}^{(1)}(t_0),\dots,\mathbf{x}^{(n)}(t_0)\)</span> são linearmente independentes. (Pode-se mostrar que, se <span class="math notranslate nohighlight">\(W\)</span> não se anula em um ponto, não se anula em nenhum.)</p>
+<p>Então, para um sistema <span class="math notranslate nohighlight">\(2\times2\)</span>, a tarefa é encontrar <strong>duas</strong> soluções independentes; para um <span class="math notranslate nohighlight">\(3\times3\)</span>, <strong>três</strong>.</p>
+</section>
+<section id="de-onde-vem-a-solucao-mathbf-x-e-lambda-t-mathbf-v">
+<h2>De onde vem a solução: <span class="math notranslate nohighlight">\(\mathbf{x}=e^{\lambda t}\mathbf{v}\)</span><a class="headerlink" href="#de-onde-vem-a-solucao-mathbf-x-e-lambda-t-mathbf-v" title="Link to this heading">#</a></h2>
+<p>Para uma equação escalar <span class="math notranslate nohighlight">\(x'=ax\)</span>, a solução é uma exponencial, <span class="math notranslate nohighlight">\(x=ce^{at}\)</span>. Para o sistema <span class="math notranslate nohighlight">\(\mathbf{x}'=A\mathbf{x}\)</span>, é natural tentar algo parecido: uma exponencial multiplicando um vetor constante,</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{x}(t) = e^{\lambda t}\,\mathbf{v},
+\]</div>
+<p>com <span class="math notranslate nohighlight">\(\lambda\)</span> um número e <span class="math notranslate nohighlight">\(\mathbf{v}\neq\mathbf{0}\)</span> um vetor constante, ambos a determinar. Derivando, <span class="math notranslate nohighlight">\(\mathbf{x}'=\lambda e^{\lambda t}\mathbf{v}\)</span>. Substituindo no sistema:</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda e^{\lambda t}\mathbf{v} = A\big(e^{\lambda t}\mathbf{v}\big) = e^{\lambda t}A\mathbf{v}.
+\]</div>
+<p>Como <span class="math notranslate nohighlight">\(e^{\lambda t}\neq0\)</span>, podemos cancelar:</p>
+<div class="math notranslate nohighlight">
+\[
+A\mathbf{v} = \lambda\mathbf{v}.
+\]</div>
+<p>Ou seja, <span class="math notranslate nohighlight">\(\mathbf{x}=e^{\lambda t}\mathbf{v}\)</span> é solução <strong>exatamente quando <span class="math notranslate nohighlight">\(\lambda\)</span> é um autovalor de <span class="math notranslate nohighlight">\(A\)</span> e <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> é um autovetor correspondente</strong>. É o mesmo papel que a equação característica <span class="math notranslate nohighlight">\(ar^2+br+c=0\)</span> fazia na segunda ordem — e, de fato, é a mesma equação quando o sistema vem de uma equação de segunda ordem, como vimos na aula de autovalores.</p>
+<p>Então a receita é:</p>
+<ol class="arabic simple">
+<li><p>encontrar os autovalores, resolvendo <span class="math notranslate nohighlight">\(\det(A-\lambda I)=0\)</span>;</p></li>
+<li><p>para cada autovalor, encontrar um autovetor, resolvendo <span class="math notranslate nohighlight">\((A-\lambda I)\mathbf{v}=\mathbf{0}\)</span>;</p></li>
+<li><p>cada par dá uma solução <span class="math notranslate nohighlight">\(e^{\lambda t}\mathbf{v}\)</span>; se conseguirmos <span class="math notranslate nohighlight">\(n\)</span> delas independentes, a solução geral é a combinação de todas.</p></li>
+</ol>
+<p>Como para a segunda ordem, aparecem três casos, conforme os autovalores sejam <strong>reais e distintos</strong>, <strong>complexos</strong> ou <strong>repetidos</strong>. Cada um terá sua própria seção.</p>
+<section id="um-primeiro-exemplo">
+<h3>Um primeiro exemplo<a class="headerlink" href="#um-primeiro-exemplo" title="Link to this heading">#</a></h3>
+<p>Na aula de autovalores, vimos que <span class="math notranslate nohighlight">\(A=\begin{pmatrix} 3 &amp; -1\\ 4 &amp; -2\end{pmatrix}\)</span> tem autovalores <span class="math notranslate nohighlight">\(\lambda_1=2\)</span> e <span class="math notranslate nohighlight">\(\lambda_2=-1\)</span>, com autovetores <span class="math notranslate nohighlight">\(\mathbf{v}^{(1)}=\begin{pmatrix} 1\\ 1\end{pmatrix}\)</span> e <span class="math notranslate nohighlight">\(\mathbf{v}^{(2)}=\begin{pmatrix} 1\\ 4\end{pmatrix}\)</span>. Então</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x}^{(1)}(t) = \begin{pmatrix} 1\\ 1\end{pmatrix}e^{2t}, \qquad \mathbf{x}^{(2)}(t) = \begin{pmatrix} 1\\ 4\end{pmatrix}e^{-t}
+\end{split}\]</div>
+<p>são soluções de <span class="math notranslate nohighlight">\(\mathbf{x}'=A\mathbf{x}\)</span>. Elas são independentes:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+W(t) = \begin{vmatrix} e^{2t} &amp; e^{-t}\\ e^{2t} &amp; 4e^{-t}\end{vmatrix} = 4e^{t} - e^{t} = 3e^{t} \neq 0.
+\end{split}\]</div>
+<p>Logo, pelo teorema, a solução geral é</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x}(t) = c_1\begin{pmatrix} 1\\ 1\end{pmatrix}e^{2t} + c_2\begin{pmatrix} 1\\ 4\end{pmatrix}e^{-t}.
+\end{split}\]</div>
+</section>
+</section>
+<section id="plano-de-fase-e-estabilidade">
+<h2>Plano de fase e estabilidade<a class="headerlink" href="#plano-de-fase-e-estabilidade" title="Link to this heading">#</a></h2>
+<p>Para sistemas <span class="math notranslate nohighlight">\(2\times2\)</span>, vamos sempre desenhar as soluções no <strong>plano de fase</strong> <span class="math notranslate nohighlight">\(x_1x_2\)</span>, como fizemos com o oscilador na aula de modelagem. O desenho com várias trajetórias é o <strong>retrato de fase</strong> do sistema.</p>
+<p>A origem <span class="math notranslate nohighlight">\(\mathbf{x}=\mathbf{0}\)</span> é sempre uma solução (constante) de <span class="math notranslate nohighlight">\(\mathbf{x}'=A\mathbf{x}\)</span>: é o <strong>ponto de equilíbrio</strong> do sistema. Assim como fizemos com a reta de fase das equações autônomas, vamos classificar esse equilíbrio:</p>
+<ul class="simple">
+<li><p><strong>assintoticamente estável</strong>, se todas as soluções tendem a <span class="math notranslate nohighlight">\(\mathbf{0}\)</span> quando <span class="math notranslate nohighlight">\(t\to\infty\)</span>;</p></li>
+<li><p><strong>estável</strong> (mas não assintoticamente), se as soluções que começam perto de <span class="math notranslate nohighlight">\(\mathbf{0}\)</span> ficam perto, sem necessariamente tender a <span class="math notranslate nohighlight">\(\mathbf{0}\)</span>;</p></li>
+<li><p><strong>instável</strong>, se existem soluções começando tão perto de <span class="math notranslate nohighlight">\(\mathbf{0}\)</span> quanto se queira que se afastam dele.</p></li>
+</ul>
+<p>Como as soluções são combinações de termos <span class="math notranslate nohighlight">\(e^{\lambda t}\)</span>, já dá para adivinhar que quem decide a estabilidade é o <strong>sinal (da parte real) dos autovalores</strong> — exatamente como o sinal das raízes da equação característica decidia o comportamento das vibrações livres. No exemplo acima, como <span class="math notranslate nohighlight">\(\lambda_1=2&gt;0\)</span>, o termo <span class="math notranslate nohighlight">\(e^{2t}\)</span> cresce e a origem é instável. Vamos ver isso caso a caso.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -436,7 +522,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">próximo</p>
-        <p class="prev-next-title">Autovalores Reais Distintos</p>
+        <p class="prev-next-title">Autovalores Reais e Distintos</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -446,6 +532,26 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i>  
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-resultado-geral">O resultado geral</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-onde-vem-a-solucao-mathbf-x-e-lambda-t-mathbf-v">De onde vem a solução: <span class="math notranslate nohighlight">\(\mathbf{x}=e^{\lambda t}\mathbf{v}\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#um-primeiro-exemplo">Um primeiro exemplo</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plano-de-fase-e-estabilidade">Plano de fase e estabilidade</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

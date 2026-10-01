@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Autovalores Reais Distintos &#8212; Equações Diferenciais A</title>
+    <title>Autovalores Reais e Distintos &#8212; Equações Diferenciais A</title>
   
   
   
@@ -59,12 +59,14 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'sist/ard';</script>
     <script src="../_static/main.js?v=65a91cec"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Pesquisar" href="../search.html" />
     <link rel="next" title="Autovalores Complexos" href="acc.html" />
-    <link rel="prev" title="Homogêneos" href="h.html" />
+    <link rel="prev" title="Sistemas Lineares Homogêneos" href="h.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="pt"/>
   </head>
@@ -209,32 +211,24 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">EDs de Ordem Superior</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../ordn/mod.html">Modelos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ordn/h.html">Homogêneas</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ordn/nh.html">Não Homogêneas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ordn/ci.html">Coeficientes Indeterminados</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ordn/vp.html">Variação dos Parâmetros</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordn/mod.html">Modelagem com EDOs de Ordem Superior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordn/h.html">Equações Homogêneas de Ordem Superior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordn/nh.html">Equações Não Homogêneas de Ordem Superior</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ordn/exerc.html">Exercícios</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Sistemas de EDs Lineares</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="mod.html">Modelos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mat.html">Revisão de Matrizes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod.html">Modelagem com Sistemas de EDOs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mat.html">Matrizes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sis.html">Sistemas de Equações Lineares</a></li>
 <li class="toctree-l1"><a class="reference internal" href="aut.html">Autovalores e Autovetores</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="h.html">Homogêneos</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Autovalores Reais Distintos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="acc.html">Autovalores Complexos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="arr.html">Autovalores Reais Repetidos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="teo.html">Resumo da Teoria</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="h.html">Sistemas Lineares Homogêneos</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Autovalores Reais e Distintos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acc.html">Autovalores Complexos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arr.html">Autovalores Repetidos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="teo.html">Resumo: os Três Casos e a Estabilidade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="app.html">Aplicações</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nh.html">Não-Homogêneas</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Provas</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../provas/p1.html">Prova 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../provas/p2.html">Prova 1</a></li>
 </ul>
 
     </div>
@@ -360,7 +354,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -371,11 +367,22 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Autovalores Reais Distintos</h1>
+    <h1>Autovalores Reais e Distintos</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2>   </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-1-autovalores-de-sinais-opostos-sela">Exemplo 1: autovalores de sinais opostos (sela)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-2-dois-autovalores-negativos-no-estavel">Exemplo 2: dois autovalores negativos (nó estável)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-3-um-sistema-3-times3">Exemplo 3: um sistema <span class="math notranslate nohighlight">\(3\times3\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resumo-autovalores-reais-e-distintos-2-times2">Resumo: autovalores reais e distintos (<span class="math notranslate nohighlight">\(2\times2\)</span>)</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -385,9 +392,190 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="autovalores-reais-distintos">
-<h1>Autovalores Reais Distintos<a class="headerlink" href="#autovalores-reais-distintos" title="Link to this heading">#</a></h1>
-<p><em>Em construção</em></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="autovalores-reais-e-distintos">
+<h1>Autovalores Reais e Distintos<a class="headerlink" href="#autovalores-reais-e-distintos" title="Link to this heading">#</a></h1>
+<p>Se <span class="math notranslate nohighlight">\(A\)</span> (<span class="math notranslate nohighlight">\(n\times n\)</span>) tem <span class="math notranslate nohighlight">\(n\)</span> autovalores reais e distintos <span class="math notranslate nohighlight">\(\lambda_1,\dots,\lambda_n\)</span>, com autovetores <span class="math notranslate nohighlight">\(\mathbf{v}^{(1)},\dots,\mathbf{v}^{(n)}\)</span>, esses autovetores são automaticamente linearmente independentes (vimos isso na aula de autovalores), e a solução geral é</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{x}(t) = c_1\mathbf{v}^{(1)}e^{\lambda_1t} + c_2\mathbf{v}^{(2)}e^{\lambda_2t} + \cdots + c_n\mathbf{v}^{(n)}e^{\lambda_nt}.
+\]</div>
+<p>É o caso mais simples, e também o que tem a interpretação geométrica mais clara: cada autovetor define uma <strong>reta invariante</strong> pela origem. Uma solução que começa sobre um autovetor <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> fica sempre sobre essa reta, afastando-se da origem se <span class="math notranslate nohighlight">\(\lambda&gt;0\)</span> ou aproximando-se dela se <span class="math notranslate nohighlight">\(\lambda&lt;0\)</span>.</p>
+<p>Vamos usar uma função auxiliar para desenhar retratos de fase, com os autovetores em tracejado:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.integrate</span><span class="w"> </span><span class="kn">import</span> <span class="n">solve_ivp</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">retrato</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">lim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">titulo</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">autovetores</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="c1"># Desenha o retrato de fase de x' = A x no quadrado [-lim, lim]^2</span>
+    <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">lim</span><span class="p">,</span> <span class="n">lim</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+    <span class="n">U</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">X</span> <span class="o">+</span> <span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">Y</span>
+    <span class="n">V</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">X</span> <span class="o">+</span> <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">Y</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">streamplot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'0.55'</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="mf">1.1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">arrowsize</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">autovetores</span><span class="p">:</span>
+        <span class="n">lam</span><span class="p">,</span> <span class="n">vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">lam</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1e-12</span><span class="p">):</span>
+            <span class="n">pares</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">lam</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="n">vec</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">real</span><span class="p">))</span>
+            <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">lam</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">lam</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mf">1e-6</span><span class="p">:</span>
+                <span class="n">pares</span> <span class="o">=</span> <span class="n">pares</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">l</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">pares</span><span class="p">:</span>
+                <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">lim</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">3</span><span class="o">*</span><span class="n">lim</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">lim</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">3</span><span class="o">*</span><span class="n">lim</span><span class="o">*</span><span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span>
+                        <span class="s1">'--'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">fr</span><span class="s1">'$\lambda=</span><span class="si">{</span><span class="n">l</span><span class="si">:</span><span class="s1">.3g</span><span class="si">}</span><span class="s1">$'</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">'lower right'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">'ko'</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="n">lim</span><span class="p">,</span> <span class="n">lim</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="n">lim</span><span class="p">,</span> <span class="n">lim</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">'equal'</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'$x_1$'</span><span class="p">);</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'$x_2$'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">titulo</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">titulo</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">trajetoria</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">cor</span><span class="o">=</span><span class="s1">'b'</span><span class="p">):</span>
+    <span class="c1"># Integra x' = A x a partir de x0 e desenha a trajetória</span>
+    <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+    <span class="n">sol</span> <span class="o">=</span> <span class="n">solve_ivp</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">A</span> <span class="o">@</span> <span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">T</span><span class="p">),</span> <span class="n">x0</span><span class="p">,</span> <span class="n">max_step</span><span class="o">=</span><span class="n">T</span><span class="o">/</span><span class="mi">500</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sol</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sol</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cor</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x0</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x0</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">'o'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">cor</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">sol</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="exemplo-1-autovalores-de-sinais-opostos-sela">
+<h2>Exemplo 1: autovalores de sinais opostos (sela)<a class="headerlink" href="#exemplo-1-autovalores-de-sinais-opostos-sela" title="Link to this heading">#</a></h2>
+<p>Resolva</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x}' = \begin{pmatrix} 1 &amp; 1\\ 4 &amp; 1\end{pmatrix}\mathbf{x}, \qquad \mathbf{x}(0) = \begin{pmatrix} 2\\ 0\end{pmatrix}.
+\end{split}\]</div>
+<p><strong>Autovalores:</strong> <span class="math notranslate nohighlight">\(\operatorname{tr}A=2\)</span> e <span class="math notranslate nohighlight">\(\det A=1-4=-3\)</span>, então</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda^2 - 2\lambda - 3 = (\lambda-3)(\lambda+1) = 0 \quad\Longrightarrow\quad \lambda_1=3,\ \ \lambda_2=-1.
+\]</div>
+<p><strong>Autovetores:</strong> para <span class="math notranslate nohighlight">\(\lambda_1=3\)</span>, <span class="math notranslate nohighlight">\((A-3I)\mathbf{v}=\begin{pmatrix} -2 &amp; 1\\ 4 &amp; -2\end{pmatrix}\mathbf{v}=\mathbf{0}\)</span> dá <span class="math notranslate nohighlight">\(v_2=2v_1\)</span>, ou seja, <span class="math notranslate nohighlight">\(\mathbf{v}^{(1)}=\begin{pmatrix} 1\\ 2\end{pmatrix}\)</span>. Para <span class="math notranslate nohighlight">\(\lambda_2=-1\)</span>, <span class="math notranslate nohighlight">\((A+I)\mathbf{v}=\begin{pmatrix} 2 &amp; 1\\ 4 &amp; 2\end{pmatrix}\mathbf{v}=\mathbf{0}\)</span> dá <span class="math notranslate nohighlight">\(v_2=-2v_1\)</span>, ou seja, <span class="math notranslate nohighlight">\(\mathbf{v}^{(2)}=\begin{pmatrix} 1\\ -2\end{pmatrix}\)</span>.</p>
+<p><strong>Solução geral:</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x}(t) = c_1\begin{pmatrix} 1\\ 2\end{pmatrix}e^{3t} + c_2\begin{pmatrix} 1\\ -2\end{pmatrix}e^{-t}.
+\end{split}\]</div>
+<p><strong>Condição inicial:</strong> em <span class="math notranslate nohighlight">\(t=0\)</span>, <span class="math notranslate nohighlight">\(c_1\begin{pmatrix} 1\\ 2\end{pmatrix}+c_2\begin{pmatrix} 1\\ -2\end{pmatrix}=\begin{pmatrix} 2\\ 0\end{pmatrix}\)</span>, ou seja, <span class="math notranslate nohighlight">\(c_1+c_2=2\)</span> e <span class="math notranslate nohighlight">\(2c_1-2c_2=0\)</span>. Logo <span class="math notranslate nohighlight">\(c_1=c_2=1\)</span> e</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x}(t) = \begin{pmatrix} 1\\ 2\end{pmatrix}e^{3t} + \begin{pmatrix} 1\\ -2\end{pmatrix}e^{-t} = \begin{pmatrix} e^{3t}+e^{-t}\\ 2e^{3t}-2e^{-t}\end{pmatrix}.
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">retrato</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">lim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">titulo</span><span class="o">=</span><span class="sa">r</span><span class="s2">"Sela: $\lambda_1=3&gt;0,\ \lambda_2=-1&lt;0$"</span><span class="p">)</span>
+<span class="n">trajetoria</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">cor</span><span class="o">=</span><span class="s1">'b'</span><span class="p">)</span>
+<span class="n">trajetoria</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="p">[</span><span class="mf">1.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.9</span><span class="p">],</span> <span class="mf">1.3</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">cor</span><span class="o">=</span><span class="s1">'g'</span><span class="p">)</span>
+<span class="n">trajetoria</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="p">[</span><span class="o">-</span><span class="mf">1.6</span><span class="p">,</span> <span class="mf">2.9</span><span class="p">],</span> <span class="mf">1.3</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">cor</span><span class="o">=</span><span class="s1">'m'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/ad8fa72ef8d269bfed234bad41aa6c946627d7f31d5a4a8071088dbe4c0b676e.png" src="../_images/ad8fa72ef8d269bfed234bad41aa6c946627d7f31d5a4a8071088dbe4c0b676e.png" />
+</div>
+</div>
+<p>Repare no desenho:</p>
+<ul class="simple">
+<li><p>Sobre a reta do autovetor <span class="math notranslate nohighlight">\(\mathbf{v}^{(2)}=(1,-2)\)</span> (com <span class="math notranslate nohighlight">\(\lambda_2=-1&lt;0\)</span>), as soluções <strong>vão para</strong> a origem.</p></li>
+<li><p>Sobre a reta de <span class="math notranslate nohighlight">\(\mathbf{v}^{(1)}=(1,2)\)</span> (com <span class="math notranslate nohighlight">\(\lambda_1=3&gt;0\)</span>), as soluções <strong>fogem</strong> da origem.</p></li>
+<li><p>Qualquer outra solução (como a verde e a magenta) chega perto da origem vindo pela direção de <span class="math notranslate nohighlight">\(\mathbf{v}^{(2)}\)</span>, mas acaba sendo empurrada para longe pela direção de <span class="math notranslate nohighlight">\(\mathbf{v}^{(1)}\)</span>: quando <span class="math notranslate nohighlight">\(t\to\infty\)</span>, o termo <span class="math notranslate nohighlight">\(e^{3t}\)</span> domina e <span class="math notranslate nohighlight">\(\mathbf{x}(t)\approx c_1\mathbf{v}^{(1)}e^{3t}\)</span>. A solução do nosso PVI (azul) começa longe da reta de <span class="math notranslate nohighlight">\(\mathbf{v}^{(2)}\)</span> e foge quase imediatamente.</p></li>
+</ul>
+<p>Esse retrato de fase é chamado de <strong>ponto de sela</strong> (lembra as curvas de nível de uma sela de cavalo). A origem é <strong>instável</strong>: basta um pequeno desvio para fora da reta de <span class="math notranslate nohighlight">\(\mathbf{v}^{(2)}\)</span> para a solução fugir.</p>
+</section>
+<section id="exemplo-2-dois-autovalores-negativos-no-estavel">
+<h2>Exemplo 2: dois autovalores negativos (nó estável)<a class="headerlink" href="#exemplo-2-dois-autovalores-negativos-no-estavel" title="Link to this heading">#</a></h2>
+<p>Encontre a solução geral de</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x}' = \begin{pmatrix} -4 &amp; 1\\ 2 &amp; -3\end{pmatrix}\mathbf{x}.
+\end{split}\]</div>
+<p>Aqui <span class="math notranslate nohighlight">\(\operatorname{tr}A=-7\)</span> e <span class="math notranslate nohighlight">\(\det A=12-2=10\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda^2+7\lambda+10 = (\lambda+2)(\lambda+5) = 0 \quad\Longrightarrow\quad \lambda_1=-2,\ \ \lambda_2=-5.
+\]</div>
+<p>Para <span class="math notranslate nohighlight">\(\lambda_1=-2\)</span>: <span class="math notranslate nohighlight">\((A+2I)\mathbf{v}=\begin{pmatrix} -2 &amp; 1\\ 2 &amp; -1\end{pmatrix}\mathbf{v}=\mathbf{0}\)</span>, então <span class="math notranslate nohighlight">\(\mathbf{v}^{(1)}=\begin{pmatrix} 1\\ 2\end{pmatrix}\)</span>. Para <span class="math notranslate nohighlight">\(\lambda_2=-5\)</span>: <span class="math notranslate nohighlight">\((A+5I)\mathbf{v}=\begin{pmatrix} 1 &amp; 1\\ 2 &amp; 2\end{pmatrix}\mathbf{v}=\mathbf{0}\)</span>, então <span class="math notranslate nohighlight">\(\mathbf{v}^{(2)}=\begin{pmatrix} 1\\ -1\end{pmatrix}\)</span>. A solução geral é</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x}(t) = c_1\begin{pmatrix} 1\\ 2\end{pmatrix}e^{-2t} + c_2\begin{pmatrix} 1\\ -1\end{pmatrix}e^{-5t}.
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">]])</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">retrato</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">lim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">titulo</span><span class="o">=</span><span class="sa">r</span><span class="s2">"Nó estável: $\lambda_1=-2,\ \lambda_2=-5$"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">x0</span><span class="p">,</span> <span class="n">cor</span> <span class="ow">in</span> <span class="p">[([</span><span class="mf">2.8</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="s1">'b'</span><span class="p">),</span> <span class="p">([</span><span class="o">-</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">2.8</span><span class="p">],</span> <span class="s1">'g'</span><span class="p">),</span> <span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.8</span><span class="p">],</span> <span class="s1">'m'</span><span class="p">)]:</span>
+    <span class="n">trajetoria</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">cor</span><span class="o">=</span><span class="n">cor</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/dcd7b43c573c5e8d176216531f676ad4c041a41f1084aa4a7a61af1db7ceb855.png" src="../_images/dcd7b43c573c5e8d176216531f676ad4c041a41f1084aa4a7a61af1db7ceb855.png" />
+</div>
+</div>
+<p>Agora as duas exponenciais decaem, e <strong>todas</strong> as soluções vão para a origem: ela é <strong>assintoticamente estável</strong>. Esse retrato é chamado de <strong>nó estável</strong>.</p>
+<p>Repare num detalhe: as trajetórias chegam à origem <strong>tangentes ao autovetor de <span class="math notranslate nohighlight">\(\lambda_1=-2\)</span></strong>, o autovalor «mais lento». Como <span class="math notranslate nohighlight">\(e^{-5t}\)</span> morre muito mais rápido que <span class="math notranslate nohighlight">\(e^{-2t}\)</span>, depois de pouco tempo sobra <span class="math notranslate nohighlight">\(\mathbf{x}(t)\approx c_1\mathbf{v}^{(1)}e^{-2t}\)</span>: a solução se alinha com a direção lenta. (É exatamente isso que acontece no modelo de leucemia, como veremos na aula de aplicações.)</p>
+<p>Se os dois autovalores fossem <strong>positivos</strong>, o desenho seria o mesmo, com as setas invertidas: todas as soluções fugiriam da origem, num <strong>nó instável</strong>. (Trocar <span class="math notranslate nohighlight">\(A\)</span> por <span class="math notranslate nohighlight">\(-A\)</span> troca o sinal dos autovalores e inverte o sentido do tempo.)</p>
+</section>
+<section id="exemplo-3-um-sistema-3-times3">
+<h2>Exemplo 3: um sistema <span class="math notranslate nohighlight">\(3\times3\)</span><a class="headerlink" href="#exemplo-3-um-sistema-3-times3" title="Link to this heading">#</a></h2>
+<p>Encontre a solução geral de</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x}' = \begin{pmatrix} 0 &amp; 1 &amp; 1\\ 1 &amp; 0 &amp; 1\\ 1 &amp; 1 &amp; 0\end{pmatrix}\mathbf{x}.
+\end{split}\]</div>
+<p>Já calculamos os autovalores e autovetores dessa matriz na aula de autovalores: <span class="math notranslate nohighlight">\(\lambda_1=2\)</span>, com <span class="math notranslate nohighlight">\(\mathbf{v}^{(1)}=(1,1,1)\)</span>, e o autovalor duplo <span class="math notranslate nohighlight">\(\lambda_2=\lambda_3=-1\)</span>, com <strong>dois</strong> autovetores independentes, <span class="math notranslate nohighlight">\(\mathbf{v}^{(2)}=(1,0,-1)\)</span> e <span class="math notranslate nohighlight">\(\mathbf{v}^{(3)}=(0,1,-1)\)</span>. Os autovalores não são todos distintos, mas isso não atrapalha: temos três autovetores LI, que dão três soluções independentes:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{x}(t) = c_1\begin{pmatrix} 1\\ 1\\ 1\end{pmatrix}e^{2t} + c_2\begin{pmatrix} 1\\ 0\\ -1\end{pmatrix}e^{-t} + c_3\begin{pmatrix} 0\\ 1\\ -1\end{pmatrix}e^{-t}.
+\end{split}\]</div>
+<p>Como <span class="math notranslate nohighlight">\(\lambda_1=2&gt;0\)</span>, a origem é <strong>instável</strong>. Mas repare: as soluções com <span class="math notranslate nohighlight">\(c_1=0\)</span>, que começam no plano gerado por <span class="math notranslate nohighlight">\(\mathbf{v}^{(2)}\)</span> e <span class="math notranslate nohighlight">\(\mathbf{v}^{(3)}\)</span> (o plano <span class="math notranslate nohighlight">\(x_1+x_2+x_3=0\)</span>), ficam nesse plano e vão para a origem. É a versão em três dimensões de uma sela.</p>
+</section>
+<section id="resumo-autovalores-reais-e-distintos-2-times2">
+<h2>Resumo: autovalores reais e distintos (<span class="math notranslate nohighlight">\(2\times2\)</span>)<a class="headerlink" href="#resumo-autovalores-reais-e-distintos-2-times2" title="Link to this heading">#</a></h2>
+<p>A solução geral é <span class="math notranslate nohighlight">\(\mathbf{x}(t)=c_1\mathbf{v}^{(1)}e^{\lambda_1t}+c_2\mathbf{v}^{(2)}e^{\lambda_2t}\)</span>, e o retrato de fase depende dos sinais dos autovalores:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Autovalores</p></th>
+<th class="head"><p>Retrato de fase</p></th>
+<th class="head"><p>Estabilidade da origem</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\lambda_1&lt;0&lt;\lambda_2\)</span></p></td>
+<td><p>sela</p></td>
+<td><p>instável</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\lambda_1,\lambda_2&lt;0\)</span></p></td>
+<td><p>nó estável</p></td>
+<td><p>assintoticamente estável</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\lambda_1,\lambda_2&gt;0\)</span></p></td>
+<td><p>nó instável</p></td>
+<td><p>instável</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Ligação com traço e determinante.</strong> Como <span class="math notranslate nohighlight">\(\lambda_1+\lambda_2=\operatorname{tr}A\)</span> e <span class="math notranslate nohighlight">\(\lambda_1\lambda_2=\det A\)</span>, nem precisamos calcular os autovalores para saber o tipo. Os autovalores são reais e distintos quando <span class="math notranslate nohighlight">\(\Delta=(\operatorname{tr}A)^2-4\det A&gt;0\)</span>, e então:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\det A&lt;0\)</span>: autovalores de sinais opostos, <strong>sela</strong>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(\det A&gt;0\)</span> e <span class="math notranslate nohighlight">\(\operatorname{tr}A&lt;0\)</span>: os dois negativos, <strong>nó estável</strong>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(\det A&gt;0\)</span> e <span class="math notranslate nohighlight">\(\operatorname{tr}A&gt;0\)</span>: os dois positivos, <strong>nó instável</strong>.</p></li>
+</ul>
+<p>Confira nos exemplos: no Exemplo 1, <span class="math notranslate nohighlight">\(\det A=-3&lt;0\)</span> (sela); no Exemplo 2, <span class="math notranslate nohighlight">\(\det A=10&gt;0\)</span> e <span class="math notranslate nohighlight">\(\operatorname{tr}A=-7&lt;0\)</span> (nó estável).</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -426,7 +614,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">Homogêneos</p>
+        <p class="prev-next-title">Sistemas Lineares Homogêneos</p>
       </div>
     </a>
     <a class="right-next"
@@ -444,6 +632,24 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i>  
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-1-autovalores-de-sinais-opostos-sela">Exemplo 1: autovalores de sinais opostos (sela)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-2-dois-autovalores-negativos-no-estavel">Exemplo 2: dois autovalores negativos (nó estável)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exemplo-3-um-sistema-3-times3">Exemplo 3: um sistema <span class="math notranslate nohighlight">\(3\times3\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resumo-autovalores-reais-e-distintos-2-times2">Resumo: autovalores reais e distintos (<span class="math notranslate nohighlight">\(2\times2\)</span>)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
